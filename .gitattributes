@@ -1,0 +1,129 @@
+# Apply native OS line-endings on checkout of these files...
+*.boo              text
+*.c                text
+*.cginc            text
+*.config           text
+*.contentproj      text
+*.cpp              text
+*.dae              text
+*.DAE              text
+*.dtd              text
+*.fx               text
+*.glsl             text
+*.h                text
+*.inc              text
+*.ini              text
+*.js               text
+*.JSFL             text
+*.jsfl             text
+*.json             text
+*.log              text
+*.md               text
+*.mel              text
+*.php              text
+*.shader           text
+*.txt              text
+*.TXT              text
+*.xaml             text
+*.xml              text
+*.xsd              text
+.gitattributes     text
+.gitignore         text
+COPYING            text
+INSTALL*           text
+KEYS*              text
+LICENSE*           text
+NEWS*              text
+NOTICE*            text
+README*            text
+TODO*              text
+WHATSNEW*          text
+
+# Apply Unix-style LF line-endings on checkout of these files...
+*.meta             text eol=lf
+*.sh               text eol=lf
+*.vspscc           text eol=lf
+.htaccess          text eol=lf
+
+# Previous "binary"
+*.unity            text eol=lf
+*.asset            text eol=lf
+*.prefab           text eol=lf
+
+# Apply Windows/DOS-style CR-LF line-endings on checkout of these files...
+*.bat              text eol=crlf
+*.cmd              text eol=crlf
+*.csproj           text eol=crlf
+*.sln              text eol=crlf
+*.user             text eol=crlf
+*.vcproj           text eol=crlf
+*.cs               text eol=crlf
+*.css              text eol=crlf
+*.htm              text eol=crlf
+*.html             text eol=crlf
+
+# No end-of-line conversions are applied (i.e., "-text -diff") to these files...
+*.7z               filter=lfs diff=lfs merge=lfs -text
+*.ai               filter=lfs diff=lfs merge=lfs -text
+*.anim             filter=lfs diff=lfs merge=lfs -text
+*.apk              filter=lfs diff=lfs merge=lfs -text
+*.bin              filter=lfs diff=lfs merge=lfs -text
+*.bmp              filter=lfs diff=lfs merge=lfs -text
+*.BMP              filter=lfs diff=lfs merge=lfs -text
+*.com              filter=lfs diff=lfs merge=lfs -text
+*.COM              filter=lfs diff=lfs merge=lfs -text
+*.controller       filter=lfs diff=lfs merge=lfs -text
+*.cubemap          filter=lfs diff=lfs merge=lfs -text
+*.dex              filter=lfs diff=lfs merge=lfs -text
+*.dll              filter=lfs diff=lfs merge=lfs -text
+*.DLL              filter=lfs diff=lfs merge=lfs -text
+*.dylib            filter=lfs diff=lfs merge=lfs -text
+*.eps              filter=lfs diff=lfs merge=lfs -text
+*.exe              filter=lfs diff=lfs merge=lfs -text
+*.EXE              filter=lfs diff=lfs merge=lfs -text
+*.exr              filter=lfs diff=lfs merge=lfs -text
+*.fbx              filter=lfs diff=lfs merge=lfs -text
+*.FBX              filter=lfs diff=lfs merge=lfs -text
+*.fla              filter=lfs diff=lfs merge=lfs -text
+*.flare            filter=lfs diff=lfs merge=lfs -text
+*.flv              filter=lfs diff=lfs merge=lfs -text
+*.gif              filter=lfs diff=lfs merge=lfs -text
+*.guiskin          filter=lfs diff=lfs merge=lfs -text
+*.gz               filter=lfs diff=lfs merge=lfs -text
+*.ht               filter=lfs diff=lfs merge=lfs -text
+*.ico              filter=lfs diff=lfs merge=lfs -text
+*.jpeg             filter=lfs diff=lfs merge=lfs -text
+*.jpg              filter=lfs diff=lfs merge=lfs -text
+*.keystore         filter=lfs diff=lfs merge=lfs -text
+*.mask             filter=lfs diff=lfs merge=lfs -text
+*.mat              filter=lfs diff=lfs merge=lfs -text
+*.mb               filter=lfs diff=lfs merge=lfs -text
+*.mp3              filter=lfs diff=lfs merge=lfs -text
+*.mp4              filter=lfs diff=lfs merge=lfs -text
+*.mpg              filter=lfs diff=lfs merge=lfs -text
+*.ogg              filter=lfs diff=lfs merge=lfs -text
+*.PCX              filter=lfs diff=lfs merge=lfs -text
+*.pcx              filter=lfs diff=lfs merge=lfs -text
+*.pdb              filter=lfs diff=lfs merge=lfs -text
+*.pdf              filter=lfs diff=lfs merge=lfs -text
+*.physicMaterial   filter=lfs diff=lfs merge=lfs -text
+*.physicmaterial   filter=lfs diff=lfs merge=lfs -text
+*.png              filter=lfs diff=lfs merge=lfs -text
+*.ps               filter=lfs diff=lfs merge=lfs -text
+*.psd              filter=lfs diff=lfs merge=lfs -text
+*.qt               filter=lfs diff=lfs merge=lfs -text
+*.so               filter=lfs diff=lfs merge=lfs -text
+*.swf              filter=lfs diff=lfs merge=lfs -text
+*.tga              filter=lfs diff=lfs merge=lfs -text
+*.tif              filter=lfs diff=lfs merge=lfs -text
+*.tiff             filter=lfs diff=lfs merge=lfs -text
+*.ttf              filter=lfs diff=lfs merge=lfs -text
+*.TTF              filter=lfs diff=lfs merge=lfs -text
+*.unitypackage     filter=lfs diff=lfs merge=lfs -text
+*.unityPackage     filter=lfs diff=lfs merge=lfs -text
+*.wav              filter=lfs diff=lfs merge=lfs -text
+*.wmv              filter=lfs diff=lfs merge=lfs -text
+*.zip              filter=lfs diff=lfs merge=lfs -text
+*.ZIP              filter=lfs diff=lfs merge=lfs -text
+# *.unity filter=lfs diff=lfs merge=lfs -text
+# *.asset filter=lfs diff=lfs merge=lfs -text
