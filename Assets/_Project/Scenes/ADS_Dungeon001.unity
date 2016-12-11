@@ -1131,7 +1131,7 @@ Transform:
   m_Children:
   - {fileID: 87550165}
   m_Father: {fileID: 1681696558}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &290302206
 Prefab:
@@ -2591,7 +2591,7 @@ Transform:
   m_Children:
   - {fileID: 1126667310}
   m_Father: {fileID: 1681696558}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &614180982
 Prefab:
@@ -6354,8 +6354,8 @@ MonoBehaviour:
     m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   Modules:
-  - {fileID: 609370581}
   - {fileID: 269535464}
+  - {fileID: 609370581}
   - {fileID: 946177055}
   - {fileID: 1093152667}
   - {fileID: 1085064531}
@@ -6370,8 +6370,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 609370582}
   - {fileID: 269535465}
+  - {fileID: 609370582}
   - {fileID: 946177056}
   - {fileID: 1093152668}
   - {fileID: 1085064532}

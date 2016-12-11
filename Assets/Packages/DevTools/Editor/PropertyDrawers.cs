@@ -523,12 +523,12 @@ namespace FluffyUnderware.DevToolsEditor
                 case SerializedPropertyType.Float:
                     minV = property.floatValue;
                     maxV = pMaxV.floatValue;
-                    EditorGUI.MinMaxSlider(label, position, ref minV, ref maxV, lBound, uBound);
+					EditorGUI.MinMaxSlider(position, label, ref minV, ref maxV, lBound, uBound);
                     break;
                 case SerializedPropertyType.Integer:
                     minV = property.intValue;
                     maxV = pMaxV.intValue;
-                    EditorGUI.MinMaxSlider(label, position, ref minV, ref maxV, lBound, uBound);
+				EditorGUI.MinMaxSlider(position, label, ref minV, ref maxV, lBound, uBound);
                     break;
             }
 
@@ -789,7 +789,7 @@ namespace FluffyUnderware.DevToolsEditor
                 r2.width -= 16;
 
             EditorGUI.BeginChangeCheck();
-            EditorGUI.MinMaxSlider(label, r2, ref l, ref u, mOptions.FromMin, mOptions.FromMax);
+			EditorGUI.MinMaxSlider(r2, label, ref l, ref u, mOptions.FromMin, mOptions.FromMax);
             if (EditorGUI.EndChangeCheck())
             {
                 ppFrom.floatValue = l;
@@ -1036,7 +1036,7 @@ namespace FluffyUnderware.DevToolsEditor
                 r2.width -= 16;
 
             EditorGUI.BeginChangeCheck();
-            EditorGUI.MinMaxSlider(label, r2, ref l, ref u, mOptions.FromMin, mOptions.FromMax);
+			EditorGUI.MinMaxSlider(r2, label, ref l, ref u, mOptions.FromMin, mOptions.FromMax);
             if (EditorGUI.EndChangeCheck())
             {
                 ppFrom.intValue = (int)l;
