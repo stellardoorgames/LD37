@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour {
 
 	public float speed = 1f;
 
+	public TenticleController tenticleController;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -20,5 +22,15 @@ public class PlayerController : MonoBehaviour {
 
 
 		transform.Translate (horizontal * speed, 0f, vertical * speed);
+	}
+
+	void OnTriggerEnter(Collider other)
+	{
+		Obstacle obsticle = other.GetComponent<Obstacle> ();
+
+		if (obsticle != null)
+		{
+			tenticleController.Collide (obsticle.gameObject);
+		}
 	}
 }

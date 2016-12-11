@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 441f88d6c30b64b4ebd1b150d5186e4a
-timeCreated: 1481393219
+guid: 5a8b433d33c55f34fbdccf3c337acb8f
+timeCreated: 1481427521
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName: {}
@@ -15,10 +15,10 @@ TextureImporter:
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
-    convertToNormalMap: 1
+    convertToNormalMap: 0
     externalNormalMap: 0
-    heightScale: 0.068
-    normalMapFilter: 1
+    heightScale: 0.25
+    normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
