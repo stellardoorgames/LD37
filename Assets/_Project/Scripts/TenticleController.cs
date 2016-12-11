@@ -70,8 +70,8 @@ public class TenticleController : MonoBehaviour {
 
 	}
 
-	/*int GetIndexFromPosition(Vector3 pos)
+	int GetIndexFromPosition(Vector3 pos)
 	{
-		//return (pos);
-	}*/
+		return ((int)pos.x);
+	}
 }

@@ -125,7 +125,7 @@ namespace FluffyUnderware.DevToolsEditor
             // Only let certain hotkeys pass
             if (!EditorGUIUtility.editingTextField) 
             {
-                GUIUtility.keyboardControl = GUIUtility.GetControlID(FocusType.Native);
+                GUIUtility.keyboardControl = GUIUtility.GetControlID(FocusType.Passive);
             }
 
             var projects = DT.Projects;
