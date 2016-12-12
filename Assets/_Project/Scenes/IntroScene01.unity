@@ -614,12 +614,12 @@ GameObject:
   - component: {fileID: 631491605}
   - component: {fileID: 631491604}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: SceneController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &631491604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1247,7 +1247,7 @@ MonoBehaviour:
   start: 0
   nextObject: {fileID: 496917204}
   nextImageTime: 1.5
-  duration: 5
+  duration: 3
   fadeInDuration: 1
   fadeOutDuration: 0.5
   startColor: {r: 0, g: 0, b: 0, a: 0}
