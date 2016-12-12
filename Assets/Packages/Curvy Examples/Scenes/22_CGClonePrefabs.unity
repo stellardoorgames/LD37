@@ -13127,23 +13127,28 @@ MonoBehaviour:
   m_AdaptOnChange: 1
   m_Animate: 0
   m_Animation:
+    serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.35416666
+    - serializedVersion: 2
+      time: 0.35416666
       value: 1.0087963
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.65548074
+    - serializedVersion: 2
+      time: 0.65548074
       value: 0.9933879
       inSlope: -0.020861626
       outSlope: -0.020861626
       tangentMode: 0
-    - time: 0.9583333
+    - serializedVersion: 2
+      time: 0.9583333
       value: 1.0314815
       inSlope: 0
       outSlope: 0
@@ -13159,24 +13164,31 @@ MonoBehaviour:
   m_DampingDirection: 0
   m_DampingUp: 0
   m_IgnoreDirection: 0
+  m_OffsetAngle: 0
+  m_OffsetRadius: 0
+  m_OffsetCompensation: 1
   m_OnAnimationEnd:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c6c65724576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControllerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_Spline: {fileID: 0}
   m_UseCache: 0
   m_OnControlPointReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnEndReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnSwitch:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &265252838
 GameObject:
   m_ObjectHideFlags: 0
@@ -18961,11 +18973,13 @@ MonoBehaviour:
   m_OnBeforeRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767943474576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767943474576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_ModuleName: 
   m_Active: 1
   m_RandomizeSeed: 0
@@ -18973,6 +18987,7 @@ MonoBehaviour:
   m_UniqueID: 16
   Properties:
     Dimensions:
+      serializedVersion: 2
       x: 316
       y: 10
       width: 250
@@ -18983,23 +18998,17 @@ MonoBehaviour:
       m_Value: 1
     MinWidth: 250
     LabelWidth: 100
-    BackgroundColor:
-      r: 0
-      g: 0
-      b: 0
-      a: 1
+    BackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   InputLinks:
   - m_ModuleID: 16
-    m_SlotName: 50617468
+    m_SlotName: Path
     m_TargetModuleID: 1
-    m_TargetSlotName: 50617468
+    m_TargetSlotName: Path
   OutputLinks:
   - m_ModuleID: 16
-    m_SlotName: 50617468
+    m_SlotName: Path
     m_TargetModuleID: 11
-    m_TargetSlotName: 506174682f566f6c756d65
-  InPath: {}
-  OutPath: {}
+    m_TargetSlotName: Path/Volume
   m_Range:
     From: 0
     To: 1
@@ -30381,23 +30390,28 @@ MonoBehaviour:
   m_AdaptOnChange: 1
   m_Animate: 0
   m_Animation:
+    serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.35416666
+    - serializedVersion: 2
+      time: 0.35416666
       value: 1.0087963
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.65548074
+    - serializedVersion: 2
+      time: 0.65548074
       value: 0.9933879
       inSlope: -0.020861626
       outSlope: -0.020861626
       tangentMode: 0
-    - time: 0.9583333
+    - serializedVersion: 2
+      time: 0.9583333
       value: 1.0314815
       inSlope: 0
       outSlope: 0
@@ -30413,24 +30427,31 @@ MonoBehaviour:
   m_DampingDirection: 0
   m_DampingUp: 0
   m_IgnoreDirection: 0
+  m_OffsetAngle: 0
+  m_OffsetRadius: 0
+  m_OffsetCompensation: 1
   m_OnAnimationEnd:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c6c65724576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControllerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_Spline: {fileID: 0}
   m_UseCache: 0
   m_OnControlPointReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnEndReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnSwitch:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &396403707
 GameObject:
   m_ObjectHideFlags: 0
@@ -44837,7 +44858,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13463edfb77f1304ca4a0da53dfe21a0, type: 2}
-  m_RootGameObject: {fileID: 791367865}
+  m_RootGameObject: {fileID: 1612604568}
   m_IsPrefabParent: 0
 --- !u!1 &535946019
 GameObject:
@@ -44892,23 +44913,28 @@ MonoBehaviour:
   m_AdaptOnChange: 1
   m_Animate: 0
   m_Animation:
+    serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.35416666
+    - serializedVersion: 2
+      time: 0.35416666
       value: 1.0087963
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.65548074
+    - serializedVersion: 2
+      time: 0.65548074
       value: 0.9933879
       inSlope: -0.020861626
       outSlope: -0.020861626
       tangentMode: 0
-    - time: 0.9583333
+    - serializedVersion: 2
+      time: 0.9583333
       value: 1.0314815
       inSlope: 0
       outSlope: 0
@@ -44924,24 +44950,31 @@ MonoBehaviour:
   m_DampingDirection: 0
   m_DampingUp: 0
   m_IgnoreDirection: 0
+  m_OffsetAngle: 0
+  m_OffsetRadius: 0
+  m_OffsetCompensation: 1
   m_OnAnimationEnd:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c6c65724576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControllerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_Spline: {fileID: 0}
   m_UseCache: 0
   m_OnControlPointReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnEndReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnSwitch:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &536518737
 GameObject:
   m_ObjectHideFlags: 0
@@ -53777,23 +53810,28 @@ MonoBehaviour:
   m_AdaptOnChange: 1
   m_Animate: 0
   m_Animation:
+    serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.35416666
+    - serializedVersion: 2
+      time: 0.35416666
       value: 1.0087963
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.65548074
+    - serializedVersion: 2
+      time: 0.65548074
       value: 0.9933879
       inSlope: -0.020861626
       outSlope: -0.020861626
       tangentMode: 0
-    - time: 0.9583333
+    - serializedVersion: 2
+      time: 0.9583333
       value: 1.0314815
       inSlope: 0
       outSlope: 0
@@ -53809,24 +53847,31 @@ MonoBehaviour:
   m_DampingDirection: 0
   m_DampingUp: 0
   m_IgnoreDirection: 0
+  m_OffsetAngle: 0
+  m_OffsetRadius: 0
+  m_OffsetCompensation: 1
   m_OnAnimationEnd:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c6c65724576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControllerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_Spline: {fileID: 0}
   m_UseCache: 0
   m_OnControlPointReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnEndReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnSwitch:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &687742778
 GameObject:
   m_ObjectHideFlags: 0
@@ -54211,23 +54256,28 @@ MonoBehaviour:
   m_AdaptOnChange: 1
   m_Animate: 0
   m_Animation:
+    serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.35416666
+    - serializedVersion: 2
+      time: 0.35416666
       value: 1.0087963
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.65548074
+    - serializedVersion: 2
+      time: 0.65548074
       value: 0.9933879
       inSlope: -0.020861626
       outSlope: -0.020861626
       tangentMode: 0
-    - time: 0.9583333
+    - serializedVersion: 2
+      time: 0.9583333
       value: 1.0314815
       inSlope: 0
       outSlope: 0
@@ -54243,24 +54293,31 @@ MonoBehaviour:
   m_DampingDirection: 0
   m_DampingUp: 0
   m_IgnoreDirection: 0
+  m_OffsetAngle: 0
+  m_OffsetRadius: 0
+  m_OffsetCompensation: 1
   m_OnAnimationEnd:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c6c65724576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControllerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_Spline: {fileID: 0}
   m_UseCache: 0
   m_OnControlPointReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnEndReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnSwitch:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &722876670
 GameObject:
   m_ObjectHideFlags: 0
@@ -54450,23 +54507,28 @@ MonoBehaviour:
   m_AdaptOnChange: 1
   m_Animate: 0
   m_Animation:
+    serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.35416666
+    - serializedVersion: 2
+      time: 0.35416666
       value: 1.0087963
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.65548074
+    - serializedVersion: 2
+      time: 0.65548074
       value: 0.9933879
       inSlope: -0.020861626
       outSlope: -0.020861626
       tangentMode: 0
-    - time: 0.9583333
+    - serializedVersion: 2
+      time: 0.9583333
       value: 1.0314815
       inSlope: 0
       outSlope: 0
@@ -54482,24 +54544,31 @@ MonoBehaviour:
   m_DampingDirection: 0
   m_DampingUp: 0
   m_IgnoreDirection: 0
+  m_OffsetAngle: 0
+  m_OffsetRadius: 0
+  m_OffsetCompensation: 1
   m_OnAnimationEnd:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c6c65724576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControllerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_Spline: {fileID: 0}
   m_UseCache: 0
   m_OnControlPointReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnEndReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnSwitch:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &747217120
 GameObject:
   m_ObjectHideFlags: 0
@@ -60070,47 +60139,6 @@ ParticleSystem:
       minColor: {r: 1, g: 1, b: 1, a: 1}
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       minMaxState: 0
---- !u!1 &791367865
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 184722, guid: 13463edfb77f1304ca4a0da53dfe21a0, type: 2}
-  m_PrefabInternal: {fileID: 528416557}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 791367867}
-  - component: {fileID: 791367866}
-  m_Layer: 5
-  m_Name: SceneSwitcher
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &791367866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11429856, guid: 13463edfb77f1304ca4a0da53dfe21a0,
-    type: 2}
-  m_PrefabInternal: {fileID: 528416557}
-  m_GameObject: {fileID: 791367865}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5af19fa201c5ff499f9c7924cb7bc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &791367867
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 476422, guid: 13463edfb77f1304ca4a0da53dfe21a0, type: 2}
-  m_PrefabInternal: {fileID: 528416557}
-  m_GameObject: {fileID: 791367865}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &797590235
 GameObject:
   m_ObjectHideFlags: 0
@@ -60950,11 +60978,13 @@ MonoBehaviour:
   m_OnBeforeRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767943474576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767943474576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_ModuleName: 
   m_Active: 1
   m_RandomizeSeed: 0
@@ -60962,6 +60992,7 @@ MonoBehaviour:
   m_UniqueID: 11
   Properties:
     Dimensions:
+      serializedVersion: 2
       x: 655
       y: 247
       width: 350
@@ -60972,28 +61003,21 @@ MonoBehaviour:
       m_Value: 1
     MinWidth: 350
     LabelWidth: 0
-    BackgroundColor:
-      r: 0
-      g: 0
-      b: 1
-      a: 1
+    BackgroundColor: {r: 0, g: 0, b: 1, a: 1}
   InputLinks:
   - m_ModuleID: 11
-    m_SlotName: 506174682f566f6c756d65
+    m_SlotName: Path/Volume
     m_TargetModuleID: 16
-    m_TargetSlotName: 50617468
+    m_TargetSlotName: Path
   - m_ModuleID: 11
-    m_SlotName: 426f756e6473
+    m_SlotName: Bounds
     m_TargetModuleID: 17
-    m_TargetSlotName: 47616d654f626a656374
+    m_TargetSlotName: GameObject
   OutputLinks:
   - m_ModuleID: 11
-    m_SlotName: 53706f7473
+    m_SlotName: Spots
     m_TargetModuleID: 18
-    m_TargetSlotName: 53706f7473
-  InPath: {}
-  InBounds: {}
-  OutSpots: {}
+    m_TargetSlotName: Spots
   m_Range:
     From: 0
     To: 1
@@ -61002,13 +61026,16 @@ MonoBehaviour:
   m_Simulate: 0
   m_CrossBase: 0
   m_CrossCurve:
+    serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 0
       inSlope: 0
       outSlope: 0
@@ -61017,7 +61044,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   m_Groups:
-  - m_Name: 4f62737461636c6573
+  - m_Name: Obstacles
     m_KeepTogether: 0
     m_SpaceBefore:
       From: 0
@@ -61048,7 +61075,7 @@ MonoBehaviour:
     m_Items:
     - Index: 0
       m_Weight: 0.5
-  - m_Name: 5368697073
+  - m_Name: Ships
     m_KeepTogether: 0
     m_SpaceBefore:
       From: 0
@@ -67246,23 +67273,28 @@ MonoBehaviour:
   m_AdaptOnChange: 1
   m_Animate: 0
   m_Animation:
+    serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.35416666
+    - serializedVersion: 2
+      time: 0.35416666
       value: 1.0087963
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.65548074
+    - serializedVersion: 2
+      time: 0.65548074
       value: 0.9933879
       inSlope: -0.020861626
       outSlope: -0.020861626
       tangentMode: 0
-    - time: 0.9583333
+    - serializedVersion: 2
+      time: 0.9583333
       value: 1.0314815
       inSlope: 0
       outSlope: 0
@@ -67278,24 +67310,31 @@ MonoBehaviour:
   m_DampingDirection: 0
   m_DampingUp: 0
   m_IgnoreDirection: 0
+  m_OffsetAngle: 0
+  m_OffsetRadius: 0
+  m_OffsetCompensation: 1
   m_OnAnimationEnd:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c6c65724576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControllerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_Spline: {fileID: 0}
   m_UseCache: 0
   m_OnControlPointReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnEndReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnSwitch:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &982951605
 GameObject:
   m_ObjectHideFlags: 0
@@ -82023,23 +82062,28 @@ MonoBehaviour:
   m_AdaptOnChange: 1
   m_Animate: 0
   m_Animation:
+    serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.35416666
+    - serializedVersion: 2
+      time: 0.35416666
       value: 1.0087963
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.65548074
+    - serializedVersion: 2
+      time: 0.65548074
       value: 0.9933879
       inSlope: -0.020861626
       outSlope: -0.020861626
       tangentMode: 0
-    - time: 0.9583333
+    - serializedVersion: 2
+      time: 0.9583333
       value: 1.0314815
       inSlope: 0
       outSlope: 0
@@ -82055,24 +82099,31 @@ MonoBehaviour:
   m_DampingDirection: 0
   m_DampingUp: 0
   m_IgnoreDirection: 0
+  m_OffsetAngle: 0
+  m_OffsetRadius: 0
+  m_OffsetCompensation: 1
   m_OnAnimationEnd:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c6c65724576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControllerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_Spline: {fileID: 0}
   m_UseCache: 0
   m_OnControlPointReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnEndReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnSwitch:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1145552309
 GameObject:
   m_ObjectHideFlags: 0
@@ -82168,11 +82219,13 @@ MonoBehaviour:
   m_OnBeforeRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767943474576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767943474576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_ModuleName: 
   m_Active: 1
   m_RandomizeSeed: 0
@@ -82180,6 +82233,7 @@ MonoBehaviour:
   m_UniqueID: 18
   Properties:
     Dimensions:
+      serializedVersion: 2
       x: 1132
       y: 216
       width: 250
@@ -82190,23 +82244,17 @@ MonoBehaviour:
       m_Value: 1
     MinWidth: 250
     LabelWidth: 0
-    BackgroundColor:
-      r: 0
-      g: 0
-      b: 0
-      a: 1
+    BackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   InputLinks:
   - m_ModuleID: 18
-    m_SlotName: 53706f7473
+    m_SlotName: Spots
     m_TargetModuleID: 11
-    m_TargetSlotName: 53706f7473
+    m_TargetSlotName: Spots
   - m_ModuleID: 18
-    m_SlotName: 47616d654f626a656374
+    m_SlotName: GameObject
     m_TargetModuleID: 17
-    m_TargetSlotName: 47616d654f626a656374
+    m_TargetSlotName: GameObject
   OutputLinks: []
-  InGameObjectArray: {}
-  InSpots: {}
   m_Resources:
     Items:
     - {fileID: 1144657793}
@@ -82255,51 +82303,51 @@ MonoBehaviour:
     - {fileID: 1085382735}
     - {fileID: 535946020}
     PoolNames:
-    - 31385f436865636b706f696e74
-    - 31385f53686970
-    - 31385f436865636b706f696e74
-    - 31385f53686970
-    - 31385f436865636b706f696e74
-    - 31385f53686970
-    - 31385f436865636b706f696e74
-    - 31385f53686970
-    - 31385f436865636b706f696e74
-    - 31385f53686970
-    - 31385f436865636b706f696e74
-    - 31385f53686970
-    - 31385f436865636b706f696e74
-    - 31385f53686970
-    - 31385f436865636b706f696e74
-    - 31385f53686970
-    - 31385f436865636b706f696e74
-    - 31385f53686970
-    - 31385f436865636b706f696e74
-    - 31385f53686970
-    - 31385f436865636b706f696e74
-    - 31385f53686970
-    - 31385f436865636b706f696e74
-    - 31385f53686970
-    - 31385f436865636b706f696e74
-    - 31385f53686970
-    - 31385f436865636b706f696e74
-    - 31385f53686970
-    - 31385f436865636b706f696e74
-    - 31385f53686970
-    - 31385f436865636b706f696e74
-    - 31385f53686970
-    - 31385f436865636b706f696e74
-    - 31385f53686970
-    - 31385f436865636b706f696e74
-    - 31385f53686970
-    - 31385f436865636b706f696e74
-    - 31385f53686970
-    - 31385f436865636b706f696e74
-    - 31385f53686970
-    - 31385f436865636b706f696e74
-    - 31385f53686970
-    - 31385f436865636b706f696e74
-    - 31385f53686970
-    - 31385f436865636b706f696e74
+    - 18_Checkpoint
+    - 18_Ship
+    - 18_Checkpoint
+    - 18_Ship
+    - 18_Checkpoint
+    - 18_Ship
+    - 18_Checkpoint
+    - 18_Ship
+    - 18_Checkpoint
+    - 18_Ship
+    - 18_Checkpoint
+    - 18_Ship
+    - 18_Checkpoint
+    - 18_Ship
+    - 18_Checkpoint
+    - 18_Ship
+    - 18_Checkpoint
+    - 18_Ship
+    - 18_Checkpoint
+    - 18_Ship
+    - 18_Checkpoint
+    - 18_Ship
+    - 18_Checkpoint
+    - 18_Ship
+    - 18_Checkpoint
+    - 18_Ship
+    - 18_Checkpoint
+    - 18_Ship
+    - 18_Checkpoint
+    - 18_Ship
+    - 18_Checkpoint
+    - 18_Ship
+    - 18_Checkpoint
+    - 18_Ship
+    - 18_Checkpoint
+    - 18_Ship
+    - 18_Checkpoint
+    - 18_Ship
+    - 18_Checkpoint
+    - 18_Ship
+    - 18_Checkpoint
+    - 18_Ship
+    - 18_Checkpoint
+    - 18_Ship
+    - 18_Checkpoint
   m_MakeStatic: 0
   m_Layer: 0
 --- !u!4 &1162792377
@@ -82459,11 +82507,13 @@ MonoBehaviour:
   m_OnBeforeRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767943474576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767943474576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_ModuleName: 
   m_Active: 1
   m_RandomizeSeed: 0
@@ -82471,6 +82521,7 @@ MonoBehaviour:
   m_UniqueID: 19
   Properties:
     Dimensions:
+      serializedVersion: 2
       x: 702
       y: 19
       width: 200
@@ -82481,14 +82532,11 @@ MonoBehaviour:
       m_Value: 1
     MinWidth: 200
     LabelWidth: 50
-    BackgroundColor:
-      r: 1
-      g: 1
-      b: 1
-      a: 1
+    BackgroundColor: {r: 1, g: 1, b: 1, a: 1}
   InputLinks: []
   OutputLinks: []
-  m_Note: 53696d706c652050726566616220636c6f6e696e67206578616d706c652e204e6f74652074686174207468652022566f6c756d652053706f747322206d6f64756c65206569746865722074616b6573206120566f6c756d65206f72206120526173746572697a6564205061746821
+  m_Note: Simple Prefab cloning example. Note that the "Volume Spots" module either
+    takes a Volume or a Rasterized Path!
 --- !u!4 &1183560361
 Transform:
   m_ObjectHideFlags: 0
@@ -82924,35 +82972,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82f49053b9b703e4cbb1c6e76a563270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 322e312e30
+  m_Version: 2.1.1
   m_OnRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnAfterControlPointChanges:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnBeforeControlPointAdd:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c506f696e744576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControlPointEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnAfterControlPointAdd:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c506f696e744576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControlPointEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnBeforeControlPointDelete:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c506f696e744576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControlPointEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnMoveControlPointReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnMoveEndReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   ShowGizmos: 1
   m_Interpolation: 3
   m_RestrictTo2D: 0
@@ -82963,16 +83018,8 @@ MonoBehaviour:
   m_Tension: 0
   m_Continuity: 0
   m_Bias: 0
-  m_GizmoColor:
-    r: 0.70980394
-    g: 0.70980394
-    b: 0.70980394
-    a: 1
-  m_GizmoSelectionColor:
-    r: 0.14901961
-    g: 0.34901962
-    b: 0.6784314
-    a: 1
+  m_GizmoColor: {r: 0.70980394, g: 0.70980394, b: 0.70980394, a: 1}
+  m_GizmoSelectionColor: {r: 0.14901961, g: 0.34901962, b: 0.6784314, a: 1}
   m_CacheDensity: 50
   m_UsePooling: 1
   m_UseThreading: 0
@@ -88999,11 +89046,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Splines:
   - Spline: {fileID: 1244766100}
-    LineColor:
-      r: 0.70980394
-      g: 0.70980394
-      b: 0.70980394
-      a: 1
+    LineColor: {r: 0.70980394, g: 0.70980394, b: 0.70980394, a: 1}
 --- !u!1 &1380882089
 GameObject:
   m_ObjectHideFlags: 0
@@ -91911,23 +91954,28 @@ MonoBehaviour:
   m_AdaptOnChange: 1
   m_Animate: 0
   m_Animation:
+    serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.35416666
+    - serializedVersion: 2
+      time: 0.35416666
       value: 1.0087963
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.65548074
+    - serializedVersion: 2
+      time: 0.65548074
       value: 0.9933879
       inSlope: -0.020861626
       outSlope: -0.020861626
       tangentMode: 0
-    - time: 0.9583333
+    - serializedVersion: 2
+      time: 0.9583333
       value: 1.0314815
       inSlope: 0
       outSlope: 0
@@ -91943,24 +91991,31 @@ MonoBehaviour:
   m_DampingDirection: 0
   m_DampingUp: 0
   m_IgnoreDirection: 0
+  m_OffsetAngle: 0
+  m_OffsetRadius: 0
+  m_OffsetCompensation: 1
   m_OnAnimationEnd:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c6c65724576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControllerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_Spline: {fileID: 0}
   m_UseCache: 0
   m_OnControlPointReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnEndReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnSwitch:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1390721324
 GameObject:
   m_ObjectHideFlags: 0
@@ -92083,23 +92138,28 @@ MonoBehaviour:
   m_AdaptOnChange: 1
   m_Animate: 0
   m_Animation:
+    serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.35416666
+    - serializedVersion: 2
+      time: 0.35416666
       value: 1.0087963
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.65548074
+    - serializedVersion: 2
+      time: 0.65548074
       value: 0.9933879
       inSlope: -0.020861626
       outSlope: -0.020861626
       tangentMode: 0
-    - time: 0.9583333
+    - serializedVersion: 2
+      time: 0.9583333
       value: 1.0314815
       inSlope: 0
       outSlope: 0
@@ -92115,24 +92175,31 @@ MonoBehaviour:
   m_DampingDirection: 0
   m_DampingUp: 0
   m_IgnoreDirection: 0
+  m_OffsetAngle: 0
+  m_OffsetRadius: 0
+  m_OffsetCompensation: 1
   m_OnAnimationEnd:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c6c65724576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControllerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_Spline: {fileID: 0}
   m_UseCache: 0
   m_OnControlPointReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnEndReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnSwitch:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1392660684
 GameObject:
   m_ObjectHideFlags: 0
@@ -92348,23 +92415,28 @@ MonoBehaviour:
   m_AdaptOnChange: 1
   m_Animate: 0
   m_Animation:
+    serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.35416666
+    - serializedVersion: 2
+      time: 0.35416666
       value: 1.0087963
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.65548074
+    - serializedVersion: 2
+      time: 0.65548074
       value: 0.9933879
       inSlope: -0.020861626
       outSlope: -0.020861626
       tangentMode: 0
-    - time: 0.9583333
+    - serializedVersion: 2
+      time: 0.9583333
       value: 1.0314815
       inSlope: 0
       outSlope: 0
@@ -92380,24 +92452,31 @@ MonoBehaviour:
   m_DampingDirection: 0
   m_DampingUp: 0
   m_IgnoreDirection: 0
+  m_OffsetAngle: 0
+  m_OffsetRadius: 0
+  m_OffsetCompensation: 1
   m_OnAnimationEnd:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c6c65724576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControllerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_Spline: {fileID: 0}
   m_UseCache: 0
   m_OnControlPointReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnEndReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnSwitch:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1415212303
 GameObject:
   m_ObjectHideFlags: 0
@@ -92656,23 +92735,28 @@ MonoBehaviour:
   m_AdaptOnChange: 1
   m_Animate: 0
   m_Animation:
+    serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.35416666
+    - serializedVersion: 2
+      time: 0.35416666
       value: 1.0087963
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.65548074
+    - serializedVersion: 2
+      time: 0.65548074
       value: 0.9933879
       inSlope: -0.020861626
       outSlope: -0.020861626
       tangentMode: 0
-    - time: 0.9583333
+    - serializedVersion: 2
+      time: 0.9583333
       value: 1.0314815
       inSlope: 0
       outSlope: 0
@@ -92688,24 +92772,31 @@ MonoBehaviour:
   m_DampingDirection: 0
   m_DampingUp: 0
   m_IgnoreDirection: 0
+  m_OffsetAngle: 0
+  m_OffsetRadius: 0
+  m_OffsetCompensation: 1
   m_OnAnimationEnd:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c6c65724576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControllerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_Spline: {fileID: 0}
   m_UseCache: 0
   m_OnControlPointReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnEndReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnSwitch:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1462208852
 GameObject:
   m_ObjectHideFlags: 0
@@ -92896,23 +92987,28 @@ MonoBehaviour:
   m_AdaptOnChange: 1
   m_Animate: 0
   m_Animation:
+    serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.35416666
+    - serializedVersion: 2
+      time: 0.35416666
       value: 1.0087963
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.65548074
+    - serializedVersion: 2
+      time: 0.65548074
       value: 0.9933879
       inSlope: -0.020861626
       outSlope: -0.020861626
       tangentMode: 0
-    - time: 0.9583333
+    - serializedVersion: 2
+      time: 0.9583333
       value: 1.0314815
       inSlope: 0
       outSlope: 0
@@ -92928,24 +93024,31 @@ MonoBehaviour:
   m_DampingDirection: 0
   m_DampingUp: 0
   m_IgnoreDirection: 0
+  m_OffsetAngle: 0
+  m_OffsetRadius: 0
+  m_OffsetCompensation: 1
   m_OnAnimationEnd:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c6c65724576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControllerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_Spline: {fileID: 0}
   m_UseCache: 0
   m_OnControlPointReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnEndReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnSwitch:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1468823582
 GameObject:
   m_ObjectHideFlags: 0
@@ -96360,23 +96463,28 @@ MonoBehaviour:
   m_AdaptOnChange: 1
   m_Animate: 0
   m_Animation:
+    serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.35416666
+    - serializedVersion: 2
+      time: 0.35416666
       value: 1.0087963
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.65548074
+    - serializedVersion: 2
+      time: 0.65548074
       value: 0.9933879
       inSlope: -0.020861626
       outSlope: -0.020861626
       tangentMode: 0
-    - time: 0.9583333
+    - serializedVersion: 2
+      time: 0.9583333
       value: 1.0314815
       inSlope: 0
       outSlope: 0
@@ -96392,24 +96500,31 @@ MonoBehaviour:
   m_DampingDirection: 0
   m_DampingUp: 0
   m_IgnoreDirection: 0
+  m_OffsetAngle: 0
+  m_OffsetRadius: 0
+  m_OffsetCompensation: 1
   m_OnAnimationEnd:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c6c65724576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControllerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_Spline: {fileID: 0}
   m_UseCache: 0
   m_OnControlPointReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnEndReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnSwitch:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1573508034
 GameObject:
   m_ObjectHideFlags: 0
@@ -99447,23 +99562,28 @@ MonoBehaviour:
   m_AdaptOnChange: 1
   m_Animate: 0
   m_Animation:
+    serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.35416666
+    - serializedVersion: 2
+      time: 0.35416666
       value: 1.0087963
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.65548074
+    - serializedVersion: 2
+      time: 0.65548074
       value: 0.9933879
       inSlope: -0.020861626
       outSlope: -0.020861626
       tangentMode: 0
-    - time: 0.9583333
+    - serializedVersion: 2
+      time: 0.9583333
       value: 1.0314815
       inSlope: 0
       outSlope: 0
@@ -99479,24 +99599,31 @@ MonoBehaviour:
   m_DampingDirection: 0
   m_DampingUp: 0
   m_IgnoreDirection: 0
+  m_OffsetAngle: 0
+  m_OffsetRadius: 0
+  m_OffsetCompensation: 1
   m_OnAnimationEnd:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c6c65724576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControllerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_Spline: {fileID: 0}
   m_UseCache: 0
   m_OnControlPointReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnEndReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnSwitch:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1604828200
 GameObject:
   m_ObjectHideFlags: 0
@@ -102414,6 +102541,47 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1608820639}
   m_Mesh: {fileID: 4300000, guid: 33dce83cdb6948247ba5a483fe0db390, type: 3}
+--- !u!1 &1612604568
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 184722, guid: 13463edfb77f1304ca4a0da53dfe21a0, type: 2}
+  m_PrefabInternal: {fileID: 528416557}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1612604570}
+  - component: {fileID: 1612604569}
+  m_Layer: 5
+  m_Name: SceneSwitcher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1612604569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11429856, guid: 13463edfb77f1304ca4a0da53dfe21a0,
+    type: 2}
+  m_PrefabInternal: {fileID: 528416557}
+  m_GameObject: {fileID: 1612604568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5af19fa201c5ff499f9c7924cb7bc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1612604570
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 476422, guid: 13463edfb77f1304ca4a0da53dfe21a0, type: 2}
+  m_PrefabInternal: {fileID: 528416557}
+  m_GameObject: {fileID: 1612604568}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1618839511
 GameObject:
   m_ObjectHideFlags: 0
@@ -105304,7 +105472,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62f98941b92097f49bd5ff480ec47122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Identifier: 466c75666679556e646572776172652e43757276792e437572767953706c696e655365676d656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+  m_Identifier: FluffyUnderware.Curvy.CurvySplineSegment, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
   m_Settings:
     m_Prewarm: 1
     m_AutoCreate: 1
@@ -105412,11 +105581,13 @@ MonoBehaviour:
   m_OnBeforeRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767943474576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767943474576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_ModuleName: 
   m_Active: 1
   m_RandomizeSeed: 0
@@ -105424,6 +105595,7 @@ MonoBehaviour:
   m_UniqueID: 17
   Properties:
     Dimensions:
+      serializedVersion: 2
       x: 14
       y: 260
       width: 250
@@ -105434,22 +105606,17 @@ MonoBehaviour:
       m_Value: 1
     MinWidth: 250
     LabelWidth: 0
-    BackgroundColor:
-      r: 0
-      g: 0
-      b: 0
-      a: 1
+    BackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   InputLinks: []
   OutputLinks:
   - m_ModuleID: 17
-    m_SlotName: 47616d654f626a656374
+    m_SlotName: GameObject
     m_TargetModuleID: 11
-    m_TargetSlotName: 426f756e6473
+    m_TargetSlotName: Bounds
   - m_ModuleID: 17
-    m_SlotName: 47616d654f626a656374
+    m_SlotName: GameObject
     m_TargetModuleID: 18
-    m_TargetSlotName: 47616d654f626a656374
-  OutGameObject: {}
+    m_TargetSlotName: GameObject
   m_GameObjects:
   - m_Object: {fileID: 159084, guid: 8a09b0f1c96bfbe4f9a1ebc232bd2f64, type: 2}
     m_Translation: {x: 0, y: 0, z: 0}
@@ -108378,23 +108545,28 @@ MonoBehaviour:
   m_AdaptOnChange: 1
   m_Animate: 0
   m_Animation:
+    serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.35416666
+    - serializedVersion: 2
+      time: 0.35416666
       value: 1.0087963
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.65548074
+    - serializedVersion: 2
+      time: 0.65548074
       value: 0.9933879
       inSlope: -0.020861626
       outSlope: -0.020861626
       tangentMode: 0
-    - time: 0.9583333
+    - serializedVersion: 2
+      time: 0.9583333
       value: 1.0314815
       inSlope: 0
       outSlope: 0
@@ -108410,24 +108582,31 @@ MonoBehaviour:
   m_DampingDirection: 0
   m_DampingUp: 0
   m_IgnoreDirection: 0
+  m_OffsetAngle: 0
+  m_OffsetRadius: 0
+  m_OffsetCompensation: 1
   m_OnAnimationEnd:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c6c65724576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControllerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_Spline: {fileID: 0}
   m_UseCache: 0
   m_OnControlPointReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnEndReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnSwitch:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1655437974
 GameObject:
   m_ObjectHideFlags: 0
@@ -111938,23 +112117,28 @@ MonoBehaviour:
   m_AdaptOnChange: 1
   m_Animate: 0
   m_Animation:
+    serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.35416666
+    - serializedVersion: 2
+      time: 0.35416666
       value: 1.0087963
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.65548074
+    - serializedVersion: 2
+      time: 0.65548074
       value: 0.9933879
       inSlope: -0.020861626
       outSlope: -0.020861626
       tangentMode: 0
-    - time: 0.9583333
+    - serializedVersion: 2
+      time: 0.9583333
       value: 1.0314815
       inSlope: 0
       outSlope: 0
@@ -111970,24 +112154,31 @@ MonoBehaviour:
   m_DampingDirection: 0
   m_DampingUp: 0
   m_IgnoreDirection: 0
+  m_OffsetAngle: 0
+  m_OffsetRadius: 0
+  m_OffsetCompensation: 1
   m_OnAnimationEnd:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c6c65724576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControllerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_Spline: {fileID: 0}
   m_UseCache: 0
   m_OnControlPointReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnEndReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnSwitch:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1772770899
 GameObject:
   m_ObjectHideFlags: 0
@@ -115031,23 +115222,28 @@ MonoBehaviour:
   m_AdaptOnChange: 1
   m_Animate: 0
   m_Animation:
+    serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.35416666
+    - serializedVersion: 2
+      time: 0.35416666
       value: 1.0087963
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.65548074
+    - serializedVersion: 2
+      time: 0.65548074
       value: 0.9933879
       inSlope: -0.020861626
       outSlope: -0.020861626
       tangentMode: 0
-    - time: 0.9583333
+    - serializedVersion: 2
+      time: 0.9583333
       value: 1.0314815
       inSlope: 0
       outSlope: 0
@@ -115063,24 +115259,31 @@ MonoBehaviour:
   m_DampingDirection: 0
   m_DampingUp: 0
   m_IgnoreDirection: 0
+  m_OffsetAngle: 0
+  m_OffsetRadius: 0
+  m_OffsetCompensation: 1
   m_OnAnimationEnd:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c6c65724576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControllerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_Spline: {fileID: 0}
   m_UseCache: 0
   m_OnControlPointReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnEndReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnSwitch:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1819320297
 GameObject:
   m_ObjectHideFlags: 0
@@ -115440,23 +115643,28 @@ MonoBehaviour:
   m_AdaptOnChange: 1
   m_Animate: 0
   m_Animation:
+    serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.35416666
+    - serializedVersion: 2
+      time: 0.35416666
       value: 1.0087963
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.65548074
+    - serializedVersion: 2
+      time: 0.65548074
       value: 0.9933879
       inSlope: -0.020861626
       outSlope: -0.020861626
       tangentMode: 0
-    - time: 0.9583333
+    - serializedVersion: 2
+      time: 0.9583333
       value: 1.0314815
       inSlope: 0
       outSlope: 0
@@ -115472,24 +115680,31 @@ MonoBehaviour:
   m_DampingDirection: 0
   m_DampingUp: 0
   m_IgnoreDirection: 0
+  m_OffsetAngle: 0
+  m_OffsetRadius: 0
+  m_OffsetCompensation: 1
   m_OnAnimationEnd:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c6c65724576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControllerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_Spline: {fileID: 0}
   m_UseCache: 0
   m_OnControlPointReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnEndReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnSwitch:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1869942018
 GameObject:
   m_ObjectHideFlags: 0
@@ -115846,23 +116061,28 @@ MonoBehaviour:
   m_AdaptOnChange: 1
   m_Animate: 0
   m_Animation:
+    serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.35416666
+    - serializedVersion: 2
+      time: 0.35416666
       value: 1.0087963
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.65548074
+    - serializedVersion: 2
+      time: 0.65548074
       value: 0.9933879
       inSlope: -0.020861626
       outSlope: -0.020861626
       tangentMode: 0
-    - time: 0.9583333
+    - serializedVersion: 2
+      time: 0.9583333
       value: 1.0314815
       inSlope: 0
       outSlope: 0
@@ -115878,24 +116098,31 @@ MonoBehaviour:
   m_DampingDirection: 0
   m_DampingUp: 0
   m_IgnoreDirection: 0
+  m_OffsetAngle: 0
+  m_OffsetRadius: 0
+  m_OffsetCompensation: 1
   m_OnAnimationEnd:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c6c65724576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControllerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_Spline: {fileID: 0}
   m_UseCache: 0
   m_OnControlPointReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnEndReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnSwitch:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1900033354
 GameObject:
   m_ObjectHideFlags: 0
@@ -124326,11 +124553,13 @@ MonoBehaviour:
   m_OnBeforeRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767943474576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767943474576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_ModuleName: 
   m_Active: 1
   m_RandomizeSeed: 0
@@ -124338,6 +124567,7 @@ MonoBehaviour:
   m_UniqueID: 1
   Properties:
     Dimensions:
+      serializedVersion: 2
       x: 10
       y: 10
       width: 250
@@ -124348,21 +124578,16 @@ MonoBehaviour:
       m_Value: 1
     MinWidth: 250
     LabelWidth: 0
-    BackgroundColor:
-      r: 1
-      g: 0.92156863
-      b: 0.015686275
-      a: 1
+    BackgroundColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   InputLinks: []
   OutputLinks:
   - m_ModuleID: 1
-    m_SlotName: 50617468
+    m_SlotName: Path
     m_TargetModuleID: 16
-    m_TargetSlotName: 50617468
+    m_TargetSlotName: Path
   m_UseCache: 0
   m_StartCP: {fileID: 0}
   m_EndCP: {fileID: 0}
-  Path: {}
   m_Spline: {fileID: 1244766100}
 --- !u!1 &1978027894
 GameObject:
@@ -130281,23 +130506,28 @@ MonoBehaviour:
   m_AdaptOnChange: 1
   m_Animate: 0
   m_Animation:
+    serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.35416666
+    - serializedVersion: 2
+      time: 0.35416666
       value: 1.0087963
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.65548074
+    - serializedVersion: 2
+      time: 0.65548074
       value: 0.9933879
       inSlope: -0.020861626
       outSlope: -0.020861626
       tangentMode: 0
-    - time: 0.9583333
+    - serializedVersion: 2
+      time: 0.9583333
       value: 1.0314815
       inSlope: 0
       outSlope: 0
@@ -130313,24 +130543,31 @@ MonoBehaviour:
   m_DampingDirection: 0
   m_DampingUp: 0
   m_IgnoreDirection: 0
+  m_OffsetAngle: 0
+  m_OffsetRadius: 0
+  m_OffsetCompensation: 1
   m_OnAnimationEnd:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c6c65724576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControllerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_Spline: {fileID: 0}
   m_UseCache: 0
   m_OnControlPointReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnEndReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnSwitch:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &2055683441
 GameObject:
   m_ObjectHideFlags: 0
@@ -133277,7 +133514,8 @@ MonoBehaviour:
   m_OnRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767943474576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   Modules:
   - {fileID: 1973745542}
   - {fileID: 1646623752}
@@ -133317,7 +133555,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62f98941b92097f49bd5ff480ec47122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Identifier: 466c75666679556e646572776172652e43757276792e47656e657261746f722e43474d6573685265736f757263652c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+  m_Identifier: FluffyUnderware.Curvy.Generator.CGMeshResource, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
   m_Settings:
     m_Prewarm: 0
     m_AutoCreate: 1
@@ -133337,7 +133576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3bdfa960a223645a04f11686263106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Identifier: 31385f53686970
+  m_Identifier: 18_Ship
   m_Prefabs:
   - {fileID: 181814, guid: ffbb5901c3829b14f8b88e5068bdd36e, type: 2}
   m_Settings:
@@ -133359,7 +133598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3bdfa960a223645a04f11686263106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Identifier: 31385f436865636b706f696e74
+  m_Identifier: 18_Checkpoint
   m_Prefabs:
   - {fileID: 159084, guid: 8a09b0f1c96bfbe4f9a1ebc232bd2f64, type: 2}
   m_Settings:
@@ -133423,23 +133662,28 @@ MonoBehaviour:
   m_AdaptOnChange: 1
   m_Animate: 0
   m_Animation:
+    serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.35416666
+    - serializedVersion: 2
+      time: 0.35416666
       value: 1.0087963
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.65548074
+    - serializedVersion: 2
+      time: 0.65548074
       value: 0.9933879
       inSlope: -0.020861626
       outSlope: -0.020861626
       tangentMode: 0
-    - time: 0.9583333
+    - serializedVersion: 2
+      time: 0.9583333
       value: 1.0314815
       inSlope: 0
       outSlope: 0
@@ -133455,24 +133699,31 @@ MonoBehaviour:
   m_DampingDirection: 0
   m_DampingUp: 0
   m_IgnoreDirection: 0
+  m_OffsetAngle: 0
+  m_OffsetRadius: 0
+  m_OffsetCompensation: 1
   m_OnAnimationEnd:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c6c65724576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControllerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_Spline: {fileID: 0}
   m_UseCache: 0
   m_OnControlPointReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnEndReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnSwitch:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &2077850757
 GameObject:
   m_ObjectHideFlags: 0
@@ -136680,23 +136931,28 @@ MonoBehaviour:
   m_AdaptOnChange: 1
   m_Animate: 0
   m_Animation:
+    serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.35416666
+    - serializedVersion: 2
+      time: 0.35416666
       value: 1.0087963
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 0.65548074
+    - serializedVersion: 2
+      time: 0.65548074
       value: 0.9933879
       inSlope: -0.020861626
       outSlope: -0.020861626
       tangentMode: 0
-    - time: 0.9583333
+    - serializedVersion: 2
+      time: 0.9583333
       value: 1.0314815
       inSlope: 0
       outSlope: 0
@@ -136712,24 +136968,31 @@ MonoBehaviour:
   m_DampingDirection: 0
   m_DampingUp: 0
   m_IgnoreDirection: 0
+  m_OffsetAngle: 0
+  m_OffsetRadius: 0
+  m_OffsetCompensation: 1
   m_OnAnimationEnd:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c6c65724576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControllerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_Spline: {fileID: 0}
   m_UseCache: 0
   m_OnControlPointReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnEndReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnSwitch:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &2122170890
 GameObject:
   m_ObjectHideFlags: 0

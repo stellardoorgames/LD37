@@ -137,7 +137,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 0
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: 0, y: 0, z: -23}
@@ -157,8 +156,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 1
   m_ConnectionSyncRotation: 1
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &96157578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,7 +219,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -1, y: 0, z: 0}
@@ -242,8 +238,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &103352578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,7 +287,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: 9.739525, y: -0, z: 0.38699648}
@@ -313,8 +306,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!4 &132875099
 Transform:
   m_ObjectHideFlags: 0
@@ -373,7 +364,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 0
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: 0, y: -0, z: -33.093}
@@ -393,8 +383,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &139387022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -476,7 +464,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -1, y: 0, z: 0}
@@ -496,8 +483,63 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
+--- !u!1 &221390997
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: ab277e3cf5b9d96439028ce23217a409, type: 3}
+  m_PrefabInternal: {fileID: 427340841}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1979368593}
+  - component: {fileID: 221390999}
+  - component: {fileID: 221390998}
+  m_Layer: 0
+  m_Name: rail_car_wheel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &221390998
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300000, guid: ab277e3cf5b9d96439028ce23217a409,
+    type: 3}
+  m_PrefabInternal: {fileID: 427340841}
+  m_GameObject: {fileID: 221390997}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: cfb41dfe5f2704c42bd82542d42d8509, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &221390999
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300000, guid: ab277e3cf5b9d96439028ce23217a409,
+    type: 3}
+  m_PrefabInternal: {fileID: 427340841}
+  m_GameObject: {fileID: 221390997}
+  m_Mesh: {fileID: 4300000, guid: ab277e3cf5b9d96439028ce23217a409, type: 3}
 --- !u!1 &222532715
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,11 +585,13 @@ MonoBehaviour:
   m_OnBeforeRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767943474576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767943474576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_ModuleName: 
   m_Active: 1
   m_RandomizeSeed: 0
@@ -555,6 +599,7 @@ MonoBehaviour:
   m_UniqueID: 4
   Properties:
     Dimensions:
+      serializedVersion: 2
       x: 776
       y: 12
       width: 250
@@ -565,27 +610,21 @@ MonoBehaviour:
       m_Value: 1
     MinWidth: 250
     LabelWidth: 0
-    BackgroundColor:
-      r: 0
-      g: 0
-      b: 0
-      a: 1
+    BackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   InputLinks:
   - m_ModuleID: 4
-    m_SlotName: 566f6c756d65
+    m_SlotName: Volume
     m_TargetModuleID: 3
-    m_TargetSlotName: 566f6c756d65
+    m_TargetSlotName: Volume
   OutputLinks:
   - m_ModuleID: 4
-    m_SlotName: 564d657368
+    m_SlotName: VMesh
     m_TargetModuleID: 5
-    m_TargetSlotName: 564d657368
+    m_TargetSlotName: VMesh
   - m_ModuleID: 4
-    m_SlotName: 564d657368
+    m_SlotName: VMesh
     m_TargetModuleID: 5
-    m_TargetSlotName: 564d657368
-  InVolume: {}
-  OutVMesh: {}
+    m_TargetSlotName: VMesh
   m_GenerateUV: 1
   m_Split: 1
   m_SplitLength: 100
@@ -955,35 +994,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82f49053b9b703e4cbb1c6e76a563270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 322e302e35
+  m_Version: 2.1.1
   m_OnRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnAfterControlPointChanges:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnBeforeControlPointAdd:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c506f696e744576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControlPointEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnAfterControlPointAdd:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c506f696e744576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControlPointEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnBeforeControlPointDelete:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c506f696e744576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControlPointEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnMoveControlPointReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnMoveEndReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   ShowGizmos: 1
   m_Interpolation: 3
   m_RestrictTo2D: 0
@@ -994,16 +1040,8 @@ MonoBehaviour:
   m_Tension: 0
   m_Continuity: 0
   m_Bias: 0
-  m_GizmoColor:
-    r: 0.70980394
-    g: 0.70980394
-    b: 0.70980394
-    a: 1
-  m_GizmoSelectionColor:
-    r: 0.14901961
-    g: 0.34901962
-    b: 0.6784314
-    a: 1
+  m_GizmoColor: {r: 0.70980394, g: 0.70980394, b: 0.70980394, a: 1}
+  m_GizmoSelectionColor: {r: 0.14901961, g: 0.34901962, b: 0.6784314, a: 1}
   m_CacheDensity: 50
   m_UsePooling: 1
   m_UseThreading: 0
@@ -1019,7 +1057,6 @@ MonoBehaviour:
   - {fileID: 1048681237}
   - {fileID: 860126538}
   - {fileID: 1149984505}
-  m_UserValueSize: 0
 --- !u!1 &300013538
 GameObject:
   m_ObjectHideFlags: 0
@@ -1065,7 +1102,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -1, y: 0, z: 0}
@@ -1085,8 +1121,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &300013541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1155,11 +1189,13 @@ MonoBehaviour:
   m_OnBeforeRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767943474576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767943474576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_ModuleName: 
   m_Active: 1
   m_RandomizeSeed: 0
@@ -1167,6 +1203,7 @@ MonoBehaviour:
   m_UniqueID: 5
   Properties:
     Dimensions:
+      serializedVersion: 2
       x: 1143
       y: 11
       width: 250
@@ -1177,23 +1214,17 @@ MonoBehaviour:
       m_Value: 1
     MinWidth: 250
     LabelWidth: 0
-    BackgroundColor:
-      r: 0
-      g: 0
-      b: 0
-      a: 1
+    BackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   InputLinks:
   - m_ModuleID: 5
-    m_SlotName: 564d657368
+    m_SlotName: VMesh
     m_TargetModuleID: 4
-    m_TargetSlotName: 564d657368
+    m_TargetSlotName: VMesh
   - m_ModuleID: 5
-    m_SlotName: 564d657368
+    m_SlotName: VMesh
     m_TargetModuleID: 4
-    m_TargetSlotName: 564d657368
+    m_TargetSlotName: VMesh
   OutputLinks: []
-  InVMeshArray: {}
-  InSpots: {}
   m_MeshResources:
     Items:
     - {fileID: 549556140}
@@ -1210,6 +1241,7 @@ MonoBehaviour:
   m_Layer: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_LightProbeUsage: 1
   m_UseLightProbes: 1
   m_ReflectionProbes: 1
   m_AnchorOverride: {fileID: 0}
@@ -1217,7 +1249,6 @@ MonoBehaviour:
   m_Convex: 0
   m_AutoUpdateColliders: 1
   m_Material: {fileID: 0}
-  m_MeshColliders: 0
 --- !u!1 &315549759
 GameObject:
   m_ObjectHideFlags: 0
@@ -1281,7 +1312,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -1, y: 0, z: 0}
@@ -1301,8 +1331,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!1 &328436143
 GameObject:
   m_ObjectHideFlags: 0
@@ -1348,7 +1376,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -1, y: 0, z: 0}
@@ -1368,8 +1395,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &328436146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1433,7 +1458,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -1, y: 0, z: 0}
@@ -1453,8 +1477,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &376336374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1518,7 +1540,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -1, y: 0, z: 0}
@@ -1538,8 +1559,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &377235783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1702,7 +1721,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -1, y: 0, z: 0}
@@ -1722,8 +1740,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &382199826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1882,7 +1898,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab277e3cf5b9d96439028ce23217a409, type: 3}
-  m_RootGameObject: {fileID: 1346598692}
+  m_RootGameObject: {fileID: 221390997}
   m_IsPrefabParent: 0
 --- !u!1 &433006906
 GameObject:
@@ -1938,13 +1954,16 @@ MonoBehaviour:
   m_AdaptOnChange: 1
   m_Animate: 0
   m_Animation:
+    serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
       inSlope: 0
       outSlope: 0
@@ -1960,20 +1979,31 @@ MonoBehaviour:
   m_DampingDirection: 0
   m_DampingUp: 0
   m_IgnoreDirection: 0
+  m_OffsetAngle: 0
+  m_OffsetRadius: 0
+  m_OffsetCompensation: 1
+  m_OnAnimationEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: FluffyUnderware.Curvy.CurvyControllerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_Spline: {fileID: 279440826}
   m_UseCache: 0
   m_OnControlPointReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnEndReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnSwitch:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &433006909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2118,7 +2148,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -1, y: 0, z: 0}
@@ -2138,8 +2167,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!1 &440157675
 GameObject:
   m_ObjectHideFlags: 0
@@ -2255,7 +2282,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -1, y: 0, z: 0}
@@ -2275,8 +2301,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &461207589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2340,7 +2364,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -1, y: 0, z: 0}
@@ -2360,8 +2383,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &464464360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2717,7 +2738,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -1, y: 0, z: 0}
@@ -2737,8 +2757,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!1 &530200590
 GameObject:
   m_ObjectHideFlags: 0
@@ -2787,7 +2805,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62f98941b92097f49bd5ff480ec47122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Identifier: 466c75666679556e646572776172652e43757276792e47656e657261746f722e43474d6573685265736f757263652c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+  m_Identifier: FluffyUnderware.Curvy.Generator.CGMeshResource, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
   m_Settings:
     m_Prewarm: 0
     m_AutoCreate: 1
@@ -2838,7 +2857,8 @@ MonoBehaviour:
   m_OnRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767943474576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   Modules:
   - {fileID: 1180360422}
   - {fileID: 757260272}
@@ -3333,7 +3353,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 0
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: 0, y: -0, z: 24.268}
@@ -3353,8 +3372,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &582375138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3446,7 +3463,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -1, y: 0, z: 0}
@@ -3466,8 +3482,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &649012891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3534,7 +3548,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62f98941b92097f49bd5ff480ec47122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Identifier: 466c75666679556e646572776172652e43757276792e47656e657261746f722e43474d6573685265736f757263652c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+  m_Identifier: FluffyUnderware.Curvy.Generator.CGMeshResource, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
   m_Settings:
     m_Prewarm: 0
     m_AutoCreate: 1
@@ -3585,7 +3600,8 @@ MonoBehaviour:
   m_OnRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767943474576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   Modules:
   - {fileID: 2141123371}
   - {fileID: 747075899}
@@ -3638,7 +3654,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 0
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -35.299, y: -0, z: 0}
@@ -3658,8 +3673,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &715485938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3723,7 +3736,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -1, y: 0, z: 0}
@@ -3743,8 +3755,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &735872754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3813,7 +3823,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -1, y: 0, z: 0}
@@ -3833,8 +3842,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!4 &744915578
 Transform:
   m_ObjectHideFlags: 0
@@ -3975,11 +3982,13 @@ MonoBehaviour:
   m_OnBeforeRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767943474576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767943474576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_ModuleName: 
   m_Active: 1
   m_RandomizeSeed: 0
@@ -3987,6 +3996,7 @@ MonoBehaviour:
   m_UniqueID: 1
   Properties:
     Dimensions:
+      serializedVersion: 2
       x: 14
       y: 10
       width: 250
@@ -3997,29 +4007,24 @@ MonoBehaviour:
       m_Value: 1
     MinWidth: 250
     LabelWidth: 0
-    BackgroundColor:
-      r: 0
-      g: 0
-      b: 0
-      a: 1
+    BackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   InputLinks: []
   OutputLinks:
   - m_ModuleID: 1
-    m_SlotName: 50617468
+    m_SlotName: Path
     m_TargetModuleID: 3
-    m_TargetSlotName: 50617468
+    m_TargetSlotName: Path
   - m_ModuleID: 1
-    m_SlotName: 50617468
+    m_SlotName: Path
     m_TargetModuleID: 3
-    m_TargetSlotName: 50617468
+    m_TargetSlotName: Path
   - m_ModuleID: 1
-    m_SlotName: 50617468
+    m_SlotName: Path
     m_TargetModuleID: 3
-    m_TargetSlotName: 50617468
+    m_TargetSlotName: Path
   m_UseCache: 0
   m_StartCP: {fileID: 0}
   m_EndCP: {fileID: 0}
-  Path: {}
   m_Spline: {fileID: 279440826}
 --- !u!43 &752152965
 Mesh:
@@ -4203,11 +4208,13 @@ MonoBehaviour:
   m_OnBeforeRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767943474576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767943474576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_ModuleName: 
   m_Active: 1
   m_RandomizeSeed: 0
@@ -4215,6 +4222,7 @@ MonoBehaviour:
   m_UniqueID: 2
   Properties:
     Dimensions:
+      serializedVersion: 2
       x: 10
       y: 207
       width: 250
@@ -4225,22 +4233,74 @@ MonoBehaviour:
       m_Value: 1
     MinWidth: 250
     LabelWidth: 0
-    BackgroundColor:
-      r: 0
-      g: 0
-      b: 0
-      a: 1
+    BackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   InputLinks: []
   OutputLinks:
   - m_ModuleID: 2
-    m_SlotName: 5368617065
+    m_SlotName: Shape
     m_TargetModuleID: 3
-    m_TargetSlotName: 43726f7373
+    m_TargetSlotName: Cross
   m_UseCache: 0
   m_StartCP: {fileID: 0}
   m_EndCP: {fileID: 0}
-  OutShape: {}
   m_Shape: {fileID: 1435569009}
+--- !u!1 &803009396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: ab277e3cf5b9d96439028ce23217a409, type: 3}
+  m_PrefabInternal: {fileID: 1846253036}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1761493515}
+  - component: {fileID: 803009398}
+  - component: {fileID: 803009397}
+  m_Layer: 0
+  m_Name: rail_car_wheel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &803009397
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300000, guid: ab277e3cf5b9d96439028ce23217a409,
+    type: 3}
+  m_PrefabInternal: {fileID: 1846253036}
+  m_GameObject: {fileID: 803009396}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: cfb41dfe5f2704c42bd82542d42d8509, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &803009398
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300000, guid: ab277e3cf5b9d96439028ce23217a409,
+    type: 3}
+  m_PrefabInternal: {fileID: 1846253036}
+  m_GameObject: {fileID: 803009396}
+  m_Mesh: {fileID: 4300000, guid: ab277e3cf5b9d96439028ce23217a409, type: 3}
 --- !u!1 &807668710
 GameObject:
   m_ObjectHideFlags: 0
@@ -4286,7 +4346,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 0
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: 0, y: -0, z: 16}
@@ -4306,8 +4365,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &807668713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4370,7 +4427,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 0
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -2, y: -0, z: -0}
@@ -4390,65 +4446,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
---- !u!1 &850281927
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100000, guid: ab277e3cf5b9d96439028ce23217a409, type: 3}
-  m_PrefabInternal: {fileID: 1846253036}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1761493515}
-  - component: {fileID: 850281929}
-  - component: {fileID: 850281928}
-  m_Layer: 0
-  m_Name: rail_car_wheel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!23 &850281928
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2300000, guid: ab277e3cf5b9d96439028ce23217a409,
-    type: 3}
-  m_PrefabInternal: {fileID: 1846253036}
-  m_GameObject: {fileID: 850281927}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: cfb41dfe5f2704c42bd82542d42d8509, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!33 &850281929
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3300000, guid: ab277e3cf5b9d96439028ce23217a409,
-    type: 3}
-  m_PrefabInternal: {fileID: 1846253036}
-  m_GameObject: {fileID: 850281927}
-  m_Mesh: {fileID: 4300000, guid: ab277e3cf5b9d96439028ce23217a409, type: 3}
 --- !u!1 &853602678
 GameObject:
   m_ObjectHideFlags: 0
@@ -4494,7 +4491,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -1, y: 0, z: 0}
@@ -4514,8 +4510,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &853602681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4579,7 +4573,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -1, y: 0, z: 0}
@@ -4599,8 +4592,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &858902471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4664,7 +4655,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 0
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: 16, y: -0, z: 0}
@@ -4684,8 +4674,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &860126539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4749,7 +4737,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -1, y: 0, z: 0}
@@ -4769,8 +4756,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &891611313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4834,7 +4819,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -1, y: 0, z: 0}
@@ -4854,8 +4838,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &970856671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7623,7 +7605,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 0
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: 0, y: 0, z: -23}
@@ -7643,8 +7624,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!4 &1000289341
 Transform:
   m_ObjectHideFlags: 0
@@ -10443,7 +10422,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 0
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: 0, y: -0, z: 16}
@@ -10463,8 +10441,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!4 &1029514110
 Transform:
   m_ObjectHideFlags: 0
@@ -10523,7 +10499,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -1, y: 0, z: 0}
@@ -10543,8 +10518,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &1036311919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10594,7 +10567,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: 12.482527, y: -0, z: 0.08979673}
@@ -10614,8 +10586,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!4 &1048681238
 Transform:
   m_ObjectHideFlags: 0
@@ -10778,7 +10748,6 @@ MonoBehaviour:
   m_OrientationAnchor: 1
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 0
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -2, y: -0, z: -0}
@@ -10798,8 +10767,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!4 &1107298968
 Transform:
   m_ObjectHideFlags: 0
@@ -10858,7 +10825,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 0
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: 0, y: -0, z: -35.299}
@@ -10878,8 +10844,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &1149984506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11046,7 +11010,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 0
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: 26.474, y: -0, z: 0}
@@ -11066,8 +11029,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &1151888800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11273,11 +11234,13 @@ MonoBehaviour:
   m_OnBeforeRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767943474576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767943474576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_ModuleName: 
   m_Active: 1
   m_RandomizeSeed: 0
@@ -11285,6 +11248,7 @@ MonoBehaviour:
   m_UniqueID: 1
   Properties:
     Dimensions:
+      serializedVersion: 2
       x: 14
       y: 10
       width: 250
@@ -11295,29 +11259,24 @@ MonoBehaviour:
       m_Value: 1
     MinWidth: 250
     LabelWidth: 0
-    BackgroundColor:
-      r: 0
-      g: 0
-      b: 0
-      a: 1
+    BackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   InputLinks: []
   OutputLinks:
   - m_ModuleID: 1
-    m_SlotName: 50617468
+    m_SlotName: Path
     m_TargetModuleID: 3
-    m_TargetSlotName: 50617468
+    m_TargetSlotName: Path
   - m_ModuleID: 1
-    m_SlotName: 50617468
+    m_SlotName: Path
     m_TargetModuleID: 3
-    m_TargetSlotName: 50617468
+    m_TargetSlotName: Path
   - m_ModuleID: 1
-    m_SlotName: 50617468
+    m_SlotName: Path
     m_TargetModuleID: 3
-    m_TargetSlotName: 50617468
+    m_TargetSlotName: Path
   m_UseCache: 0
   m_StartCP: {fileID: 0}
   m_EndCP: {fileID: 0}
-  Path: {}
   m_Spline: {fileID: 2031863537}
 --- !u!1 &1215189935
 GameObject:
@@ -11369,7 +11328,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -1, y: 0, z: 0}
@@ -11389,8 +11347,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!4 &1215189938
 Transform:
   m_ObjectHideFlags: 0
@@ -11583,35 +11539,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82f49053b9b703e4cbb1c6e76a563270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 322e302e35
+  m_Version: 2.1.1
   m_OnRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnAfterControlPointChanges:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnBeforeControlPointAdd:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c506f696e744576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControlPointEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnAfterControlPointAdd:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c506f696e744576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControlPointEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnBeforeControlPointDelete:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c506f696e744576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControlPointEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnMoveControlPointReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnMoveEndReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   ShowGizmos: 0
   m_Interpolation: 3
   m_RestrictTo2D: 1
@@ -11622,16 +11585,8 @@ MonoBehaviour:
   m_Tension: 0
   m_Continuity: 0
   m_Bias: 0
-  m_GizmoColor:
-    r: 0.70980394
-    g: 0.70980394
-    b: 0.70980394
-    a: 1
-  m_GizmoSelectionColor:
-    r: 0.14901961
-    g: 0.34901962
-    b: 0.6784314
-    a: 1
+  m_GizmoColor: {r: 0.70980394, g: 0.70980394, b: 0.70980394, a: 1}
+  m_GizmoSelectionColor: {r: 0.14901961, g: 0.34901962, b: 0.6784314, a: 1}
   m_CacheDensity: 50
   m_UsePooling: 1
   m_UseThreading: 0
@@ -11640,7 +11595,6 @@ MonoBehaviour:
   ControlPoints:
   - {fileID: 1107298967}
   - {fileID: 823809037}
-  m_UserValueSize: 0
 --- !u!1 &1231410784
 GameObject:
   m_ObjectHideFlags: 0
@@ -11963,11 +11917,13 @@ MonoBehaviour:
   m_OnBeforeRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767943474576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767943474576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_ModuleName: 
   m_Active: 1
   m_RandomizeSeed: 0
@@ -11975,6 +11931,7 @@ MonoBehaviour:
   m_UniqueID: 3
   Properties:
     Dimensions:
+      serializedVersion: 2
       x: 386
       y: 10
       width: 250
@@ -11985,37 +11942,29 @@ MonoBehaviour:
       m_Value: 1
     MinWidth: 270
     LabelWidth: 100
-    BackgroundColor:
-      r: 0
-      g: 0
-      b: 0
-      a: 1
+    BackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   InputLinks:
   - m_ModuleID: 3
-    m_SlotName: 50617468
+    m_SlotName: Path
     m_TargetModuleID: 1
-    m_TargetSlotName: 50617468
+    m_TargetSlotName: Path
   - m_ModuleID: 3
-    m_SlotName: 43726f7373
+    m_SlotName: Cross
     m_TargetModuleID: 2
-    m_TargetSlotName: 5368617065
+    m_TargetSlotName: Shape
   - m_ModuleID: 3
-    m_SlotName: 50617468
+    m_SlotName: Path
     m_TargetModuleID: 1
-    m_TargetSlotName: 50617468
+    m_TargetSlotName: Path
   - m_ModuleID: 3
-    m_SlotName: 50617468
+    m_SlotName: Path
     m_TargetModuleID: 1
-    m_TargetSlotName: 50617468
+    m_TargetSlotName: Path
   OutputLinks:
   - m_ModuleID: 3
-    m_SlotName: 566f6c756d65
+    m_SlotName: Volume
     m_TargetModuleID: 4
-    m_TargetSlotName: 566f6c756d65
-  InPath: {}
-  InCross: {}
-  OutVolume: {}
-  OutVolumeHollow: {}
+    m_TargetSlotName: Volume
   m_Range:
     From: 0
     To: 1
@@ -12044,13 +11993,16 @@ MonoBehaviour:
   m_ScaleX: 1
   m_ScaleY: 1
   m_ScaleCurveX:
+    serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
       inSlope: 0
       outSlope: 0
@@ -12059,13 +12011,16 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   m_ScaleCurveY:
+    serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
       inSlope: 0
       outSlope: 0
@@ -12120,11 +12075,13 @@ MonoBehaviour:
   m_OnBeforeRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767943474576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767943474576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_ModuleName: 
   m_Active: 1
   m_RandomizeSeed: 0
@@ -12132,6 +12089,7 @@ MonoBehaviour:
   m_UniqueID: 4
   Properties:
     Dimensions:
+      serializedVersion: 2
       x: 776
       y: 12
       width: 250
@@ -12142,27 +12100,21 @@ MonoBehaviour:
       m_Value: 1
     MinWidth: 250
     LabelWidth: 0
-    BackgroundColor:
-      r: 0
-      g: 0
-      b: 0
-      a: 1
+    BackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   InputLinks:
   - m_ModuleID: 4
-    m_SlotName: 566f6c756d65
+    m_SlotName: Volume
     m_TargetModuleID: 3
-    m_TargetSlotName: 566f6c756d65
+    m_TargetSlotName: Volume
   OutputLinks:
   - m_ModuleID: 4
-    m_SlotName: 564d657368
+    m_SlotName: VMesh
     m_TargetModuleID: 5
-    m_TargetSlotName: 564d657368
+    m_TargetSlotName: VMesh
   - m_ModuleID: 4
-    m_SlotName: 564d657368
+    m_SlotName: VMesh
     m_TargetModuleID: 5
-    m_TargetSlotName: 564d657368
-  InVolume: {}
-  OutVMesh: {}
+    m_TargetSlotName: VMesh
   m_GenerateUV: 1
   m_Split: 1
   m_SplitLength: 100
@@ -12228,7 +12180,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 0
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: 0, y: -0, z: 26.474}
@@ -12248,8 +12199,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &1292614003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12367,63 +12316,6 @@ Transform:
   m_Father: {fileID: 1751981603}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1346598692
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100000, guid: ab277e3cf5b9d96439028ce23217a409, type: 3}
-  m_PrefabInternal: {fileID: 427340841}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1979368593}
-  - component: {fileID: 1346598694}
-  - component: {fileID: 1346598693}
-  m_Layer: 0
-  m_Name: rail_car_wheel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!23 &1346598693
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2300000, guid: ab277e3cf5b9d96439028ce23217a409,
-    type: 3}
-  m_PrefabInternal: {fileID: 427340841}
-  m_GameObject: {fileID: 1346598692}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: cfb41dfe5f2704c42bd82542d42d8509, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!33 &1346598694
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3300000, guid: ab277e3cf5b9d96439028ce23217a409,
-    type: 3}
-  m_PrefabInternal: {fileID: 427340841}
-  m_GameObject: {fileID: 1346598692}
-  m_Mesh: {fileID: 4300000, guid: ab277e3cf5b9d96439028ce23217a409, type: 3}
 --- !u!1 &1352695125
 GameObject:
   m_ObjectHideFlags: 0
@@ -12803,7 +12695,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62f98941b92097f49bd5ff480ec47122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Identifier: 466c75666679556e646572776172652e43757276792e437572767953706c696e655365676d656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+  m_Identifier: FluffyUnderware.Curvy.CurvySplineSegment, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
   m_Settings:
     m_Prewarm: 1
     m_AutoCreate: 1
@@ -12922,7 +12815,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -12.48, y: -0, z: -0}
@@ -12942,8 +12834,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!4 &1416451562
 Transform:
   m_ObjectHideFlags: 0
@@ -13020,7 +12910,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -1, y: 0, z: 0}
@@ -13040,8 +12929,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &1419464522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13211,35 +13098,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82f49053b9b703e4cbb1c6e76a563270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 322e302e35
+  m_Version: 2.1.1
   m_OnRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnAfterControlPointChanges:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnBeforeControlPointAdd:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c506f696e744576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControlPointEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnAfterControlPointAdd:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c506f696e744576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControlPointEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnBeforeControlPointDelete:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c506f696e744576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControlPointEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnMoveControlPointReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnMoveEndReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   ShowGizmos: 0
   m_Interpolation: 0
   m_RestrictTo2D: 1
@@ -13250,16 +13144,8 @@ MonoBehaviour:
   m_Tension: 0
   m_Continuity: 0
   m_Bias: 0
-  m_GizmoColor:
-    r: 0.70980394
-    g: 0.70980394
-    b: 0.70980394
-    a: 1
-  m_GizmoSelectionColor:
-    r: 0.14901961
-    g: 0.34901962
-    b: 0.6784314
-    a: 1
+  m_GizmoColor: {r: 0.70980394, g: 0.70980394, b: 0.70980394, a: 1}
+  m_GizmoSelectionColor: {r: 0.14901961, g: 0.34901962, b: 0.6784314, a: 1}
   m_CacheDensity: 1
   m_UsePooling: 1
   m_UseThreading: 0
@@ -13281,7 +13167,47 @@ MonoBehaviour:
   - {fileID: 891611312}
   - {fileID: 1036311918}
   - {fileID: 1955931100}
-  m_UserValueSize: 0
+--- !u!1 &1438204418
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 184722, guid: 13463edfb77f1304ca4a0da53dfe21a0, type: 2}
+  m_PrefabInternal: {fileID: 1890378309}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1438204420}
+  - component: {fileID: 1438204419}
+  m_Layer: 5
+  m_Name: SceneSwitcher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1438204419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11429856, guid: 13463edfb77f1304ca4a0da53dfe21a0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1890378309}
+  m_GameObject: {fileID: 1438204418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5af19fa201c5ff499f9c7924cb7bc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1438204420
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 476422, guid: 13463edfb77f1304ca4a0da53dfe21a0, type: 2}
+  m_PrefabInternal: {fileID: 1890378309}
+  m_GameObject: {fileID: 1438204418}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1439194254
 GameObject:
   m_ObjectHideFlags: 0
@@ -13327,7 +13253,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -1, y: 0, z: 0}
@@ -13347,8 +13272,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &1439194257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13511,7 +13434,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -1, y: 0, z: 0}
@@ -13531,8 +13453,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &1470089474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13629,7 +13549,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -1, y: 0, z: 0}
@@ -13649,8 +13568,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &1506439646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13714,7 +13631,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -1, y: 0, z: 0}
@@ -13734,8 +13650,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &1521427202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13799,7 +13713,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 0
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: 24.268, y: -0, z: 0}
@@ -13819,8 +13732,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &1542615720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13884,7 +13795,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 0
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: 16, y: -0, z: 0}
@@ -13904,8 +13814,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &1583815253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14264,7 +14172,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -1, y: 0, z: 0}
@@ -14284,8 +14191,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &1681444218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14419,7 +14324,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 0
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -2, y: -0, z: 0}
@@ -14439,8 +14343,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &1723107203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14637,11 +14539,13 @@ MonoBehaviour:
   m_OnBeforeRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767943474576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767943474576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_ModuleName: 
   m_Active: 1
   m_RandomizeSeed: 0
@@ -14649,6 +14553,7 @@ MonoBehaviour:
   m_UniqueID: 5
   Properties:
     Dimensions:
+      serializedVersion: 2
       x: 1143
       y: 11
       width: 250
@@ -14659,23 +14564,17 @@ MonoBehaviour:
       m_Value: 1
     MinWidth: 250
     LabelWidth: 0
-    BackgroundColor:
-      r: 0
-      g: 0
-      b: 0
-      a: 1
+    BackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   InputLinks:
   - m_ModuleID: 5
-    m_SlotName: 564d657368
+    m_SlotName: VMesh
     m_TargetModuleID: 4
-    m_TargetSlotName: 564d657368
+    m_TargetSlotName: VMesh
   - m_ModuleID: 5
-    m_SlotName: 564d657368
+    m_SlotName: VMesh
     m_TargetModuleID: 4
-    m_TargetSlotName: 564d657368
+    m_TargetSlotName: VMesh
   OutputLinks: []
-  InVMeshArray: {}
-  InSpots: {}
   m_MeshResources:
     Items:
     - {fileID: 252423102}
@@ -14693,6 +14592,7 @@ MonoBehaviour:
   m_Layer: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_LightProbeUsage: 1
   m_UseLightProbes: 1
   m_ReflectionProbes: 1
   m_AnchorOverride: {fileID: 0}
@@ -14700,13 +14600,12 @@ MonoBehaviour:
   m_Convex: 0
   m_AutoUpdateColliders: 1
   m_Material: {fileID: 0}
-  m_MeshColliders: 0
 --- !u!4 &1761493515
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400000, guid: ab277e3cf5b9d96439028ce23217a409, type: 3}
   m_PrefabInternal: {fileID: 1846253036}
-  m_GameObject: {fileID: 850281927}
+  m_GameObject: {fileID: 803009396}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0.286, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -14775,7 +14674,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -0.36548403, y: -0, z: 7.767302}
@@ -14795,8 +14693,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!4 &1844901485
 Transform:
   m_ObjectHideFlags: 0
@@ -14851,7 +14747,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab277e3cf5b9d96439028ce23217a409, type: 3}
-  m_RootGameObject: {fileID: 850281927}
+  m_RootGameObject: {fileID: 803009396}
   m_IsPrefabParent: 0
 --- !u!1 &1852452133
 GameObject:
@@ -14898,7 +14794,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -1, y: 0, z: 0}
@@ -14918,8 +14813,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &1852452136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15156,7 +15049,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13463edfb77f1304ca4a0da53dfe21a0, type: 2}
-  m_RootGameObject: {fileID: 1941589252}
+  m_RootGameObject: {fileID: 1438204418}
   m_IsPrefabParent: 0
 --- !u!1 &1924399040
 GameObject:
@@ -15203,7 +15096,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 0
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -2, y: -0, z: 0}
@@ -15223,8 +15115,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &1924399043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15243,47 +15133,6 @@ MonoBehaviour:
   m_ExplicitU: 0
   m_FirstU: 0
   m_SecondU: 0
---- !u!1 &1941589252
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 184722, guid: 13463edfb77f1304ca4a0da53dfe21a0, type: 2}
-  m_PrefabInternal: {fileID: 1890378309}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1941589254}
-  - component: {fileID: 1941589253}
-  m_Layer: 5
-  m_Name: SceneSwitcher
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1941589253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11429856, guid: 13463edfb77f1304ca4a0da53dfe21a0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1890378309}
-  m_GameObject: {fileID: 1941589252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5af19fa201c5ff499f9c7924cb7bc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1941589254
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 476422, guid: 13463edfb77f1304ca4a0da53dfe21a0, type: 2}
-  m_PrefabInternal: {fileID: 1890378309}
-  m_GameObject: {fileID: 1941589252}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1949530766
 GameObject:
   m_ObjectHideFlags: 0
@@ -15315,7 +15164,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -0.040699366, y: -0, z: 5.7210393}
@@ -15335,8 +15183,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!4 &1949530768
 Transform:
   m_ObjectHideFlags: 0
@@ -15400,7 +15246,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 0
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -33.093, y: -0, z: 0}
@@ -15420,8 +15265,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!4 &1950700217
 Transform:
   m_ObjectHideFlags: 0
@@ -15480,7 +15323,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -1, y: 0, z: 0}
@@ -15500,8 +15342,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &1951881764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15565,7 +15405,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -1, y: 0, z: 0}
@@ -15585,8 +15424,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &1955931101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15636,7 +15473,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: 0.24856822, y: -0, z: 5.853174}
@@ -15656,8 +15492,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!4 &1959062535
 Transform:
   m_ObjectHideFlags: 0
@@ -15676,7 +15510,7 @@ Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400000, guid: ab277e3cf5b9d96439028ce23217a409, type: 3}
   m_PrefabInternal: {fileID: 427340841}
-  m_GameObject: {fileID: 1346598692}
+  m_GameObject: {fileID: 221390997}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0.286, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -15731,7 +15565,6 @@ MonoBehaviour:
   m_OrientationAnchor: 0
   m_Swirl: 0
   m_SwirlTurns: 0
-  m_UserValues: []
   m_AutoHandles: 1
   m_AutoHandleDistance: 0.39
   m_HandleIn: {x: -1, y: 0, z: 0}
@@ -15751,8 +15584,6 @@ MonoBehaviour:
   m_ConnectionSyncPosition: 0
   m_ConnectionSyncRotation: 0
   m_Connection: {fileID: 0}
-  FreeHandles: 0
-  HandleScale: 1
 --- !u!114 &1984637579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15811,13 +15642,16 @@ MonoBehaviour:
   m_AdaptOnChange: 1
   m_Animate: 0
   m_Animation:
+    serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
       inSlope: 0
       outSlope: 0
@@ -15833,6 +15667,14 @@ MonoBehaviour:
   m_DampingDirection: 0
   m_DampingUp: 0
   m_IgnoreDirection: 0
+  m_OffsetAngle: 0
+  m_OffsetRadius: 0
+  m_OffsetCompensation: 1
+  m_OnAnimationEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: FluffyUnderware.Curvy.CurvyControllerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_Spline: {fileID: 2031863537}
   m_UseCache: 0
   m_OnControlPointReached:
@@ -15849,15 +15691,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnEndReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnSwitch:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!4 &1999590541
 Transform:
   m_ObjectHideFlags: 0
@@ -16075,35 +15920,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82f49053b9b703e4cbb1c6e76a563270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 322e302e35
+  m_Version: 2.1.1
   m_OnRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnAfterControlPointChanges:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnBeforeControlPointAdd:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c506f696e744576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControlPointEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnAfterControlPointAdd:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c506f696e744576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControlPointEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnBeforeControlPointDelete:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c506f696e744576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControlPointEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnMoveControlPointReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnMoveEndReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   ShowGizmos: 1
   m_Interpolation: 3
   m_RestrictTo2D: 0
@@ -16114,16 +15966,8 @@ MonoBehaviour:
   m_Tension: 0
   m_Continuity: 0
   m_Bias: 0
-  m_GizmoColor:
-    r: 0.70980394
-    g: 0.70980394
-    b: 0.70980394
-    a: 1
-  m_GizmoSelectionColor:
-    r: 0.14901961
-    g: 0.34901962
-    b: 0.6784314
-    a: 1
+  m_GizmoColor: {r: 0.70980394, g: 0.70980394, b: 0.70980394, a: 1}
+  m_GizmoSelectionColor: {r: 0.14901961, g: 0.34901962, b: 0.6784314, a: 1}
   m_CacheDensity: 50
   m_UsePooling: 1
   m_UseThreading: 0
@@ -16143,7 +15987,6 @@ MonoBehaviour:
   - {fileID: 132875098}
   - {fileID: 1583815252}
   - {fileID: 139387021}
-  m_UserValueSize: 0
 --- !u!1 &2033824379
 GameObject:
   m_ObjectHideFlags: 0
@@ -16287,11 +16130,13 @@ MonoBehaviour:
   m_OnBeforeRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767943474576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767943474576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_ModuleName: 
   m_Active: 1
   m_RandomizeSeed: 0
@@ -16299,6 +16144,7 @@ MonoBehaviour:
   m_UniqueID: 3
   Properties:
     Dimensions:
+      serializedVersion: 2
       x: 386
       y: 10
       width: 250
@@ -16309,37 +16155,29 @@ MonoBehaviour:
       m_Value: 1
     MinWidth: 270
     LabelWidth: 100
-    BackgroundColor:
-      r: 0
-      g: 0
-      b: 0
-      a: 1
+    BackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   InputLinks:
   - m_ModuleID: 3
-    m_SlotName: 50617468
+    m_SlotName: Path
     m_TargetModuleID: 1
-    m_TargetSlotName: 50617468
+    m_TargetSlotName: Path
   - m_ModuleID: 3
-    m_SlotName: 43726f7373
+    m_SlotName: Cross
     m_TargetModuleID: 2
-    m_TargetSlotName: 5368617065
+    m_TargetSlotName: Shape
   - m_ModuleID: 3
-    m_SlotName: 50617468
+    m_SlotName: Path
     m_TargetModuleID: 1
-    m_TargetSlotName: 50617468
+    m_TargetSlotName: Path
   - m_ModuleID: 3
-    m_SlotName: 50617468
+    m_SlotName: Path
     m_TargetModuleID: 1
-    m_TargetSlotName: 50617468
+    m_TargetSlotName: Path
   OutputLinks:
   - m_ModuleID: 3
-    m_SlotName: 566f6c756d65
+    m_SlotName: Volume
     m_TargetModuleID: 4
-    m_TargetSlotName: 566f6c756d65
-  InPath: {}
-  InCross: {}
-  OutVolume: {}
-  OutVolumeHollow: {}
+    m_TargetSlotName: Volume
   m_Range:
     From: 0
     To: 1
@@ -16368,13 +16206,16 @@ MonoBehaviour:
   m_ScaleX: 1
   m_ScaleY: 1
   m_ScaleCurveX:
+    serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
       inSlope: 0
       outSlope: 0
@@ -16383,13 +16224,16 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   m_ScaleCurveY:
+    serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
       inSlope: 0
       outSlope: 0
@@ -16455,35 +16299,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82f49053b9b703e4cbb1c6e76a563270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 322e302e35
+  m_Version: 2.1.1
   m_OnRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnAfterControlPointChanges:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnBeforeControlPointAdd:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c506f696e744576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControlPointEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnAfterControlPointAdd:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c506f696e744576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControlPointEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnBeforeControlPointDelete:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e4375727679436f6e74726f6c506f696e744576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyControlPointEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnMoveControlPointReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnMoveEndReached:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767953706c696e654d6f76654576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvySplineMoveEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   ShowGizmos: 0
   m_Interpolation: 0
   m_RestrictTo2D: 1
@@ -16494,16 +16345,8 @@ MonoBehaviour:
   m_Tension: 0
   m_Continuity: 0
   m_Bias: 0
-  m_GizmoColor:
-    r: 0.70980394
-    g: 0.70980394
-    b: 0.70980394
-    a: 1
-  m_GizmoSelectionColor:
-    r: 0.14901961
-    g: 0.34901962
-    b: 0.6784314
-    a: 1
+  m_GizmoColor: {r: 0.70980394, g: 0.70980394, b: 0.70980394, a: 1}
+  m_GizmoSelectionColor: {r: 0.14901961, g: 0.34901962, b: 0.6784314, a: 1}
   m_CacheDensity: 59
   m_UsePooling: 1
   m_UseThreading: 0
@@ -16526,7 +16369,6 @@ MonoBehaviour:
   - {fileID: 1470089473}
   - {fileID: 853602680}
   - {fileID: 1521427201}
-  m_UserValueSize: 0
 --- !u!1 &2141123369
 GameObject:
   m_ObjectHideFlags: 0
@@ -16572,11 +16414,13 @@ MonoBehaviour:
   m_OnBeforeRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767943474576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_OnRefresh:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: 466c75666679556e646572776172652e43757276792e437572767943474576656e742c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   m_ModuleName: 
   m_Active: 1
   m_RandomizeSeed: 0
@@ -16584,6 +16428,7 @@ MonoBehaviour:
   m_UniqueID: 2
   Properties:
     Dimensions:
+      serializedVersion: 2
       x: 10
       y: 207
       width: 250
@@ -16594,19 +16439,14 @@ MonoBehaviour:
       m_Value: 1
     MinWidth: 250
     LabelWidth: 0
-    BackgroundColor:
-      r: 0
-      g: 0
-      b: 0
-      a: 1
+    BackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   InputLinks: []
   OutputLinks:
   - m_ModuleID: 2
-    m_SlotName: 5368617065
+    m_SlotName: Shape
     m_TargetModuleID: 3
-    m_TargetSlotName: 43726f7373
+    m_TargetSlotName: Cross
   m_UseCache: 0
   m_StartCP: {fileID: 0}
   m_EndCP: {fileID: 0}
-  OutShape: {}
   m_Shape: {fileID: 1435569009}
