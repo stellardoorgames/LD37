@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class EnemyController : MonoBehaviour {
 
-	public Transform target;
+	public string targetTag;
+
+	public Text text;
+
+	Transform target;
 
 	NavMeshAgent agent;
 
@@ -13,11 +18,28 @@ public class EnemyController : MonoBehaviour {
 	void Start () {
 		agent = GetComponent<NavMeshAgent> ();
 
-		agent.destination = target.position;
+		GameObject[] targets = GameObject.FindGameObjectsWithTag (targetTag);
+
+		if (targets.Length > 0)
+		{
+			float dist = int.MaxValue;
+
+			foreach(GameObject go in targets)
+			{
+				float d = Vector3.Distance (transform.position, go.transform.position);
+				if (d < dist)
+					target = go.transform;
+			}
+
+			agent.destination = target.position;
+			
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		agent.speed = 2f;
+
+
 	}
 }

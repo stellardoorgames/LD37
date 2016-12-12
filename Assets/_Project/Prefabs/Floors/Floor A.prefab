@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4737179319232694}
   - component: {fileID: 33465364892026756}
   - component: {fileID: 23398109486406582}
-  - component: {fileID: 95755159101925184}
   m_Layer: 0
   m_Name: floorTemp (4)
   m_TagString: Untagged
@@ -109,20 +108,3 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1549059283562600}
   m_Mesh: {fileID: 4300000, guid: 26f659190b287214da927082c56afa09, type: 3}
---- !u!95 &95755159101925184
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1549059283562600}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 26f659190b287214da927082c56afa09, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
