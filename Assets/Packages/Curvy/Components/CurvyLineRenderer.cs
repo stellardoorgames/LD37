@@ -80,11 +80,11 @@ namespace FluffyUnderware.Curvy.Components
             if (Spline && Spline.IsInitialized)
             {
                 var vts=Spline.GetApproximation();
-				mRenderer.numPositions = vts.Length;//.SetVertexCount(vts.Length);
+                mRenderer.SetVertexCount(vts.Length);
                 for (int v = 0; v < vts.Length; v++)
                     mRenderer.SetPosition(v, vts[v]);
             } else if (mRenderer!=null)
-				mRenderer.numPositions = 0;//.SetVertexCount(0);
+                mRenderer.SetVertexCount(0);
         }
 
         void OnSplineRefresh(CurvySplineEventArgs e)
