@@ -4,48 +4,70 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-	public float speed = 1f;
+	const int numTenticles = 4;
 
-	public TenticleController tenticleController;
+	public TenticleLead tenticleNorth;
+	public TenticleLead tenticleSouth;
+	public TenticleLead tenticleEast;
+	public TenticleLead tenticleWest;
 
-	Rigidbody rb;
-
-	Vector3 pos;
+	[SerializeField]
+	int _activeTenticleIndex = 0;
+	public int activeTenticleIndex {
+		get {return _activeTenticleIndex;}
+		set {_activeTenticleIndex = value % numTenticles;
+			SwitchTenticles (_activeTenticleIndex);}
+	}
+	TenticleLead activeTenticle;
+	List<TenticleLead> tenticles;
 
 	// Use this for initialization
 	void Start () {
 
-		rb = GetComponentInChildren <Rigidbody> ();
+		tenticles = new List<TenticleLead>();
+		tenticles.Add (tenticleSouth);
+		tenticles.Add (tenticleWest);
+		tenticles.Add (tenticleNorth);
+		tenticles.Add (tenticleEast);
 
-		pos = transform.position;
+		activeTenticle = tenticles [activeTenticleIndex];
+
+		activeTenticle.isActive = true;
 	}
 	
 	// Update is called once per frame
-	void Update () {
-
-		float horizontal = Input.GetAxis ("Horizontal");
-		float vertical = Input.GetAxis ("Vertical");
-
-		//pos += new Vector3 (horizontal, 0f, vertical) * speed;
-
-		//rb.MovePosition (pos);
-		//rb.AddForce (new Vector3 (horizontal, 0f, vertical) * 5f, ForceMode.VelocityChange);
-		//rb.ad
-		transform.Translate (horizontal * speed, 0f, vertical * speed);
-	}
-
-	void OnTriggerEnter(Collider other)
+	void Update () 
 	{
-		Obstacle obsticle = other.GetComponent<Obstacle> ();
+		if (Input.GetButtonDown ("Cycle"))
+			activeTenticleIndex++;
 
-		if (obsticle != null)
-		{
-			Debug.Log ("Trigger");
+		if (Input.GetButtonDown ("South"))
+			activeTenticleIndex = 0;
 
-			tenticleController.Collide (obsticle.gameObject);
+		if (Input.GetButtonDown ("West"))
+			activeTenticleIndex = 1;
+		
+		if (Input.GetButtonDown ("North"))
+			activeTenticleIndex = 2;
 
-
-		}
+		if (Input.GetButtonDown ("East"))
+			activeTenticleIndex = 3;
+		
 	}
 
+	void SwitchTenticles(int index)
+	{
+		foreach(TenticleLead tc in tenticles)
+		{
+			tc.isActive = false;
+		}
+
+		tenticles [index].isActive = true;
+
+
+		/*for(int i = 0; i < tenticles.Count; i++)
+		{
+			if (i == )
+		}*/
+	}
 }
