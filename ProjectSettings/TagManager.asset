@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CameraFollow
   - Princess
+  - Lava
   layers:
   - Default
   - TransparentFX

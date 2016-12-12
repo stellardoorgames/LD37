@@ -10,6 +10,10 @@ public class TenticleLead : MonoBehaviour {
 
 	public bool isActive = false;
 
+	EnemyController enemy;
+	EnemyController grabbedEnemy;
+
+
 	//Vector3 pos;
 
 	// Use this for initialization
@@ -32,6 +36,26 @@ public class TenticleLead : MonoBehaviour {
 			
 			transform.Translate (horizontal * speed, 0f, vertical * speed);
 			//transform.Translate (p.x, 0f, p.y);
+
+
+			if (Input.GetButtonDown ("Grab"))
+			{
+				//GetComponent<ri
+				if (grabbedEnemy != null)
+				{
+					grabbedEnemy.Released ();
+					grabbedEnemy = null;
+				}
+				else
+				{
+					if (enemy != null)
+					{
+						enemy.Grabbed (transform);
+						grabbedEnemy = enemy;
+						//enemy = null
+					}
+				}
+			}
 		}
 	}
 
@@ -47,15 +71,21 @@ public class TenticleLead : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-		Obstacle obsticle = other.GetComponent<Obstacle> ();
+		Obstacle obstacle = other.GetComponent<Obstacle> ();
 
-		if (obsticle != null)
+		if (obstacle != null)
 		{
 			Debug.Log ("Trigger");
 
-			tenticleController.Collide (obsticle.gameObject);
+			tenticleController.Collide (obstacle.gameObject);
 
+		}
 
+		EnemyController ec = other.GetComponent<EnemyController> ();
+
+		if (ec != null)
+		{
+			enemy = ec;
 		}
 	}
 

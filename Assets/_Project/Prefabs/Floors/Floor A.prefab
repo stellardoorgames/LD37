@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4737179319232694}
   - component: {fileID: 33465364892026756}
   - component: {fileID: 23398109486406582}
+  - component: {fileID: 64651747819731598}
   m_Layer: 0
   m_Name: floorTemp (4)
   m_TagString: Untagged
@@ -107,4 +108,18 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1549059283562600}
+  m_Mesh: {fileID: 4300000, guid: 26f659190b287214da927082c56afa09, type: 3}
+--- !u!64 &64651747819731598
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1549059283562600}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 26f659190b287214da927082c56afa09, type: 3}

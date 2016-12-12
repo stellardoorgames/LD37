@@ -50,4 +50,9 @@ public class Obstacle : MonoBehaviour {
 		}
 
 	}
+
+	void TakeHit(float damage)
+	{
+		
+	}
 }

@@ -1,10 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerController : MonoBehaviour {
 
-	const int numTenticles = 4;
+	const int NumTenticles = 4;
+
+	public float maxLife = 10;
+	float currentLife;
 
 	public TenticleLead tenticleNorth;
 	public TenticleLead tenticleSouth;
@@ -15,14 +19,35 @@ public class PlayerController : MonoBehaviour {
 	int _activeTenticleIndex = 0;
 	public int activeTenticleIndex {
 		get {return _activeTenticleIndex;}
-		set {_activeTenticleIndex = value % numTenticles;
+		set {_activeTenticleIndex = value % NumTenticles;
 			SwitchTenticles (_activeTenticleIndex);}
 	}
 	TenticleLead activeTenticle;
 	List<TenticleLead> tenticles;
 
-	// Use this for initialization
-	void Start () {
+	public UnityEvent OnDeath;
+	public UnityEvent OnFinish;
+
+	static PlayerController _instance;
+	static PlayerController instance;
+	/*{
+		get
+		{
+			if (_instance == null)
+				_instance = new GameObject("_PlayerController").AddComponent<PlayerController>();
+			return _instance;          
+		}
+	}*/
+
+	void Awake()
+	{
+		instance = this;
+	}
+
+	void Start () 
+	{
+
+		currentLife = maxLife;
 
 		tenticles = new List<TenticleLead>();
 		tenticles.Add (tenticleSouth);
@@ -40,7 +65,9 @@ public class PlayerController : MonoBehaviour {
 	{
 		if (Input.GetButtonDown ("Cycle"))
 			activeTenticleIndex++;
-
+		if (Input.GetButtonDown ("CyclePrevious"))
+			activeTenticleIndex++;
+		
 		if (Input.GetButtonDown ("South"))
 			activeTenticleIndex = 0;
 
@@ -69,5 +96,12 @@ public class PlayerController : MonoBehaviour {
 		{
 			if (i == )
 		}*/
+	}
+
+	public static void TakeDamage(float damage)
+	{
+		instance.currentLife -= damage;
+		if (instance.currentLife <= 0f)
+			instance.OnDeath.Invoke ();
 	}
 }

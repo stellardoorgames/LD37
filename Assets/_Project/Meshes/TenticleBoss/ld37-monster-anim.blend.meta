@@ -1,0 +1,349 @@
+fileFormatVersion: 2
+guid: 8c50dd7a8dfe77c4eaa1388b92dae4ca
+timeCreated: 1481567871
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Base
+    100002: Head
+    100004: //RootNode
+    100006: Monster
+    100008: Monster-Rig
+    100010: Mouth
+    100012: Neck
+    100014: Tentacle-Front-1_L
+    100016: Tentacle-Front-1_R
+    100018: Tentacle-Front-2_L
+    100020: Tentacle-Front-2_R
+    100022: Tentacle-Mid-1_L
+    100024: Tentacle-Mid-1_R
+    100026: Tentacle-Mid-2_L
+    100028: Tentacle-Mid-2_R
+    100030: Tentacle-Mouth-1_L
+    100032: Tentacle-Mouth-1_R
+    100034: Tentacle-Mouth-2_L
+    100036: Tentacle-Mouth-2_R
+    100038: Tentacle-Rear-1_L
+    100040: Tentacle-Rear-1_R
+    100042: Tentacle-Rear-2_L
+    100044: Tentacle-Rear-2_R
+    400000: Base
+    400002: Head
+    400004: //RootNode
+    400006: Monster
+    400008: Monster-Rig
+    400010: Mouth
+    400012: Neck
+    400014: Tentacle-Front-1_L
+    400016: Tentacle-Front-1_R
+    400018: Tentacle-Front-2_L
+    400020: Tentacle-Front-2_R
+    400022: Tentacle-Mid-1_L
+    400024: Tentacle-Mid-1_R
+    400026: Tentacle-Mid-2_L
+    400028: Tentacle-Mid-2_R
+    400030: Tentacle-Mouth-1_L
+    400032: Tentacle-Mouth-1_R
+    400034: Tentacle-Mouth-2_L
+    400036: Tentacle-Mouth-2_R
+    400038: Tentacle-Rear-1_L
+    400040: Tentacle-Rear-1_R
+    400042: Tentacle-Rear-2_L
+    400044: Tentacle-Rear-2_R
+    4300000: Monster
+    7400000: Default Take
+    7400002: Monster-Hit
+    7400004: Monster-Idle
+    9500000: //RootNode
+    13700000: Monster
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 34
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Monster
+        weight: 1
+      - path: Monster-Rig
+        weight: 1
+      - path: Monster-Rig/Base
+        weight: 1
+      - path: Monster-Rig/Mouth
+        weight: 1
+      - path: Monster-Rig/Neck
+        weight: 1
+      - path: Monster-Rig/Neck/Head
+        weight: 1
+      - path: Monster-Rig/Tentacle-Front-1_L
+        weight: 1
+      - path: Monster-Rig/Tentacle-Front-1_L/Tentacle-Front-2_L
+        weight: 1
+      - path: Monster-Rig/Tentacle-Front-1_R
+        weight: 1
+      - path: Monster-Rig/Tentacle-Front-1_R/Tentacle-Front-2_R
+        weight: 1
+      - path: Monster-Rig/Tentacle-Mid-1_L
+        weight: 1
+      - path: Monster-Rig/Tentacle-Mid-1_L/Tentacle-Mid-2_L
+        weight: 1
+      - path: Monster-Rig/Tentacle-Mid-1_R
+        weight: 1
+      - path: Monster-Rig/Tentacle-Mid-1_R/Tentacle-Mid-2_R
+        weight: 1
+      - path: Monster-Rig/Tentacle-Mouth-1_L
+        weight: 1
+      - path: Monster-Rig/Tentacle-Mouth-1_R
+        weight: 1
+      - path: Monster-Rig/Tentacle-Mouth-2_L
+        weight: 1
+      - path: Monster-Rig/Tentacle-Mouth-2_R
+        weight: 1
+      - path: Monster-Rig/Tentacle-Rear-1_L
+        weight: 1
+      - path: Monster-Rig/Tentacle-Rear-1_L/Tentacle-Rear-2_L
+        weight: 1
+      - path: Monster-Rig/Tentacle-Rear-1_R
+        weight: 1
+      - path: Monster-Rig/Tentacle-Rear-1_R/Tentacle-Rear-2_R
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Monster-Hit
+      takeName: Monster-Hit
+      firstFrame: -1
+      lastFrame: 34
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Monster
+        weight: 1
+      - path: Monster-Rig
+        weight: 1
+      - path: Monster-Rig/Base
+        weight: 1
+      - path: Monster-Rig/Mouth
+        weight: 1
+      - path: Monster-Rig/Neck
+        weight: 1
+      - path: Monster-Rig/Neck/Head
+        weight: 1
+      - path: Monster-Rig/Tentacle-Front-1_L
+        weight: 1
+      - path: Monster-Rig/Tentacle-Front-1_L/Tentacle-Front-2_L
+        weight: 1
+      - path: Monster-Rig/Tentacle-Front-1_R
+        weight: 1
+      - path: Monster-Rig/Tentacle-Front-1_R/Tentacle-Front-2_R
+        weight: 1
+      - path: Monster-Rig/Tentacle-Mid-1_L
+        weight: 1
+      - path: Monster-Rig/Tentacle-Mid-1_L/Tentacle-Mid-2_L
+        weight: 1
+      - path: Monster-Rig/Tentacle-Mid-1_R
+        weight: 1
+      - path: Monster-Rig/Tentacle-Mid-1_R/Tentacle-Mid-2_R
+        weight: 1
+      - path: Monster-Rig/Tentacle-Mouth-1_L
+        weight: 1
+      - path: Monster-Rig/Tentacle-Mouth-1_R
+        weight: 1
+      - path: Monster-Rig/Tentacle-Mouth-2_L
+        weight: 1
+      - path: Monster-Rig/Tentacle-Mouth-2_R
+        weight: 1
+      - path: Monster-Rig/Tentacle-Rear-1_L
+        weight: 1
+      - path: Monster-Rig/Tentacle-Rear-1_L/Tentacle-Rear-2_L
+        weight: 1
+      - path: Monster-Rig/Tentacle-Rear-1_R
+        weight: 1
+      - path: Monster-Rig/Tentacle-Rear-1_R/Tentacle-Rear-2_R
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Monster-Idle
+      takeName: Monster-Idle
+      firstFrame: -1
+      lastFrame: 79
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Monster
+        weight: 1
+      - path: Monster-Rig
+        weight: 1
+      - path: Monster-Rig/Base
+        weight: 1
+      - path: Monster-Rig/Mouth
+        weight: 1
+      - path: Monster-Rig/Neck
+        weight: 1
+      - path: Monster-Rig/Neck/Head
+        weight: 1
+      - path: Monster-Rig/Tentacle-Front-1_L
+        weight: 1
+      - path: Monster-Rig/Tentacle-Front-1_L/Tentacle-Front-2_L
+        weight: 1
+      - path: Monster-Rig/Tentacle-Front-1_R
+        weight: 1
+      - path: Monster-Rig/Tentacle-Front-1_R/Tentacle-Front-2_R
+        weight: 1
+      - path: Monster-Rig/Tentacle-Mid-1_L
+        weight: 1
+      - path: Monster-Rig/Tentacle-Mid-1_L/Tentacle-Mid-2_L
+        weight: 1
+      - path: Monster-Rig/Tentacle-Mid-1_R
+        weight: 1
+      - path: Monster-Rig/Tentacle-Mid-1_R/Tentacle-Mid-2_R
+        weight: 1
+      - path: Monster-Rig/Tentacle-Mouth-1_L
+        weight: 1
+      - path: Monster-Rig/Tentacle-Mouth-1_R
+        weight: 1
+      - path: Monster-Rig/Tentacle-Mouth-2_L
+        weight: 1
+      - path: Monster-Rig/Tentacle-Mouth-2_R
+        weight: 1
+      - path: Monster-Rig/Tentacle-Rear-1_L
+        weight: 1
+      - path: Monster-Rig/Tentacle-Rear-1_L/Tentacle-Rear-2_L
+        weight: 1
+      - path: Monster-Rig/Tentacle-Rear-1_R
+        weight: 1
+      - path: Monster-Rig/Tentacle-Rear-1_R/Tentacle-Rear-2_R
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
