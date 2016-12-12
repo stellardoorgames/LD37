@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour {
 
 		activeTenticle = tenticles [activeTenticleIndex];
 
-		activeTenticle.isActive = true;
+		activeTenticle.Activate(true);
 	}
 	
 	// Update is called once per frame
@@ -59,10 +59,10 @@ public class PlayerController : MonoBehaviour {
 	{
 		foreach(TenticleLead tc in tenticles)
 		{
-			tc.isActive = false;
+			tc.Activate(false);
 		}
 
-		tenticles [index].isActive = true;
+		tenticles [index].Activate(true);
 
 
 		/*for(int i = 0; i < tenticles.Count; i++)

@@ -10,28 +10,39 @@ public class TenticleLead : MonoBehaviour {
 
 	public bool isActive = false;
 
-	Rigidbody rb;
-
-	Vector3 pos;
+	//Vector3 pos;
 
 	// Use this for initialization
 	void Start () {
 
-		rb = GetComponentInChildren <Rigidbody> ();
+		//pos = transform.position;
 
-		pos = transform.position;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
+		//Vector2 p = -(pos - Input.mousePosition) * 0.005f;
+		//pos = Input.mousePosition;
+
 		if (isActive)
 		{
-			float horizontal = Input.GetAxis ("Horizontal");
+			float horizontal = Input.GetAxis ("Horizontal" );
 			float vertical = Input.GetAxis ("Vertical");
 			
 			transform.Translate (horizontal * speed, 0f, vertical * speed);
+			//transform.Translate (p.x, 0f, p.y);
 		}
+	}
+
+	public void Activate(bool active)
+	{
+		isActive = active;
+
+		if (active)
+			gameObject.tag = "CameraFollow";
+		else
+			gameObject.tag = "Untagged";
 	}
 
 	void OnTriggerEnter(Collider other)

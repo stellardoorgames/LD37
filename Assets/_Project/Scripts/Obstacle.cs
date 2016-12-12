@@ -6,7 +6,7 @@ using FluffyUnderware.Curvy;
 public class Obstacle : MonoBehaviour {
 
 	public float distanceMultiplier = 0.5f;
-	Transform target;
+	public Transform target;
 
 	//public float distanceAtCreation;
 
@@ -16,8 +16,8 @@ public class Obstacle : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		GameObject go = GameObject.FindGameObjectWithTag ("Player");
-		target = go.transform;
+		//GameObject go = GameObject.FindGameObjectWithTag ("Player");
+		//target = go.transform;
 
 		Scale ();
 	}

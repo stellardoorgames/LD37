@@ -80,6 +80,7 @@ public class TenticleController : MonoBehaviour {
 				go.transform.position = previousSegment.transform.position;
 
 				Obstacle ob = go.GetComponent<Obstacle> ();
+				ob.target = target;
 
 				cellStack.Add (new TenticleCell (ob, segment));
 			}
