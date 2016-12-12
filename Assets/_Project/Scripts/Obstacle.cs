@@ -1,11 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FluffyUnderware.Curvy;
 
 public class Obstacle : MonoBehaviour {
 
-	public float distance;
+	public float distanceMultiplier = 0.5f;
 	Transform target;
+
+	//public float distanceAtCreation;
+
+	bool stillScaling = true;
+	float scale;
 
 	// Use this for initialization
 	void Start () 
@@ -19,7 +25,8 @@ public class Obstacle : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		Scale ();
+		if (stillScaling)
+			Scale ();
 	}
 
 	public void Remove()
@@ -31,9 +38,16 @@ public class Obstacle : MonoBehaviour {
 	{
 		if (target != null)
 		{
-			float dist = Mathf.Clamp01 (Vector3.Distance (target.position, transform.position) * 0.8f);
+			float dist = Mathf.Clamp01 (Vector3.Distance (target.position, transform.position) * distanceMultiplier);
 
-			transform.localScale = new Vector3(dist, dist, dist);
+			if (dist > scale)
+				transform.localScale = Vector3.one * dist;
+
+			scale = dist;
+
+			if (dist >= 0.9f)
+				stillScaling = false;
 		}
+
 	}
 }

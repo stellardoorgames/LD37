@@ -8,14 +8,11 @@ public class TenticleCell
 {
 	public Obstacle obstacle;
 	public CurvySplineSegment segment;
-	public CurvySpline spline;
 
-	public TenticleCell(Obstacle obstacle, CurvySplineSegment segment, CurvySpline spline)
+	public TenticleCell(Obstacle obstacle, CurvySplineSegment segment)
 	{
 		this.obstacle = obstacle;
 		this.segment = segment;
-		this.spline = spline;
-
 	}
 }
 
@@ -25,15 +22,17 @@ public class TenticleController : MonoBehaviour {
 
 	public CurvySpline spline;
 
-	public float segmentLength = 2f;
-
-	public int gridWidth = 20;
+	public float segmentLength = 1f;
 
 	public GameObject obstacle;
 
-	public List<TenticleCell> cellStack;
+	public Material tenticleMaterial;
+
+	List<TenticleCell> cellStack;
 
 	CurvySplineSegment segment;
+
+	float length;
 
 	void Start()
 	{
@@ -41,13 +40,23 @@ public class TenticleController : MonoBehaviour {
 
 		cellStack = new List<TenticleCell> ();
 		foreach (CurvySplineSegment s in spline.Segments)
-			cellStack.Add (new TenticleCell (null, s, spline));
+			cellStack.Add (new TenticleCell (null, s));
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		segment = spline.LastVisibleControlPoint;
+		spline.Refresh ();
+
+		segment = spline.LastVisibleControlPoint;//spline.ControlPoints [spline.Count - 1];//
+
+		float offset = spline.Length - length;//Vector3.Distance (segment.transform.position, target.position);
+		length = spline.Length;
+
+		Vector3 v = tenticleMaterial.mainTextureOffset;
+		v.x -= offset * 0.25f;
+
+		tenticleMaterial.mainTextureOffset = v;
 
 		segment.transform.position = target.position;
 
@@ -63,14 +72,16 @@ public class TenticleController : MonoBehaviour {
 
 			CurvySplineSegment previousSegment = null;
 			if (segment.PreviousControlPoint != null)
-				previousSegment = segment;
+				previousSegment = segment.PreviousControlPoint;
 			
 			if (previousSegment != null)
 			{
 				GameObject go = Instantiate (obstacle);
 				go.transform.position = previousSegment.transform.position;
 
-				cellStack.Add (new TenticleCell (go.GetComponent<Obstacle> (), segment, spline));
+				Obstacle ob = go.GetComponent<Obstacle> ();
+
+				cellStack.Add (new TenticleCell (ob, segment));
 			}
 		}
 
@@ -87,41 +98,38 @@ public class TenticleController : MonoBehaviour {
 	public bool Collide(GameObject go)
 	{
 		bool retVal = false;
-		TenticleCell tc = cellStack [cellStack.Count - 1];
-		if (go == tc.obstacle.gameObject)
+
+		for (int i = 1; i < 8; i++)
 		{
-			Debug.Log ("Collide");
-			
-			cellStack.RemoveAt (cellStack.Count - 1);
-			GameObject.Destroy(tc.obstacle.gameObject);
-			tc.segment.Delete ();
-			//Obstacle ob = go2.GetComponent<Obstacle> ();
-			//ob.Remove ();
+			if (i >= 0 && i < cellStack.Count - 1)
+			{
+				TenticleCell tc = cellStack [cellStack.Count - i];
+				if (go == tc.obstacle.gameObject)
+				{
+					Debug.Log ("Retracting");
 
-			retVal = true;
-		}
+					RemoveSegment (cellStack.Count - i);
+					
+					retVal = true;
+				}
+				
+			}
 
-		tc = cellStack [cellStack.Count - 2];
-		if (go == tc.obstacle.gameObject)
-		{
-			Debug.Log ("Collide");
-
-			cellStack.RemoveAt (cellStack.Count - 2);
-			GameObject.Destroy(tc.obstacle.gameObject);
-			tc.segment.Delete ();
-			//Obstacle ob = go2.GetComponent<Obstacle> ();
-			//ob.Remove ();
-
-			retVal = true;
 		}
 
 		return retVal;
 	}
 
-	/*int GetIndexFromPosition(Vector3 pos)
+	void RemoveSegment(int index)
 	{
-		return (int)(pos.x * pos.y);
-	}*/
-
-
+		for (int i = cellStack.Count - 1; i >= index; i--)
+		{
+			TenticleCell tc = cellStack [i];
+			
+			GameObject.Destroy(tc.obstacle.gameObject);
+			tc.segment.Delete ();
+			cellStack.Remove (tc);//.RemoveAt (cellStack.Count - i);
+			
+		}
+	}
 }
