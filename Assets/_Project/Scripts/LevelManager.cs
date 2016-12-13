@@ -51,4 +51,9 @@ public class LevelManager : MonoBehaviour {
 	{
 		instance.currentTreasure++;
 	}
+
+	static public void LoseLevel()
+	{
+		instance.OnLose.Invoke ();
+	}
 }

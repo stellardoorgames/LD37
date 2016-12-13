@@ -16,6 +16,11 @@ public class PrincessController : Grabbable {
 
 	void OnTriggerEnter(Collider other)
 	{
-		
+		EnemyController enemy = other.GetComponent<EnemyController> ();
+
+		if (enemy != null)
+		{
+			LevelManager.LoseLevel ();
+		}
 	}
 }

@@ -39,7 +39,7 @@ public class Spawner : MonoBehaviour {
 		if (spawnNum == 0)
 			spawnNum = int.MaxValue;
 
-		for (int i = 0; i < spawnNum; i++)
+		for (int i = 0; i < spawnNum ; i++)
 		{
 			if (stopTime > 0f && Time.time > sequenceEndTime)
 				yield break;

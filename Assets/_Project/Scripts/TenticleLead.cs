@@ -10,8 +10,8 @@ public class TenticleLead : MonoBehaviour {
 
 	public bool isActive = false;
 
-	EnemyController enemy;
-	EnemyController grabbedEnemy;
+	Grabbable grabbable;
+	Grabbable carryingObject;
 
 
 	void Start () 
@@ -32,29 +32,29 @@ public class TenticleLead : MonoBehaviour {
 			transform.Translate (horizontal * speed, 0f, vertical * speed);
 			//transform.Translate (p.x, 0f, p.y);
 
-			if (grabbedEnemy != null)
+			if (carryingObject != null)
 			{
-				if (Vector3.Distance(transform.position, enemy.transform.position) > 1)
+				if (Vector3.Distance(transform.position, grabbable.transform.position) > 1)
 				{
-					grabbedEnemy.Released ();
-					grabbedEnemy = null;
+					carryingObject.Released ();
+					carryingObject = null;
 				}
 			}
 
 			if (Input.GetButtonDown ("Grab"))
 			{
-				if (grabbedEnemy != null)
+				if (carryingObject != null)
 				{
-					grabbedEnemy.Released ();
-					grabbedEnemy = null;
+					carryingObject.Released ();
+					carryingObject = null;
 				}
 				else
 				{
-					if (enemy != null)
+					if (grabbable != null)
 					{
-						if (Vector3.Distance(transform.position, enemy.transform.position) < 1)
-						enemy.Grabbed (transform);
-						grabbedEnemy = enemy;
+						if (Vector3.Distance(transform.position, grabbable.transform.position) < 1)
+						grabbable.Grabbed (transform);
+						carryingObject = grabbable;
 						//enemy = null
 					}
 				}
@@ -84,11 +84,11 @@ public class TenticleLead : MonoBehaviour {
 
 		}
 
-		EnemyController ec = other.GetComponent<EnemyController> ();
+		Grabbable ec = other.GetComponent<Grabbable> ();
 
 		if (ec != null)
 		{
-			enemy = ec;
+			grabbable = ec;
 		}
 	}
 
