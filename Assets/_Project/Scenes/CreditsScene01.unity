@@ -211,7 +211,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -72}
-  m_SizeDelta: {x: 431, y: 210}
+  m_SizeDelta: {x: 480.66, y: 234}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &477857273
 MonoBehaviour:
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.78431374}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -233,8 +233,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6039b780014df8045b87618d4d5efe7d, type: 3}
-    m_FontSize: 28
+    m_Font: {fileID: 12800000, guid: 6491bb13580873b429ddeadb12e49361, type: 3}
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -245,7 +245,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Back
+  m_Text: "Adam Silcott: Code, Art \r\nGreg Lord: 3D Models, Animation, Music, Writing
+    \r\nIan Lane: Code, Animation, Art \r\nMelanie Judd: 2D Art \nRicky McCallum:
+    3D Art"
 --- !u!222 &477857274
 CanvasRenderer:
   m_ObjectHideFlags: 0
