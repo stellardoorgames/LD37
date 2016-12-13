@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: e9f06f6a196d6bc419e3bb087ba900e9
-timeCreated: 1481435854
+guid: 2538f547ae1b32d42953f941517d15f6
+timeCreated: 1481589352
 licenseType: Free
 TrueTypeFontImporter:
   serializedVersion: 4
@@ -9,11 +9,10 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Regina Black
+  fontName: OldStyle 1
   fontNames:
-  - Regina Black
-  fallbackFontReferences:
-  - {fileID: 12800000, guid: 3e0584f5a0b196d49846b5ba1a859a6c, type: 3}
+  - OldStyle 1
+  fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

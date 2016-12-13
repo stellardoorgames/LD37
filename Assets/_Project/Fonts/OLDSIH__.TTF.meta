@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: c58a6f6694ad4a84eadb27ca2fc80914
+timeCreated: 1481589352
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Oldstyle Italic
+  fontNames:
+  - Oldstyle Italic
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

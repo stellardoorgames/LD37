@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 3e0584f5a0b196d49846b5ba1a859a6c
-timeCreated: 1481435854
+guid: 6039b780014df8045b87618d4d5efe7d
+timeCreated: 1481581229
 licenseType: Free
 TrueTypeFontImporter:
   serializedVersion: 4
@@ -9,10 +9,11 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Regina Black
+  fontName: Bebas Neue
   fontNames:
-  - Regina Black
-  fallbackFontReferences: []
+  - Bebas Neue
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 0e9e9392e18e8e84c80d18e27d3e981c, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
