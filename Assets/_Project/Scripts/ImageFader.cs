@@ -19,6 +19,7 @@ public class ImageFader : MonoBehaviour
     public Color endColor = Color.clear;
 
     public GameObject textObject;
+    public float textDuration;
 
     public UnityEvent OnEnd;
 
@@ -69,6 +70,12 @@ public class ImageFader : MonoBehaviour
 
         SetTextActive(true);
 
+        if (textDuration != 0)
+        {
+            //Remove text after given interval
+            StartCoroutine(TextRemoveCoroutine());
+        }
+
         //Wait
         float waitTime = duration - fadeInDuration - fadeOutDuration;
         yield return new WaitForSeconds(waitTime);
@@ -106,11 +113,18 @@ public class ImageFader : MonoBehaviour
 
     }
 
+    IEnumerator TextRemoveCoroutine()
+    {
+        yield return new WaitForSeconds(textDuration);
+        SetTextActive(false);
+    }
+
     void SetTextActive(bool active)
     {
         /*foreach (Transform t in transform)
 			t.gameObject.SetActive (active);*/
         if (textObject != null)
             textObject.SetActive(active);
+
     }
 }
