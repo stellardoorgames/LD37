@@ -679,6 +679,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1943171806}
   - component: {fileID: 1943171805}
+  - component: {fileID: 1943171807}
   m_Layer: 0
   m_Name: SceneController
   m_TagString: Untagged
@@ -694,7 +695,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1943171804}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cea793d2d0fa1264aa53fbca47b607fd, type: 3}
+  m_Script: {fileID: 11500000, guid: 7130f3edbfe8824498bd492bb47e2016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1943171806
@@ -710,6 +711,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1943171807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1943171804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0430aeda17d1d024bae78e62fc1a3469, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultExitScene:
+    m_SceneAsset: {fileID: 102900000, guid: b898486496c1939469177589c1f925ac, type: 3}
+    m_SceneName: MenuScene01
+  asychronousLoad: 0
+  fadeIn: 1
+  fadeInDuration: 1
+  fadeInColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeInAudio: 0
+  fadeOut: 1
+  fadeOutDuration: 1
+  fadeOutColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeOutAudio: 0
+  escapeBehavior: 1
+  menu: {fileID: 0}
 --- !u!1 &1984959960
 GameObject:
   m_ObjectHideFlags: 0

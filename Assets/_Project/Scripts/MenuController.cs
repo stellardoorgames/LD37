@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class SceneController : MonoBehaviour
+public class MenuController : MonoBehaviour
 {
 
     public void OnPlay()

@@ -1009,8 +1009,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultExitScene:
-    m_SceneAsset: {fileID: 0}
-    m_SceneName: 
+    m_SceneAsset: {fileID: 102900000, guid: 56939042f5799334f82afc3ff35f7b2e, type: 3}
+    m_SceneName: ADS_Dungeon004
   asychronousLoad: 0
   fadeIn: 1
   fadeInDuration: 1
@@ -1020,7 +1020,7 @@ MonoBehaviour:
   fadeOutDuration: 1
   fadeOutColor: {r: 0, g: 0, b: 0, a: 1}
   fadeOutAudio: 0
-  escapeBehavior: 0
+  escapeBehavior: 1
   menu: {fileID: 0}
 --- !u!4 &631491605
 Transform:
@@ -1471,7 +1471,18 @@ MonoBehaviour:
   textDuration: 7
   OnEnd:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 631491604}
+        m_MethodName: ChangeLevel
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ADS_Dungeon004
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
 --- !u!114 &752271888
