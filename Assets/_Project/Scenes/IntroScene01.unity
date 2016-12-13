@@ -1009,8 +1009,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultExitScene:
-    m_SceneAsset: {fileID: 102900000, guid: 56939042f5799334f82afc3ff35f7b2e, type: 3}
-    m_SceneName: ADS_Dungeon004
+    m_SceneAsset: {fileID: 102900000, guid: d842c63d46898ee4aa557e15cb28da1d, type: 3}
+    m_SceneName: DungeonLevel001
   asychronousLoad: 0
   fadeIn: 1
   fadeInDuration: 1
@@ -1480,7 +1480,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: ADS_Dungeon004
+          m_StringArgument: DungeonLevel001
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,

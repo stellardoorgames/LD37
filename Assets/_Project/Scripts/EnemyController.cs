@@ -57,6 +57,7 @@ public class EnemyController : Grabbable {
 
 	public void Death()
 	{
+		LevelManager.AddKill ();
 		Destroy (gameObject);
 
 	}

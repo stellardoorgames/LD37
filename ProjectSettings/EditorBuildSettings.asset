@@ -12,4 +12,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Project/Scenes/CreditsScene01.unity
   - enabled: 1
-    path: Assets/_Project/Scenes/ADS_Dungeon004.unity
+    path: Assets/_Project/Scenes/DungeonLevel001.unity
+  - enabled: 1
+    path: Assets/_Project/Scenes/CutScene02.unity
