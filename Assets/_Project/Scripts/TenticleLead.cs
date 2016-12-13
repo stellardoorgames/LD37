@@ -14,16 +14,11 @@ public class TenticleLead : MonoBehaviour {
 	EnemyController grabbedEnemy;
 
 
-	//Vector3 pos;
-
-	// Use this for initialization
-	void Start () {
-
-		//pos = transform.position;
+	void Start () 
+	{
 
 	}
 	
-	// Update is called once per frame
 	void Update () {
 
 		//Vector2 p = -(pos - Input.mousePosition) * 0.005f;
@@ -37,10 +32,17 @@ public class TenticleLead : MonoBehaviour {
 			transform.Translate (horizontal * speed, 0f, vertical * speed);
 			//transform.Translate (p.x, 0f, p.y);
 
+			if (grabbedEnemy != null)
+			{
+				if (Vector3.Distance(transform.position, enemy.transform.position) > 1)
+				{
+					grabbedEnemy.Released ();
+					grabbedEnemy = null;
+				}
+			}
 
 			if (Input.GetButtonDown ("Grab"))
 			{
-				//GetComponent<ri
 				if (grabbedEnemy != null)
 				{
 					grabbedEnemy.Released ();
@@ -50,6 +52,7 @@ public class TenticleLead : MonoBehaviour {
 				{
 					if (enemy != null)
 					{
+						if (Vector3.Distance(transform.position, enemy.transform.position) < 1)
 						enemy.Grabbed (transform);
 						grabbedEnemy = enemy;
 						//enemy = null

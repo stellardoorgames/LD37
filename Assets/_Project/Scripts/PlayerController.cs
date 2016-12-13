@@ -5,12 +5,12 @@ using UnityEngine.Events;
 
 public class PlayerController : MonoBehaviour {
 
-	const int NumTenticles = 4;
+	const int NumTenticles = 3;
 
 	public float maxLife = 10;
 	float currentLife;
 
-	public TenticleLead tenticleNorth;
+	//public TenticleLead tenticleNorth;
 	public TenticleLead tenticleSouth;
 	public TenticleLead tenticleEast;
 	public TenticleLead tenticleWest;
@@ -50,9 +50,9 @@ public class PlayerController : MonoBehaviour {
 		currentLife = maxLife;
 
 		tenticles = new List<TenticleLead>();
-		tenticles.Add (tenticleSouth);
 		tenticles.Add (tenticleWest);
-		tenticles.Add (tenticleNorth);
+		tenticles.Add (tenticleSouth);
+		//tenticles.Add (tenticleNorth);
 		tenticles.Add (tenticleEast);
 
 		activeTenticle = tenticles [activeTenticleIndex];
@@ -68,18 +68,18 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetButtonDown ("CyclePrevious"))
 			activeTenticleIndex++;
 		
-		if (Input.GetButtonDown ("South"))
-			activeTenticleIndex = 0;
-
 		if (Input.GetButtonDown ("West"))
-			activeTenticleIndex = 1;
+			activeTenticleIndex = 0;
 		
-		if (Input.GetButtonDown ("North"))
-			activeTenticleIndex = 2;
+		if (Input.GetButtonDown ("South"))
+			activeTenticleIndex = 1;
 
 		if (Input.GetButtonDown ("East"))
-			activeTenticleIndex = 3;
+			activeTenticleIndex = 2;
 		
+		
+		//if (Input.GetButtonDown ("North"))
+		//	activeTenticleIndex = 2;
 	}
 
 	void SwitchTenticles(int index)

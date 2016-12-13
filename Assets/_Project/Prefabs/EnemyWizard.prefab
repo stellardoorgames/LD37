@@ -540,7 +540,7 @@ GameObject:
   - component: {fileID: 23015690928895042}
   - component: {fileID: 195942146776064628}
   - component: {fileID: 114122683560081904}
-  - component: {fileID: 54062020078632086}
+  - component: {fileID: 54174559977020928}
   m_Layer: 0
   m_Name: EnemyWizard
   m_TagString: Untagged
@@ -14036,7 +14036,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1062152934732278}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8, y: 0, z: -3}
+  m_LocalPosition: {x: 10, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 224266676690555216}
@@ -16732,7 +16732,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1815774787856220}
   m_Mesh: {fileID: 4300088, guid: 1e15964357a70284bb461f6f7e25aa39, type: 3}
---- !u!54 &54062020078632086
+--- !u!54 &54174559977020928
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -17186,7 +17186,7 @@ NavMeshAgent:
   m_AutoRepath: 1
   m_Height: 2
   m_BaseOffset: 0
-  m_WalkableMask: 4294967295
+  m_WalkableMask: 1
   m_ObstacleAvoidanceType: 4
 --- !u!222 &222666974432963386
 CanvasRenderer:

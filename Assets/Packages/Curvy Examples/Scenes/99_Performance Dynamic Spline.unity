@@ -1030,7 +1030,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13463edfb77f1304ca4a0da53dfe21a0, type: 2}
-  m_RootGameObject: {fileID: 1305832891}
+  m_RootGameObject: {fileID: 1536237396}
   m_IsPrefabParent: 0
 --- !u!1 &1290413247
 GameObject:
@@ -1176,15 +1176,15 @@ MonoBehaviour:
   m_StartCP: {fileID: 0}
   m_EndCP: {fileID: 0}
   m_Shape: {fileID: 803406578}
---- !u!1 &1305832891
+--- !u!1 &1536237396
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 184722, guid: 13463edfb77f1304ca4a0da53dfe21a0, type: 2}
   m_PrefabInternal: {fileID: 1254575339}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 1305832893}
-  - component: {fileID: 1305832892}
+  - component: {fileID: 1536237398}
+  - component: {fileID: 1536237397}
   m_Layer: 5
   m_Name: SceneSwitcher
   m_TagString: Untagged
@@ -1192,24 +1192,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1305832892
+--- !u!114 &1536237397
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11429856, guid: 13463edfb77f1304ca4a0da53dfe21a0,
     type: 2}
   m_PrefabInternal: {fileID: 1254575339}
-  m_GameObject: {fileID: 1305832891}
+  m_GameObject: {fileID: 1536237396}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5af19fa201c5ff499f9c7924cb7bc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1305832893
+--- !u!4 &1536237398
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 476422, guid: 13463edfb77f1304ca4a0da53dfe21a0, type: 2}
   m_PrefabInternal: {fileID: 1254575339}
-  m_GameObject: {fileID: 1305832891}
+  m_GameObject: {fileID: 1536237396}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 552.5, y: 283, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 
-public class EnemyController : MonoBehaviour {
+public class EnemyController : Grabbable {
 
 	public string targetTag;
 
@@ -14,15 +14,9 @@ public class EnemyController : MonoBehaviour {
 
 	Transform target;
 
-	NavMeshAgent agent;
-	Rigidbody rb;
-
-	bool isGrabbed = false;
-
-	// Use this for initialization
-	void Start () {
-		agent = GetComponent<NavMeshAgent> ();
-		rb = GetComponent<Rigidbody> ();
+	public override void Start()
+	{
+		base.Start ();
 
 		GameObject[] targets = GameObject.FindGameObjectsWithTag (targetTag);
 
@@ -36,47 +30,18 @@ public class EnemyController : MonoBehaviour {
 				if (d < dist)
 					target = go.transform;
 			}
-
-			agent.destination = target.position;
+			if (agent != null)
+				agent.destination = target.position;
 			
 		}
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		//agent.speed = 2f;
-
-		if (isGrabbed)
-		{
-			transform.localPosition = Vector3.zero;
-		}
-
-	}
-
-
-	public void Grabbed(Transform sucker)
+	public override void Update () 
 	{
-		Debug.Log ("Grabbed");
-		if (Vector3.Distance(transform.position, sucker.position) < 1)
-		{
-			agent.Stop ();
-			if (rb != null)
-				rb.isKinematic = true;
-			transform.position = sucker.position;
-			transform.SetParent (sucker);
-			
-		}
+		base.Start ();
+
 	}
 
-	public void Released()
-	{
-		agent.Resume ();
-
-		if (rb != null)
-			rb.isKinematic = false;
-		
-		transform.SetParent (null);
-	}
 
 	void OnTriggerEnter(Collider other)
 	{
@@ -86,7 +51,7 @@ public class EnemyController : MonoBehaviour {
 			//Animator anim = GetComponent<Animator> ();
 			//anim.Play ("Death");
 			Debug.Log ("Lava");
-			//Destroy (gameObject);
+			Death ();
 		}
 	}
 

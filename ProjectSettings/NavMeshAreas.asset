@@ -1,7 +1,7 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!126 &1
-NavMeshAreas:
+NavMeshProjectSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   areas:
@@ -11,7 +11,7 @@ NavMeshAreas:
     cost: 1
   - name: Jump
     cost: 2
-  - name: 
+  - name: Trap
     cost: 1
   - name: 
     cost: 1

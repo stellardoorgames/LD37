@@ -94,6 +94,8 @@ public class TenticleController : MonoBehaviour {
 			transform.position = segment.transform.position;
 		}
 
+		spline.Refresh ();
+
 	}
 
 	public bool Collide(GameObject go)
