@@ -135,4 +135,10 @@ public class TenticleController : MonoBehaviour {
 			
 		}
 	}
+
+	void OnDestroy()
+	{
+		Debug.Log("Resetting Texture UVs");
+		tenticleMaterial.mainTextureOffset = Vector2.zero;
+	}
 }
