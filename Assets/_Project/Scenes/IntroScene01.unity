@@ -273,8 +273,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 752271885}
-  nextImageTime: 4
-  duration: 5
+  nextImageTime: 6
+  duration: 7
   fadeInDuration: 1
   fadeOutDuration: 1
   startColor: {r: 0, g: 0, b: 0, a: 0}
@@ -455,15 +455,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 1
   nextObject: {fileID: 1702280730}
-  nextImageTime: 4
+  nextImageTime: 3
   duration: 19
   fadeInDuration: 2
   fadeOutDuration: 0.5
   startColor: {r: 0, g: 0, b: 0, a: 0}
   displayColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
-  textObject: {fileID: 1081088364}
-  textDuration: 4
+  textObject: {fileID: 0}
+  textDuration: 0
   OnEnd:
     m_PersistentCalls:
       m_Calls:
@@ -1103,8 +1103,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 247707358}
-  nextImageTime: 5
-  duration: 5
+  nextImageTime: 7
+  duration: 7
   fadeInDuration: 1
   fadeOutDuration: 1
   startColor: {r: 0, g: 0, b: 0, a: 0}
@@ -2194,15 +2194,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 365870935}
-  nextImageTime: 3
+  nextImageTime: 4
   duration: 8
   fadeInDuration: 0.5
   fadeOutDuration: 0.5
   startColor: {r: 0, g: 0, b: 0, a: 0}
   displayColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
-  textObject: {fileID: 0}
-  textDuration: 0
+  textObject: {fileID: 1081088364}
+  textDuration: 4
   OnEnd:
     m_PersistentCalls:
       m_Calls:
@@ -2592,7 +2592,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 2538f547ae1b32d42953f941517d15f6, type: 3}
-    m_FontSize: 28
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -2603,8 +2603,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Dinnertime, darling!  \r\nSome fresh heroic souls for you, my dear. Served
-    just as you like them\u2026 in shining armor."
+  m_Text: "Dinnertime, darling! Some fresh heroic souls for you, my dear. Served just
+    as you like them\u2026 in shining armor."
 --- !u!222 &2010866157
 CanvasRenderer:
   m_ObjectHideFlags: 0
