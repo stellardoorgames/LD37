@@ -1,3 +1,308 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8e713413f70092d62d732be66ff17a2d274ce218e9d353eb9eca09114143bb1b
-size 7275
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: rail_car_wheel
+  m_Shader: {fileID: 4800000, guid: 4af43bc13bcb0254393bf11cc658411c, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: 2000
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 7d6f25bea6d4ef347b908aa2dce7784a, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BumpMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailNormalMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _ParallaxMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _OcclusionMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _EmissionMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailMask
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailAlbedoMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _MetallicGlossMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Diffuse
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _SurfaceTexColors
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _SurfaceTexAttributes
+        second:
+          m_Texture: {fileID: 2800000, guid: e401476bf76ee4e4bbd3280e2dd2915c, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _TriplanarAttributes
+        second:
+          m_Texture: {fileID: 2800000, guid: b323a59f586d4cc4aac4468c3890af85, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Normals
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Edge
+        second:
+          m_Texture: {fileID: 2800000, guid: 1769c1724fffab2499432e75c63f041e, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Surface
+        second:
+          m_Texture: {fileID: 2800000, guid: 113b55dc7f38cb9428b7b3b79bc4590d, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _node_5610
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _node_4764
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _node_3386
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _SrcBlend
+        second: 1
+      data:
+        first:
+          name: _DstBlend
+        second: 0
+      data:
+        first:
+          name: _Cutoff
+        second: .5
+      data:
+        first:
+          name: _Parallax
+        second: .0199999996
+      data:
+        first:
+          name: _ZWrite
+        second: 1
+      data:
+        first:
+          name: _Glossiness
+        second: 1
+      data:
+        first:
+          name: _BumpScale
+        second: 1
+      data:
+        first:
+          name: _OcclusionStrength
+        second: 1
+      data:
+        first:
+          name: _DetailNormalMapScale
+        second: 1
+      data:
+        first:
+          name: _UVSec
+        second: 0
+      data:
+        first:
+          name: _Mode
+        second: 0
+      data:
+        first:
+          name: _Metallic
+        second: 1
+      data:
+        first:
+          name: _Gloss
+        second: .451127797
+      data:
+        first:
+          name: _TriplanarSharpness
+        second: 6.26520491
+      data:
+        first:
+          name: _CurvatureWearFactor
+        second: .72299999
+      data:
+        first:
+          name: _CurvaturePower
+        second: 8
+      data:
+        first:
+          name: _MainMetalness
+        second: 0
+      data:
+        first:
+          name: _EdgeMetalness
+        second: 1
+      data:
+        first:
+          name: _MainSmoothness
+        second: .197999999
+      data:
+        first:
+          name: _EdgeSmoothness
+        second: 1
+      data:
+        first:
+          name: _CurvatureAlbedoBoost
+        second: 1
+      data:
+        first:
+          name: _CurvatureBoostSelf
+        second: 1
+      data:
+        first:
+          name: _CurvatureBoostUniform
+        second: .800000012
+      data:
+        first:
+          name: _Bands
+        second: 8
+      data:
+        first:
+          name: _Sharpness
+        second: 10.6000004
+      data:
+        first:
+          name: _EdgeFactor
+        second: 1
+      data:
+        first:
+          name: _AlbedoBoost
+        second: 1
+      data:
+        first:
+          name: _CurvatureBoost
+        second: .783999979
+      data:
+        first:
+          name: _DirtBoost
+        second: 0
+      data:
+        first:
+          name: _DirtOcclusionCoverage
+        second: .35800001
+    m_Colors:
+      data:
+        first:
+          name: _EmissionColor
+        second: {r: 0, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _Color
+        second: {r: .588, g: .588, b: .588, a: 1}
+      data:
+        first:
+          name: _Emission
+        second: {r: 0, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _LightWrapping
+        second: {r: .905882418, g: .494117588, b: .490196109, a: 1}
+      data:
+        first:
+          name: _Diffuse
+        second: {r: .911764681, g: .876042485, b: .817906618, a: 1}
+      data:
+        first:
+          name: _MainAlbedo
+        second: {r: .558823526, g: .407045692, b: .345155716, a: 1}
+      data:
+        first:
+          name: _EdgeAlbedo
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _ColorMain
+        second: {r: 1, g: .804056823, b: .382352948, a: 1}
+      data:
+        first:
+          name: _ColorSecondary
+        second: {r: .5, g: .5, b: .5, a: 1}
