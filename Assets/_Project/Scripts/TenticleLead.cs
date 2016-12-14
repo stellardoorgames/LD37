@@ -28,8 +28,10 @@ public class TenticleLead : MonoBehaviour {
 		{
 			float horizontal = Input.GetAxis ("Horizontal" );
 			float vertical = Input.GetAxis ("Vertical");
-			
-			transform.Translate (horizontal * speed, 0f, vertical * speed);
+
+			Vector3 movement = new Vector3 (horizontal, 0, vertical) * speed * Time.deltaTime;
+
+			transform.Translate (movement);
 			//transform.Translate (p.x, 0f, p.y);
 
 			if (carryingObject != null)

@@ -246,8 +246,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Adam Silcott: Code, Art \r\nGreg Lord: 3D Models, Animation, Music, Writing
-    \r\nIan Lane: Code, Animation, Art \r\nMelanie Judd: 2D Art \nRicky McCallum:
-    3D Art"
+    \r\nIan Lane: Code, Animation, Art \r\nMelanie Judd: 2D Art, Character Designer\nRicky
+    McCallum: 3D Art"
 --- !u!222 &477857274
 CanvasRenderer:
   m_ObjectHideFlags: 0
