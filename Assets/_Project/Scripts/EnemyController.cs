@@ -15,6 +15,8 @@ public class EnemyController : Grabbable {
 
 	Transform target;
 
+    public GameObject lavaDeathEffect;
+
 	public override void Start()
 	{
 		base.Start ();
@@ -52,7 +54,9 @@ public class EnemyController : Grabbable {
 			//Animator anim = GetComponent<Animator> ();
 			//anim.Play ("Death");
 			Debug.Log ("Lava");
-			Death ();
+            Instantiate(lavaDeathEffect, transform.position, Quaternion.identity);
+
+            Death ();
 		}
 	}
 

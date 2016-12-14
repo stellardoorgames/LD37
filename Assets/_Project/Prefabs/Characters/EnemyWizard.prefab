@@ -16778,6 +16778,8 @@ MonoBehaviour:
   anim: {fileID: 95917374941006580}
   targetTag: Princess
   text: {fileID: 0}
+  lavaDeathEffect: {fileID: 1038803464642200, guid: 31d076bc109379645a681b46611c640c,
+    type: 2}
 --- !u!114 &114272735126883098
 MonoBehaviour:
   m_ObjectHideFlags: 1
