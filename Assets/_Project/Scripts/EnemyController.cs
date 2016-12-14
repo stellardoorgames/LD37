@@ -8,7 +8,8 @@ public class EnemyController : Grabbable {
 
 	public string targetTag;
 
-	public AnimationClip deathAnim;
+	//public AnimationClip deathAnim;
+	//public Animator anim;
 
 	public Text text;
 

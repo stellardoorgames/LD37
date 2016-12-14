@@ -88,8 +88,6 @@ public class TenticleLead : MonoBehaviour {
 
 		if (obstacle != null)
 		{
-			Debug.Log ("Trigger");
-
 			tenticleController.SelfCollide (obstacle.gameObject);
 
 		}

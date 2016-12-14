@@ -1,0 +1,2494 @@
+fileFormatVersion: 2
+guid: 5bee4e99af80b7c40bb90ff95454d9e1
+timeCreated: 1481757625
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: chest
+    100002: DEF-chest
+    100004: DEF-chest_end
+    100006: DEF-foot.L
+    100008: DEF-foot.L_end
+    100010: DEF-foot.R
+    100012: DEF-foot.R_end
+    100014: DEF-forearm.01.L
+    100016: DEF-forearm.01.L_end
+    100018: DEF-forearm.01.R
+    100020: DEF-forearm.01.R_end
+    100022: DEF-forearm.02.L
+    100024: DEF-forearm.02.L_end
+    100026: DEF-forearm.02.R
+    100028: DEF-forearm.02.R_end
+    100030: DEF-hand.L
+    100032: DEF-hand.L_end
+    100034: DEF-hand.R
+    100036: DEF-hand.R_end
+    100038: DEF-head
+    100040: DEF-head_end
+    100042: DEF-hips
+    100044: DEF-hips_end
+    100046: DEF-neck
+    100048: DEF-neck_end
+    100050: DEF-shin.01.L
+    100052: DEF-shin.01.L_end
+    100054: DEF-shin.01.R
+    100056: DEF-shin.01.R_end
+    100058: DEF-shin.02.L
+    100060: DEF-shin.02.L_end
+    100062: DEF-shin.02.R
+    100064: DEF-shin.02.R_end
+    100066: DEF-shoulder.L
+    100068: DEF-shoulder.L_end
+    100070: DEF-shoulder.R
+    100072: DEF-shoulder.R_end
+    100074: DEF-spine
+    100076: DEF-spine_end
+    100078: DEF-thigh.01.L
+    100080: DEF-thigh.01.L_end
+    100082: DEF-thigh.01.R
+    100084: DEF-thigh.01.R_end
+    100086: DEF-thigh.02.L
+    100088: DEF-thigh.02.R
+    100090: DEF-toe.L
+    100092: DEF-toe.L_end
+    100094: DEF-toe.R
+    100096: DEF-toe.R_end
+    100098: DEF-upper_arm.01.L
+    100100: DEF-upper_arm.01.L_end
+    100102: DEF-upper_arm.01.R
+    100104: DEF-upper_arm.01.R_end
+    100106: DEF-upper_arm.02.L
+    100108: DEF-upper_arm.02.R
+    100110: elbow_hose.L
+    100112: elbow_hose.L_end
+    100114: elbow_hose.R
+    100116: elbow_hose.R_end
+    100118: elbow_target.ik.L
+    100120: elbow_target.ik.L_end
+    100122: elbow_target.ik.R
+    100124: elbow_target.ik.R_end
+    100126: foot.fk.L
+    100128: foot.fk.R
+    100130: foot.ik.L
+    100132: foot.ik.R
+    100134: foot_roll.ik.L
+    100136: foot_roll.ik.L_end
+    100138: foot_roll.ik.R
+    100140: foot_roll.ik.R_end
+    100142: forearm.fk.L
+    100144: forearm.fk.R
+    100146: forearm_hose.L
+    100148: forearm_hose.L_end
+    100150: forearm_hose.R
+    100152: forearm_hose.R_end
+    100154: forearm_hose_end.L
+    100156: forearm_hose_end.L_end
+    100158: forearm_hose_end.R
+    100160: forearm_hose_end.R_end
+    100162: hand.fk.L
+    100164: hand.fk.R
+    100166: hand.ik.L
+    100168: hand.ik.R
+    100170: head
+    100172: hips
+    100174: knee_hose.L
+    100176: knee_hose.L_end
+    100178: knee_hose.R
+    100180: knee_hose.R_end
+    100182: knee_target.ik.L
+    100184: knee_target.ik.L_end
+    100186: knee_target.ik.R
+    100188: knee_target.ik.R_end
+    100190: //RootNode
+    100192: MCH-chest.flex
+    100194: MCH-chest.flex_s
+    100196: MCH-chest.reverse
+    100198: MCH-chest.reverse_end
+    100200: MCH-elbow_hose_p.L
+    100202: MCH-elbow_hose_p.R
+    100204: MCH-elbow_target.ik_parent.L
+    100206: MCH-elbow_target.ik_parent.R
+    100208: MCH-foot.L
+    100210: MCH-foot.L.001
+    100212: MCH-foot.L.001_end
+    100214: MCH-foot.L.rocker.01
+    100216: MCH-foot.L.rocker.02
+    100218: MCH-foot.L.roll.01
+    100220: MCH-foot.L.roll.02
+    100222: MCH-foot.L_end
+    100224: MCH-foot.R
+    100226: MCH-foot.R.001
+    100228: MCH-foot.R.001_end
+    100230: MCH-foot.R.rocker.01
+    100232: MCH-foot.R.rocker.02
+    100234: MCH-foot.R.roll.01
+    100236: MCH-foot.R.roll.02
+    100238: MCH-foot.R_end
+    100240: MCH-forearm.01.L
+    100242: MCH-forearm.01.R
+    100244: MCH-forearm.ik.L
+    100246: MCH-forearm.ik.L_end
+    100248: MCH-forearm.ik.R
+    100250: MCH-forearm.ik.R_end
+    100252: MCH-forearm.junc.L
+    100254: MCH-forearm.junc.L_end
+    100256: MCH-forearm.junc.R
+    100258: MCH-forearm.junc.R_end
+    100260: MCH-forearm.nostr.ik.L
+    100262: MCH-forearm.nostr.ik.L_end
+    100264: MCH-forearm.nostr.ik.R
+    100266: MCH-forearm.nostr.ik.R_end
+    100268: MCH-forearm.stretch.ik.L
+    100270: MCH-forearm.stretch.ik.L_end
+    100272: MCH-forearm.stretch.ik.R
+    100274: MCH-forearm.stretch.ik.R_end
+    100276: MCH-forearm_antistr.fk.L
+    100278: MCH-forearm_antistr.fk.R
+    100280: MCH-forearm_hose_end_p.L
+    100282: MCH-forearm_hose_end_p.R
+    100284: MCH-forearm_hose_p.L
+    100286: MCH-forearm_hose_p.R
+    100288: MCH-forearm_smth.01.L
+    100290: MCH-forearm_smth.01.R
+    100292: MCH-hand.L
+    100294: MCH-hand.L.001
+    100296: MCH-hand.L.001_end
+    100298: MCH-hand.L_end
+    100300: MCH-hand.R
+    100302: MCH-hand.R.001
+    100304: MCH-hand.R.001_end
+    100306: MCH-hand.R_end
+    100308: MCH-head
+    100310: MCH-head.001
+    100312: MCH-head.001_end
+    100314: MCH-head.02
+    100316: MCH-head.socket1
+    100318: MCH-head.socket1_end
+    100320: MCH-head.socket2
+    100322: MCH-head_end
+    100324: MCH-hips.flex
+    100326: MCH-hips.flex_s
+    100328: MCH-hips.reverse
+    100330: MCH-hips.reverse_end
+    100332: MCH-hips_fk_ns_ch
+    100334: MCH-hips_fk_ns_ch.001
+    100336: MCH-hips_fk_ns_intr
+    100338: MCH-hips_fk_ns_intr.001
+    100340: MCH-hips_fk_ns_intr.001_end
+    100342: MCH-hips_fk_ns_intr_end
+    100344: MCH-hips_ik_ns_ch
+    100346: MCH-hips_ik_ns_ch.001
+    100348: MCH-hips_ik_ns_intr
+    100350: MCH-hips_ik_ns_intr.001
+    100352: MCH-hips_ik_ns_intr.001_end
+    100354: MCH-hips_ik_ns_intr_end
+    100356: MCH-hips_rh_ns_ch
+    100358: MCH-hips_rh_ns_ch.001
+    100360: MCH-hips_rh_ns_intr
+    100362: MCH-hips_rh_ns_intr.001
+    100364: MCH-hips_rh_ns_intr.001_end
+    100366: MCH-hips_rh_ns_intr_end
+    100368: MCH-knee_hose_p.L
+    100370: MCH-knee_hose_p.R
+    100372: MCH-knee_target.ik_parent.L
+    100374: MCH-knee_target.ik_parent.R
+    100376: MCH-neck
+    100378: MCH-neck.02
+    100380: MCH-neck.child
+    100382: MCH-neck.child_end
+    100384: MCH-neck.follow
+    100386: MCH-neck_end
+    100388: MCH-par_spine
+    100390: MCH-shin.01.L
+    100392: MCH-shin.01.R
+    100394: MCH-shin.ik.L
+    100396: MCH-shin.ik.L_end
+    100398: MCH-shin.ik.R
+    100400: MCH-shin.ik.R_end
+    100402: MCH-shin.junc.L
+    100404: MCH-shin.junc.L_end
+    100406: MCH-shin.junc.R
+    100408: MCH-shin.junc.R_end
+    100410: MCH-shin.nostr.ik.L
+    100412: MCH-shin.nostr.ik.L_end
+    100414: MCH-shin.nostr.ik.R
+    100416: MCH-shin.nostr.ik.R_end
+    100418: MCH-shin.stretch.ik.L
+    100420: MCH-shin.stretch.ik.L_end
+    100422: MCH-shin.stretch.ik.R
+    100424: MCH-shin.stretch.ik.R_end
+    100426: MCH-shin_antistr.fk.L
+    100428: MCH-shin_antistr.fk.R
+    100430: MCH-shin_hose_end_p.L
+    100432: MCH-shin_hose_end_p.R
+    100434: MCH-shin_hose_p.L
+    100436: MCH-shin_hose_p.R
+    100438: MCH-shin_smth.01.L
+    100440: MCH-shin_smth.01.R
+    100442: MCH-shoulder_fk_ns_ch.L
+    100444: MCH-shoulder_fk_ns_ch.R
+    100446: MCH-shoulder_fk_ns_intr.L
+    100448: MCH-shoulder_fk_ns_intr.L_end
+    100450: MCH-shoulder_fk_ns_intr.R
+    100452: MCH-shoulder_fk_ns_intr.R_end
+    100454: MCH-shoulder_ik_ns_ch.L
+    100456: MCH-shoulder_ik_ns_ch.R
+    100458: MCH-shoulder_ik_ns_intr.L
+    100460: MCH-shoulder_ik_ns_intr.L_end
+    100462: MCH-shoulder_ik_ns_intr.R
+    100464: MCH-shoulder_ik_ns_intr.R_end
+    100466: MCH-shoulder_rh_ns_ch.L
+    100468: MCH-shoulder_rh_ns_ch.R
+    100470: MCH-shoulder_rh_ns_intr.L
+    100472: MCH-shoulder_rh_ns_intr.L_end
+    100474: MCH-shoulder_rh_ns_intr.R
+    100476: MCH-shoulder_rh_ns_intr.R_end
+    100478: MCH-spine.flex
+    100480: MCH-spine.flex_s
+    100482: MCH-spine.reverse
+    100484: MCH-spine.reverse_end
+    100486: MCH-sub_chest
+    100488: MCH-sub_chest_end
+    100490: MCH-sub_hips
+    100492: MCH-sub_hips_end
+    100494: MCH-sub_spine
+    100496: MCH-sub_spine_end
+    100498: MCH-thigh.fk.L.socket1
+    100500: MCH-thigh.fk.L.socket1_end
+    100502: MCH-thigh.fk.L.socket2
+    100504: MCH-thigh.fk.R.socket1
+    100506: MCH-thigh.fk.R.socket1_end
+    100508: MCH-thigh.fk.R.socket2
+    100510: MCH-thigh.ik.L
+    100512: MCH-thigh.ik.R
+    100514: MCH-thigh.nostr.ik.L
+    100516: MCH-thigh.nostr.ik.R
+    100518: MCH-thigh.stretch.ik.L
+    100520: MCH-thigh.stretch.ik.L_end
+    100522: MCH-thigh.stretch.ik.R
+    100524: MCH-thigh.stretch.ik.R_end
+    100526: MCH-thigh_antistr.fk.L
+    100528: MCH-thigh_antistr.fk.R
+    100530: MCH-thigh_hose_end_p.L
+    100532: MCH-thigh_hose_end_p.R
+    100534: MCH-thigh_hose_p.L
+    100536: MCH-thigh_hose_p.R
+    100538: MCH-thigh_smth.02.L
+    100540: MCH-thigh_smth.02.L_end
+    100542: MCH-thigh_smth.02.R
+    100544: MCH-thigh_smth.02.R_end
+    100546: MCH-toe.L.parent
+    100548: MCH-toe.L.socket1
+    100550: MCH-toe.L.socket2
+    100552: MCH-toe.L.socket2_end
+    100554: MCH-toe.R.parent
+    100556: MCH-toe.R.socket1
+    100558: MCH-toe.R.socket2
+    100560: MCH-toe.R.socket2_end
+    100562: MCH-upper_arm.fk.L.socket1
+    100564: MCH-upper_arm.fk.L.socket1_end
+    100566: MCH-upper_arm.fk.L.socket2
+    100568: MCH-upper_arm.fk.R.socket1
+    100570: MCH-upper_arm.fk.R.socket1_end
+    100572: MCH-upper_arm.fk.R.socket2
+    100574: MCH-upper_arm.ik.L
+    100576: MCH-upper_arm.ik.R
+    100578: MCH-upper_arm.nostr.ik.L
+    100580: MCH-upper_arm.nostr.ik.R
+    100582: MCH-upper_arm.stretch.ik.L
+    100584: MCH-upper_arm.stretch.ik.L_end
+    100586: MCH-upper_arm.stretch.ik.R
+    100588: MCH-upper_arm.stretch.ik.R_end
+    100590: MCH-upper_arm_antistr.fk.L
+    100592: MCH-upper_arm_antistr.fk.R
+    100594: MCH-upper_arm_hose_end_p.L
+    100596: MCH-upper_arm_hose_end_p.R
+    100598: MCH-upper_arm_hose_p.L
+    100600: MCH-upper_arm_hose_p.R
+    100602: MCH-upper_arm_smth.02.L
+    100604: MCH-upper_arm_smth.02.L_end
+    100606: MCH-upper_arm_smth.02.R
+    100608: MCH-upper_arm_smth.02.R_end
+    100610: neck
+    100612: ORG-chest
+    100614: ORG-foot.L
+    100616: ORG-foot.R
+    100618: ORG-forearm.L
+    100620: ORG-forearm.R
+    100622: ORG-hand.L
+    100624: ORG-hand.R
+    100626: ORG-head
+    100628: ORG-head_end
+    100630: ORG-heel.02.L
+    100632: ORG-heel.02.L_end
+    100634: ORG-heel.02.R
+    100636: ORG-heel.02.R_end
+    100638: ORG-heel.L
+    100640: ORG-heel.R
+    100642: ORG-hips
+    100644: ORG-neck
+    100646: ORG-shin.L
+    100648: ORG-shin.R
+    100650: ORG-shoulder.L
+    100652: ORG-shoulder.R
+    100654: ORG-spine
+    100656: ORG-thigh.L
+    100658: ORG-thigh.R
+    100660: ORG-toe.L
+    100662: ORG-toe.R
+    100664: ORG-upper_arm.L
+    100666: ORG-upper_arm.R
+    100668: Princess
+    100670: Princess-Rig
+    100672: root
+    100674: shin.fk.L
+    100676: shin.fk.R
+    100678: shin_hose.L
+    100680: shin_hose.L_end
+    100682: shin_hose.R
+    100684: shin_hose.R_end
+    100686: shin_hose_end.L
+    100688: shin_hose_end.L_end
+    100690: shin_hose_end.R
+    100692: shin_hose_end.R_end
+    100694: shoulder.L
+    100696: shoulder.L_end
+    100698: shoulder.R
+    100700: shoulder.R_end
+    100702: spine
+    100704: thigh.fk.L
+    100706: thigh.fk.R
+    100708: thigh_hose.L
+    100710: thigh_hose.L_end
+    100712: thigh_hose.R
+    100714: thigh_hose.R_end
+    100716: thigh_hose_end.L
+    100718: thigh_hose_end.L_end
+    100720: thigh_hose_end.R
+    100722: thigh_hose_end.R_end
+    100724: toe.L
+    100726: toe.L_end
+    100728: toe.R
+    100730: toe.R_end
+    100732: torso
+    100734: upper_arm.fk.L
+    100736: upper_arm.fk.R
+    100738: upper_arm_hose.L
+    100740: upper_arm_hose.L_end
+    100742: upper_arm_hose.R
+    100744: upper_arm_hose.R_end
+    100746: upper_arm_hose_end.L
+    100748: upper_arm_hose_end.L_end
+    100750: upper_arm_hose_end.R
+    100752: upper_arm_hose_end.R_end
+    100754: VIS-foot.ik.L
+    100756: VIS-foot.ik.L_end
+    100758: VIS-foot.ik.R
+    100760: VIS-foot.ik.R_end
+    100762: VIS-hand.ik.L
+    100764: VIS-hand.ik.L_end
+    100766: VIS-hand.ik.R
+    100768: VIS-hand.ik.R_end
+    100770: VIS-thigh_pole.ik.L
+    100772: VIS-thigh_pole.ik.L_end
+    100774: VIS-thigh_pole.ik.R
+    100776: VIS-thigh_pole.ik.R_end
+    100778: VIS-upper_arm_pole.ik.L
+    100780: VIS-upper_arm_pole.ik.L_end
+    100782: VIS-upper_arm_pole.ik.R
+    100784: VIS-upper_arm_pole.ik.R_end
+    400000: chest
+    400002: DEF-chest
+    400004: DEF-chest_end
+    400006: DEF-foot.L
+    400008: DEF-foot.L_end
+    400010: DEF-foot.R
+    400012: DEF-foot.R_end
+    400014: DEF-forearm.01.L
+    400016: DEF-forearm.01.L_end
+    400018: DEF-forearm.01.R
+    400020: DEF-forearm.01.R_end
+    400022: DEF-forearm.02.L
+    400024: DEF-forearm.02.L_end
+    400026: DEF-forearm.02.R
+    400028: DEF-forearm.02.R_end
+    400030: DEF-hand.L
+    400032: DEF-hand.L_end
+    400034: DEF-hand.R
+    400036: DEF-hand.R_end
+    400038: DEF-head
+    400040: DEF-head_end
+    400042: DEF-hips
+    400044: DEF-hips_end
+    400046: DEF-neck
+    400048: DEF-neck_end
+    400050: DEF-shin.01.L
+    400052: DEF-shin.01.L_end
+    400054: DEF-shin.01.R
+    400056: DEF-shin.01.R_end
+    400058: DEF-shin.02.L
+    400060: DEF-shin.02.L_end
+    400062: DEF-shin.02.R
+    400064: DEF-shin.02.R_end
+    400066: DEF-shoulder.L
+    400068: DEF-shoulder.L_end
+    400070: DEF-shoulder.R
+    400072: DEF-shoulder.R_end
+    400074: DEF-spine
+    400076: DEF-spine_end
+    400078: DEF-thigh.01.L
+    400080: DEF-thigh.01.L_end
+    400082: DEF-thigh.01.R
+    400084: DEF-thigh.01.R_end
+    400086: DEF-thigh.02.L
+    400088: DEF-thigh.02.R
+    400090: DEF-toe.L
+    400092: DEF-toe.L_end
+    400094: DEF-toe.R
+    400096: DEF-toe.R_end
+    400098: DEF-upper_arm.01.L
+    400100: DEF-upper_arm.01.L_end
+    400102: DEF-upper_arm.01.R
+    400104: DEF-upper_arm.01.R_end
+    400106: DEF-upper_arm.02.L
+    400108: DEF-upper_arm.02.R
+    400110: elbow_hose.L
+    400112: elbow_hose.L_end
+    400114: elbow_hose.R
+    400116: elbow_hose.R_end
+    400118: elbow_target.ik.L
+    400120: elbow_target.ik.L_end
+    400122: elbow_target.ik.R
+    400124: elbow_target.ik.R_end
+    400126: foot.fk.L
+    400128: foot.fk.R
+    400130: foot.ik.L
+    400132: foot.ik.R
+    400134: foot_roll.ik.L
+    400136: foot_roll.ik.L_end
+    400138: foot_roll.ik.R
+    400140: foot_roll.ik.R_end
+    400142: forearm.fk.L
+    400144: forearm.fk.R
+    400146: forearm_hose.L
+    400148: forearm_hose.L_end
+    400150: forearm_hose.R
+    400152: forearm_hose.R_end
+    400154: forearm_hose_end.L
+    400156: forearm_hose_end.L_end
+    400158: forearm_hose_end.R
+    400160: forearm_hose_end.R_end
+    400162: hand.fk.L
+    400164: hand.fk.R
+    400166: hand.ik.L
+    400168: hand.ik.R
+    400170: head
+    400172: hips
+    400174: knee_hose.L
+    400176: knee_hose.L_end
+    400178: knee_hose.R
+    400180: knee_hose.R_end
+    400182: knee_target.ik.L
+    400184: knee_target.ik.L_end
+    400186: knee_target.ik.R
+    400188: knee_target.ik.R_end
+    400190: //RootNode
+    400192: MCH-chest.flex
+    400194: MCH-chest.flex_s
+    400196: MCH-chest.reverse
+    400198: MCH-chest.reverse_end
+    400200: MCH-elbow_hose_p.L
+    400202: MCH-elbow_hose_p.R
+    400204: MCH-elbow_target.ik_parent.L
+    400206: MCH-elbow_target.ik_parent.R
+    400208: MCH-foot.L
+    400210: MCH-foot.L.001
+    400212: MCH-foot.L.001_end
+    400214: MCH-foot.L.rocker.01
+    400216: MCH-foot.L.rocker.02
+    400218: MCH-foot.L.roll.01
+    400220: MCH-foot.L.roll.02
+    400222: MCH-foot.L_end
+    400224: MCH-foot.R
+    400226: MCH-foot.R.001
+    400228: MCH-foot.R.001_end
+    400230: MCH-foot.R.rocker.01
+    400232: MCH-foot.R.rocker.02
+    400234: MCH-foot.R.roll.01
+    400236: MCH-foot.R.roll.02
+    400238: MCH-foot.R_end
+    400240: MCH-forearm.01.L
+    400242: MCH-forearm.01.R
+    400244: MCH-forearm.ik.L
+    400246: MCH-forearm.ik.L_end
+    400248: MCH-forearm.ik.R
+    400250: MCH-forearm.ik.R_end
+    400252: MCH-forearm.junc.L
+    400254: MCH-forearm.junc.L_end
+    400256: MCH-forearm.junc.R
+    400258: MCH-forearm.junc.R_end
+    400260: MCH-forearm.nostr.ik.L
+    400262: MCH-forearm.nostr.ik.L_end
+    400264: MCH-forearm.nostr.ik.R
+    400266: MCH-forearm.nostr.ik.R_end
+    400268: MCH-forearm.stretch.ik.L
+    400270: MCH-forearm.stretch.ik.L_end
+    400272: MCH-forearm.stretch.ik.R
+    400274: MCH-forearm.stretch.ik.R_end
+    400276: MCH-forearm_antistr.fk.L
+    400278: MCH-forearm_antistr.fk.R
+    400280: MCH-forearm_hose_end_p.L
+    400282: MCH-forearm_hose_end_p.R
+    400284: MCH-forearm_hose_p.L
+    400286: MCH-forearm_hose_p.R
+    400288: MCH-forearm_smth.01.L
+    400290: MCH-forearm_smth.01.R
+    400292: MCH-hand.L
+    400294: MCH-hand.L.001
+    400296: MCH-hand.L.001_end
+    400298: MCH-hand.L_end
+    400300: MCH-hand.R
+    400302: MCH-hand.R.001
+    400304: MCH-hand.R.001_end
+    400306: MCH-hand.R_end
+    400308: MCH-head
+    400310: MCH-head.001
+    400312: MCH-head.001_end
+    400314: MCH-head.02
+    400316: MCH-head.socket1
+    400318: MCH-head.socket1_end
+    400320: MCH-head.socket2
+    400322: MCH-head_end
+    400324: MCH-hips.flex
+    400326: MCH-hips.flex_s
+    400328: MCH-hips.reverse
+    400330: MCH-hips.reverse_end
+    400332: MCH-hips_fk_ns_ch
+    400334: MCH-hips_fk_ns_ch.001
+    400336: MCH-hips_fk_ns_intr
+    400338: MCH-hips_fk_ns_intr.001
+    400340: MCH-hips_fk_ns_intr.001_end
+    400342: MCH-hips_fk_ns_intr_end
+    400344: MCH-hips_ik_ns_ch
+    400346: MCH-hips_ik_ns_ch.001
+    400348: MCH-hips_ik_ns_intr
+    400350: MCH-hips_ik_ns_intr.001
+    400352: MCH-hips_ik_ns_intr.001_end
+    400354: MCH-hips_ik_ns_intr_end
+    400356: MCH-hips_rh_ns_ch
+    400358: MCH-hips_rh_ns_ch.001
+    400360: MCH-hips_rh_ns_intr
+    400362: MCH-hips_rh_ns_intr.001
+    400364: MCH-hips_rh_ns_intr.001_end
+    400366: MCH-hips_rh_ns_intr_end
+    400368: MCH-knee_hose_p.L
+    400370: MCH-knee_hose_p.R
+    400372: MCH-knee_target.ik_parent.L
+    400374: MCH-knee_target.ik_parent.R
+    400376: MCH-neck
+    400378: MCH-neck.02
+    400380: MCH-neck.child
+    400382: MCH-neck.child_end
+    400384: MCH-neck.follow
+    400386: MCH-neck_end
+    400388: MCH-par_spine
+    400390: MCH-shin.01.L
+    400392: MCH-shin.01.R
+    400394: MCH-shin.ik.L
+    400396: MCH-shin.ik.L_end
+    400398: MCH-shin.ik.R
+    400400: MCH-shin.ik.R_end
+    400402: MCH-shin.junc.L
+    400404: MCH-shin.junc.L_end
+    400406: MCH-shin.junc.R
+    400408: MCH-shin.junc.R_end
+    400410: MCH-shin.nostr.ik.L
+    400412: MCH-shin.nostr.ik.L_end
+    400414: MCH-shin.nostr.ik.R
+    400416: MCH-shin.nostr.ik.R_end
+    400418: MCH-shin.stretch.ik.L
+    400420: MCH-shin.stretch.ik.L_end
+    400422: MCH-shin.stretch.ik.R
+    400424: MCH-shin.stretch.ik.R_end
+    400426: MCH-shin_antistr.fk.L
+    400428: MCH-shin_antistr.fk.R
+    400430: MCH-shin_hose_end_p.L
+    400432: MCH-shin_hose_end_p.R
+    400434: MCH-shin_hose_p.L
+    400436: MCH-shin_hose_p.R
+    400438: MCH-shin_smth.01.L
+    400440: MCH-shin_smth.01.R
+    400442: MCH-shoulder_fk_ns_ch.L
+    400444: MCH-shoulder_fk_ns_ch.R
+    400446: MCH-shoulder_fk_ns_intr.L
+    400448: MCH-shoulder_fk_ns_intr.L_end
+    400450: MCH-shoulder_fk_ns_intr.R
+    400452: MCH-shoulder_fk_ns_intr.R_end
+    400454: MCH-shoulder_ik_ns_ch.L
+    400456: MCH-shoulder_ik_ns_ch.R
+    400458: MCH-shoulder_ik_ns_intr.L
+    400460: MCH-shoulder_ik_ns_intr.L_end
+    400462: MCH-shoulder_ik_ns_intr.R
+    400464: MCH-shoulder_ik_ns_intr.R_end
+    400466: MCH-shoulder_rh_ns_ch.L
+    400468: MCH-shoulder_rh_ns_ch.R
+    400470: MCH-shoulder_rh_ns_intr.L
+    400472: MCH-shoulder_rh_ns_intr.L_end
+    400474: MCH-shoulder_rh_ns_intr.R
+    400476: MCH-shoulder_rh_ns_intr.R_end
+    400478: MCH-spine.flex
+    400480: MCH-spine.flex_s
+    400482: MCH-spine.reverse
+    400484: MCH-spine.reverse_end
+    400486: MCH-sub_chest
+    400488: MCH-sub_chest_end
+    400490: MCH-sub_hips
+    400492: MCH-sub_hips_end
+    400494: MCH-sub_spine
+    400496: MCH-sub_spine_end
+    400498: MCH-thigh.fk.L.socket1
+    400500: MCH-thigh.fk.L.socket1_end
+    400502: MCH-thigh.fk.L.socket2
+    400504: MCH-thigh.fk.R.socket1
+    400506: MCH-thigh.fk.R.socket1_end
+    400508: MCH-thigh.fk.R.socket2
+    400510: MCH-thigh.ik.L
+    400512: MCH-thigh.ik.R
+    400514: MCH-thigh.nostr.ik.L
+    400516: MCH-thigh.nostr.ik.R
+    400518: MCH-thigh.stretch.ik.L
+    400520: MCH-thigh.stretch.ik.L_end
+    400522: MCH-thigh.stretch.ik.R
+    400524: MCH-thigh.stretch.ik.R_end
+    400526: MCH-thigh_antistr.fk.L
+    400528: MCH-thigh_antistr.fk.R
+    400530: MCH-thigh_hose_end_p.L
+    400532: MCH-thigh_hose_end_p.R
+    400534: MCH-thigh_hose_p.L
+    400536: MCH-thigh_hose_p.R
+    400538: MCH-thigh_smth.02.L
+    400540: MCH-thigh_smth.02.L_end
+    400542: MCH-thigh_smth.02.R
+    400544: MCH-thigh_smth.02.R_end
+    400546: MCH-toe.L.parent
+    400548: MCH-toe.L.socket1
+    400550: MCH-toe.L.socket2
+    400552: MCH-toe.L.socket2_end
+    400554: MCH-toe.R.parent
+    400556: MCH-toe.R.socket1
+    400558: MCH-toe.R.socket2
+    400560: MCH-toe.R.socket2_end
+    400562: MCH-upper_arm.fk.L.socket1
+    400564: MCH-upper_arm.fk.L.socket1_end
+    400566: MCH-upper_arm.fk.L.socket2
+    400568: MCH-upper_arm.fk.R.socket1
+    400570: MCH-upper_arm.fk.R.socket1_end
+    400572: MCH-upper_arm.fk.R.socket2
+    400574: MCH-upper_arm.ik.L
+    400576: MCH-upper_arm.ik.R
+    400578: MCH-upper_arm.nostr.ik.L
+    400580: MCH-upper_arm.nostr.ik.R
+    400582: MCH-upper_arm.stretch.ik.L
+    400584: MCH-upper_arm.stretch.ik.L_end
+    400586: MCH-upper_arm.stretch.ik.R
+    400588: MCH-upper_arm.stretch.ik.R_end
+    400590: MCH-upper_arm_antistr.fk.L
+    400592: MCH-upper_arm_antistr.fk.R
+    400594: MCH-upper_arm_hose_end_p.L
+    400596: MCH-upper_arm_hose_end_p.R
+    400598: MCH-upper_arm_hose_p.L
+    400600: MCH-upper_arm_hose_p.R
+    400602: MCH-upper_arm_smth.02.L
+    400604: MCH-upper_arm_smth.02.L_end
+    400606: MCH-upper_arm_smth.02.R
+    400608: MCH-upper_arm_smth.02.R_end
+    400610: neck
+    400612: ORG-chest
+    400614: ORG-foot.L
+    400616: ORG-foot.R
+    400618: ORG-forearm.L
+    400620: ORG-forearm.R
+    400622: ORG-hand.L
+    400624: ORG-hand.R
+    400626: ORG-head
+    400628: ORG-head_end
+    400630: ORG-heel.02.L
+    400632: ORG-heel.02.L_end
+    400634: ORG-heel.02.R
+    400636: ORG-heel.02.R_end
+    400638: ORG-heel.L
+    400640: ORG-heel.R
+    400642: ORG-hips
+    400644: ORG-neck
+    400646: ORG-shin.L
+    400648: ORG-shin.R
+    400650: ORG-shoulder.L
+    400652: ORG-shoulder.R
+    400654: ORG-spine
+    400656: ORG-thigh.L
+    400658: ORG-thigh.R
+    400660: ORG-toe.L
+    400662: ORG-toe.R
+    400664: ORG-upper_arm.L
+    400666: ORG-upper_arm.R
+    400668: Princess
+    400670: Princess-Rig
+    400672: root
+    400674: shin.fk.L
+    400676: shin.fk.R
+    400678: shin_hose.L
+    400680: shin_hose.L_end
+    400682: shin_hose.R
+    400684: shin_hose.R_end
+    400686: shin_hose_end.L
+    400688: shin_hose_end.L_end
+    400690: shin_hose_end.R
+    400692: shin_hose_end.R_end
+    400694: shoulder.L
+    400696: shoulder.L_end
+    400698: shoulder.R
+    400700: shoulder.R_end
+    400702: spine
+    400704: thigh.fk.L
+    400706: thigh.fk.R
+    400708: thigh_hose.L
+    400710: thigh_hose.L_end
+    400712: thigh_hose.R
+    400714: thigh_hose.R_end
+    400716: thigh_hose_end.L
+    400718: thigh_hose_end.L_end
+    400720: thigh_hose_end.R
+    400722: thigh_hose_end.R_end
+    400724: toe.L
+    400726: toe.L_end
+    400728: toe.R
+    400730: toe.R_end
+    400732: torso
+    400734: upper_arm.fk.L
+    400736: upper_arm.fk.R
+    400738: upper_arm_hose.L
+    400740: upper_arm_hose.L_end
+    400742: upper_arm_hose.R
+    400744: upper_arm_hose.R_end
+    400746: upper_arm_hose_end.L
+    400748: upper_arm_hose_end.L_end
+    400750: upper_arm_hose_end.R
+    400752: upper_arm_hose_end.R_end
+    400754: VIS-foot.ik.L
+    400756: VIS-foot.ik.L_end
+    400758: VIS-foot.ik.R
+    400760: VIS-foot.ik.R_end
+    400762: VIS-hand.ik.L
+    400764: VIS-hand.ik.L_end
+    400766: VIS-hand.ik.R
+    400768: VIS-hand.ik.R_end
+    400770: VIS-thigh_pole.ik.L
+    400772: VIS-thigh_pole.ik.L_end
+    400774: VIS-thigh_pole.ik.R
+    400776: VIS-thigh_pole.ik.R_end
+    400778: VIS-upper_arm_pole.ik.L
+    400780: VIS-upper_arm_pole.ik.L_end
+    400782: VIS-upper_arm_pole.ik.R
+    400784: VIS-upper_arm_pole.ik.R_end
+    4300000: Princess
+    7400000: Princess-Rig|Flail
+    7400002: Princess-Rig|Idle
+    9500000: //RootNode
+    13700000: Princess
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Princess-Rig|Flail
+      takeName: Princess-Rig|Flail
+      firstFrame: 0
+      lastFrame: 88
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Princess
+        weight: 1
+      - path: Princess-Rig
+        weight: 1
+      - path: Princess-Rig/root
+        weight: 1
+      - path: Princess-Rig/root/DEF-hips
+        weight: 1
+      - path: Princess-Rig/root/DEF-hips/DEF-hips_end
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.L
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.L/foot_roll.ik.L
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.L/foot_roll.ik.L/foot_roll.ik.L_end
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.L/MCH-foot.L.rocker.01
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.L/MCH-foot.L.rocker.01/MCH-foot.L.rocker.02
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.L/MCH-foot.L.rocker.01/MCH-foot.L.rocker.02/MCH-foot.L.roll.01
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.L/MCH-foot.L.rocker.01/MCH-foot.L.rocker.02/MCH-foot.L.roll.01/MCH-foot.L.roll.02
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.L/MCH-foot.L.rocker.01/MCH-foot.L.rocker.02/MCH-foot.L.roll.01/MCH-foot.L.roll.02/MCH-foot.L.001
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.L/MCH-foot.L.rocker.01/MCH-foot.L.rocker.02/MCH-foot.L.roll.01/MCH-foot.L.roll.02/MCH-foot.L.001/MCH-foot.L.001_end
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.L/MCH-foot.L.rocker.01/MCH-foot.L.rocker.02/MCH-foot.L.roll.01/MCH-toe.L.socket1
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.L/MCH-foot.L.rocker.01/MCH-foot.L.rocker.02/MCH-foot.L.roll.01/MCH-toe.L.socket1/MCH-toe.L.parent
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.L/MCH-foot.L.rocker.01/MCH-foot.L.rocker.02/MCH-foot.L.roll.01/MCH-toe.L.socket1/MCH-toe.L.parent/toe.L
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.L/MCH-foot.L.rocker.01/MCH-foot.L.rocker.02/MCH-foot.L.roll.01/MCH-toe.L.socket1/MCH-toe.L.parent/toe.L/toe.L_end
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.R
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.R/foot_roll.ik.R
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.R/foot_roll.ik.R/foot_roll.ik.R_end
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.R/MCH-foot.R.rocker.01
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.R/MCH-foot.R.rocker.01/MCH-foot.R.rocker.02
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.R/MCH-foot.R.rocker.01/MCH-foot.R.rocker.02/MCH-foot.R.roll.01
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.R/MCH-foot.R.rocker.01/MCH-foot.R.rocker.02/MCH-foot.R.roll.01/MCH-foot.R.roll.02
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.R/MCH-foot.R.rocker.01/MCH-foot.R.rocker.02/MCH-foot.R.roll.01/MCH-foot.R.roll.02/MCH-foot.R.001
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.R/MCH-foot.R.rocker.01/MCH-foot.R.rocker.02/MCH-foot.R.roll.01/MCH-foot.R.roll.02/MCH-foot.R.001/MCH-foot.R.001_end
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.R/MCH-foot.R.rocker.01/MCH-foot.R.rocker.02/MCH-foot.R.roll.01/MCH-toe.R.socket1
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.R/MCH-foot.R.rocker.01/MCH-foot.R.rocker.02/MCH-foot.R.roll.01/MCH-toe.R.socket1/MCH-toe.R.parent
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.R/MCH-foot.R.rocker.01/MCH-foot.R.rocker.02/MCH-foot.R.roll.01/MCH-toe.R.socket1/MCH-toe.R.parent/toe.R
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.R/MCH-foot.R.rocker.01/MCH-foot.R.rocker.02/MCH-foot.R.roll.01/MCH-toe.R.socket1/MCH-toe.R.parent/toe.R/toe.R_end
+        weight: 1
+      - path: Princess-Rig/root/hand.ik.L
+        weight: 1
+      - path: Princess-Rig/root/hand.ik.L/MCH-hand.L.001
+        weight: 1
+      - path: Princess-Rig/root/hand.ik.L/MCH-hand.L.001/MCH-hand.L.001_end
+        weight: 1
+      - path: Princess-Rig/root/hand.ik.R
+        weight: 1
+      - path: Princess-Rig/root/hand.ik.R/MCH-hand.R.001
+        weight: 1
+      - path: Princess-Rig/root/hand.ik.R/MCH-hand.R.001/MCH-hand.R.001_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-elbow_target.ik_parent.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-elbow_target.ik_parent.L/elbow_target.ik.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-elbow_target.ik_parent.L/elbow_target.ik.L/elbow_target.ik.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-elbow_target.ik_parent.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-elbow_target.ik_parent.R/elbow_target.ik.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-elbow_target.ik_parent.R/elbow_target.ik.R/elbow_target.ik.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-head.socket2
+        weight: 1
+      - path: Princess-Rig/root/MCH-head.socket2/head
+        weight: 1
+      - path: Princess-Rig/root/MCH-head.socket2/head/MCH-head
+        weight: 1
+      - path: Princess-Rig/root/MCH-head.socket2/head/MCH-head/MCH-head_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_fk_ns_ch
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_fk_ns_ch/MCH-thigh.fk.L.socket1
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_fk_ns_ch/MCH-thigh.fk.L.socket1/MCH-thigh.fk.L.socket1_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_fk_ns_ch.001
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_fk_ns_ch.001/MCH-thigh.fk.R.socket1
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_fk_ns_ch.001/MCH-thigh.fk.R.socket1/MCH-thigh.fk.R.socket1_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch/MCH-shin.stretch.ik.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch/MCH-shin.stretch.ik.L/MCH-shin.stretch.ik.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch/MCH-thigh.ik.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch/MCH-thigh.ik.L/MCH-shin.ik.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch/MCH-thigh.ik.L/MCH-shin.ik.L/MCH-shin.ik.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch/MCH-thigh.nostr.ik.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch/MCH-thigh.nostr.ik.L/MCH-shin.nostr.ik.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch/MCH-thigh.nostr.ik.L/MCH-shin.nostr.ik.L/MCH-shin.nostr.ik.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch/MCH-thigh.stretch.ik.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch/MCH-thigh.stretch.ik.L/MCH-thigh.stretch.ik.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch.001
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch.001/MCH-shin.stretch.ik.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch.001/MCH-shin.stretch.ik.R/MCH-shin.stretch.ik.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch.001/MCH-thigh.ik.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch.001/MCH-thigh.ik.R/MCH-shin.ik.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch.001/MCH-thigh.ik.R/MCH-shin.ik.R/MCH-shin.ik.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch.001/MCH-thigh.nostr.ik.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch.001/MCH-thigh.nostr.ik.R/MCH-shin.nostr.ik.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch.001/MCH-thigh.nostr.ik.R/MCH-shin.nostr.ik.R/MCH-shin.nostr.ik.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch.001/MCH-thigh.stretch.ik.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch.001/MCH-thigh.stretch.ik.R/MCH-thigh.stretch.ik.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch/DEF-thigh.01.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch/DEF-thigh.01.L/DEF-thigh.01.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch/MCH-knee_hose_p.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch/MCH-knee_hose_p.L/knee_hose.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch/MCH-knee_hose_p.L/knee_hose.L/knee_hose.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch/MCH-shin_hose_end_p.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch/MCH-shin_hose_end_p.L/shin_hose_end.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch/MCH-shin_hose_end_p.L/shin_hose_end.L/shin_hose_end.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch/MCH-shin_hose_p.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch/MCH-shin_hose_p.L/shin_hose.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch/MCH-shin_hose_p.L/shin_hose.L/shin_hose.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch/MCH-thigh_hose_end_p.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch/MCH-thigh_hose_end_p.L/thigh_hose_end.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch/MCH-thigh_hose_end_p.L/thigh_hose_end.L/thigh_hose_end.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch/MCH-thigh_hose_p.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch/MCH-thigh_hose_p.L/thigh_hose.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch/MCH-thigh_hose_p.L/thigh_hose.L/thigh_hose.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001/DEF-thigh.01.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001/DEF-thigh.01.R/DEF-thigh.01.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001/MCH-knee_hose_p.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001/MCH-knee_hose_p.R/knee_hose.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001/MCH-knee_hose_p.R/knee_hose.R/knee_hose.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001/MCH-shin_hose_end_p.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001/MCH-shin_hose_end_p.R/shin_hose_end.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001/MCH-shin_hose_end_p.R/shin_hose_end.R/shin_hose_end.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001/MCH-shin_hose_p.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001/MCH-shin_hose_p.R/shin_hose.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001/MCH-shin_hose_p.R/shin_hose.R/shin_hose.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001/MCH-thigh_hose_end_p.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001/MCH-thigh_hose_end_p.R/thigh_hose_end.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001/MCH-thigh_hose_end_p.R/thigh_hose_end.R/thigh_hose_end.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001/MCH-thigh_hose_p.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001/MCH-thigh_hose_p.R/thigh_hose.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001/MCH-thigh_hose_p.R/thigh_hose.R/thigh_hose.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-knee_target.ik_parent.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-knee_target.ik_parent.L/knee_target.ik.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-knee_target.ik_parent.L/knee_target.ik.L/knee_target.ik.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-knee_target.ik_parent.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-knee_target.ik_parent.R/knee_target.ik.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-knee_target.ik_parent.R/knee_target.ik.R/knee_target.ik.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_fk_ns_ch.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_fk_ns_ch.L/MCH-upper_arm.fk.L.socket1
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_fk_ns_ch.L/MCH-upper_arm.fk.L.socket1/MCH-upper_arm.fk.L.socket1_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_fk_ns_ch.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_fk_ns_ch.R/MCH-upper_arm.fk.R.socket1
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_fk_ns_ch.R/MCH-upper_arm.fk.R.socket1/MCH-upper_arm.fk.R.socket1_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.L/MCH-forearm.stretch.ik.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.L/MCH-forearm.stretch.ik.L/MCH-forearm.stretch.ik.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.L/MCH-upper_arm.ik.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.L/MCH-upper_arm.ik.L/MCH-forearm.ik.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.L/MCH-upper_arm.ik.L/MCH-forearm.ik.L/MCH-forearm.ik.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.L/MCH-upper_arm.nostr.ik.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.L/MCH-upper_arm.nostr.ik.L/MCH-forearm.nostr.ik.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.L/MCH-upper_arm.nostr.ik.L/MCH-forearm.nostr.ik.L/MCH-forearm.nostr.ik.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.L/MCH-upper_arm.stretch.ik.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.L/MCH-upper_arm.stretch.ik.L/MCH-upper_arm.stretch.ik.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.R/MCH-forearm.stretch.ik.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.R/MCH-forearm.stretch.ik.R/MCH-forearm.stretch.ik.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.R/MCH-upper_arm.ik.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.R/MCH-upper_arm.ik.R/MCH-forearm.ik.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.R/MCH-upper_arm.ik.R/MCH-forearm.ik.R/MCH-forearm.ik.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.R/MCH-upper_arm.nostr.ik.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.R/MCH-upper_arm.nostr.ik.R/MCH-forearm.nostr.ik.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.R/MCH-upper_arm.nostr.ik.R/MCH-forearm.nostr.ik.R/MCH-forearm.nostr.ik.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.R/MCH-upper_arm.stretch.ik.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.R/MCH-upper_arm.stretch.ik.R/MCH-upper_arm.stretch.ik.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L/DEF-upper_arm.01.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L/DEF-upper_arm.01.L/DEF-upper_arm.01.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L/MCH-elbow_hose_p.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L/MCH-elbow_hose_p.L/elbow_hose.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L/MCH-elbow_hose_p.L/elbow_hose.L/elbow_hose.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L/MCH-forearm_hose_end_p.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L/MCH-forearm_hose_end_p.L/forearm_hose_end.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L/MCH-forearm_hose_end_p.L/forearm_hose_end.L/forearm_hose_end.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L/MCH-forearm_hose_p.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L/MCH-forearm_hose_p.L/forearm_hose.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L/MCH-forearm_hose_p.L/forearm_hose.L/forearm_hose.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L/MCH-upper_arm_hose_end_p.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L/MCH-upper_arm_hose_end_p.L/upper_arm_hose_end.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L/MCH-upper_arm_hose_end_p.L/upper_arm_hose_end.L/upper_arm_hose_end.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L/MCH-upper_arm_hose_p.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L/MCH-upper_arm_hose_p.L/upper_arm_hose.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L/MCH-upper_arm_hose_p.L/upper_arm_hose.L/upper_arm_hose.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R/DEF-upper_arm.01.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R/DEF-upper_arm.01.R/DEF-upper_arm.01.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R/MCH-elbow_hose_p.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R/MCH-elbow_hose_p.R/elbow_hose.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R/MCH-elbow_hose_p.R/elbow_hose.R/elbow_hose.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R/MCH-forearm_hose_end_p.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R/MCH-forearm_hose_end_p.R/forearm_hose_end.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R/MCH-forearm_hose_end_p.R/forearm_hose_end.R/forearm_hose_end.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R/MCH-forearm_hose_p.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R/MCH-forearm_hose_p.R/forearm_hose.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R/MCH-forearm_hose_p.R/forearm_hose.R/forearm_hose.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R/MCH-upper_arm_hose_end_p.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R/MCH-upper_arm_hose_end_p.R/upper_arm_hose_end.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R/MCH-upper_arm_hose_end_p.R/upper_arm_hose_end.R/upper_arm_hose_end.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R/MCH-upper_arm_hose_p.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R/MCH-upper_arm_hose_p.R/upper_arm_hose.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R/MCH-upper_arm_hose_p.R/upper_arm_hose.R/upper_arm_hose.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-thigh.fk.L.socket2
+        weight: 1
+      - path: Princess-Rig/root/MCH-thigh.fk.L.socket2/thigh.fk.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-thigh.fk.L.socket2/thigh.fk.L/MCH-thigh_antistr.fk.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-thigh.fk.L.socket2/thigh.fk.L/MCH-thigh_antistr.fk.L/shin.fk.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-thigh.fk.L.socket2/thigh.fk.L/MCH-thigh_antistr.fk.L/shin.fk.L/MCH-shin_antistr.fk.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-thigh.fk.L.socket2/thigh.fk.L/MCH-thigh_antistr.fk.L/shin.fk.L/MCH-shin_antistr.fk.L/foot.fk.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-thigh.fk.L.socket2/thigh.fk.L/MCH-thigh_antistr.fk.L/shin.fk.L/MCH-shin_antistr.fk.L/foot.fk.L/MCH-foot.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-thigh.fk.L.socket2/thigh.fk.L/MCH-thigh_antistr.fk.L/shin.fk.L/MCH-shin_antistr.fk.L/foot.fk.L/MCH-foot.L/MCH-foot.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-thigh.fk.R.socket2
+        weight: 1
+      - path: Princess-Rig/root/MCH-thigh.fk.R.socket2/thigh.fk.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-thigh.fk.R.socket2/thigh.fk.R/MCH-thigh_antistr.fk.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-thigh.fk.R.socket2/thigh.fk.R/MCH-thigh_antistr.fk.R/shin.fk.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-thigh.fk.R.socket2/thigh.fk.R/MCH-thigh_antistr.fk.R/shin.fk.R/MCH-shin_antistr.fk.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-thigh.fk.R.socket2/thigh.fk.R/MCH-thigh_antistr.fk.R/shin.fk.R/MCH-shin_antistr.fk.R/foot.fk.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-thigh.fk.R.socket2/thigh.fk.R/MCH-thigh_antistr.fk.R/shin.fk.R/MCH-shin_antistr.fk.R/foot.fk.R/MCH-foot.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-thigh.fk.R.socket2/thigh.fk.R/MCH-thigh_antistr.fk.R/shin.fk.R/MCH-shin_antistr.fk.R/foot.fk.R/MCH-foot.R/MCH-foot.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-upper_arm.fk.L.socket2
+        weight: 1
+      - path: Princess-Rig/root/MCH-upper_arm.fk.L.socket2/upper_arm.fk.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-upper_arm.fk.L.socket2/upper_arm.fk.L/MCH-upper_arm_antistr.fk.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-upper_arm.fk.L.socket2/upper_arm.fk.L/MCH-upper_arm_antistr.fk.L/forearm.fk.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-upper_arm.fk.L.socket2/upper_arm.fk.L/MCH-upper_arm_antistr.fk.L/forearm.fk.L/MCH-forearm_antistr.fk.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-upper_arm.fk.L.socket2/upper_arm.fk.L/MCH-upper_arm_antistr.fk.L/forearm.fk.L/MCH-forearm_antistr.fk.L/hand.fk.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-upper_arm.fk.L.socket2/upper_arm.fk.L/MCH-upper_arm_antistr.fk.L/forearm.fk.L/MCH-forearm_antistr.fk.L/hand.fk.L/MCH-hand.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-upper_arm.fk.L.socket2/upper_arm.fk.L/MCH-upper_arm_antistr.fk.L/forearm.fk.L/MCH-forearm_antistr.fk.L/hand.fk.L/MCH-hand.L/MCH-hand.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-upper_arm.fk.R.socket2
+        weight: 1
+      - path: Princess-Rig/root/MCH-upper_arm.fk.R.socket2/upper_arm.fk.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-upper_arm.fk.R.socket2/upper_arm.fk.R/MCH-upper_arm_antistr.fk.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-upper_arm.fk.R.socket2/upper_arm.fk.R/MCH-upper_arm_antistr.fk.R/forearm.fk.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-upper_arm.fk.R.socket2/upper_arm.fk.R/MCH-upper_arm_antistr.fk.R/forearm.fk.R/MCH-forearm_antistr.fk.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-upper_arm.fk.R.socket2/upper_arm.fk.R/MCH-upper_arm_antistr.fk.R/forearm.fk.R/MCH-forearm_antistr.fk.R/hand.fk.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-upper_arm.fk.R.socket2/upper_arm.fk.R/MCH-upper_arm_antistr.fk.R/forearm.fk.R/MCH-forearm_antistr.fk.R/hand.fk.R/MCH-hand.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-upper_arm.fk.R.socket2/upper_arm.fk.R/MCH-upper_arm_antistr.fk.R/forearm.fk.R/MCH-forearm_antistr.fk.R/hand.fk.R/MCH-hand.R/MCH-hand.R_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/DEF-spine
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/DEF-spine/DEF-spine_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/MCH-hips_fk_ns_intr
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/MCH-hips_fk_ns_intr/MCH-hips_fk_ns_intr_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/MCH-hips_fk_ns_intr.001
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/MCH-hips_fk_ns_intr.001/MCH-hips_fk_ns_intr.001_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/MCH-hips_ik_ns_intr
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/MCH-hips_ik_ns_intr/MCH-hips_ik_ns_intr_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/MCH-hips_ik_ns_intr.001
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/MCH-hips_ik_ns_intr.001/MCH-hips_ik_ns_intr.001_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/MCH-hips_rh_ns_intr
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/MCH-hips_rh_ns_intr/MCH-hips_rh_ns_intr_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/MCH-hips_rh_ns_intr.001
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/MCH-hips_rh_ns_intr.001/MCH-hips_rh_ns_intr.001_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/DEF-chest
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/DEF-chest/DEF-chest_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/DEF-neck
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/DEF-neck/DEF-neck_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/MCH-head.02
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/MCH-head.02/MCH-head.001
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/MCH-head.02/MCH-head.001/MCH-head.001_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/MCH-head.socket1
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/MCH-head.socket1/MCH-head.socket1_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/MCH-neck.02
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/MCH-neck.02/MCH-neck
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/MCH-neck.02/MCH-neck/MCH-neck_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/MCH-neck.follow
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/MCH-neck.follow/neck
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/MCH-neck.follow/neck/MCH-neck.child
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/MCH-neck.follow/neck/MCH-neck.child/MCH-neck.child_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-neck
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-neck/DEF-head
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-neck/DEF-head/DEF-head_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-neck/ORG-head
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-neck/ORG-head/ORG-head_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/DEF-shoulder.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/DEF-shoulder.L/DEF-shoulder.L_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/MCH-shoulder_fk_ns_intr.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/MCH-shoulder_fk_ns_intr.L/MCH-shoulder_fk_ns_intr.L_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/MCH-shoulder_ik_ns_intr.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/MCH-shoulder_ik_ns_intr.L/MCH-shoulder_ik_ns_intr.L_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/MCH-shoulder_rh_ns_intr.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/MCH-shoulder_rh_ns_intr.L/MCH-shoulder_rh_ns_intr.L_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/ORG-upper_arm.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/ORG-upper_arm.L/DEF-upper_arm.02.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/ORG-upper_arm.L/DEF-upper_arm.02.L/MCH-upper_arm_smth.02.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/ORG-upper_arm.L/DEF-upper_arm.02.L/MCH-upper_arm_smth.02.L/MCH-upper_arm_smth.02.L_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/ORG-upper_arm.L/MCH-forearm.junc.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/ORG-upper_arm.L/MCH-forearm.junc.L/MCH-forearm.junc.L_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/ORG-upper_arm.L/ORG-forearm.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/ORG-upper_arm.L/ORG-forearm.L/DEF-forearm.02.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/ORG-upper_arm.L/ORG-forearm.L/DEF-forearm.02.L/DEF-forearm.02.L_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/ORG-upper_arm.L/ORG-forearm.L/MCH-forearm.01.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/ORG-upper_arm.L/ORG-forearm.L/MCH-forearm.01.L/MCH-forearm_smth.01.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/ORG-upper_arm.L/ORG-forearm.L/MCH-forearm.01.L/MCH-forearm_smth.01.L/DEF-forearm.01.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/ORG-upper_arm.L/ORG-forearm.L/MCH-forearm.01.L/MCH-forearm_smth.01.L/DEF-forearm.01.L/DEF-forearm.01.L_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/ORG-upper_arm.L/ORG-forearm.L/ORG-hand.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/ORG-upper_arm.L/ORG-forearm.L/ORG-hand.L/DEF-hand.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/ORG-upper_arm.L/ORG-forearm.L/ORG-hand.L/DEF-hand.L/DEF-hand.L_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/DEF-shoulder.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/DEF-shoulder.R/DEF-shoulder.R_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/MCH-shoulder_fk_ns_intr.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/MCH-shoulder_fk_ns_intr.R/MCH-shoulder_fk_ns_intr.R_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/MCH-shoulder_ik_ns_intr.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/MCH-shoulder_ik_ns_intr.R/MCH-shoulder_ik_ns_intr.R_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/MCH-shoulder_rh_ns_intr.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/MCH-shoulder_rh_ns_intr.R/MCH-shoulder_rh_ns_intr.R_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/ORG-upper_arm.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/ORG-upper_arm.R/DEF-upper_arm.02.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/ORG-upper_arm.R/DEF-upper_arm.02.R/MCH-upper_arm_smth.02.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/ORG-upper_arm.R/DEF-upper_arm.02.R/MCH-upper_arm_smth.02.R/MCH-upper_arm_smth.02.R_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/ORG-upper_arm.R/MCH-forearm.junc.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/ORG-upper_arm.R/MCH-forearm.junc.R/MCH-forearm.junc.R_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/ORG-upper_arm.R/ORG-forearm.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/ORG-upper_arm.R/ORG-forearm.R/DEF-forearm.02.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/ORG-upper_arm.R/ORG-forearm.R/DEF-forearm.02.R/DEF-forearm.02.R_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/ORG-upper_arm.R/ORG-forearm.R/MCH-forearm.01.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/ORG-upper_arm.R/ORG-forearm.R/MCH-forearm.01.R/MCH-forearm_smth.01.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/ORG-upper_arm.R/ORG-forearm.R/MCH-forearm.01.R/MCH-forearm_smth.01.R/DEF-forearm.01.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/ORG-upper_arm.R/ORG-forearm.R/MCH-forearm.01.R/MCH-forearm_smth.01.R/DEF-forearm.01.R/DEF-forearm.01.R_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/ORG-upper_arm.R/ORG-forearm.R/ORG-hand.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/ORG-upper_arm.R/ORG-forearm.R/ORG-hand.R/DEF-hand.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/ORG-upper_arm.R/ORG-forearm.R/ORG-hand.R/DEF-hand.R/DEF-hand.R_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/shoulder.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/shoulder.L/shoulder.L_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/shoulder.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/shoulder.R/shoulder.R_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/DEF-thigh.02.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/DEF-thigh.02.L/MCH-thigh_smth.02.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/DEF-thigh.02.L/MCH-thigh_smth.02.L/MCH-thigh_smth.02.L_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/MCH-shin.junc.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/MCH-shin.junc.L/MCH-shin.junc.L_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L/DEF-shin.02.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L/DEF-shin.02.L/DEF-shin.02.L_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L/MCH-shin.01.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L/MCH-shin.01.L/MCH-shin_smth.01.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L/MCH-shin.01.L/MCH-shin_smth.01.L/DEF-shin.01.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L/MCH-shin.01.L/MCH-shin_smth.01.L/DEF-shin.01.L/DEF-shin.01.L_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L/ORG-foot.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L/ORG-foot.L/DEF-foot.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L/ORG-foot.L/DEF-foot.L/DEF-foot.L_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L/ORG-foot.L/MCH-toe.L.socket2
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L/ORG-foot.L/MCH-toe.L.socket2/MCH-toe.L.socket2_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L/ORG-foot.L/ORG-toe.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L/ORG-foot.L/ORG-toe.L/DEF-toe.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L/ORG-foot.L/ORG-toe.L/DEF-toe.L/DEF-toe.L_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L/ORG-heel.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L/ORG-heel.L/ORG-heel.02.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L/ORG-heel.L/ORG-heel.02.L/ORG-heel.02.L_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/DEF-thigh.02.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/DEF-thigh.02.R/MCH-thigh_smth.02.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/DEF-thigh.02.R/MCH-thigh_smth.02.R/MCH-thigh_smth.02.R_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/MCH-shin.junc.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/MCH-shin.junc.R/MCH-shin.junc.R_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R/DEF-shin.02.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R/DEF-shin.02.R/DEF-shin.02.R_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R/MCH-shin.01.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R/MCH-shin.01.R/MCH-shin_smth.01.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R/MCH-shin.01.R/MCH-shin_smth.01.R/DEF-shin.01.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R/MCH-shin.01.R/MCH-shin_smth.01.R/DEF-shin.01.R/DEF-shin.01.R_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R/ORG-foot.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R/ORG-foot.R/DEF-foot.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R/ORG-foot.R/DEF-foot.R/DEF-foot.R_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R/ORG-foot.R/MCH-toe.R.socket2
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R/ORG-foot.R/MCH-toe.R.socket2/MCH-toe.R.socket2_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R/ORG-foot.R/ORG-toe.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R/ORG-foot.R/ORG-toe.R/DEF-toe.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R/ORG-foot.R/ORG-toe.R/DEF-toe.R/DEF-toe.R_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R/ORG-heel.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R/ORG-heel.R/ORG-heel.02.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R/ORG-heel.R/ORG-heel.02.R/ORG-heel.02.R_end
+        weight: 1
+      - path: Princess-Rig/root/torso
+        weight: 1
+      - path: Princess-Rig/root/torso/chest
+        weight: 1
+      - path: Princess-Rig/root/torso/chest/MCH-sub_chest
+        weight: 1
+      - path: Princess-Rig/root/torso/chest/MCH-sub_chest/MCH-sub_chest_end
+        weight: 1
+      - path: Princess-Rig/root/torso/hips
+        weight: 1
+      - path: Princess-Rig/root/torso/hips/MCH-hips.flex_s
+        weight: 1
+      - path: Princess-Rig/root/torso/hips/MCH-hips.flex_s/MCH-hips.flex
+        weight: 1
+      - path: Princess-Rig/root/torso/hips/MCH-hips.flex_s/MCH-hips.flex/MCH-hips.reverse
+        weight: 1
+      - path: Princess-Rig/root/torso/hips/MCH-hips.flex_s/MCH-hips.flex/MCH-hips.reverse/MCH-hips.reverse_end
+        weight: 1
+      - path: Princess-Rig/root/torso/hips/MCH-hips.flex_s/MCH-hips.flex/MCH-spine.flex_s
+        weight: 1
+      - path: Princess-Rig/root/torso/hips/MCH-hips.flex_s/MCH-hips.flex/MCH-spine.flex_s/MCH-spine.flex
+        weight: 1
+      - path: Princess-Rig/root/torso/hips/MCH-hips.flex_s/MCH-hips.flex/MCH-spine.flex_s/MCH-spine.flex/MCH-chest.flex_s
+        weight: 1
+      - path: Princess-Rig/root/torso/hips/MCH-hips.flex_s/MCH-hips.flex/MCH-spine.flex_s/MCH-spine.flex/MCH-chest.flex_s/MCH-chest.flex
+        weight: 1
+      - path: Princess-Rig/root/torso/hips/MCH-hips.flex_s/MCH-hips.flex/MCH-spine.flex_s/MCH-spine.flex/MCH-chest.flex_s/MCH-chest.flex/MCH-chest.reverse
+        weight: 1
+      - path: Princess-Rig/root/torso/hips/MCH-hips.flex_s/MCH-hips.flex/MCH-spine.flex_s/MCH-spine.flex/MCH-chest.flex_s/MCH-chest.flex/MCH-chest.reverse/MCH-chest.reverse_end
+        weight: 1
+      - path: Princess-Rig/root/torso/hips/MCH-hips.flex_s/MCH-hips.flex/MCH-spine.flex_s/MCH-spine.flex/MCH-spine.reverse
+        weight: 1
+      - path: Princess-Rig/root/torso/hips/MCH-hips.flex_s/MCH-hips.flex/MCH-spine.flex_s/MCH-spine.flex/MCH-spine.reverse/MCH-spine.reverse_end
+        weight: 1
+      - path: Princess-Rig/root/torso/hips/MCH-sub_hips
+        weight: 1
+      - path: Princess-Rig/root/torso/hips/MCH-sub_hips/MCH-sub_hips_end
+        weight: 1
+      - path: Princess-Rig/root/torso/MCH-par_spine
+        weight: 1
+      - path: Princess-Rig/root/torso/MCH-par_spine/spine
+        weight: 1
+      - path: Princess-Rig/root/torso/MCH-par_spine/spine/MCH-sub_spine
+        weight: 1
+      - path: Princess-Rig/root/torso/MCH-par_spine/spine/MCH-sub_spine/MCH-sub_spine_end
+        weight: 1
+      - path: Princess-Rig/root/VIS-foot.ik.L
+        weight: 1
+      - path: Princess-Rig/root/VIS-foot.ik.L/VIS-foot.ik.L_end
+        weight: 1
+      - path: Princess-Rig/root/VIS-foot.ik.R
+        weight: 1
+      - path: Princess-Rig/root/VIS-foot.ik.R/VIS-foot.ik.R_end
+        weight: 1
+      - path: Princess-Rig/root/VIS-hand.ik.L
+        weight: 1
+      - path: Princess-Rig/root/VIS-hand.ik.L/VIS-hand.ik.L_end
+        weight: 1
+      - path: Princess-Rig/root/VIS-hand.ik.R
+        weight: 1
+      - path: Princess-Rig/root/VIS-hand.ik.R/VIS-hand.ik.R_end
+        weight: 1
+      - path: Princess-Rig/root/VIS-thigh_pole.ik.L
+        weight: 1
+      - path: Princess-Rig/root/VIS-thigh_pole.ik.L/VIS-thigh_pole.ik.L_end
+        weight: 1
+      - path: Princess-Rig/root/VIS-thigh_pole.ik.R
+        weight: 1
+      - path: Princess-Rig/root/VIS-thigh_pole.ik.R/VIS-thigh_pole.ik.R_end
+        weight: 1
+      - path: Princess-Rig/root/VIS-upper_arm_pole.ik.L
+        weight: 1
+      - path: Princess-Rig/root/VIS-upper_arm_pole.ik.L/VIS-upper_arm_pole.ik.L_end
+        weight: 1
+      - path: Princess-Rig/root/VIS-upper_arm_pole.ik.R
+        weight: 1
+      - path: Princess-Rig/root/VIS-upper_arm_pole.ik.R/VIS-upper_arm_pole.ik.R_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Princess-Rig|Idle
+      takeName: Princess-Rig|Idle
+      firstFrame: 0
+      lastFrame: 129
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Princess
+        weight: 1
+      - path: Princess-Rig
+        weight: 1
+      - path: Princess-Rig/root
+        weight: 1
+      - path: Princess-Rig/root/DEF-hips
+        weight: 1
+      - path: Princess-Rig/root/DEF-hips/DEF-hips_end
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.L
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.L/foot_roll.ik.L
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.L/foot_roll.ik.L/foot_roll.ik.L_end
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.L/MCH-foot.L.rocker.01
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.L/MCH-foot.L.rocker.01/MCH-foot.L.rocker.02
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.L/MCH-foot.L.rocker.01/MCH-foot.L.rocker.02/MCH-foot.L.roll.01
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.L/MCH-foot.L.rocker.01/MCH-foot.L.rocker.02/MCH-foot.L.roll.01/MCH-foot.L.roll.02
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.L/MCH-foot.L.rocker.01/MCH-foot.L.rocker.02/MCH-foot.L.roll.01/MCH-foot.L.roll.02/MCH-foot.L.001
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.L/MCH-foot.L.rocker.01/MCH-foot.L.rocker.02/MCH-foot.L.roll.01/MCH-foot.L.roll.02/MCH-foot.L.001/MCH-foot.L.001_end
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.L/MCH-foot.L.rocker.01/MCH-foot.L.rocker.02/MCH-foot.L.roll.01/MCH-toe.L.socket1
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.L/MCH-foot.L.rocker.01/MCH-foot.L.rocker.02/MCH-foot.L.roll.01/MCH-toe.L.socket1/MCH-toe.L.parent
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.L/MCH-foot.L.rocker.01/MCH-foot.L.rocker.02/MCH-foot.L.roll.01/MCH-toe.L.socket1/MCH-toe.L.parent/toe.L
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.L/MCH-foot.L.rocker.01/MCH-foot.L.rocker.02/MCH-foot.L.roll.01/MCH-toe.L.socket1/MCH-toe.L.parent/toe.L/toe.L_end
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.R
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.R/foot_roll.ik.R
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.R/foot_roll.ik.R/foot_roll.ik.R_end
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.R/MCH-foot.R.rocker.01
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.R/MCH-foot.R.rocker.01/MCH-foot.R.rocker.02
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.R/MCH-foot.R.rocker.01/MCH-foot.R.rocker.02/MCH-foot.R.roll.01
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.R/MCH-foot.R.rocker.01/MCH-foot.R.rocker.02/MCH-foot.R.roll.01/MCH-foot.R.roll.02
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.R/MCH-foot.R.rocker.01/MCH-foot.R.rocker.02/MCH-foot.R.roll.01/MCH-foot.R.roll.02/MCH-foot.R.001
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.R/MCH-foot.R.rocker.01/MCH-foot.R.rocker.02/MCH-foot.R.roll.01/MCH-foot.R.roll.02/MCH-foot.R.001/MCH-foot.R.001_end
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.R/MCH-foot.R.rocker.01/MCH-foot.R.rocker.02/MCH-foot.R.roll.01/MCH-toe.R.socket1
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.R/MCH-foot.R.rocker.01/MCH-foot.R.rocker.02/MCH-foot.R.roll.01/MCH-toe.R.socket1/MCH-toe.R.parent
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.R/MCH-foot.R.rocker.01/MCH-foot.R.rocker.02/MCH-foot.R.roll.01/MCH-toe.R.socket1/MCH-toe.R.parent/toe.R
+        weight: 1
+      - path: Princess-Rig/root/foot.ik.R/MCH-foot.R.rocker.01/MCH-foot.R.rocker.02/MCH-foot.R.roll.01/MCH-toe.R.socket1/MCH-toe.R.parent/toe.R/toe.R_end
+        weight: 1
+      - path: Princess-Rig/root/hand.ik.L
+        weight: 1
+      - path: Princess-Rig/root/hand.ik.L/MCH-hand.L.001
+        weight: 1
+      - path: Princess-Rig/root/hand.ik.L/MCH-hand.L.001/MCH-hand.L.001_end
+        weight: 1
+      - path: Princess-Rig/root/hand.ik.R
+        weight: 1
+      - path: Princess-Rig/root/hand.ik.R/MCH-hand.R.001
+        weight: 1
+      - path: Princess-Rig/root/hand.ik.R/MCH-hand.R.001/MCH-hand.R.001_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-elbow_target.ik_parent.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-elbow_target.ik_parent.L/elbow_target.ik.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-elbow_target.ik_parent.L/elbow_target.ik.L/elbow_target.ik.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-elbow_target.ik_parent.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-elbow_target.ik_parent.R/elbow_target.ik.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-elbow_target.ik_parent.R/elbow_target.ik.R/elbow_target.ik.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-head.socket2
+        weight: 1
+      - path: Princess-Rig/root/MCH-head.socket2/head
+        weight: 1
+      - path: Princess-Rig/root/MCH-head.socket2/head/MCH-head
+        weight: 1
+      - path: Princess-Rig/root/MCH-head.socket2/head/MCH-head/MCH-head_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_fk_ns_ch
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_fk_ns_ch/MCH-thigh.fk.L.socket1
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_fk_ns_ch/MCH-thigh.fk.L.socket1/MCH-thigh.fk.L.socket1_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_fk_ns_ch.001
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_fk_ns_ch.001/MCH-thigh.fk.R.socket1
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_fk_ns_ch.001/MCH-thigh.fk.R.socket1/MCH-thigh.fk.R.socket1_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch/MCH-shin.stretch.ik.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch/MCH-shin.stretch.ik.L/MCH-shin.stretch.ik.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch/MCH-thigh.ik.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch/MCH-thigh.ik.L/MCH-shin.ik.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch/MCH-thigh.ik.L/MCH-shin.ik.L/MCH-shin.ik.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch/MCH-thigh.nostr.ik.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch/MCH-thigh.nostr.ik.L/MCH-shin.nostr.ik.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch/MCH-thigh.nostr.ik.L/MCH-shin.nostr.ik.L/MCH-shin.nostr.ik.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch/MCH-thigh.stretch.ik.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch/MCH-thigh.stretch.ik.L/MCH-thigh.stretch.ik.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch.001
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch.001/MCH-shin.stretch.ik.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch.001/MCH-shin.stretch.ik.R/MCH-shin.stretch.ik.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch.001/MCH-thigh.ik.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch.001/MCH-thigh.ik.R/MCH-shin.ik.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch.001/MCH-thigh.ik.R/MCH-shin.ik.R/MCH-shin.ik.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch.001/MCH-thigh.nostr.ik.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch.001/MCH-thigh.nostr.ik.R/MCH-shin.nostr.ik.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch.001/MCH-thigh.nostr.ik.R/MCH-shin.nostr.ik.R/MCH-shin.nostr.ik.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch.001/MCH-thigh.stretch.ik.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_ik_ns_ch.001/MCH-thigh.stretch.ik.R/MCH-thigh.stretch.ik.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch/DEF-thigh.01.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch/DEF-thigh.01.L/DEF-thigh.01.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch/MCH-knee_hose_p.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch/MCH-knee_hose_p.L/knee_hose.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch/MCH-knee_hose_p.L/knee_hose.L/knee_hose.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch/MCH-shin_hose_end_p.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch/MCH-shin_hose_end_p.L/shin_hose_end.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch/MCH-shin_hose_end_p.L/shin_hose_end.L/shin_hose_end.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch/MCH-shin_hose_p.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch/MCH-shin_hose_p.L/shin_hose.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch/MCH-shin_hose_p.L/shin_hose.L/shin_hose.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch/MCH-thigh_hose_end_p.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch/MCH-thigh_hose_end_p.L/thigh_hose_end.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch/MCH-thigh_hose_end_p.L/thigh_hose_end.L/thigh_hose_end.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch/MCH-thigh_hose_p.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch/MCH-thigh_hose_p.L/thigh_hose.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch/MCH-thigh_hose_p.L/thigh_hose.L/thigh_hose.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001/DEF-thigh.01.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001/DEF-thigh.01.R/DEF-thigh.01.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001/MCH-knee_hose_p.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001/MCH-knee_hose_p.R/knee_hose.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001/MCH-knee_hose_p.R/knee_hose.R/knee_hose.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001/MCH-shin_hose_end_p.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001/MCH-shin_hose_end_p.R/shin_hose_end.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001/MCH-shin_hose_end_p.R/shin_hose_end.R/shin_hose_end.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001/MCH-shin_hose_p.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001/MCH-shin_hose_p.R/shin_hose.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001/MCH-shin_hose_p.R/shin_hose.R/shin_hose.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001/MCH-thigh_hose_end_p.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001/MCH-thigh_hose_end_p.R/thigh_hose_end.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001/MCH-thigh_hose_end_p.R/thigh_hose_end.R/thigh_hose_end.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001/MCH-thigh_hose_p.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001/MCH-thigh_hose_p.R/thigh_hose.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-hips_rh_ns_ch.001/MCH-thigh_hose_p.R/thigh_hose.R/thigh_hose.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-knee_target.ik_parent.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-knee_target.ik_parent.L/knee_target.ik.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-knee_target.ik_parent.L/knee_target.ik.L/knee_target.ik.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-knee_target.ik_parent.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-knee_target.ik_parent.R/knee_target.ik.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-knee_target.ik_parent.R/knee_target.ik.R/knee_target.ik.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_fk_ns_ch.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_fk_ns_ch.L/MCH-upper_arm.fk.L.socket1
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_fk_ns_ch.L/MCH-upper_arm.fk.L.socket1/MCH-upper_arm.fk.L.socket1_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_fk_ns_ch.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_fk_ns_ch.R/MCH-upper_arm.fk.R.socket1
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_fk_ns_ch.R/MCH-upper_arm.fk.R.socket1/MCH-upper_arm.fk.R.socket1_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.L/MCH-forearm.stretch.ik.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.L/MCH-forearm.stretch.ik.L/MCH-forearm.stretch.ik.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.L/MCH-upper_arm.ik.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.L/MCH-upper_arm.ik.L/MCH-forearm.ik.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.L/MCH-upper_arm.ik.L/MCH-forearm.ik.L/MCH-forearm.ik.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.L/MCH-upper_arm.nostr.ik.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.L/MCH-upper_arm.nostr.ik.L/MCH-forearm.nostr.ik.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.L/MCH-upper_arm.nostr.ik.L/MCH-forearm.nostr.ik.L/MCH-forearm.nostr.ik.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.L/MCH-upper_arm.stretch.ik.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.L/MCH-upper_arm.stretch.ik.L/MCH-upper_arm.stretch.ik.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.R/MCH-forearm.stretch.ik.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.R/MCH-forearm.stretch.ik.R/MCH-forearm.stretch.ik.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.R/MCH-upper_arm.ik.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.R/MCH-upper_arm.ik.R/MCH-forearm.ik.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.R/MCH-upper_arm.ik.R/MCH-forearm.ik.R/MCH-forearm.ik.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.R/MCH-upper_arm.nostr.ik.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.R/MCH-upper_arm.nostr.ik.R/MCH-forearm.nostr.ik.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.R/MCH-upper_arm.nostr.ik.R/MCH-forearm.nostr.ik.R/MCH-forearm.nostr.ik.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.R/MCH-upper_arm.stretch.ik.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_ik_ns_ch.R/MCH-upper_arm.stretch.ik.R/MCH-upper_arm.stretch.ik.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L/DEF-upper_arm.01.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L/DEF-upper_arm.01.L/DEF-upper_arm.01.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L/MCH-elbow_hose_p.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L/MCH-elbow_hose_p.L/elbow_hose.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L/MCH-elbow_hose_p.L/elbow_hose.L/elbow_hose.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L/MCH-forearm_hose_end_p.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L/MCH-forearm_hose_end_p.L/forearm_hose_end.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L/MCH-forearm_hose_end_p.L/forearm_hose_end.L/forearm_hose_end.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L/MCH-forearm_hose_p.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L/MCH-forearm_hose_p.L/forearm_hose.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L/MCH-forearm_hose_p.L/forearm_hose.L/forearm_hose.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L/MCH-upper_arm_hose_end_p.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L/MCH-upper_arm_hose_end_p.L/upper_arm_hose_end.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L/MCH-upper_arm_hose_end_p.L/upper_arm_hose_end.L/upper_arm_hose_end.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L/MCH-upper_arm_hose_p.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L/MCH-upper_arm_hose_p.L/upper_arm_hose.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.L/MCH-upper_arm_hose_p.L/upper_arm_hose.L/upper_arm_hose.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R/DEF-upper_arm.01.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R/DEF-upper_arm.01.R/DEF-upper_arm.01.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R/MCH-elbow_hose_p.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R/MCH-elbow_hose_p.R/elbow_hose.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R/MCH-elbow_hose_p.R/elbow_hose.R/elbow_hose.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R/MCH-forearm_hose_end_p.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R/MCH-forearm_hose_end_p.R/forearm_hose_end.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R/MCH-forearm_hose_end_p.R/forearm_hose_end.R/forearm_hose_end.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R/MCH-forearm_hose_p.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R/MCH-forearm_hose_p.R/forearm_hose.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R/MCH-forearm_hose_p.R/forearm_hose.R/forearm_hose.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R/MCH-upper_arm_hose_end_p.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R/MCH-upper_arm_hose_end_p.R/upper_arm_hose_end.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R/MCH-upper_arm_hose_end_p.R/upper_arm_hose_end.R/upper_arm_hose_end.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R/MCH-upper_arm_hose_p.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R/MCH-upper_arm_hose_p.R/upper_arm_hose.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-shoulder_rh_ns_ch.R/MCH-upper_arm_hose_p.R/upper_arm_hose.R/upper_arm_hose.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-thigh.fk.L.socket2
+        weight: 1
+      - path: Princess-Rig/root/MCH-thigh.fk.L.socket2/thigh.fk.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-thigh.fk.L.socket2/thigh.fk.L/MCH-thigh_antistr.fk.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-thigh.fk.L.socket2/thigh.fk.L/MCH-thigh_antistr.fk.L/shin.fk.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-thigh.fk.L.socket2/thigh.fk.L/MCH-thigh_antistr.fk.L/shin.fk.L/MCH-shin_antistr.fk.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-thigh.fk.L.socket2/thigh.fk.L/MCH-thigh_antistr.fk.L/shin.fk.L/MCH-shin_antistr.fk.L/foot.fk.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-thigh.fk.L.socket2/thigh.fk.L/MCH-thigh_antistr.fk.L/shin.fk.L/MCH-shin_antistr.fk.L/foot.fk.L/MCH-foot.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-thigh.fk.L.socket2/thigh.fk.L/MCH-thigh_antistr.fk.L/shin.fk.L/MCH-shin_antistr.fk.L/foot.fk.L/MCH-foot.L/MCH-foot.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-thigh.fk.R.socket2
+        weight: 1
+      - path: Princess-Rig/root/MCH-thigh.fk.R.socket2/thigh.fk.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-thigh.fk.R.socket2/thigh.fk.R/MCH-thigh_antistr.fk.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-thigh.fk.R.socket2/thigh.fk.R/MCH-thigh_antistr.fk.R/shin.fk.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-thigh.fk.R.socket2/thigh.fk.R/MCH-thigh_antistr.fk.R/shin.fk.R/MCH-shin_antistr.fk.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-thigh.fk.R.socket2/thigh.fk.R/MCH-thigh_antistr.fk.R/shin.fk.R/MCH-shin_antistr.fk.R/foot.fk.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-thigh.fk.R.socket2/thigh.fk.R/MCH-thigh_antistr.fk.R/shin.fk.R/MCH-shin_antistr.fk.R/foot.fk.R/MCH-foot.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-thigh.fk.R.socket2/thigh.fk.R/MCH-thigh_antistr.fk.R/shin.fk.R/MCH-shin_antistr.fk.R/foot.fk.R/MCH-foot.R/MCH-foot.R_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-upper_arm.fk.L.socket2
+        weight: 1
+      - path: Princess-Rig/root/MCH-upper_arm.fk.L.socket2/upper_arm.fk.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-upper_arm.fk.L.socket2/upper_arm.fk.L/MCH-upper_arm_antistr.fk.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-upper_arm.fk.L.socket2/upper_arm.fk.L/MCH-upper_arm_antistr.fk.L/forearm.fk.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-upper_arm.fk.L.socket2/upper_arm.fk.L/MCH-upper_arm_antistr.fk.L/forearm.fk.L/MCH-forearm_antistr.fk.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-upper_arm.fk.L.socket2/upper_arm.fk.L/MCH-upper_arm_antistr.fk.L/forearm.fk.L/MCH-forearm_antistr.fk.L/hand.fk.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-upper_arm.fk.L.socket2/upper_arm.fk.L/MCH-upper_arm_antistr.fk.L/forearm.fk.L/MCH-forearm_antistr.fk.L/hand.fk.L/MCH-hand.L
+        weight: 1
+      - path: Princess-Rig/root/MCH-upper_arm.fk.L.socket2/upper_arm.fk.L/MCH-upper_arm_antistr.fk.L/forearm.fk.L/MCH-forearm_antistr.fk.L/hand.fk.L/MCH-hand.L/MCH-hand.L_end
+        weight: 1
+      - path: Princess-Rig/root/MCH-upper_arm.fk.R.socket2
+        weight: 1
+      - path: Princess-Rig/root/MCH-upper_arm.fk.R.socket2/upper_arm.fk.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-upper_arm.fk.R.socket2/upper_arm.fk.R/MCH-upper_arm_antistr.fk.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-upper_arm.fk.R.socket2/upper_arm.fk.R/MCH-upper_arm_antistr.fk.R/forearm.fk.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-upper_arm.fk.R.socket2/upper_arm.fk.R/MCH-upper_arm_antistr.fk.R/forearm.fk.R/MCH-forearm_antistr.fk.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-upper_arm.fk.R.socket2/upper_arm.fk.R/MCH-upper_arm_antistr.fk.R/forearm.fk.R/MCH-forearm_antistr.fk.R/hand.fk.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-upper_arm.fk.R.socket2/upper_arm.fk.R/MCH-upper_arm_antistr.fk.R/forearm.fk.R/MCH-forearm_antistr.fk.R/hand.fk.R/MCH-hand.R
+        weight: 1
+      - path: Princess-Rig/root/MCH-upper_arm.fk.R.socket2/upper_arm.fk.R/MCH-upper_arm_antistr.fk.R/forearm.fk.R/MCH-forearm_antistr.fk.R/hand.fk.R/MCH-hand.R/MCH-hand.R_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/DEF-spine
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/DEF-spine/DEF-spine_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/MCH-hips_fk_ns_intr
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/MCH-hips_fk_ns_intr/MCH-hips_fk_ns_intr_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/MCH-hips_fk_ns_intr.001
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/MCH-hips_fk_ns_intr.001/MCH-hips_fk_ns_intr.001_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/MCH-hips_ik_ns_intr
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/MCH-hips_ik_ns_intr/MCH-hips_ik_ns_intr_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/MCH-hips_ik_ns_intr.001
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/MCH-hips_ik_ns_intr.001/MCH-hips_ik_ns_intr.001_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/MCH-hips_rh_ns_intr
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/MCH-hips_rh_ns_intr/MCH-hips_rh_ns_intr_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/MCH-hips_rh_ns_intr.001
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/MCH-hips_rh_ns_intr.001/MCH-hips_rh_ns_intr.001_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/DEF-chest
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/DEF-chest/DEF-chest_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/DEF-neck
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/DEF-neck/DEF-neck_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/MCH-head.02
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/MCH-head.02/MCH-head.001
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/MCH-head.02/MCH-head.001/MCH-head.001_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/MCH-head.socket1
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/MCH-head.socket1/MCH-head.socket1_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/MCH-neck.02
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/MCH-neck.02/MCH-neck
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/MCH-neck.02/MCH-neck/MCH-neck_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/MCH-neck.follow
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/MCH-neck.follow/neck
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/MCH-neck.follow/neck/MCH-neck.child
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/MCH-neck.follow/neck/MCH-neck.child/MCH-neck.child_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-neck
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-neck/DEF-head
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-neck/DEF-head/DEF-head_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-neck/ORG-head
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-neck/ORG-head/ORG-head_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/DEF-shoulder.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/DEF-shoulder.L/DEF-shoulder.L_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/MCH-shoulder_fk_ns_intr.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/MCH-shoulder_fk_ns_intr.L/MCH-shoulder_fk_ns_intr.L_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/MCH-shoulder_ik_ns_intr.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/MCH-shoulder_ik_ns_intr.L/MCH-shoulder_ik_ns_intr.L_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/MCH-shoulder_rh_ns_intr.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/MCH-shoulder_rh_ns_intr.L/MCH-shoulder_rh_ns_intr.L_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/ORG-upper_arm.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/ORG-upper_arm.L/DEF-upper_arm.02.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/ORG-upper_arm.L/DEF-upper_arm.02.L/MCH-upper_arm_smth.02.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/ORG-upper_arm.L/DEF-upper_arm.02.L/MCH-upper_arm_smth.02.L/MCH-upper_arm_smth.02.L_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/ORG-upper_arm.L/MCH-forearm.junc.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/ORG-upper_arm.L/MCH-forearm.junc.L/MCH-forearm.junc.L_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/ORG-upper_arm.L/ORG-forearm.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/ORG-upper_arm.L/ORG-forearm.L/DEF-forearm.02.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/ORG-upper_arm.L/ORG-forearm.L/DEF-forearm.02.L/DEF-forearm.02.L_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/ORG-upper_arm.L/ORG-forearm.L/MCH-forearm.01.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/ORG-upper_arm.L/ORG-forearm.L/MCH-forearm.01.L/MCH-forearm_smth.01.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/ORG-upper_arm.L/ORG-forearm.L/MCH-forearm.01.L/MCH-forearm_smth.01.L/DEF-forearm.01.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/ORG-upper_arm.L/ORG-forearm.L/MCH-forearm.01.L/MCH-forearm_smth.01.L/DEF-forearm.01.L/DEF-forearm.01.L_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/ORG-upper_arm.L/ORG-forearm.L/ORG-hand.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/ORG-upper_arm.L/ORG-forearm.L/ORG-hand.L/DEF-hand.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.L/ORG-upper_arm.L/ORG-forearm.L/ORG-hand.L/DEF-hand.L/DEF-hand.L_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/DEF-shoulder.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/DEF-shoulder.R/DEF-shoulder.R_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/MCH-shoulder_fk_ns_intr.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/MCH-shoulder_fk_ns_intr.R/MCH-shoulder_fk_ns_intr.R_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/MCH-shoulder_ik_ns_intr.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/MCH-shoulder_ik_ns_intr.R/MCH-shoulder_ik_ns_intr.R_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/MCH-shoulder_rh_ns_intr.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/MCH-shoulder_rh_ns_intr.R/MCH-shoulder_rh_ns_intr.R_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/ORG-upper_arm.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/ORG-upper_arm.R/DEF-upper_arm.02.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/ORG-upper_arm.R/DEF-upper_arm.02.R/MCH-upper_arm_smth.02.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/ORG-upper_arm.R/DEF-upper_arm.02.R/MCH-upper_arm_smth.02.R/MCH-upper_arm_smth.02.R_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/ORG-upper_arm.R/MCH-forearm.junc.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/ORG-upper_arm.R/MCH-forearm.junc.R/MCH-forearm.junc.R_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/ORG-upper_arm.R/ORG-forearm.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/ORG-upper_arm.R/ORG-forearm.R/DEF-forearm.02.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/ORG-upper_arm.R/ORG-forearm.R/DEF-forearm.02.R/DEF-forearm.02.R_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/ORG-upper_arm.R/ORG-forearm.R/MCH-forearm.01.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/ORG-upper_arm.R/ORG-forearm.R/MCH-forearm.01.R/MCH-forearm_smth.01.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/ORG-upper_arm.R/ORG-forearm.R/MCH-forearm.01.R/MCH-forearm_smth.01.R/DEF-forearm.01.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/ORG-upper_arm.R/ORG-forearm.R/MCH-forearm.01.R/MCH-forearm_smth.01.R/DEF-forearm.01.R/DEF-forearm.01.R_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/ORG-upper_arm.R/ORG-forearm.R/ORG-hand.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/ORG-upper_arm.R/ORG-forearm.R/ORG-hand.R/DEF-hand.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/ORG-shoulder.R/ORG-upper_arm.R/ORG-forearm.R/ORG-hand.R/DEF-hand.R/DEF-hand.R_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/shoulder.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/shoulder.L/shoulder.L_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/shoulder.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-spine/ORG-chest/shoulder.R/shoulder.R_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/DEF-thigh.02.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/DEF-thigh.02.L/MCH-thigh_smth.02.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/DEF-thigh.02.L/MCH-thigh_smth.02.L/MCH-thigh_smth.02.L_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/MCH-shin.junc.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/MCH-shin.junc.L/MCH-shin.junc.L_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L/DEF-shin.02.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L/DEF-shin.02.L/DEF-shin.02.L_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L/MCH-shin.01.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L/MCH-shin.01.L/MCH-shin_smth.01.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L/MCH-shin.01.L/MCH-shin_smth.01.L/DEF-shin.01.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L/MCH-shin.01.L/MCH-shin_smth.01.L/DEF-shin.01.L/DEF-shin.01.L_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L/ORG-foot.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L/ORG-foot.L/DEF-foot.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L/ORG-foot.L/DEF-foot.L/DEF-foot.L_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L/ORG-foot.L/MCH-toe.L.socket2
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L/ORG-foot.L/MCH-toe.L.socket2/MCH-toe.L.socket2_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L/ORG-foot.L/ORG-toe.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L/ORG-foot.L/ORG-toe.L/DEF-toe.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L/ORG-foot.L/ORG-toe.L/DEF-toe.L/DEF-toe.L_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L/ORG-heel.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L/ORG-heel.L/ORG-heel.02.L
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.L/ORG-shin.L/ORG-heel.L/ORG-heel.02.L/ORG-heel.02.L_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/DEF-thigh.02.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/DEF-thigh.02.R/MCH-thigh_smth.02.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/DEF-thigh.02.R/MCH-thigh_smth.02.R/MCH-thigh_smth.02.R_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/MCH-shin.junc.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/MCH-shin.junc.R/MCH-shin.junc.R_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R/DEF-shin.02.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R/DEF-shin.02.R/DEF-shin.02.R_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R/MCH-shin.01.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R/MCH-shin.01.R/MCH-shin_smth.01.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R/MCH-shin.01.R/MCH-shin_smth.01.R/DEF-shin.01.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R/MCH-shin.01.R/MCH-shin_smth.01.R/DEF-shin.01.R/DEF-shin.01.R_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R/ORG-foot.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R/ORG-foot.R/DEF-foot.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R/ORG-foot.R/DEF-foot.R/DEF-foot.R_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R/ORG-foot.R/MCH-toe.R.socket2
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R/ORG-foot.R/MCH-toe.R.socket2/MCH-toe.R.socket2_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R/ORG-foot.R/ORG-toe.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R/ORG-foot.R/ORG-toe.R/DEF-toe.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R/ORG-foot.R/ORG-toe.R/DEF-toe.R/DEF-toe.R_end
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R/ORG-heel.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R/ORG-heel.R/ORG-heel.02.R
+        weight: 1
+      - path: Princess-Rig/root/ORG-hips/ORG-thigh.R/ORG-shin.R/ORG-heel.R/ORG-heel.02.R/ORG-heel.02.R_end
+        weight: 1
+      - path: Princess-Rig/root/torso
+        weight: 1
+      - path: Princess-Rig/root/torso/chest
+        weight: 1
+      - path: Princess-Rig/root/torso/chest/MCH-sub_chest
+        weight: 1
+      - path: Princess-Rig/root/torso/chest/MCH-sub_chest/MCH-sub_chest_end
+        weight: 1
+      - path: Princess-Rig/root/torso/hips
+        weight: 1
+      - path: Princess-Rig/root/torso/hips/MCH-hips.flex_s
+        weight: 1
+      - path: Princess-Rig/root/torso/hips/MCH-hips.flex_s/MCH-hips.flex
+        weight: 1
+      - path: Princess-Rig/root/torso/hips/MCH-hips.flex_s/MCH-hips.flex/MCH-hips.reverse
+        weight: 1
+      - path: Princess-Rig/root/torso/hips/MCH-hips.flex_s/MCH-hips.flex/MCH-hips.reverse/MCH-hips.reverse_end
+        weight: 1
+      - path: Princess-Rig/root/torso/hips/MCH-hips.flex_s/MCH-hips.flex/MCH-spine.flex_s
+        weight: 1
+      - path: Princess-Rig/root/torso/hips/MCH-hips.flex_s/MCH-hips.flex/MCH-spine.flex_s/MCH-spine.flex
+        weight: 1
+      - path: Princess-Rig/root/torso/hips/MCH-hips.flex_s/MCH-hips.flex/MCH-spine.flex_s/MCH-spine.flex/MCH-chest.flex_s
+        weight: 1
+      - path: Princess-Rig/root/torso/hips/MCH-hips.flex_s/MCH-hips.flex/MCH-spine.flex_s/MCH-spine.flex/MCH-chest.flex_s/MCH-chest.flex
+        weight: 1
+      - path: Princess-Rig/root/torso/hips/MCH-hips.flex_s/MCH-hips.flex/MCH-spine.flex_s/MCH-spine.flex/MCH-chest.flex_s/MCH-chest.flex/MCH-chest.reverse
+        weight: 1
+      - path: Princess-Rig/root/torso/hips/MCH-hips.flex_s/MCH-hips.flex/MCH-spine.flex_s/MCH-spine.flex/MCH-chest.flex_s/MCH-chest.flex/MCH-chest.reverse/MCH-chest.reverse_end
+        weight: 1
+      - path: Princess-Rig/root/torso/hips/MCH-hips.flex_s/MCH-hips.flex/MCH-spine.flex_s/MCH-spine.flex/MCH-spine.reverse
+        weight: 1
+      - path: Princess-Rig/root/torso/hips/MCH-hips.flex_s/MCH-hips.flex/MCH-spine.flex_s/MCH-spine.flex/MCH-spine.reverse/MCH-spine.reverse_end
+        weight: 1
+      - path: Princess-Rig/root/torso/hips/MCH-sub_hips
+        weight: 1
+      - path: Princess-Rig/root/torso/hips/MCH-sub_hips/MCH-sub_hips_end
+        weight: 1
+      - path: Princess-Rig/root/torso/MCH-par_spine
+        weight: 1
+      - path: Princess-Rig/root/torso/MCH-par_spine/spine
+        weight: 1
+      - path: Princess-Rig/root/torso/MCH-par_spine/spine/MCH-sub_spine
+        weight: 1
+      - path: Princess-Rig/root/torso/MCH-par_spine/spine/MCH-sub_spine/MCH-sub_spine_end
+        weight: 1
+      - path: Princess-Rig/root/VIS-foot.ik.L
+        weight: 1
+      - path: Princess-Rig/root/VIS-foot.ik.L/VIS-foot.ik.L_end
+        weight: 1
+      - path: Princess-Rig/root/VIS-foot.ik.R
+        weight: 1
+      - path: Princess-Rig/root/VIS-foot.ik.R/VIS-foot.ik.R_end
+        weight: 1
+      - path: Princess-Rig/root/VIS-hand.ik.L
+        weight: 1
+      - path: Princess-Rig/root/VIS-hand.ik.L/VIS-hand.ik.L_end
+        weight: 1
+      - path: Princess-Rig/root/VIS-hand.ik.R
+        weight: 1
+      - path: Princess-Rig/root/VIS-hand.ik.R/VIS-hand.ik.R_end
+        weight: 1
+      - path: Princess-Rig/root/VIS-thigh_pole.ik.L
+        weight: 1
+      - path: Princess-Rig/root/VIS-thigh_pole.ik.L/VIS-thigh_pole.ik.L_end
+        weight: 1
+      - path: Princess-Rig/root/VIS-thigh_pole.ik.R
+        weight: 1
+      - path: Princess-Rig/root/VIS-thigh_pole.ik.R/VIS-thigh_pole.ik.R_end
+        weight: 1
+      - path: Princess-Rig/root/VIS-upper_arm_pole.ik.L
+        weight: 1
+      - path: Princess-Rig/root/VIS-upper_arm_pole.ik.L/VIS-upper_arm_pole.ik.L_end
+        weight: 1
+      - path: Princess-Rig/root/VIS-upper_arm_pole.ik.R
+        weight: 1
+      - path: Princess-Rig/root/VIS-upper_arm_pole.ik.R/VIS-upper_arm_pole.ik.R_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

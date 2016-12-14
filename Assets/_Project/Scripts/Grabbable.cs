@@ -9,6 +9,7 @@ public class Grabbable : MonoBehaviour {
 
 	protected NavMeshAgent agent;
 	protected Rigidbody rb;
+	public Animator anim;
 
 
 	// Use this for initialization
@@ -36,6 +37,9 @@ public class Grabbable : MonoBehaviour {
 		
 		if (rb != null)
 			rb.isKinematic = true;
+
+		if (anim != null)
+			anim.SetBool ("isGrabbed", true);
 		
 		transform.position = grabber.position;
 		transform.SetParent (grabber);
@@ -50,7 +54,10 @@ public class Grabbable : MonoBehaviour {
 
 		if (rb != null)
 			rb.isKinematic = false;
-
+		
+		if (anim != null)
+			anim.SetBool ("isGrabbed", false);
+		
 		transform.SetParent (null);
 	}
 
