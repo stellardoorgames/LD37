@@ -4,18 +4,6 @@ using UnityEngine;
 using FluffyUnderware.Curvy;
 using FluffyUnderware.Curvy.Generator;
 
-public class TenticleCell
-{
-	public Obstacle obstacle;
-	public CurvySplineSegment segment;
-
-	public TenticleCell(Obstacle obstacle, CurvySplineSegment segment)
-	{
-		this.obstacle = obstacle;
-		this.segment = segment;
-	}
-}
-
 public class TenticleController : MonoBehaviour {
 
 	public Transform target;
@@ -26,9 +14,13 @@ public class TenticleController : MonoBehaviour {
 
 	public GameObject obstacle;
 
-	public Material tenticleMaterial;
+	public Material tentacleMaterial;
+	//public MeshRenderer materialObject;
 
-	List<TenticleCell> cellStack;
+	public int selfCollidenumber = 8;
+
+	[HideInInspector]
+	public List<TentacleSection> tentacleSectionList = new List<TentacleSection>();
 
 	CurvySplineSegment segment;
 
@@ -36,11 +28,11 @@ public class TenticleController : MonoBehaviour {
 
 	void Start()
 	{
-		//spline.Add ();
-
-		cellStack = new List<TenticleCell> ();
 		foreach (CurvySplineSegment s in spline.Segments)
-			cellStack.Add (new TenticleCell (null, s));
+		{
+			tentacleSectionList.Add (TentacleSection.Create (obstacle, null, s));
+		}
+
 	}
 	
 	// Update is called once per frame
@@ -53,10 +45,17 @@ public class TenticleController : MonoBehaviour {
 		float offset = spline.Length - length;//Vector3.Distance (segment.transform.position, target.position);
 		length = spline.Length;
 
-		Vector3 v = tenticleMaterial.mainTextureOffset;
+		//Material mat = materialObject.material;
+
+		Vector2 v = tentacleMaterial.mainTextureOffset;
 		v.x -= offset * 0.25f;
 
-		tenticleMaterial.mainTextureOffset = v;
+		tentacleMaterial.mainTextureOffset = v;
+
+		//TODO: figure out how to get to the material on the mesh that Curvy generates at runtime
+		/*mat.SetTextureOffset("_MainTex", v);
+		mat.SetTextureOffset("_BumpMap", v);
+		mat.SetTextureOffset("_EmissionMap", v);*/
 
 		segment.transform.position = target.position;
 
@@ -75,15 +74,8 @@ public class TenticleController : MonoBehaviour {
 				previousSegment = segment.PreviousControlPoint;
 			
 			if (previousSegment != null)
-			{
-				GameObject go = Instantiate (obstacle);
-				go.transform.position = previousSegment.transform.position;
-
-				Obstacle ob = go.GetComponent<Obstacle> ();
-				ob.target = target;
-
-				cellStack.Add (new TenticleCell (ob, segment));
-			}
+				tentacleSectionList.Add (TentacleSection.Create (obstacle, target, segment));
+			
 		}
 
 		if (Input.GetKeyDown (KeyCode.P))
@@ -98,26 +90,23 @@ public class TenticleController : MonoBehaviour {
 
 	}
 
-	public bool Collide(GameObject go)
+	public bool SelfCollide(GameObject go)
 	{
 		bool retVal = false;
 
-		for (int i = 1; i < 8; i++)
+		int maxSection = tentacleSectionList.Count - 1;
+		Debug.Log ("RetractTest");
+		for (int i = 1; i < selfCollidenumber; i++)
 		{
-			if (i >= 0 && i < cellStack.Count - 1)
+			if (i >= 0 && i < tentacleSectionList.Count - 1)
 			{
-				TenticleCell tc = cellStack [cellStack.Count - i];
-				if (go == tc.obstacle.gameObject)
+				TentacleSection ts = tentacleSectionList [tentacleSectionList.Count - 1];
+				if (go == ts.gameObject)
 				{
-					Debug.Log ("Retracting");
-
-					RemoveSegment (cellStack.Count - i);
-					
-					retVal = true;
+					RemoveSegment (tentacleSectionList.Count - 1);
 				}
-				
+				retVal = true;
 			}
-
 		}
 
 		return retVal;
@@ -125,20 +114,17 @@ public class TenticleController : MonoBehaviour {
 
 	void RemoveSegment(int index)
 	{
-		for (int i = cellStack.Count - 1; i >= index; i--)
+		for (int i = tentacleSectionList.Count - 1; i >= index; i--)
 		{
-			TenticleCell tc = cellStack [i];
-			
-			GameObject.Destroy(tc.obstacle.gameObject);
-			tc.segment.Delete ();
-			cellStack.Remove (tc);//.RemoveAt (cellStack.Count - i);
-			
+			tentacleSectionList [i].Remove ();
+			tentacleSectionList.RemoveAt (i);
 		}
+
 	}
 
 	void OnDestroy()
 	{
 		Debug.Log("Resetting Texture UVs");
-		tenticleMaterial.mainTextureOffset = Vector2.zero;
+		tentacleMaterial.mainTextureOffset = Vector2.zero;
 	}
 }

@@ -13,10 +13,12 @@ public class TenticleLead : MonoBehaviour {
 	Grabbable grabbable;
 	Grabbable carryingObject;
 
+	Projector projector;
 
 	void Start () 
 	{
-
+		projector = GetComponentInChildren<Projector> ();
+		projector.enabled = false;
 	}
 	
 	void Update () {
@@ -69,20 +71,26 @@ public class TenticleLead : MonoBehaviour {
 		isActive = active;
 
 		if (active)
+		{
 			gameObject.tag = "CameraFollow";
+			projector.enabled = true;
+		}
 		else
+		{
 			gameObject.tag = "Untagged";
+			projector.enabled = false;
+		}
 	}
 
 	void OnTriggerEnter(Collider other)
 	{
-		Obstacle obstacle = other.GetComponent<Obstacle> ();
+		TentacleSection obstacle = other.GetComponent<TentacleSection> ();
 
 		if (obstacle != null)
 		{
 			Debug.Log ("Trigger");
 
-			tenticleController.Collide (obstacle.gameObject);
+			tenticleController.SelfCollide (obstacle.gameObject);
 
 		}
 

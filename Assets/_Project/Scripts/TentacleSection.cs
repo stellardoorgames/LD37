@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using FluffyUnderware.Curvy;
 
-public class Obstacle : MonoBehaviour {
+public class TentacleSection : MonoBehaviour {
 
 	public float distanceMultiplier = 0.5f;
 	public Transform target;
 
-	//public float distanceAtCreation;
+	public CurvySplineSegment segment;
 
 	bool stillScaling = true;
 	float scale;
@@ -16,10 +16,26 @@ public class Obstacle : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		//GameObject go = GameObject.FindGameObjectWithTag ("Player");
-		//target = go.transform;
-
 		Scale ();
+	}
+
+	public static TentacleSection Create(GameObject prefab, Transform target, CurvySplineSegment segment)
+	{
+		GameObject go = Instantiate (prefab);
+		go.transform.position = segment.PreviousControlPoint.transform.position;
+		TentacleSection ts = go.GetComponent<TentacleSection> ();
+		ts.target = target;
+		ts.segment = segment;
+		return ts;
+	}
+
+	public void Remove()
+	{
+		CurvySpline cs = segment.Spline;
+		cs.Delete (segment);
+		//Destroy (segment);
+		cs.Refresh ();
+		Destroy (gameObject);
 	}
 	
 	// Update is called once per frame
@@ -27,11 +43,6 @@ public class Obstacle : MonoBehaviour {
 	{
 		if (stillScaling)
 			Scale ();
-	}
-
-	public void Remove()
-	{
-		GameObject.Destroy (gameObject);
 	}
 
 	void Scale()
