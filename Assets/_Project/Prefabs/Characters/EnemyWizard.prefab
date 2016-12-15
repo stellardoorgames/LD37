@@ -16826,7 +16826,9 @@ MonoBehaviour:
   text: {fileID: 0}
   lavaDeathEffect: {fileID: 1038803464642200, guid: 31d076bc109379645a681b46611c640c,
     type: 2}
-  attackInterval: 1
+  attackInterval: 3
+  fireballProjectile: {fileID: 114988797209288496, guid: ee5bfa6599ff8b44cb7a3fa17ed0b652,
+    type: 2}
 --- !u!114 &114783325694630818
 MonoBehaviour:
   m_ObjectHideFlags: 1

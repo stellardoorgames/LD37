@@ -8,6 +8,9 @@ public class WizardController : EnemyController {
 
 	bool isAttacking;
 
+    public Projectile fireballProjectile;
+    Transform target;
+
 	protected override void OnTriggerEnter (Collider other)
 	{
 		base.OnTriggerEnter (other);
@@ -29,9 +32,12 @@ public class WizardController : EnemyController {
 
 		Collider[] colliders = Physics.OverlapSphere (transform.position, 1f);
 		bool isTentacle = false;
-		foreach (Collider c in colliders)
-			if (c.tag == "Tentacle")
-				isTentacle = true;
+        foreach (Collider c in colliders) {
+            if (c.tag == "Tentacle") {
+                isTentacle = true;
+                target = c.transform;
+            }
+        }
 		isAttacking = isTentacle;
 	}
 
@@ -46,6 +52,11 @@ public class WizardController : EnemyController {
 		while (isAttacking)
 		{
 			anim.SetTrigger ("Attack");
+            Projectile fireball = Instantiate(fireballProjectile, transform.position, Quaternion.identity);
+
+            fireball.targetTag = "Tentacle"; //TODO: This needs to be made modular
+            fireball.target = target;
+            fireball.speed = 1f;
 			
 			float nextAttackTime = Time.time + attackInterval;
 			
