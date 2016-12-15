@@ -23,11 +23,14 @@ public class EnemyController : Grabbable {
 
 		Retarget ();
 	}
+<<<<<<< HEAD
 	
 	/*public override void Update () 
 	{
 		base.Start ();
 	}*/
+=======
+>>>>>>> c9cd903fdbfb84581e9e08f0aa417cd48494ba76
 
 	public void Retarget()
 	{
