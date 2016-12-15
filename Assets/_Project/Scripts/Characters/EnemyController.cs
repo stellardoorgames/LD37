@@ -27,7 +27,6 @@ public class EnemyController : Grabbable {
 	/*public override void Update () 
 	{
 		base.Start ();
-
 	}*/
 
 	public void Retarget()
