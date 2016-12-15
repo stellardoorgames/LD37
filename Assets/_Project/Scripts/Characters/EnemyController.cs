@@ -46,9 +46,9 @@ public class EnemyController : Grabbable {
 	}
 
 
-	void OnTriggerEnter(Collider other)
+	protected virtual void OnTriggerEnter(Collider other)
 	{
-		
+
 		if (other.tag == "Lava")
 		{
 			//Animator anim = GetComponent<Animator> ();

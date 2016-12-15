@@ -2391,6 +2391,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1319721945851022
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4729425744177380}
+  - component: {fileID: 135211919453510796}
+  m_Layer: 0
+  m_Name: Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1323475009698444
 GameObject:
   m_ObjectHideFlags: 1
@@ -3300,8 +3316,8 @@ GameObject:
   - component: {fileID: 136165172383228610}
   - component: {fileID: 23650521980380944}
   - component: {fileID: 195888309525097082}
-  - component: {fileID: 114252840867866614}
   - component: {fileID: 54842308736755642}
+  - component: {fileID: 114615348317922084}
   m_Layer: 0
   m_Name: EnemyWizard
   m_TagString: Untagged
@@ -12168,6 +12184,7 @@ Transform:
   m_Children:
   - {fileID: 224311566669145188}
   - {fileID: 4510613642213284}
+  - {fileID: 4729425744177380}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12390,6 +12407,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4972741566475476}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4729425744177380
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1319721945851022}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4673325714426218}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4730097689357076
 Transform:
@@ -16764,22 +16794,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114252840867866614
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1444026687741626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef04fc51d1ac81244bb06802da8726b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 95917374941006580}
-  targetTag: Princess
-  text: {fileID: 0}
-  lavaDeathEffect: {fileID: 1038803464642200, guid: 31d076bc109379645a681b46611c640c,
-    type: 2}
 --- !u!114 &114272735126883098
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16796,6 +16810,22 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114615348317922084
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1444026687741626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3006405e26ac784fb244d505f3805f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 95917374941006580}
+  targetTag: Tentacle
+  text: {fileID: 0}
+  lavaDeathEffect: {fileID: 1038803464642200, guid: 31d076bc109379645a681b46611c640c,
+    type: 2}
 --- !u!114 &114783325694630818
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16850,6 +16880,18 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: New Text fdsfds
+--- !u!135 &135211919453510796
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1319721945851022}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &136165172383228610
 CapsuleCollider:
   m_ObjectHideFlags: 1

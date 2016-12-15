@@ -30,13 +30,11 @@ public class Grabbable : MonoBehaviour {
 	public void Grabbed(Transform grabber)
 	{
 		Debug.Log ("Grabbed");
-		//if (Vector3.Distance(transform.position, sucker.position) < 1)
-		//{
 		if (agent != null)
 			agent.Stop ();
 		
-		if (rb != null)
-			rb.isKinematic = true;
+		/*if (rb != null)
+			rb.isKinematic = true;*/
 
 		if (anim != null)
 			anim.SetBool ("isGrabbed", true);
@@ -44,7 +42,6 @@ public class Grabbable : MonoBehaviour {
 		transform.position = grabber.position;
 		transform.SetParent (grabber);
 
-		//}
 	}
 
 	public void Released()
