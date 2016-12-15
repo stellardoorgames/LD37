@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4462513199997808}
   - component: {fileID: 198976613762329966}
   - component: {fileID: 199005019580409176}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: LavaFlame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
