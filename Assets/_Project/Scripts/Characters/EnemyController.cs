@@ -21,6 +21,17 @@ public class EnemyController : Grabbable {
 	{
 		base.Start ();
 
+		Retarget ();
+	}
+	
+	/*public override void Update () 
+	{
+		base.Start ();
+
+	}*/
+
+	public void Retarget()
+	{
 		GameObject[] targets = GameObject.FindGameObjectsWithTag (targetTag);
 
 		if (targets.Length > 0)
@@ -35,14 +46,8 @@ public class EnemyController : Grabbable {
 			}
 			if (agent != null)
 				agent.destination = target.position;
-			
-		}
-	}
-	
-	public override void Update () 
-	{
-		base.Start ();
 
+		}
 	}
 
 

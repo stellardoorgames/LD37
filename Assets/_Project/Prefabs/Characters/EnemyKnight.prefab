@@ -16823,6 +16823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef04fc51d1ac81244bb06802da8726b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGrabbed: 0
   anim: {fileID: 95481908306019208}
   targetTag: Princess
   text: {fileID: 0}
