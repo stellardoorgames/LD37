@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TreasureController : MonoBehaviour {
 
+    public GameObject pickupEffect;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -20,6 +22,7 @@ public class TreasureController : MonoBehaviour {
 
 		if (tenticle != null)
 		{
+            Instantiate(pickupEffect, transform.position, Quaternion.identity);
 			LevelManager.AddTreasure ();
 			Destroy (gameObject);
 		}
