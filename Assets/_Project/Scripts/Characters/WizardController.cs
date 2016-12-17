@@ -30,7 +30,7 @@ public class WizardController : EnemyController {
 	{
 		base.Update ();
 
-		Collider[] colliders = Physics.OverlapSphere (transform.position, 1f);
+		Collider[] colliders = Physics.OverlapSphere (transform.position, .5f);
 		bool isTentacle = false;
         foreach (Collider c in colliders) {
             if (c.tag == "Tentacle") {

@@ -38,7 +38,7 @@ public class TenticleLead : MonoBehaviour {
 
 			if (carryingObject != null)
 			{
-				if (Vector3.Distance(transform.position, grabbable.transform.position) > 1)
+				if (Vector3.Distance(transform.position, grabbable.transform.position) > 2)
 				{
 					carryingObject.Released ();
 					carryingObject = null;
@@ -56,8 +56,8 @@ public class TenticleLead : MonoBehaviour {
 				{
 					if (grabbable != null)
 					{
-						if (Vector3.Distance(transform.position, grabbable.transform.position) < 1)
-						grabbable.Grabbed (transform);
+						if (Vector3.Distance (transform.position, grabbable.transform.position) < 1)
+							grabbable.Grabbed (transform);
 						carryingObject = grabbable;
 						//enemy = null
 					}
