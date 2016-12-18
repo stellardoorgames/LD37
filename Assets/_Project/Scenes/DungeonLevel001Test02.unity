@@ -5207,7 +5207,7 @@ Prefab:
     - target: {fileID: 114813504824746054, guid: 6b92973f3ee931740ad3013c911716de,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6b92973f3ee931740ad3013c911716de, type: 2}
@@ -13445,7 +13445,7 @@ Prefab:
     - target: {fileID: 114813504824746054, guid: c794c851b8e59da48a1eaa7eac48a28f,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c794c851b8e59da48a1eaa7eac48a28f, type: 2}
@@ -14093,7 +14093,7 @@ Prefab:
     - target: {fileID: 114813504824746054, guid: 6b92973f3ee931740ad3013c911716de,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6b92973f3ee931740ad3013c911716de, type: 2}
@@ -21050,7 +21050,7 @@ Prefab:
     - target: {fileID: 114813504824746054, guid: c794c851b8e59da48a1eaa7eac48a28f,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c794c851b8e59da48a1eaa7eac48a28f, type: 2}
@@ -39954,8 +39954,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 817b57f6909cfc24096dd5c6596cbdc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _state: 2
-  stateSequence: 020000000000000001000000
+  _state: 0
+  stateSequence: 000000000000000001000000
   OnChangeBarrier:
     m_PersistentCalls:
       m_Calls: []

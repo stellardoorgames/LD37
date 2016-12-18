@@ -16829,6 +16829,7 @@ MonoBehaviour:
   text: {fileID: 0}
   lavaDeathEffect: {fileID: 1038803464642200, guid: 31d076bc109379645a681b46611c640c,
     type: 2}
+  damage: 1
 --- !u!114 &114837903237553900
 MonoBehaviour:
   m_ObjectHideFlags: 1
