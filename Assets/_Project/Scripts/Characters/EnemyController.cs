@@ -17,6 +17,8 @@ public class EnemyController : Grabbable {
 
     public GameObject lavaDeathEffect;
 
+	public float damage = 1f;
+
 	public override void Start()
 	{
 		base.Start ();

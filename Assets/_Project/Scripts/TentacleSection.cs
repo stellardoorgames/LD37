@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using FluffyUnderware.Curvy;
 
-public class TentacleSection : MonoBehaviour {
+public class TentacleSection : MonoBehaviour, IDamagable {
 
 	public float distanceMultiplier = 0.5f;
 	public Transform target;
 
 	public CurvySplineSegment segment;
+	public TenticleController controller;
 
 	bool stillScaling = true;
 	float scale;
@@ -19,13 +20,14 @@ public class TentacleSection : MonoBehaviour {
 		Scale ();
 	}
 
-	public static TentacleSection Create(GameObject prefab, Transform target, CurvySplineSegment segment)
+	public static TentacleSection Create(GameObject prefab, Transform target, CurvySplineSegment segment, TenticleController controller)
 	{
 		GameObject go = Instantiate (prefab);
 		go.transform.position = segment.PreviousControlPoint.transform.position;
 		TentacleSection ts = go.GetComponent<TentacleSection> ();
 		ts.target = target;
 		ts.segment = segment;
+		ts.controller = controller;
 		return ts;
 	}
 
@@ -62,8 +64,8 @@ public class TentacleSection : MonoBehaviour {
 
 	}
 
-	void TakeHit(float damage)
+	public void TakeDamage(float damage)
 	{
-		
+		controller.TakeDamage();
 	}
 }

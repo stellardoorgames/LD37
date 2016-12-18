@@ -16,9 +16,9 @@ public class WizardController : EnemyController {
 		{
 			Debug.Log ("Attack");
 			
-
-
-			StartCoroutine (AttackCoroutine ());
+			IDamagable d = other.GetComponent<IDamagable>();
+			if (d != null)
+				StartCoroutine (AttackCoroutine (d));
 		}
 
 	}
@@ -35,7 +35,7 @@ public class WizardController : EnemyController {
 		isAttacking = isTentacle;
 	}
 
-	IEnumerator AttackCoroutine()
+	IEnumerator AttackCoroutine(IDamagable attackTarget)
 	{
 		isAttacking = true;
 
@@ -48,7 +48,9 @@ public class WizardController : EnemyController {
 			anim.SetTrigger ("Attack");
 			
 			float nextAttackTime = Time.time + attackInterval;
-			
+
+			attackTarget.TakeDamage(damage);
+
 			while (Time.time < nextAttackTime)
 				yield return null;
 			

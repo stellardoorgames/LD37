@@ -19,6 +19,13 @@ public class TenticleController : MonoBehaviour {
 
 	public int selfCollidenumber = 8;
 
+	public Color damageTint;
+	Color startingTint;
+	public float damageFlashDuration = 2;
+	public int damageFlashNumber = 3;
+	bool isFlashing = false;
+
+
 	[HideInInspector]
 	public List<TentacleSection> tentacleSectionList = new List<TentacleSection>();
 
@@ -30,10 +37,10 @@ public class TenticleController : MonoBehaviour {
 	{
 		foreach (CurvySplineSegment s in spline.Segments)
 		{
-			tentacleSectionList.Add (TentacleSection.Create (obstacle, null, s));
+			tentacleSectionList.Add (TentacleSection.Create (obstacle, null, s, this));
 		}
 
-
+		startingTint = tentacleMaterial.color;
 	}
 	
 	// Update is called once per frame
@@ -75,16 +82,16 @@ public class TenticleController : MonoBehaviour {
 				previousSegment = segment.PreviousControlPoint;
 			
 			if (previousSegment != null)
-				tentacleSectionList.Add (TentacleSection.Create (obstacle, target, segment));
+				tentacleSectionList.Add (TentacleSection.Create (obstacle, target, segment, this));
 			
 		}
 
 		if (Input.GetKeyDown (KeyCode.P))
 		{
-			
-			spline = spline.ControlPoints [5].SplitSpline ();
+			TakeDamage();
+			/*spline = spline.ControlPoints [5].SplitSpline ();
 			segment = spline.ControlPoints[spline.ControlPointCount - 1];
-			transform.position = segment.transform.position;
+			transform.position = segment.transform.position;*/
 		}
 
 		spline.Refresh ();
@@ -123,9 +130,44 @@ public class TenticleController : MonoBehaviour {
 
 	}
 
+	public void TakeDamage()
+	{
+		if (!isFlashing)
+			StartCoroutine(ColorFlash(damageTint, damageFlashDuration, damageFlashNumber));
+	}
+
+	public IEnumerator ColorFlash(Color color, float duration, int number)
+	{
+		isFlashing = true;
+
+		float flashTime = duration / (number * 2);
+		for ( int i = 0; i < number; i++)
+		{
+			float endTime = Time.time + flashTime;
+			float startingTime = Time.time;
+			while (Time.time < endTime)
+			{
+				yield return null;
+				float t = Mathf.InverseLerp(startingTime, endTime, Time.time);
+				tentacleMaterial.color = Color.Lerp(startingTint, damageTint, t);
+			}
+			endTime = Time.time + flashTime;
+			startingTime = Time.time;
+			while (Time.time < endTime)
+			{
+				yield return null;
+				float t = Mathf.InverseLerp(startingTime, endTime, Time.time);
+				tentacleMaterial.color = Color.Lerp(damageTint, startingTint, t);
+			}
+		}
+
+		isFlashing = false;
+	}
+
 	void OnDestroy()
 	{
 		Debug.Log("Resetting Texture UVs");
 		tentacleMaterial.mainTextureOffset = Vector2.zero;
+		tentacleMaterial.color = startingTint;
 	}
 }

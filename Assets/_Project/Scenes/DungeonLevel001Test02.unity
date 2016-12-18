@@ -1495,6 +1495,48 @@ Transform:
   m_Father: {fileID: 467205984}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &63710277
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 268055574}
+    m_Modifications:
+    - target: {fileID: 4394800440613490, guid: 41d87ac91f9c54e49890388f26c82b8c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4394800440613490, guid: 41d87ac91f9c54e49890388f26c82b8c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4394800440613490, guid: 41d87ac91f9c54e49890388f26c82b8c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4394800440613490, guid: 41d87ac91f9c54e49890388f26c82b8c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4394800440613490, guid: 41d87ac91f9c54e49890388f26c82b8c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4394800440613490, guid: 41d87ac91f9c54e49890388f26c82b8c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4394800440613490, guid: 41d87ac91f9c54e49890388f26c82b8c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4394800440613490, guid: 41d87ac91f9c54e49890388f26c82b8c, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 41d87ac91f9c54e49890388f26c82b8c, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &65119957
 Prefab:
   m_ObjectHideFlags: 0
@@ -2092,7 +2134,7 @@ GameObject:
   - component: {fileID: 78222143}
   - component: {fileID: 78222144}
   - component: {fileID: 78222145}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: CP0000
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2983,7 +3025,7 @@ GameObject:
   - component: {fileID: 114324899}
   - component: {fileID: 114324901}
   - component: {fileID: 114324902}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tenticle Tracking East
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -3292,6 +3334,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4413616739731240, guid: 1c1f3919499767147aa4efaf5f50c41f,
     type: 2}
   m_PrefabInternal: {fileID: 126398771}
+--- !u!4 &132295376 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4394800440613490, guid: 41d87ac91f9c54e49890388f26c82b8c,
+    type: 2}
+  m_PrefabInternal: {fileID: 63710277}
 --- !u!1001 &134521528
 Prefab:
   m_ObjectHideFlags: 0
@@ -6271,7 +6318,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.5, z: -3}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
-  - {fileID: 1725742894}
+  - {fileID: 132295376}
   m_Father: {fileID: 2087423250}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7927,7 +7974,7 @@ GameObject:
   - component: {fileID: 362741270}
   - component: {fileID: 362741271}
   - component: {fileID: 362741272}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CP0003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9852,7 +9899,7 @@ GameObject:
   - component: {fileID: 465432597}
   - component: {fileID: 465432596}
   - component: {fileID: 465432595}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Generator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9870,8 +9917,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1397067790}
   - {fileID: 890870752}
+  - {fileID: 1397067790}
   - {fileID: 1914998517}
   - {fileID: 1142762931}
   - {fileID: 1709443564}
@@ -9945,8 +9992,8 @@ MonoBehaviour:
     m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   Modules:
-  - {fileID: 1397067791}
   - {fileID: 890870753}
+  - {fileID: 1397067791}
   - {fileID: 1914998518}
   - {fileID: 1142762932}
   - {fileID: 1709443565}
@@ -11006,7 +11053,7 @@ GameObject:
   - component: {fileID: 492564777}
   - component: {fileID: 492564778}
   - component: {fileID: 492564779}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: CP0005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12383,7 +12430,7 @@ GameObject:
   - component: {fileID: 539638286}
   - component: {fileID: 539638287}
   - component: {fileID: 539638288}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CP0000
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16238,7 +16285,7 @@ Transform:
   m_Children:
   - {fileID: 1593120338}
   m_Father: {fileID: 1331538979}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &678235310
 MonoBehaviour:
@@ -16302,7 +16349,7 @@ GameObject:
   m_Component:
   - component: {fileID: 678953020}
   - component: {fileID: 678953019}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Input Spline Path_1_Spline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18361,7 +18408,7 @@ GameObject:
   m_Component:
   - component: {fileID: 776586210}
   - component: {fileID: 776586211}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Input Spline Shape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18381,7 +18428,7 @@ Transform:
   m_Children:
   - {fileID: 1109837452}
   m_Father: {fileID: 1302588969}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &776586211
 MonoBehaviour:
@@ -19388,7 +19435,7 @@ GameObject:
   - component: {fileID: 813640678}
   - component: {fileID: 813640679}
   - component: {fileID: 813640680}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CP0006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19588,7 +19635,7 @@ GameObject:
   - component: {fileID: 814099012}
   - component: {fileID: 814099013}
   - component: {fileID: 814099014}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: CP0006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20264,52 +20311,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4413616739731240, guid: 1c1f3919499767147aa4efaf5f50c41f,
     type: 2}
   m_PrefabInternal: {fileID: 838338603}
---- !u!1001 &838743008
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 268055574}
-    m_Modifications:
-    - target: {fileID: 4552881475787534, guid: 22d325f7cb3e24c4e82918e3e4a245c6, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4552881475787534, guid: 22d325f7cb3e24c4e82918e3e4a245c6, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4552881475787534, guid: 22d325f7cb3e24c4e82918e3e4a245c6, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4552881475787534, guid: 22d325f7cb3e24c4e82918e3e4a245c6, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4552881475787534, guid: 22d325f7cb3e24c4e82918e3e4a245c6, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4552881475787534, guid: 22d325f7cb3e24c4e82918e3e4a245c6, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4552881475787534, guid: 22d325f7cb3e24c4e82918e3e4a245c6, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071067
-      objectReference: {fileID: 0}
-    - target: {fileID: 4552881475787534, guid: 22d325f7cb3e24c4e82918e3e4a245c6, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1675212625694482, guid: 22d325f7cb3e24c4e82918e3e4a245c6, type: 2}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 22d325f7cb3e24c4e82918e3e4a245c6, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &838877958
 GameObject:
   m_ObjectHideFlags: 0
@@ -22009,7 +22010,7 @@ GameObject:
   m_Component:
   - component: {fileID: 890870752}
   - component: {fileID: 890870753}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Input Spline Shape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22029,7 +22030,7 @@ Transform:
   m_Children:
   - {fileID: 1485409873}
   m_Father: {fileID: 465432594}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &890870753
 MonoBehaviour:
@@ -22374,7 +22375,7 @@ GameObject:
   - component: {fileID: 904373624}
   - component: {fileID: 904373626}
   - component: {fileID: 904373627}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Tenticle Tracking West
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -23210,6 +23211,10 @@ Prefab:
     - target: {fileID: 4552881475787534, guid: 22d325f7cb3e24c4e82918e3e4a245c6, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675212625694482, guid: 22d325f7cb3e24c4e82918e3e4a245c6, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 22d325f7cb3e24c4e82918e3e4a245c6, type: 2}
@@ -24278,7 +24283,7 @@ GameObject:
   - component: {fileID: 993175329}
   - component: {fileID: 993175330}
   - component: {fileID: 993175331}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: CP0001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24610,7 +24615,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1017647002}
   - component: {fileID: 1017647003}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Input Spline Path
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24630,7 +24635,7 @@ Transform:
   m_Children:
   - {fileID: 678953020}
   m_Father: {fileID: 1302588969}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1017647003
 MonoBehaviour:
@@ -25057,7 +25062,7 @@ Transform:
   m_Children:
   - {fileID: 487009017}
   m_Father: {fileID: 1331538979}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1022216828
 MonoBehaviour:
@@ -25472,7 +25477,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1041548148}
   - component: {fileID: 1041548147}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Input Spline Path_1_Spline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26452,7 +26457,7 @@ GameObject:
   - component: {fileID: 1109837452}
   - component: {fileID: 1109837454}
   - component: {fileID: 1109837453}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Input Spline Shape_2_Shape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26784,7 +26789,7 @@ GameObject:
   - component: {fileID: 1125927048}
   - component: {fileID: 1125927046}
   - component: {fileID: 1125927047}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: CP0001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27145,7 +27150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1142762931}
   - component: {fileID: 1142762932}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Volume Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28027,7 +28032,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1191516371}
   - component: {fileID: 1191516372}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Create Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28201,7 +28206,7 @@ GameObject:
   - component: {fileID: 1202356031}
   - component: {fileID: 1202356030}
   - component: {fileID: 1202356029}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: CP0000
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28305,7 +28310,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1204350714}
   - component: {fileID: 1204350715}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Shape Extrusion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28459,7 +28464,7 @@ GameObject:
   - component: {fileID: 1213105181}
   - component: {fileID: 1213105180}
   - component: {fileID: 1213105179}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CP0000
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29048,7 +29053,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1256034779}
   - component: {fileID: 1256034778}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Tenticle West
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29073,6 +29078,9 @@ MonoBehaviour:
   obstacle: {fileID: 1946876087593136, guid: 612c9ac974daae748a03839c593f57e9, type: 2}
   tentacleMaterial: {fileID: 2100000, guid: c11bb81749a6ed449b20cc2a7819655e, type: 2}
   selfCollidenumber: 12
+  damageTint: {r: 0.9632353, g: 0.120404415, b: 0.120404415, a: 1}
+  damageFlashDuration: 1.5
+  damageFlashNumber: 3
   tentacleSectionList: []
 --- !u!4 &1256034779
 Transform:
@@ -29245,7 +29253,7 @@ GameObject:
   - component: {fileID: 1264488282}
   - component: {fileID: 1264488283}
   - component: {fileID: 1264488284}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: CP0004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29567,7 +29575,7 @@ GameObject:
   - component: {fileID: 1302588972}
   - component: {fileID: 1302588971}
   - component: {fileID: 1302588970}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Generator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29585,8 +29593,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1017647002}
   - {fileID: 776586210}
+  - {fileID: 1017647002}
   - {fileID: 1204350714}
   - {fileID: 1319500490}
   - {fileID: 1191516371}
@@ -29660,8 +29668,8 @@ MonoBehaviour:
     m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   Modules:
-  - {fileID: 1017647003}
   - {fileID: 776586211}
+  - {fileID: 1017647003}
   - {fileID: 1204350715}
   - {fileID: 1319500491}
   - {fileID: 1191516372}
@@ -30162,7 +30170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1319500490}
   - component: {fileID: 1319500491}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Volume Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30421,8 +30429,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1022216827}
   - {fileID: 678235309}
+  - {fileID: 1022216827}
   - {fileID: 847729484}
   - {fileID: 584409013}
   - {fileID: 1663088951}
@@ -30496,8 +30504,8 @@ MonoBehaviour:
     m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   Modules:
-  - {fileID: 1022216828}
   - {fileID: 678235310}
+  - {fileID: 1022216828}
   - {fileID: 847729485}
   - {fileID: 584409014}
   - {fileID: 1663088952}
@@ -31000,7 +31008,7 @@ GameObject:
   - component: {fileID: 1364356944}
   - component: {fileID: 1364356945}
   - component: {fileID: 1364356946}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CP0004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31200,7 +31208,7 @@ GameObject:
   - component: {fileID: 1374547122}
   - component: {fileID: 1374547123}
   - component: {fileID: 1374547124}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CP0005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31607,7 +31615,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1397067790}
   - component: {fileID: 1397067791}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Input Spline Path
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31627,7 +31635,7 @@ Transform:
   m_Children:
   - {fileID: 1041548148}
   m_Father: {fileID: 465432594}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1397067791
 MonoBehaviour:
@@ -33387,7 +33395,7 @@ GameObject:
   - component: {fileID: 1485409873}
   - component: {fileID: 1485409875}
   - component: {fileID: 1485409874}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Input Spline Shape_2_Shape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34974,7 +34982,7 @@ GameObject:
   - component: {fileID: 1551244983}
   - component: {fileID: 1551244984}
   - component: {fileID: 1551244985}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CP0002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35741,7 +35749,7 @@ GameObject:
   - component: {fileID: 1599306614}
   - component: {fileID: 1599306615}
   - component: {fileID: 1599306616}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CP0007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36799,7 +36807,7 @@ GameObject:
   - component: {fileID: 1648372008}
   - component: {fileID: 1648372009}
   - component: {fileID: 1648372010}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CP0001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38892,7 +38900,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1709443564}
   - component: {fileID: 1709443565}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Create Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39125,11 +39133,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4413616739731240, guid: 1c1f3919499767147aa4efaf5f50c41f,
     type: 2}
   m_PrefabInternal: {fileID: 1723522003}
---- !u!4 &1725742894 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4552881475787534, guid: 22d325f7cb3e24c4e82918e3e4a245c6,
-    type: 2}
-  m_PrefabInternal: {fileID: 838743008}
 --- !u!1001 &1728767770
 Prefab:
   m_ObjectHideFlags: 0
@@ -40558,6 +40561,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1004031830184562, guid: 5d2f64f32a18e75478952a28d2f78aa4, type: 2}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5d2f64f32a18e75478952a28d2f78aa4, type: 2}
   m_IsPrefabParent: 0
@@ -41755,7 +41762,7 @@ GameObject:
   - component: {fileID: 1844216080}
   - component: {fileID: 1844216078}
   - component: {fileID: 1844216079}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CP0001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43428,7 +43435,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1914998517}
   - component: {fileID: 1914998518}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Shape Extrusion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44649,7 +44656,7 @@ GameObject:
   - component: {fileID: 1978195521}
   - component: {fileID: 1978195522}
   - component: {fileID: 1978195523}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: CP0007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45675,7 +45682,7 @@ GameObject:
   - component: {fileID: 2020905235}
   - component: {fileID: 2020905236}
   - component: {fileID: 2020905237}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: CP0003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46013,7 +46020,7 @@ GameObject:
   - component: {fileID: 2032307204}
   - component: {fileID: 2032307205}
   - component: {fileID: 2032307206}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: CP0002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46931,7 +46938,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2054711733}
   - component: {fileID: 2054711732}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tenticle East
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46955,7 +46962,10 @@ MonoBehaviour:
   segmentLength: 1
   obstacle: {fileID: 1946876087593136, guid: 612c9ac974daae748a03839c593f57e9, type: 2}
   tentacleMaterial: {fileID: 2100000, guid: 76c14f2e2b1a12c4b9005aa9e0054d58, type: 2}
-  selfCollidenumber: 8
+  selfCollidenumber: 12
+  damageTint: {r: 0.9632353, g: 0.120404415, b: 0.120404415, a: 1}
+  damageFlashDuration: 1.5
+  damageFlashNumber: 3
   tentacleSectionList: []
 --- !u!4 &2054711733
 Transform:
@@ -47311,7 +47321,10 @@ MonoBehaviour:
   segmentLength: 1
   obstacle: {fileID: 1946876087593136, guid: 612c9ac974daae748a03839c593f57e9, type: 2}
   tentacleMaterial: {fileID: 2100000, guid: 0bb98e761cf7bfa41bc35b866b95ce90, type: 2}
-  selfCollidenumber: 8
+  selfCollidenumber: 12
+  damageTint: {r: 0.9632353, g: 0.120404415, b: 0.120404415, a: 1}
+  damageFlashDuration: 1.5
+  damageFlashNumber: 3
   tentacleSectionList: []
 --- !u!4 &2087423250
 Transform:
