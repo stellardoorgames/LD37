@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class TenticleLead : MonoBehaviour {
 
-	public float speed = 1f;
+	public float speed = 800f;
+	public float maxSpeed = 1f;
 
 	public TenticleController tenticleController;
 
@@ -15,10 +16,14 @@ public class TenticleLead : MonoBehaviour {
 
 	Projector projector;
 
+	Rigidbody rb;
+
 	void Start () 
 	{
 		projector = GetComponentInChildren<Projector> ();
 		projector.enabled = false;
+
+		rb = GetComponent<Rigidbody>();
 	}
 	
 	void Update () {
@@ -31,9 +36,13 @@ public class TenticleLead : MonoBehaviour {
 			float horizontal = Input.GetAxis ("Horizontal" );
 			float vertical = Input.GetAxis ("Vertical");
 
-			Vector3 movement = new Vector3 (horizontal, 0, vertical) * speed * Time.deltaTime;
 
-			transform.Translate (movement);
+			Vector3 movement = new Vector3 (horizontal, 0, vertical) * speed * Time.deltaTime;
+			//Debug.Log(rb.velocity.magnitude);
+			//if (rb.velocity.magnitude < maxSpeed)
+				rb.AddForce(movement);
+
+			//transform.Translate (movement);
 			//transform.Translate (p.x, 0f, p.y);
 
 			if (carryingObject != null)

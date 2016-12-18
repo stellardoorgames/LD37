@@ -33,6 +33,7 @@ public class TenticleController : MonoBehaviour {
 			tentacleSectionList.Add (TentacleSection.Create (obstacle, null, s));
 		}
 
+
 	}
 	
 	// Update is called once per frame
