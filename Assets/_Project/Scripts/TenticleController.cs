@@ -6,7 +6,9 @@ using FluffyUnderware.Curvy.Generator;
 
 public class TenticleController : MonoBehaviour {
 
-	public Transform target;
+	public TenticleLead lead;
+	public PlayerController playerController;
+	//public Transform target;
 
 	public CurvySpline spline;
 
@@ -25,6 +27,8 @@ public class TenticleController : MonoBehaviour {
 	public int damageFlashNumber = 3;
 	bool isFlashing = false;
 
+	[HideInInspector]
+	public float tentacleLength;
 
 	[HideInInspector]
 	public List<TentacleSection> tentacleSectionList = new List<TentacleSection>();
@@ -46,14 +50,26 @@ public class TenticleController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		spline.Refresh ();
+		//spline.Refresh ();
+
+		if (playerController.totalTentacleLength > playerController.currentMaxTotalTentacleLength)
+		{
+			float dist1 = Vector3.Distance(lead.transform.position, segment.PreviousControlPoint.transform.position);
+			Vector3 movement = lead.GetMovement() + lead.transform.position;
+			float dist2 = Vector3.Distance(movement, segment.PreviousControlPoint.transform.position);
+			if (dist1 > dist2)
+				lead.UpdatePosition();
+			else
+				lead.Stop();
+			Debug.Log("Exceeded Length");
+		}
+		else
+			lead.UpdatePosition();
 
 		segment = spline.LastVisibleControlPoint;//spline.ControlPoints [spline.Count - 1];//
 
 		float offset = spline.Length - length;//Vector3.Distance (segment.transform.position, target.position);
 		length = spline.Length;
-
-		//Material mat = materialObject.material;
 
 		Vector2 v = tentacleMaterial.mainTextureOffset;
 		v.x -= offset * 0.25f;
@@ -61,13 +77,12 @@ public class TenticleController : MonoBehaviour {
 		tentacleMaterial.mainTextureOffset = v;
 
 		//TODO: figure out how to get to the material on the mesh that Curvy generates at runtime
+		//Material mat = materialObject.material;
 		/*mat.SetTextureOffset("_MainTex", v);
 		mat.SetTextureOffset("_BumpMap", v);
 		mat.SetTextureOffset("_EmissionMap", v);*/
 
-		segment.transform.position = target.position;
-
-		//Debug.Log (segment.PreviousControlPoint.Length);
+		segment.transform.position = lead.transform.position;//target.position;
 
 		if (segment.PreviousControlPoint.Length > segmentLength)
 		{
@@ -82,7 +97,7 @@ public class TenticleController : MonoBehaviour {
 				previousSegment = segment.PreviousControlPoint;
 			
 			if (previousSegment != null)
-				tentacleSectionList.Add (TentacleSection.Create (obstacle, target, segment, this));
+				tentacleSectionList.Add (TentacleSection.Create (obstacle, lead.transform, segment, this));
 			
 		}
 
@@ -96,6 +111,8 @@ public class TenticleController : MonoBehaviour {
 
 		spline.Refresh ();
 
+
+		tentacleLength = spline.Length;
 	}
 
 	public bool SelfCollide(GameObject go)

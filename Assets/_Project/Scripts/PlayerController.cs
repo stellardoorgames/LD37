@@ -5,39 +5,33 @@ using UnityEngine.Events;
 
 public class PlayerController : MonoBehaviour {
 
-	const int NumTenticles = 3;
-
 	public float maxLife = 10;
 	float currentLife;
 
-	//public TenticleLead tenticleNorth;
-	public TenticleLead tenticleSouth;
-	public TenticleLead tenticleEast;
-	public TenticleLead tenticleWest;
+	public List<TenticleController> tentacles = new List<TenticleController>();
+
+	public float startingMaxTotalTentacleLength = 10f;
+	public float currentMaxTotalTentacleLength = 10f;
+	public float currentTotalTentacleLength;
+	public float totalTentacleLength{
+		get {currentTotalTentacleLength = GetTotalTentacleLength();
+			return currentTotalTentacleLength;}
+	}
 
 	[SerializeField]
 	int _activeTenticleIndex = 0;
 	public int activeTenticleIndex {
 		get {return _activeTenticleIndex;}
-		set {_activeTenticleIndex = value % NumTenticles;
+		set {_activeTenticleIndex = value % tentacles.Count;
 			SwitchTenticles (_activeTenticleIndex);}
 	}
-	TenticleLead activeTenticle;
-	List<TenticleLead> tenticles;
+	TenticleLead activeTentacle;
+	List<TenticleLead> tentacleLeads;
 
 	public UnityEvent OnDeath;
 	public UnityEvent OnFinish;
 
-	static PlayerController _instance;
 	static PlayerController instance;
-	/*{
-		get
-		{
-			if (_instance == null)
-				_instance = new GameObject("_PlayerController").AddComponent<PlayerController>();
-			return _instance;          
-		}
-	}*/
 
 	void Awake()
 	{
@@ -49,15 +43,13 @@ public class PlayerController : MonoBehaviour {
 
 		currentLife = maxLife;
 
-		tenticles = new List<TenticleLead>();
-		tenticles.Add (tenticleWest);
-		tenticles.Add (tenticleSouth);
-		//tenticles.Add (tenticleNorth);
-		tenticles.Add (tenticleEast);
+		tentacleLeads = new List<TenticleLead>();
+		foreach(TenticleController tc in tentacles)
+			tentacleLeads.Add(tc.lead);
+	
+		activeTentacle = tentacleLeads [activeTenticleIndex];
 
-		activeTenticle = tenticles [activeTenticleIndex];
-
-		activeTenticle.Activate(true);
+		activeTentacle.Activate(true);
 	}
 	
 	// Update is called once per frame
@@ -80,16 +72,26 @@ public class PlayerController : MonoBehaviour {
 		
 		//if (Input.GetButtonDown ("North"))
 		//	activeTenticleIndex = 2;
+
+
+	}
+
+	public float GetTotalTentacleLength()
+	{
+		float len = 0;
+		foreach (TenticleController tc in tentacles)
+			len += tc.tentacleLength;
+		return len;
 	}
 
 	void SwitchTenticles(int index)
 	{
-		foreach(TenticleLead tc in tenticles)
+		foreach(TenticleLead tc in tentacleLeads)
 		{
 			tc.Activate(false);
 		}
 
-		tenticles [index].Activate(true);
+		tentacleLeads [index].Activate(true);
 
 
 		/*for(int i = 0; i < tenticles.Count; i++)

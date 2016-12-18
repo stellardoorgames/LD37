@@ -25,11 +25,24 @@ public class TenticleLead : MonoBehaviour {
 
 		rb = GetComponent<Rigidbody>();
 	}
-	
-	void Update () {
 
-		//Vector2 p = -(pos - Input.mousePosition) * 0.005f;
-		//pos = Input.mousePosition;
+	public void Stop()
+	{
+		rb.velocity = Vector3.zero;
+
+	}
+
+	public Vector3 GetMovement()
+	{
+		float horizontal = Input.GetAxis ("Horizontal" );
+		float vertical = Input.GetAxis ("Vertical");
+
+
+		return new Vector3 (horizontal, 0, vertical);
+	}
+
+	public void UpdatePosition()
+	{
 
 		if (isActive)
 		{
@@ -40,11 +53,30 @@ public class TenticleLead : MonoBehaviour {
 			Vector3 movement = new Vector3 (horizontal, 0, vertical) * speed * Time.deltaTime;
 			//Debug.Log(rb.velocity.magnitude);
 			//if (rb.velocity.magnitude < maxSpeed)
+			rb.AddForce(movement);
+		}
+	}
+
+	void Update () {
+
+		//Vector2 p = -(pos - Input.mousePosition) * 0.005f;
+		//pos = Input.mousePosition;
+
+		if (isActive)
+		{
+			
+			/*float horizontal = Input.GetAxis ("Horizontal" );
+			float vertical = Input.GetAxis ("Vertical");
+
+
+			Vector3 movement = new Vector3 (horizontal, 0, vertical) * speed * Time.deltaTime;
+			//Debug.Log(rb.velocity.magnitude);
+			//if (rb.velocity.magnitude < maxSpeed)
 				rb.AddForce(movement);
 
 			//transform.Translate (movement);
 			//transform.Translate (p.x, 0f, p.y);
-
+*/
 			if (carryingObject != null)
 			{
 				if (Vector3.Distance(transform.position, grabbable.transform.position) > 2)
