@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KnightController : CharacterController {
+public class KnightController : CharController {
 
 	public override void Start ()
 	{

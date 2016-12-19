@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PrincessController : CharacterController, IGrabbable {
+public class PrincessController : CharController, IGrabbable {
 
 	public override void Start ()
 	{
@@ -13,7 +13,7 @@ public class PrincessController : CharacterController, IGrabbable {
 	{
 		base.OnTriggerEnter(other);
 
-		CharacterController enemy = other.GetComponent<CharacterController> ();
+		CharController enemy = other.GetComponent<CharController> ();
 
 		if (enemy != null)
 		{

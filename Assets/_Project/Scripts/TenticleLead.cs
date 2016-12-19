@@ -24,6 +24,7 @@ public class TenticleLead : MonoBehaviour {
 		projector.enabled = false;
 
 		rb = GetComponent<Rigidbody>();
+
 	}
 
 	public Vector3 GetMovement()
@@ -60,30 +61,42 @@ public class TenticleLead : MonoBehaviour {
 					carryingObject = null;
 				}
 			}*/
-			Debug.Log(carryingObject);
-			if (carryingObject == null)
-				carryingObject = null;
+			//Debug.Log(carryingObject);
 			if (Input.GetButtonDown ("Grab"))
 			{
 				if (carryingObject != null)
 				{
 					carryingObject.Released ();
-					carryingObject = null;
+					OnGrabRelease();
+					//carryingObject = null;
 				}
 				else
 				{
 					if (grabbable != null)
 					{
-						if (Vector3.Distance (transform.position, grabbable.grabTransform.position) < 1f)
+						//if (Vector3.Distance (transform.position, grabbable.grabTransform.position) < 1f)
+						if (grabbable.GetGrabRange(transform.position) < grabbable.grabRange)
 						{
-							grabbable.Grabbed (transform);
-							carryingObject = grabbable;
+							bool grabWorked = grabbable.Grabbed (transform);
+							if (grabWorked)
+							{
+								carryingObject = grabbable;
+								carryingObject.OnEscaped += OnGrabRelease;
+							}
 						}
 						//enemy = null
 					}
 				}
 			}
 		}
+	}
+
+	void OnGrabRelease()
+	{
+		if (carryingObject != null)
+			carryingObject.OnEscaped -= OnGrabRelease;
+		
+		carryingObject = null;
 	}
 
 	public void Activate(bool active)
@@ -113,6 +126,11 @@ public class TenticleLead : MonoBehaviour {
 		if (g != null)
 			grabbable = g;
 
+	}
+
+	public void HasReleased (IGrabbable grabbable)
+	{
+		
 	}
 
 }

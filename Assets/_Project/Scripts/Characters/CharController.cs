@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
+using System;
 
-public class CharacterController : MonoBehaviour, IGrabbable {
+public class CharController : MonoBehaviour, IGrabbable {
 
 	public string targetTag;
 
@@ -19,20 +20,26 @@ public class CharacterController : MonoBehaviour, IGrabbable {
 	public Animator anim;
 	protected NavMeshAgent agent;
 	protected Rigidbody rb;
-	protected Collider collide;
+	protected Collider charCollider;
 
+	[SerializeField]
+	float _grabRange = 1f;
+	public float grabRange {
+		get {return _grabRange;}
+		set {_grabRange = value;}
+	}
 	public bool isGrabbed {get; set;}
 	public Transform grabber {get; set;}
 	public Transform grabTransform {get; set;}
-
+	public event Action OnEscaped;
 
 	public virtual void Start()
 	{
 		agent = GetComponent<NavMeshAgent> ();
 		rb = GetComponent<Rigidbody> ();
-		collide = GetComponent<Collider> ();
+		charCollider = GetComponent<Collider> ();
 
-		grabTransform = transform;
+		//grabTransform = transform;
 
 		Retarget ();
 	}
@@ -41,10 +48,13 @@ public class CharacterController : MonoBehaviour, IGrabbable {
 	{
 		if (isGrabbed)
 		{
-			transform.localPosition = Vector3.zero;
+			//transform.localPosition = Vector3.zero;
 			//transform.position = grabber.position;
-			//transform.position = Vector3.Lerp (transform.position, grabber.position, 0.05f);
+			transform.position = Vector3.Lerp (transform.position, grabber.position, 0.1f);
 		}
+
+		if (Input.GetKeyDown(KeyCode.K))
+			Death();
 	}
 
 	public void Retarget()
@@ -87,13 +97,20 @@ public class CharacterController : MonoBehaviour, IGrabbable {
 
 	public void Death()
 	{
+		if (OnEscaped != null)
+			OnEscaped();
 		
 		LevelManager.AddKill ();
 		Destroy (gameObject);
 
 	}
 
-	public void Grabbed(Transform grabber)
+	public float GetGrabRange(Vector3 grabberPosition)
+	{
+		return Vector3.Distance(grabberPosition, transform.position);
+	}
+
+	public bool Grabbed(Transform grabber)
 	{
 		isGrabbed = true;
 
@@ -106,8 +123,8 @@ public class CharacterController : MonoBehaviour, IGrabbable {
 		if (rb != null)
 			rb.isKinematic = true;
 
-		if (collide != null)
-			collide.enabled = false;
+		if (charCollider != null)
+			charCollider.enabled = false;
 
 		if (anim != null)
 			anim.SetBool ("isGrabbed", true);
@@ -116,6 +133,7 @@ public class CharacterController : MonoBehaviour, IGrabbable {
 
 		transform.SetParent (grabber);
 
+		return true;
 	}
 
 	public void Released()
@@ -130,8 +148,8 @@ public class CharacterController : MonoBehaviour, IGrabbable {
 		if (rb != null)
 			rb.isKinematic = false;
 
-		if (collide != null)
-			collide.enabled = true;
+		if (charCollider != null)
+			charCollider.enabled = true;
 
 		if (anim != null)
 			anim.SetBool ("isGrabbed", false);

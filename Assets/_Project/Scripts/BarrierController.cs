@@ -42,7 +42,7 @@ public class BarrierController : MonoBehaviour {
 
 	int sequenceIndex = 0;
 
-	Collider collider;
+	Collider barrierCollider;
 
 	void Awake()
 	{
@@ -65,7 +65,7 @@ public class BarrierController : MonoBehaviour {
 
 	void Start()
 	{
-		collider = GetComponent<Collider>();
+		barrierCollider = GetComponent<Collider>();
 
 		SetState(state);
 	}
@@ -88,11 +88,11 @@ public class BarrierController : MonoBehaviour {
 	{
 		if (state == BarrierStates.Disabled)
 		{
-			collider.enabled = false;
+			barrierCollider.enabled = false;
 		}
 		else
 		{
-			collider.enabled = true;
+			barrierCollider.enabled = true;
 			gameObject.layer = LayerMask.NameToLayer(barrierLayers[state]);
 		}
 		//TODO: animations

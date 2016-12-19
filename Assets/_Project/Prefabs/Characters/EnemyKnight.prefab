@@ -16829,6 +16829,7 @@ MonoBehaviour:
     type: 2}
   damage: 1
   anim: {fileID: 95481908306019208}
+  _grabRange: 1
 --- !u!114 &114837903237553900
 MonoBehaviour:
   m_ObjectHideFlags: 1
