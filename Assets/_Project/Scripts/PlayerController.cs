@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
@@ -10,6 +11,7 @@ public class PlayerController : MonoBehaviour {
 
 	public List<TenticleController> tentacles = new List<TenticleController>();
 
+	public List<Image> tentacleBarImages = new List<Image>();
 	public float startingMaxTotalTentacleLength = 10f;
 	public float currentMaxTotalTentacleLength = 10f;
 	public float currentTotalTentacleLength;
@@ -72,8 +74,13 @@ public class PlayerController : MonoBehaviour {
 		
 		//if (Input.GetButtonDown ("North"))
 		//	activeTenticleIndex = 2;
-
-
+		float percent = 0f;
+		for(int i = 0; i < tentacleBarImages.Count; i++)
+		{
+			percent += tentacles[i].tentacleLength / currentMaxTotalTentacleLength;
+			tentacleBarImages[i].material.SetFloat("_Progress", percent);
+			
+		}
 	}
 
 	public float GetTotalTentacleLength()

@@ -95,7 +95,7 @@ public class CharController : MonoBehaviour, IGrabbable {
 		}
 	}
 
-	public void Death()
+	public virtual void Death()
 	{
 		if (OnEscaped != null)
 			OnEscaped();

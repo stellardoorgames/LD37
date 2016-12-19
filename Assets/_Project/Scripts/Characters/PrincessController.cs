@@ -22,4 +22,11 @@ public class PrincessController : CharController, IGrabbable {
 		if (other.tag == "Exit")
 			LevelManager.LoseLevel ();
 	}
+
+	public override void Death ()
+	{
+		LevelManager.LoseLevel ();
+
+		base.Death ();
+	}
 }
