@@ -11,8 +11,8 @@ public class TenticleLead : MonoBehaviour {
 
 	public bool isActive = false;
 
-	Grabbable grabbable;
-	Grabbable carryingObject;
+	IGrabbable grabbable;
+	IGrabbable carryingObject;
 
 	Projector projector;
 
@@ -26,17 +26,10 @@ public class TenticleLead : MonoBehaviour {
 		rb = GetComponent<Rigidbody>();
 	}
 
-	public void Stop()
-	{
-		rb.velocity = Vector3.zero;
-
-	}
-
 	public Vector3 GetMovement()
 	{
 		float horizontal = Input.GetAxis ("Horizontal" );
 		float vertical = Input.GetAxis ("Vertical");
-
 
 		return new Vector3 (horizontal, 0, vertical);
 	}
@@ -46,12 +39,7 @@ public class TenticleLead : MonoBehaviour {
 
 		if (isActive)
 		{
-			float horizontal = Input.GetAxis ("Horizontal" );
-			float vertical = Input.GetAxis ("Vertical");
-
-
-			Vector3 movement = new Vector3 (horizontal, 0, vertical) * speed * Time.deltaTime;
-			//Debug.Log(rb.velocity.magnitude);
+			Vector3 movement = GetMovement() * speed * Time.deltaTime;
 			//if (rb.velocity.magnitude < maxSpeed)
 			rb.AddForce(movement);
 		}
@@ -64,28 +52,17 @@ public class TenticleLead : MonoBehaviour {
 
 		if (isActive)
 		{
-			
-			/*float horizontal = Input.GetAxis ("Horizontal" );
-			float vertical = Input.GetAxis ("Vertical");
-
-
-			Vector3 movement = new Vector3 (horizontal, 0, vertical) * speed * Time.deltaTime;
-			//Debug.Log(rb.velocity.magnitude);
-			//if (rb.velocity.magnitude < maxSpeed)
-				rb.AddForce(movement);
-
-			//transform.Translate (movement);
-			//transform.Translate (p.x, 0f, p.y);
-*/
-			if (carryingObject != null)
+			/*if (carryingObject != null)
 			{
-				if (Vector3.Distance(transform.position, grabbable.transform.position) > 2)
+				if (Vector3.Distance(transform.position, carryingObject.grabTransform.position) > 2)
 				{
 					carryingObject.Released ();
 					carryingObject = null;
 				}
-			}
-
+			}*/
+			Debug.Log(carryingObject);
+			if (carryingObject == null)
+				carryingObject = null;
 			if (Input.GetButtonDown ("Grab"))
 			{
 				if (carryingObject != null)
@@ -97,9 +74,11 @@ public class TenticleLead : MonoBehaviour {
 				{
 					if (grabbable != null)
 					{
-						if (Vector3.Distance (transform.position, grabbable.transform.position) < 1)
+						if (Vector3.Distance (transform.position, grabbable.grabTransform.position) < 1f)
+						{
 							grabbable.Grabbed (transform);
-						carryingObject = grabbable;
+							carryingObject = grabbable;
+						}
 						//enemy = null
 					}
 				}
@@ -128,17 +107,12 @@ public class TenticleLead : MonoBehaviour {
 		TentacleSection obstacle = other.GetComponent<TentacleSection> ();
 
 		if (obstacle != null)
-		{
 			tenticleController.SelfCollide (obstacle.gameObject);
+		
+		IGrabbable g = other.GetComponent<IGrabbable> ();
+		if (g != null)
+			grabbable = g;
 
-		}
-
-		Grabbable ec = other.GetComponent<Grabbable> ();
-
-		if (ec != null)
-		{
-			grabbable = ec;
-		}
 	}
 
 }

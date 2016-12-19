@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+public enum SwitchType
+{
+	On_When_Held,
+	Toggled
+}
+
 public class SwitchController : MonoBehaviour {
 
 	public bool isOn = false;

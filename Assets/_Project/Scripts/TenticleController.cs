@@ -59,8 +59,7 @@ public class TenticleController : MonoBehaviour {
 			float dist2 = Vector3.Distance(movement, segment.PreviousControlPoint.transform.position);
 			if (dist1 > dist2)
 				lead.UpdatePosition();
-			else
-				lead.Stop();
+
 			Debug.Log("Exceeded Length");
 		}
 		else

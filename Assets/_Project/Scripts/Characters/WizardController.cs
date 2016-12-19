@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WizardController : EnemyController {
+public class WizardController : CharacterController {
 
 	public float attackInterval = 1;
 
@@ -23,10 +23,8 @@ public class WizardController : EnemyController {
 
 	}
 
-	public override void Update ()
+	public virtual void Update ()
 	{
-		base.Update ();
-
 		Collider[] colliders = Physics.OverlapSphere (transform.position, .5f);
 		bool isTentacle = false;
 		foreach (Collider c in colliders)

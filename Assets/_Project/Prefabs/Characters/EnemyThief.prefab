@@ -16907,14 +16907,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1155810576341148}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef04fc51d1ac81244bb06802da8726b3, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c79a28d898e3e840a1f7dcccf8cd238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGrabbed: 0
   anim: {fileID: 95307860893498988}
   targetTag: Princess
   text: {fileID: 0}
   lavaDeathEffect: {fileID: 1038803464642200, guid: 31d076bc109379645a681b46611c640c,
     type: 2}
+  damage: 1
 --- !u!114 &114230918440367084
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -5,14 +5,13 @@ using UnityEngine.AI;
 
 public class Grabbable : MonoBehaviour {
 
-	public bool isGrabbed = false;
 
 	public Animator anim;
 	protected NavMeshAgent agent;
 	protected Rigidbody rb;
 	protected Collider collider;
-	//protected FixedJoint joint;
 
+	public bool isGrabbed = false;
 	Transform grabber;
 
 

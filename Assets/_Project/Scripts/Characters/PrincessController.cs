@@ -2,21 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PrincessController : Grabbable {
+public class PrincessController : CharacterController, IGrabbable {
 
 	public override void Start ()
 	{
 		base.Start ();
 	}
 
-	public override void Update ()
+	protected override void OnTriggerEnter(Collider other)
 	{
-		base.Update ();
-	}
+		base.OnTriggerEnter(other);
 
-	void OnTriggerEnter(Collider other)
-	{
-		EnemyController enemy = other.GetComponent<EnemyController> ();
+		CharacterController enemy = other.GetComponent<CharacterController> ();
 
 		if (enemy != null)
 		{
