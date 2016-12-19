@@ -60,4 +60,5 @@ public class WizardController : CharController {
 
 		anim.SetBool ("isAttacking", false);
 	}
+
 }

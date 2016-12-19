@@ -68,7 +68,6 @@ public class TenticleLead : MonoBehaviour {
 				{
 					carryingObject.Released ();
 					OnGrabRelease();
-					//carryingObject = null;
 				}
 				else
 				{

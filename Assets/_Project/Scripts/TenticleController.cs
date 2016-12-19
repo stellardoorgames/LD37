@@ -119,7 +119,7 @@ public class TenticleController : MonoBehaviour {
 		bool retVal = false;
 
 		int maxSection = tentacleSectionList.Count - 1;
-		Debug.Log ("RetractTest");
+		Debug.Log ("Retracting");
 		for (int i = 1; i < selfCollidenumber; i++)
 		{
 			if (i >= 0 && i < tentacleSectionList.Count - 1)

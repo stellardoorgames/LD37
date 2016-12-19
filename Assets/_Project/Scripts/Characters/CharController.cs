@@ -110,8 +110,11 @@ public class CharController : MonoBehaviour, IGrabbable {
 		return Vector3.Distance(grabberPosition, transform.position);
 	}
 
-	public bool Grabbed(Transform grabber)
+	public virtual bool Grabbed(Transform grabber)
 	{
+		if (OnEscaped != null)
+			OnEscaped();
+
 		isGrabbed = true;
 
 		this.grabber = grabber;
@@ -136,7 +139,7 @@ public class CharController : MonoBehaviour, IGrabbable {
 		return true;
 	}
 
-	public void Released()
+	public virtual void Released()
 	{
 		isGrabbed = false;
 

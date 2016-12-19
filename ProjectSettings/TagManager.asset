@@ -8,6 +8,7 @@ TagManager:
   - Princess
   - Lava
   - Tentacle
+  - Exit
   layers:
   - Default
   - TransparentFX

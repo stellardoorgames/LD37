@@ -1461,6 +1461,7 @@ GameObject:
   - component: {fileID: 195565551799435520}
   - component: {fileID: 114160973489879966}
   - component: {fileID: 54431038364806150}
+  - component: {fileID: 135656915003472528}
   m_Layer: 0
   m_Name: EnemyThief
   m_TagString: Untagged
@@ -16910,13 +16911,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c79a28d898e3e840a1f7dcccf8cd238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isGrabbed: 0
-  anim: {fileID: 95307860893498988}
   targetTag: Princess
   text: {fileID: 0}
   lavaDeathEffect: {fileID: 1038803464642200, guid: 31d076bc109379645a681b46611c640c,
     type: 2}
   damage: 1
+  anim: {fileID: 95307860893498988}
+  _grabRange: 1
 --- !u!114 &114230918440367084
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16987,6 +16988,18 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!135 &135656915003472528
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1155810576341148}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &136436125244128808
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -16995,7 +17008,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1155810576341148}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.4
   m_Height: 1
   m_Direction: 1
