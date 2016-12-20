@@ -100,9 +100,10 @@ public class TenticleController : MonoBehaviour {
 			
 		}
 
-		if (Input.GetKeyDown (KeyCode.P))
+		if (Input.GetKeyDown (KeyCode.P) && lead.isActive)
 		{
-			TakeDamage();
+			Retract();
+			//TakeDamage();
 			/*spline = spline.ControlPoints [5].SplitSpline ();
 			segment = spline.ControlPoints[spline.ControlPointCount - 1];
 			transform.position = segment.transform.position;*/
@@ -146,10 +147,22 @@ public class TenticleController : MonoBehaviour {
 
 	}
 
+	void Retract()
+	{
+		if (tentacleSectionList.Count <= 2 || segment.PreviousControlPoint == null)
+			return;
+		
+		Vector3 newPosition = segment.PreviousControlPoint.transform.position;
+		tentacleSectionList[tentacleSectionList.Count - 1].Remove();
+		tentacleSectionList.RemoveAt(tentacleSectionList.Count - 1);
+		lead.transform.position = newPosition;
+	}
+
 	public void TakeDamage()
 	{
 		if (!isFlashing)
 			StartCoroutine(ColorFlash(damageTint, damageFlashDuration, damageFlashNumber));
+		Retract();
 	}
 
 	public IEnumerator ColorFlash(Color color, float duration, int number)

@@ -4,18 +4,17 @@ using UnityEngine;
 
 public class WizardController : CharController {
 
-	public float attackInterval = 1;
+	//public float attackInterval = 1;
 
-	bool isAttacking;
+	//bool isAttacking;
 
 	protected override void OnTriggerEnter (Collider other)
 	{
 		base.OnTriggerEnter (other);
 
-		if (other.tag == targetTag)
+		if (other.tag == currentTarget)
 		{
-			Debug.Log ("Attack");
-			
+			//Debug.Log ("Attack");
 			IDamagable d = other.GetComponent<IDamagable>();
 			if (d != null)
 				StartCoroutine (AttackCoroutine (d));
@@ -27,14 +26,19 @@ public class WizardController : CharController {
 	{
 		base.Update();
 
+
+
 		Collider[] colliders = Physics.OverlapSphere (transform.position, .5f);
 		bool isTentacle = false;
 		foreach (Collider c in colliders)
 			if (c.tag == "Tentacle")
 				isTentacle = true;
 		isAttacking = isTentacle;
-	}
 
+		if (isGrabbed)
+			isAttacking = false;
+	}
+/*
 	IEnumerator AttackCoroutine(IDamagable attackTarget)
 	{
 		isAttacking = true;
@@ -60,5 +64,5 @@ public class WizardController : CharController {
 
 		anim.SetBool ("isAttacking", false);
 	}
-
+*/
 }

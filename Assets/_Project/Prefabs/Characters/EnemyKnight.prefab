@@ -16824,10 +16824,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9256089d476eacf4e8856bd3a6f23011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTag: Princess
+  targetTags:
+  - Princess
+  - Tentacle
+  _currentTarget: 
   text: {fileID: 0}
   lavaDeathEffect: {fileID: 1038803464642200, guid: 31d076bc109379645a681b46611c640c,
     type: 2}
+  isAttacking: 0
+  attackInterval: 1
   damage: 1
   anim: {fileID: 95481908306019208}
   _grabRange: 1

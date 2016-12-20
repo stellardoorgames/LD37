@@ -11,21 +11,46 @@ public class KnightController : CharController {
 		base.Start ();
 	}
 
+	public override void Update ()
+	{
+		base.Update();
+
+
+
+		Collider[] colliders = Physics.OverlapSphere (transform.position, .5f);
+		bool isTentacle = false;
+		foreach (Collider c in colliders)
+			if (c.tag == "Tentacle")
+				isTentacle = true;
+		isAttacking = isTentacle;
+
+		if (isGrabbed)
+			isAttacking = false;
+	}
 	protected override void OnTriggerEnter (Collider other)
 	{
 		base.OnTriggerEnter (other);
 
-		if (other.tag == "Princess" && !isGrabbed)
+		if (!isGrabbed)
 		{
-			IGrabbable grab = other.GetComponent<IGrabbable>();
-
-			if (grab != null)
+			if (other.tag == "Princess")
 			{
-				grab.Grabbed(transform);
-				grab.OnEscaped += OnGrabRelease;
-
-				targetTag = "Exit";
-				Retarget();
+				IGrabbable grab = other.GetComponent<IGrabbable>();
+				
+				if (grab != null)
+				{
+					grab.Grabbed(transform);
+					grab.OnEscaped += OnGrabRelease;
+					
+					Retarget("Exit");
+				}
+			}
+			if (other.tag == "Tentacle")
+			{
+				//Debug.Log("KnightAttack");
+				IDamagable d = other.GetComponent<IDamagable>();
+				if (d != null)
+					StartCoroutine (AttackCoroutine (d));
 			}
 		}
 	}
@@ -37,7 +62,6 @@ public class KnightController : CharController {
 
 		grabbedObject = null;
 
-		targetTag = "Princess";
 		Retarget();
 	}
 

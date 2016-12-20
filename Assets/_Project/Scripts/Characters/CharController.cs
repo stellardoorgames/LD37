@@ -7,13 +7,24 @@ using System;
 
 public class CharController : MonoBehaviour, IGrabbable {
 
-	public string targetTag;
+	public List<string> targetTags;
+	[SerializeField]
+	string _currentTarget;
+	public string currentTarget{
+		get {return _currentTarget;}
+		set {Retarget(value);}
+	}
+	//public string alternateTargetTag;
 
 	public Text text;
 
 	Transform target;
 
     public GameObject lavaDeathEffect;
+
+	public bool isAttacking = false;
+
+	public float attackInterval = 1f;
 
 	public float damage = 1f;
 
@@ -57,27 +68,43 @@ public class CharController : MonoBehaviour, IGrabbable {
 			Death();
 	}
 
-	public void Retarget()
+	public void Retarget(string overrideTargetTag = null)
 	{
-		if (targetTag == "")
-			return;
-		
-		GameObject[] targets = GameObject.FindGameObjectsWithTag (targetTag);
+		GameObject[] targets = null;
 
-		if (targets.Length > 0)
+		if (overrideTargetTag != null)
 		{
-			float dist = int.MaxValue;
-
-			foreach(GameObject go in targets)
+			targets = GameObject.FindGameObjectsWithTag (overrideTargetTag);
+			_currentTarget = overrideTargetTag;
+		}
+		else
+		{
+			foreach(string tag in targetTags)
 			{
-				float d = Vector3.Distance (transform.position, go.transform.position);
-				if (d < dist)
-					target = go.transform;
+				targets = GameObject.FindGameObjectsWithTag (tag);
+				if (targets.Length > 0)
+				{
+					_currentTarget = tag;
+					break;
+				}
 			}
-			if (agent != null)
-				agent.destination = target.position;
 
 		}
+
+		if (targets == null || targets.Length == 0)
+			return;
+
+		float dist = int.MaxValue;
+
+		foreach(GameObject go in targets)
+		{
+			float d = Vector3.Distance (transform.position, go.transform.position);
+			if (d < dist)
+				target = go.transform;
+		}
+		if (agent != null)
+			agent.destination = target.position;
+	
 	}
 
 
@@ -159,4 +186,32 @@ public class CharController : MonoBehaviour, IGrabbable {
 
 		transform.SetParent (null);
 	}
+
+
+	protected IEnumerator AttackCoroutine(IDamagable attackTarget)
+	{
+		isAttacking = true;
+
+		anim.SetBool ("isAttacking", true);
+
+		agent.Stop ();
+
+		while (isAttacking)
+		{
+			anim.SetTrigger ("Attack");
+
+			float nextAttackTime = Time.time + attackInterval;
+
+			attackTarget.TakeDamage(damage);
+
+			while (Time.time < nextAttackTime)
+				yield return null;
+
+		}
+
+		agent.Resume ();
+
+		anim.SetBool ("isAttacking", false);
+	}
+
 }
