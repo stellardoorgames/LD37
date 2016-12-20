@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class KnightController : CharController {
 
-	IGrabbable grabbedObject;
-
 	public override void Start ()
 	{
 		base.Start ();
@@ -24,7 +22,7 @@ public class KnightController : CharController {
 				isTentacle = true;
 		isAttacking = isTentacle;
 
-		if (isGrabbed)
+		if (isGrabbed || grabbedObject != null)
 			isAttacking = false;
 	}
 	protected override void OnTriggerEnter (Collider other)
@@ -35,17 +33,19 @@ public class KnightController : CharController {
 		{
 			if (other.tag == "Princess")
 			{
-				IGrabbable grab = other.GetComponent<IGrabbable>();
+				AttemptToGrab(other.gameObject);
+				/*IGrabbable grab = other.GetComponent<IGrabbable>();
 				
 				if (grab != null)
 				{
 					grab.Grabbed(transform);
 					grab.OnEscaped += OnGrabRelease;
+					grabbedObject = grab;
 					
-					Retarget("Exit");
-				}
+				}*/
+				Retarget("Exit");
 			}
-			if (other.tag == "Tentacle")
+			if (other.tag == "Tentacle" && grabbedObject == null)
 			{
 				//Debug.Log("KnightAttack");
 				IDamagable d = other.GetComponent<IDamagable>();
@@ -53,27 +53,6 @@ public class KnightController : CharController {
 					StartCoroutine (AttackCoroutine (d));
 			}
 		}
-	}
-
-	void OnGrabRelease()
-	{
-		if (grabbedObject != null)
-			grabbedObject.OnEscaped -= OnGrabRelease;
-
-		grabbedObject = null;
-
-		Retarget();
-	}
-
-	public override bool Grabbed (Transform grabber)
-	{
-		if (grabbedObject != null)
-		{
-			grabbedObject.Released();
-			OnGrabRelease();
-		}
-
-		return base.Grabbed (grabber);
 	}
 
 }

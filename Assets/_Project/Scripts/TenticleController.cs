@@ -37,6 +37,8 @@ public class TenticleController : MonoBehaviour {
 
 	float length;
 
+	bool isRetracting = false;
+
 	void Start()
 	{
 		foreach (CurvySplineSegment s in spline.Segments)
@@ -149,13 +151,36 @@ public class TenticleController : MonoBehaviour {
 
 	void Retract()
 	{
-		if (tentacleSectionList.Count <= 2 || segment.PreviousControlPoint == null)
-			return;
-		
+		StartCoroutine(RetractCoroutine(0.5f));
+	}
+
+	IEnumerator RetractCoroutine(float duration)
+	{
+		if (tentacleSectionList.Count <= 3 || segment.PreviousControlPoint == null || isRetracting)
+			yield break;
+
+		isRetracting = true;
+
 		Vector3 newPosition = segment.PreviousControlPoint.transform.position;
-		tentacleSectionList[tentacleSectionList.Count - 1].Remove();
-		tentacleSectionList.RemoveAt(tentacleSectionList.Count - 1);
-		lead.transform.position = newPosition;
+		tentacleSectionList[tentacleSectionList.Count - 2].Remove();
+		tentacleSectionList.RemoveAt(tentacleSectionList.Count - 2);
+
+
+		float startTime = Time.time;
+		float endTime = Time.time + duration;
+
+		Vector3 startPosition = lead.transform.position;
+
+		while (Time.time < endTime)
+		{
+			float t = Mathf.InverseLerp(startTime, endTime, Time.time);
+
+			lead.transform.position = Vector3.Lerp(startPosition, newPosition, t);
+
+			yield return null;
+		}
+
+		isRetracting = false;
 	}
 
 	public void TakeDamage()

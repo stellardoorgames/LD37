@@ -11595,9 +11595,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a623a662aa22f8b45a4dc7c80f77b67d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTag: 
+  targetTags: []
+  _currentTarget: 
   text: {fileID: 0}
   lavaDeathEffect: {fileID: 0}
+  isAttacking: 0
+  attackInterval: 1
   damage: 1
   anim: {fileID: 0}
   _grabRange: 1

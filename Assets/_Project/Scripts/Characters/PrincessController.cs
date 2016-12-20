@@ -13,12 +13,6 @@ public class PrincessController : CharController, IGrabbable {
 	{
 		base.OnTriggerEnter(other);
 
-		/*CharController enemy = other.GetComponent<CharController> ();
-
-		if (enemy != null)
-		{
-		}*/
-
 		if (other.tag == "Exit")
 			LevelManager.LoseLevel ();
 	}

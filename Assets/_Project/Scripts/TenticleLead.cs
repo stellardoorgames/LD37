@@ -11,7 +11,7 @@ public class TenticleLead : MonoBehaviour {
 
 	public bool isActive = false;
 
-	IGrabbable grabbable;
+	//IGrabbable grabbable;
 	IGrabbable carryingObject;
 
 	Projector projector;
@@ -66,12 +66,28 @@ public class TenticleLead : MonoBehaviour {
 			{
 				if (carryingObject != null)
 				{
-					carryingObject.Released ();
 					OnGrabRelease();
 				}
 				else
 				{
-					if (grabbable != null)
+					Collider[] colliders = Physics.OverlapSphere (transform.position, 1f);
+					GameObject princess = null;
+					GameObject enemy = null;
+					foreach (Collider c in colliders)
+					{
+						if (c.tag == "Enemy")
+							enemy = c.gameObject;
+						else if (c.tag == "Princess")
+							princess = c.gameObject;
+					}
+
+					if (enemy != null)
+						AttemptToGrab(enemy);
+					else if (princess != null)
+						AttemptToGrab(princess);
+
+					
+					/*if (grabbable != null)
 					{
 						//if (Vector3.Distance (transform.position, grabbable.grabTransform.position) < 1f)
 						if (grabbable.GetGrabRange(transform.position) < grabbable.grabRange)
@@ -84,8 +100,22 @@ public class TenticleLead : MonoBehaviour {
 							}
 						}
 						//enemy = null
-					}
+					}*/
 				}
+			}
+		}
+	}
+
+	void AttemptToGrab(GameObject go)
+	{
+		IGrabbable grabbable = go.GetComponent<IGrabbable>();
+		if (grabbable != null)
+		{
+			bool grabWorked = grabbable.Grabbed (transform);
+			if (grabWorked)
+			{
+				carryingObject = grabbable;
+				carryingObject.OnEscaped += OnGrabRelease;
 			}
 		}
 	}
@@ -93,7 +123,10 @@ public class TenticleLead : MonoBehaviour {
 	void OnGrabRelease()
 	{
 		if (carryingObject != null)
+		{
+			carryingObject.Released ();
 			carryingObject.OnEscaped -= OnGrabRelease;
+		}
 		
 		carryingObject = null;
 	}
@@ -121,15 +154,15 @@ public class TenticleLead : MonoBehaviour {
 		if (obstacle != null)
 			tenticleController.SelfCollide (obstacle.gameObject);
 		
-		IGrabbable g = other.GetComponent<IGrabbable> ();
+		/*IGrabbable g = other.GetComponent<IGrabbable> ();
 		if (g != null)
-			grabbable = g;
+			grabbable = g;*/
 
 	}
 
-	public void HasReleased (IGrabbable grabbable)
+	/*public void HasReleased (IGrabbable grabbable)
 	{
 		
-	}
+	}*/
 
 }

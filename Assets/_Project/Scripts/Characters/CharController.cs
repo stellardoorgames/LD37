@@ -5,6 +5,16 @@ using UnityEngine.AI;
 using UnityEngine.UI;
 using System;
 
+public enum CharacterStates
+{
+	Spawning,
+	Hunting,
+	Attacking,
+	Carrying,
+	Grabbed,
+	Dying
+}
+
 public class CharController : MonoBehaviour, IGrabbable {
 
 	public List<string> targetTags;
@@ -44,6 +54,8 @@ public class CharController : MonoBehaviour, IGrabbable {
 	public Transform grabTransform {get; set;}
 	public event Action OnEscaped;
 
+	protected IGrabbable grabbedObject;
+
 	public virtual void Start()
 	{
 		agent = GetComponent<NavMeshAgent> ();
@@ -57,13 +69,7 @@ public class CharController : MonoBehaviour, IGrabbable {
 
 	public virtual void Update () 
 	{
-		if (isGrabbed)
-		{
-			//transform.localPosition = Vector3.zero;
-			//transform.position = grabber.position;
-			transform.position = Vector3.Lerp (transform.position, grabber.position, 0.1f);
-		}
-
+	
 		if (Input.GetKeyDown(KeyCode.K))
 			Death();
 	}
@@ -139,6 +145,9 @@ public class CharController : MonoBehaviour, IGrabbable {
 
 	public virtual bool Grabbed(Transform grabber)
 	{
+		if (grabbedObject != null)
+			OnGrabRelease();
+		
 		if (OnEscaped != null)
 			OnEscaped();
 
@@ -163,11 +172,24 @@ public class CharController : MonoBehaviour, IGrabbable {
 
 		transform.SetParent (grabber);
 
+		StartCoroutine(GrabbedCoroutine());
+
 		return true;
+	}
+
+	IEnumerator GrabbedCoroutine()
+	{
+		while(isGrabbed)
+		{
+			transform.position = Vector3.Lerp (transform.position, grabber.position, 0.1f);
+			yield return null;
+		}
 	}
 
 	public virtual void Released()
 	{
+		if (isGrabbed == false)
+			return;
 		isGrabbed = false;
 
 		Debug.Log ("Released");
@@ -214,4 +236,30 @@ public class CharController : MonoBehaviour, IGrabbable {
 		anim.SetBool ("isAttacking", false);
 	}
 
+	protected void OnGrabRelease()
+	{
+		if (grabbedObject != null)
+		{
+			grabbedObject.Released();
+			grabbedObject.OnEscaped -= OnGrabRelease;
+		}
+
+		grabbedObject = null;
+
+		Retarget();
+	}
+
+	public void AttemptToGrab(GameObject go)
+	{
+		IGrabbable grabbable = go.GetComponent<IGrabbable>();
+		if (grabbable != null)
+		{
+			bool grabWorked = grabbable.Grabbed (transform);
+			if (grabWorked)
+			{
+				grabbedObject = grabbable;
+				grabbedObject.OnEscaped += OnGrabRelease;
+			}
+		}
+	}
 }

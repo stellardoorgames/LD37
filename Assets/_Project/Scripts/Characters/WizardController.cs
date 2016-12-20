@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class WizardController : CharController {
 
-	//public float attackInterval = 1;
-
-	//bool isAttacking;
 
 	protected override void OnTriggerEnter (Collider other)
 	{
 		base.OnTriggerEnter (other);
 
+		if (isGrabbed)
+			return;
+		
 		if (other.tag == currentTarget)
 		{
 			//Debug.Log ("Attack");
@@ -38,31 +38,5 @@ public class WizardController : CharController {
 		if (isGrabbed)
 			isAttacking = false;
 	}
-/*
-	IEnumerator AttackCoroutine(IDamagable attackTarget)
-	{
-		isAttacking = true;
 
-		anim.SetBool ("isAttacking", true);
-
-		agent.Stop ();
-
-		while (isAttacking)
-		{
-			anim.SetTrigger ("Attack");
-			
-			float nextAttackTime = Time.time + attackInterval;
-
-			attackTarget.TakeDamage(damage);
-
-			while (Time.time < nextAttackTime)
-				yield return null;
-			
-		}
-
-		agent.Resume ();
-
-		anim.SetBool ("isAttacking", false);
-	}
-*/
 }

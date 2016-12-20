@@ -1464,7 +1464,7 @@ GameObject:
   - component: {fileID: 135656915003472528}
   m_Layer: 0
   m_Name: EnemyThief
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7810,7 +7810,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1927623370470468}
-  m_LocalRotation: {x: -0.7391055, y: -0.20863585, z: 0.18416516, w: 0.6134146}
+  m_LocalRotation: {x: -0.73910546, y: -0.20863582, z: 0.18416515, w: 0.6134145}
   m_LocalPosition: {x: 0.000923934, y: 0.0018449316, z: 0.0012772849}
   m_LocalScale: {x: 1.0000025, y: 0.99999994, z: 1.0000005}
   m_Children:
@@ -16917,6 +16917,8 @@ MonoBehaviour:
   text: {fileID: 0}
   lavaDeathEffect: {fileID: 1038803464642200, guid: 31d076bc109379645a681b46611c640c,
     type: 2}
+  isAttacking: 0
+  attackInterval: 1
   damage: 1
   anim: {fileID: 95307860893498988}
   _grabRange: 1

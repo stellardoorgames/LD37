@@ -9,6 +9,7 @@ TagManager:
   - Lava
   - Tentacle
   - Exit
+  - Enemy
   layers:
   - Default
   - TransparentFX

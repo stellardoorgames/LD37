@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour {
 		float percent = 0f;
 		for(int i = 0; i < tentacleBarImages.Count; i++)
 		{
-			percent += tentacles[i].tentacleLength / currentMaxTotalTentacleLength;
+			percent += (tentacles[i].tentacleLength - 2.5f) / (currentMaxTotalTentacleLength - 7.5f);
 			tentacleBarImages[i].material.SetFloat("_Progress", percent);
 			
 		}
