@@ -71,6 +71,7 @@ public class TenticleLead : MonoBehaviour {
 				else
 				{
 					Collider[] colliders = Physics.OverlapSphere (transform.position, 1f);
+					GameObject key = null;
 					GameObject princess = null;
 					GameObject enemy = null;
 					foreach (Collider c in colliders)
@@ -79,12 +80,16 @@ public class TenticleLead : MonoBehaviour {
 							enemy = c.gameObject;
 						else if (c.tag == "Princess")
 							princess = c.gameObject;
+						else if (c.tag == "Key")
+							key = c.gameObject;
 					}
 
-					if (enemy != null)
-						AttemptToGrab(enemy);
+					if (key != null)
+						AttemptToGrab (key);
+					else if (enemy != null)
+						AttemptToGrab (enemy);
 					else if (princess != null)
-						AttemptToGrab(princess);
+						AttemptToGrab (princess);
 
 					
 					/*if (grabbable != null)
@@ -111,6 +116,7 @@ public class TenticleLead : MonoBehaviour {
 		IGrabbable grabbable = go.GetComponent<IGrabbable>();
 		if (grabbable != null)
 		{
+			Debug.Log(grabbable);
 			bool grabWorked = grabbable.Grabbed (transform);
 			if (grabWorked)
 			{

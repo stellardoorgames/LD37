@@ -10,6 +10,7 @@ TagManager:
   - Tentacle
   - Exit
   - Enemy
+  - Key
   layers:
   - Default
   - TransparentFX

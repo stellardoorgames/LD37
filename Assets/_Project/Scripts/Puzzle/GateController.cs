@@ -56,11 +56,11 @@ public class GateController : MonoBehaviour {
 			Close();
 	}
 
-	public void OnKey(KeyTypes KeyType)
+	/*public void OnKey(KeyTypes KeyType)
 	{
 		if (KeyType == lockType && !isOpen)
 			Open();
-	}
+	}*/
 
 	public void Open()
 	{
@@ -74,5 +74,15 @@ public class GateController : MonoBehaviour {
 		isOpen = false;
 
 		OnClose.Invoke();
+	}
+
+	void OnTriggerEnter(Collider other)
+	{
+		if (other.tag == "Key")
+		{
+			KeyController kc = other.GetComponent<KeyController>();
+			if (kc.keyType == lockType && !isOpen)
+				Open();
+		}
 	}
 }

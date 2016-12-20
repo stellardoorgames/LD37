@@ -12,8 +12,9 @@ public class PlayerController : MonoBehaviour {
 	public List<TenticleController> tentacles = new List<TenticleController>();
 
 	public List<Image> tentacleBarImages = new List<Image>();
-	public float startingMaxTotalTentacleLength = 10f;
-	public float currentMaxTotalTentacleLength = 10f;
+	public float startingMaxTotalTentacleLength = 20f;
+	public float currentMaxTotalTentacleLength = 20f;
+	public float addToMaxLengthPerSoul = 10f;
 	public float currentTotalTentacleLength;
 	public float totalTentacleLength{
 		get {currentTotalTentacleLength = GetTotalTentacleLength();
@@ -29,6 +30,8 @@ public class PlayerController : MonoBehaviour {
 	}
 	TenticleLead activeTentacle;
 	List<TenticleLead> tentacleLeads;
+
+	public List<TentacleTrigger> tentacleTriggers = new List<TentacleTrigger>();
 
 	public UnityEvent OnDeath;
 	public UnityEvent OnFinish;
@@ -52,6 +55,11 @@ public class PlayerController : MonoBehaviour {
 		activeTentacle = tentacleLeads [activeTenticleIndex];
 
 		activeTentacle.Activate(true);
+
+		foreach(TentacleTrigger tt in tentacleTriggers)
+		{
+			tt.OnEatSoul += OnEatSoul;
+		}
 	}
 	
 	// Update is called once per frame
@@ -105,6 +113,12 @@ public class PlayerController : MonoBehaviour {
 		{
 			if (i == )
 		}*/
+	}
+
+	public void OnEatSoul(CharController enemy)
+	{
+		currentMaxTotalTentacleLength += addToMaxLengthPerSoul;
+		enemy.Death();
 	}
 
 	public static void TakeDamage(float damage)
