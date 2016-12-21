@@ -14,48 +14,22 @@ public class Character : MonoBehaviour, IGrabbable {
 		Lava,
 		Spikes
 	}
-
-	//public string stealTag;
-	//public string attackTag;
-	//public string escapeTag;
-
-	//public List<string> targetTags;
-	//[SerializeField]
-	//string _currentTarget;
 	public string currentTarget;
-	/*{
-		get {return _currentTarget;}
-		set {Retarget(value);}
-	}*/
-	//public string alternateTargetTag;
 
 	public Text text;
 
 	Transform target;
 
-    //public GameObject lavaDeathEffect;
+	//public bool isAttacking = false;
 
-	public bool isAttacking = false;
-
-	//public float attackInterval = 1f;
-
-	//public float damage = 1f;
-
-	//public GameObject soulGemPrefab;
-
-	public bool isDying = false;
-	public DeathTypes deathType;
+	//public DeathTypes deathType;
 
 	public Animator anim;
 	[HideInInspector]
 	public NavMeshAgent agent;
-	/*[HideInInspector]
-	public Rigidbody rb;
-	[HideInInspector]
-	public Collider charCollider;*/
 
-	[HideInInspector]
-	public IDamagable attackTarget;
+	//[HideInInspector]
+	//public IDamagable attackTarget;
 
 	[SerializeField]
 	float _grabRange = 1f;
@@ -88,8 +62,6 @@ public class Character : MonoBehaviour, IGrabbable {
 	public virtual void Start()
 	{
 		agent = GetComponent<NavMeshAgent> ();
-		//rb = GetComponent<Rigidbody> ();
-		//charCollider = GetComponent<Collider> ();
 
 		spawnState = GetComponent<CharacterSpawnState>();
 		huntState = GetComponent<CharacterHuntState>();
@@ -109,11 +81,6 @@ public class Character : MonoBehaviour, IGrabbable {
 		stateMachine.addState(GetComponent<CharacterAttackState>());
 		stateMachine.addState(GetComponent<CharacterDeathState>());
 		stateMachine.addState(GetComponent<CharacterCarryState>());*/
-		/*stateMachine.addState(new CharacterHuntState());
-		stateMachine.addState(new CharacterGrabbedState());
-		stateMachine.addState(new CharacterAttackState());
-		stateMachine.addState(new CharacterDeathState());
-		stateMachine.addState(new CharacterCarryState());*/
 
 	}
 
@@ -152,43 +119,19 @@ public class Character : MonoBehaviour, IGrabbable {
 
 	protected virtual void OnTriggerEnter(Collider other)
 	{
-		if (isDying)
-			return;
-		
 		if (other.tag == "Lava")
 		{
 			Debug.Log ("Lava");
             Death (DeathTypes.Lava);
 		}
-
-		/*if (!isGrabbed)
-		{
-			if (other.tag == stealTag && other.tag == currentTarget)
-			{
-				AttemptToGrab(other.gameObject);
-			}
-			if (other.tag == attackTag && other.tag == currentTarget)
-			{
-				IDamagable d = other.GetComponent<IDamagable>();
-				if (d != null)
-					Attack(d);
-			}
-		}*/
 	}
 
 	public virtual void Death(DeathTypes deathType)
 	{
-		if (isDying)
+		if (deathState.enabled)
 			return;
-		
-		//if (OnEscaped != null)
-		//	OnEscaped();
 
-		//if (deathType == DeathTypes.Lava)
-		//	Instantiate(lavaDeathEffect, transform.position, Quaternion.identity);
-
-		this.deathType = deathType;
-
+		deathState.deathType = deathType;
 		stateMachine.changeState<CharacterDeathState>();
 
 	}
@@ -204,38 +147,12 @@ public class Character : MonoBehaviour, IGrabbable {
 
 	public virtual bool Grabbed(Transform grabber)
 	{
-		/*if (grabbedObject != null)
-			OnGrabRelease();
+		if (deathState.enabled)
+			return false;
 		
-		if (OnEscaped != null)
-			OnEscaped();*/
-
-
 		this.grabber = grabber;
-		//isGrabbed = true;
 
-		/*Debug.Log ("Grabbed");
-		if (agent != null)
-			agent.Stop ();
-
-		if (rb != null)
-			rb.isKinematic = true;
-
-		if (charCollider != null)
-			charCollider.enabled = false;
-
-		if (anim != null)
-			anim.SetBool ("isGrabbed", true);
-
-		transform.position = grabber.position;
-
-		transform.SetParent (grabber);
-
-		//StartCoroutine(GrabbedCoroutine());
-			stateMachine.changeState<CharacterGrabbedState>();
-*/
-		if (!isDying)
-			stateMachine.changeState<CharacterGrabbedState>();
+		stateMachine.changeState<CharacterGrabbedState>();
 		
 		return true;
 	}
@@ -244,25 +161,8 @@ public class Character : MonoBehaviour, IGrabbable {
 	{
 		if (isGrabbed == false)
 			return;
-		//isGrabbed = false;
-
-		/*Debug.Log ("Released");
-
-		if (agent != null)
-			agent.Resume ();
-
-		if (rb != null)
-			rb.isKinematic = false;
-
-		if (charCollider != null)
-			charCollider.enabled = true;
-
-		if (anim != null)
-			anim.SetBool ("isGrabbed", false);
-
-		transform.SetParent (null);*/
-
-		if (!isDying)
+	
+		if (!deathState.enabled)
 			stateMachine.changeState<CharacterHuntState>();
 	}
 
@@ -272,13 +172,6 @@ public class Character : MonoBehaviour, IGrabbable {
 			OnEscaped();
 		
 	}
-
-	/*public void Attack(IDamagable target)
-	{
-		attackTarget = target;
-		if (!isDying)
-			stateMachine.changeState<CharacterAttackState>();
-	}*/
 
 	public void OnGrabRelease()
 	{
@@ -295,7 +188,7 @@ public class Character : MonoBehaviour, IGrabbable {
 
 	public void AttemptToGrab(GameObject go)
 	{
-		if (isDying)
+		if (deathState.enabled)
 			return;
 		
 		IGrabbable grabbable = go.GetComponent<IGrabbable>();

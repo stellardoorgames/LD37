@@ -11,20 +11,22 @@ public class CharacterAttackState : SKState<Character> {
 
 	float lastAttackTime;
 
+	[HideInInspector]
+	public IDamagable attackTarget;
 	string attackTag;
 
 	Animator anim;
 	NavMeshAgent agent;
 
-	public override void begin ()
+	public override void onInitialized ()
 	{
 		agent = GetComponent<NavMeshAgent>();
 		anim = _context.anim;
 		attackTag = GetComponent<CharacterHuntState>().attackTag;
-		//_context.currentTarget = _context.attackTag;
+	}
 
-		_context.isAttacking = true;
-
+	public override void begin ()
+	{
 		anim.SetBool ("isAttacking", true);
 
 		agent.Stop ();
@@ -37,7 +39,7 @@ public class CharacterAttackState : SKState<Character> {
 
 		bool isTargetThere = false;
 		foreach (Collider c in colliders)
-			if (c.tag == attackTag) //_context.attackTag)
+			if (c.tag == attackTag)
 				isTargetThere = true;
 		
 		if (!isTargetThere)
@@ -49,7 +51,7 @@ public class CharacterAttackState : SKState<Character> {
 		{
 			anim.SetTrigger ("Attack");
 			
-			_context.attackTarget.TakeDamage(damage);
+			attackTarget.TakeDamage(damage);
 			
 			lastAttackTime = Time.time;
 		}

@@ -37,6 +37,9 @@ public class CharacterHuntState : SKState<Character> {
 	}
 	protected virtual void OnTriggerEnter(Collider other)
 	{
+		if (!enabled)
+			return;
+		
 		if (other.tag == stealTag)
 		{
 			_context.AttemptToGrab(other.gameObject);
@@ -46,7 +49,7 @@ public class CharacterHuntState : SKState<Character> {
 			IDamagable d = other.GetComponent<IDamagable>();
 			if (d != null)
 			{
-				_context.attackTarget = d;
+				_context.attackState.attackTarget = d;
 				_machine.changeState<CharacterAttackState>();
 			}
 				//_context.Attack(d);

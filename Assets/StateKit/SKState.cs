@@ -61,5 +61,9 @@ namespace Prime31.StateKit
 		public virtual void end()
 		{}
 	
+		void Awake()
+		{
+			enabled = false;
+		}
 	}
 }

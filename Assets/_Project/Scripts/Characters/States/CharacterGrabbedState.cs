@@ -9,14 +9,14 @@ public class CharacterGrabbedState : SKState<Character> {
 	NavMeshAgent agent;
 	Rigidbody rb;
 	Animator anim;
-	Collider charCollider;
+	Collider characterCollider;
 
 	public override void onInitialized ()
 	{
 		agent = GetComponent<NavMeshAgent>();
 		rb = GetComponent<Rigidbody>();
 		anim = _context.anim;
-		charCollider = GetComponent<Collider>();
+		characterCollider = GetComponent<Collider>();
 	}
 
 	public override void begin ()
@@ -35,8 +35,8 @@ public class CharacterGrabbedState : SKState<Character> {
 		if (rb != null)
 			rb.isKinematic = true;
 
-		if (charCollider != null)
-			charCollider.enabled = false;
+		if (characterCollider != null)
+			characterCollider.enabled = false;
 
 		if (anim != null)
 			anim.SetBool ("isGrabbed", true);
@@ -65,8 +65,8 @@ public class CharacterGrabbedState : SKState<Character> {
 		if (rb != null)
 			rb.isKinematic = false;
 
-		if (charCollider != null)
-			charCollider.enabled = true;
+		if (characterCollider != null)
+			characterCollider.enabled = true;
 
 		if (anim != null)
 			anim.SetBool ("isGrabbed", false);

@@ -11,7 +11,6 @@ public class CharacterSpawnState : SKState<Character> {
 	public override void begin ()
 	{
 		startTime = Time.time;
-
 	}
 
 	public override void update (float deltaTime)
@@ -24,4 +23,5 @@ public class CharacterSpawnState : SKState<Character> {
 	{
 		
 	}
+
 }

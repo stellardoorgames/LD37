@@ -40,7 +40,6 @@ namespace Prime31.StateKit
 		{
 			state.setMachineAndContext( this, _context );
 			_states[state.GetType()] = state;
-			state.enabled = false;
 		}
 
 

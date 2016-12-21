@@ -5175,12 +5175,16 @@ GameObject:
   m_Component:
   - component: {fileID: 4884755707625656}
   - component: {fileID: 33555392109998094}
-  - component: {fileID: 136032524671690584}
-  - component: {fileID: 23819788971189968}
   - component: {fileID: 195492790888053406}
-  - component: {fileID: 114249933306513954}
   - component: {fileID: 54753700939563312}
   - component: {fileID: 135819077999475822}
+  - component: {fileID: 114249933306513954}
+  - component: {fileID: 114997075601322652}
+  - component: {fileID: 114987193054786102}
+  - component: {fileID: 114303997633703298}
+  - component: {fileID: 114426017360544632}
+  - component: {fileID: 114298528269174422}
+  - component: {fileID: 114545808982212804}
   m_Layer: 0
   m_Name: EnemyKnight
   m_TagString: Enemy
@@ -15952,37 +15956,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!23 &23819788971189968
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1643498522182676}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
 --- !u!23 &23832709118428290
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -16824,28 +16797,71 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9256089d476eacf4e8856bd3a6f23011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stealTag: Princess
-  attackTag: Tentacle
-  escapeTag: Exit
-  targetTags:
-  - Princess
-  - Tentacle
   currentTarget: 
   text: {fileID: 0}
-  lavaDeathEffect: {fileID: 1038803464642200, guid: 31d076bc109379645a681b46611c640c,
-    type: 2}
-  isAttacking: 0
-  attackInterval: 1
-  damage: 1
-  soulGemPrefab: {fileID: 1803453541596278, guid: 30ee4ca92a34f67489c144b69435d709,
-    type: 2}
-  isDying: 0
   anim: {fileID: 95481908306019208}
   agent: {fileID: 0}
-  rb: {fileID: 0}
-  charCollider: {fileID: 0}
   _grabRange: 1
+  spawnState: {fileID: 0}
+  huntState: {fileID: 0}
+  attackState: {fileID: 0}
+  carryState: {fileID: 0}
+  grabbedState: {fileID: 0}
+  deathState: {fileID: 0}
   isSuicidal: 0
+--- !u!114 &114298528269174422
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1643498522182676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64becf96bf4bb4f40a0169307956ffcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114303997633703298
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1643498522182676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 055335178bc85ce4bb9b952d8419f9a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackInterval: 1
+  damage: 1
+--- !u!114 &114426017360544632
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1643498522182676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f30862ed4308d24e938f591df675b22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carryDestination: Exit
+--- !u!114 &114545808982212804
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1643498522182676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4772719231c1b14eb96513c605caee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathTime: 2
+  lavaDeathEffect: {fileID: 1038803464642200, guid: 31d076bc109379645a681b46611c640c,
+    type: 2}
+  soulGemPrefab: {fileID: 1803453541596278, guid: 30ee4ca92a34f67489c144b69435d709,
+    type: 2}
+  deathType: 0
 --- !u!114 &114837903237553900
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16862,6 +16878,33 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114987193054786102
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1643498522182676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8606390da21746d44984c3cf92041f99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackNotSteal: 0
+  stealTag: Princess
+  attackTag: Tentacle
+  retargetInterval: 3
+--- !u!114 &114997075601322652
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1643498522182676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7933a879846c864eac8b4d1f4b672ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitTime: 1
 --- !u!135 &135819077999475822
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -16874,19 +16917,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136032524671690584
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1643498522182676}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
 --- !u!137 &137192017365136282
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
