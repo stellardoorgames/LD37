@@ -4,8 +4,9 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 using System;
+using Prime31.StateKit;
 
-public enum CharacterStates
+/*public enum CharacterStates
 {
 	Spawning,
 	Hunting,
@@ -13,17 +14,22 @@ public enum CharacterStates
 	Carrying,
 	Grabbed,
 	Dying
-}
+}*/
 
-public class CharController : MonoBehaviour, IGrabbable {
+public class Character : MonoBehaviour, IGrabbable {
+
+	public string stealTag;
+	public string attackTag;
+	public string escapeTag;
 
 	public List<string> targetTags;
-	[SerializeField]
-	string _currentTarget;
-	public string currentTarget{
+	//[SerializeField]
+	//string _currentTarget;
+	public string currentTarget;
+	/*{
 		get {return _currentTarget;}
 		set {Retarget(value);}
-	}
+	}*/
 	//public string alternateTargetTag;
 
 	public Text text;
@@ -39,9 +45,15 @@ public class CharController : MonoBehaviour, IGrabbable {
 	public float damage = 1f;
 
 	public Animator anim;
-	protected NavMeshAgent agent;
-	protected Rigidbody rb;
-	protected Collider charCollider;
+	[HideInInspector]
+	public NavMeshAgent agent;
+	[HideInInspector]
+	public Rigidbody rb;
+	[HideInInspector]
+	public Collider charCollider;
+
+	[HideInInspector]
+	public IDamagable attackTarget;
 
 	[SerializeField]
 	float _grabRange = 1f;
@@ -56,6 +68,10 @@ public class CharController : MonoBehaviour, IGrabbable {
 
 	protected IGrabbable grabbedObject;
 
+	SKStateMachine<Character> stateMachine;
+	//SKState<Character> spawning;
+	//SKState<Character> hunting;
+
 	public virtual void Start()
 	{
 		agent = GetComponent<NavMeshAgent> ();
@@ -64,21 +80,31 @@ public class CharController : MonoBehaviour, IGrabbable {
 
 		//grabTransform = transform;
 
-		Retarget ();
+		//spawning = new SKState<Character>();
+		//hunting = new SKState<Character>();
+
+		stateMachine = new SKStateMachine<Character>(this, new CharacterSpawnState());
+		stateMachine.addState(new CharacterHuntState());
+		stateMachine.addState(new CharacterGrabbedState());
+		stateMachine.addState(new CharacterAttackState());
+		stateMachine.addState(new CharacterDeathState());
+		stateMachine.addState(new CharacterCarryState());
+
+		//Retarget ();
 	}
 
 	public virtual void Update () 
 	{
-	
-		if (Input.GetKeyDown(KeyCode.K))
-			Death();
+		stateMachine.update(Time.deltaTime);
+
+		//if (Input.GetKeyDown(KeyCode.K))
+		//	Death();
 	}
 
-	public void Retarget(string overrideTargetTag = null)
+	public void Retarget(string newTarget = null)
 	{
-		GameObject[] targets = null;
 
-		if (overrideTargetTag != null)
+		/*if (overrideTargetTag != null)
 		{
 			targets = GameObject.FindGameObjectsWithTag (overrideTargetTag);
 			_currentTarget = overrideTargetTag;
@@ -90,7 +116,7 @@ public class CharController : MonoBehaviour, IGrabbable {
 				targets = GameObject.FindGameObjectsWithTag (tag);
 				if (targets.Length > 0)
 				{
-					_currentTarget = tag;
+					currentTarget = tag;
 					break;
 				}
 			}
@@ -99,6 +125,16 @@ public class CharController : MonoBehaviour, IGrabbable {
 
 		if (targets == null || targets.Length == 0)
 			return;
+		*/
+
+		if (newTarget != null)
+			currentTarget = newTarget;
+
+		if (currentTarget == null || currentTarget == "")
+			return;
+		
+		GameObject[] targets = null;
+		targets = GameObject.FindGameObjectsWithTag (currentTarget);
 
 		float dist = int.MaxValue;
 
@@ -126,16 +162,35 @@ public class CharController : MonoBehaviour, IGrabbable {
 
             Death ();
 		}
+
+		if (!isGrabbed)
+		{
+			if (other.tag == stealTag && other.tag == currentTarget)
+			{
+				AttemptToGrab(other.gameObject);
+			}
+			if (other.tag == attackTag && other.tag == currentTarget)
+			{
+				IDamagable d = other.GetComponent<IDamagable>();
+				if (d != null)
+					Attack(d);
+			}
+		}
 	}
 
 	public virtual void Death()
 	{
 		if (OnEscaped != null)
 			OnEscaped();
+		stateMachine.changeState<CharacterDeathState>();
 		
-		LevelManager.AddKill ();
-		Destroy (gameObject);
+		//LevelManager.AddKill ();
+		//Destroy (gameObject);
 
+	}
+	public void Destroy()
+	{
+		Destroy (gameObject);
 	}
 
 	public float GetGrabRange(Vector3 grabberPosition)
@@ -172,19 +227,20 @@ public class CharController : MonoBehaviour, IGrabbable {
 
 		transform.SetParent (grabber);
 
-		StartCoroutine(GrabbedCoroutine());
+		//StartCoroutine(GrabbedCoroutine());
+		stateMachine.changeState<CharacterGrabbedState>();
 
 		return true;
 	}
 
-	IEnumerator GrabbedCoroutine()
+	/*IEnumerator GrabbedCoroutine()
 	{
 		while(isGrabbed)
 		{
 			transform.position = Vector3.Lerp (transform.position, grabber.position, 0.1f);
 			yield return null;
 		}
-	}
+	}*/
 
 	public virtual void Released()
 	{
@@ -207,10 +263,17 @@ public class CharController : MonoBehaviour, IGrabbable {
 			anim.SetBool ("isGrabbed", false);
 
 		transform.SetParent (null);
+
+		stateMachine.changeState<CharacterHuntState>();
 	}
 
+	public void Attack(IDamagable target)
+	{
+		attackTarget = target;
+		stateMachine.changeState<CharacterAttackState>();
+	}
 
-	protected IEnumerator AttackCoroutine(IDamagable attackTarget)
+	/*protected IEnumerator AttackCoroutine(IDamagable attackTarget)
 	{
 		isAttacking = true;
 
@@ -234,7 +297,7 @@ public class CharController : MonoBehaviour, IGrabbable {
 		agent.Resume ();
 
 		anim.SetBool ("isAttacking", false);
-	}
+	}*/
 
 	protected void OnGrabRelease()
 	{
@@ -259,6 +322,7 @@ public class CharController : MonoBehaviour, IGrabbable {
 			{
 				grabbedObject = grabbable;
 				grabbedObject.OnEscaped += OnGrabRelease;
+				stateMachine.changeState<CharacterCarryState>();
 			}
 		}
 	}

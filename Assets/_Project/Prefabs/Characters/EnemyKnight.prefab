@@ -16824,10 +16824,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9256089d476eacf4e8856bd3a6f23011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stealTag: Princess
+  attackTag: Tentacle
+  escapeTag: Exit
   targetTags:
   - Princess
   - Tentacle
-  _currentTarget: 
+  currentTarget: 
   text: {fileID: 0}
   lavaDeathEffect: {fileID: 1038803464642200, guid: 31d076bc109379645a681b46611c640c,
     type: 2}
@@ -16835,6 +16838,9 @@ MonoBehaviour:
   attackInterval: 1
   damage: 1
   anim: {fileID: 95481908306019208}
+  agent: {fileID: 0}
+  rb: {fileID: 0}
+  charCollider: {fileID: 0}
   _grabRange: 1
 --- !u!114 &114837903237553900
 MonoBehaviour:

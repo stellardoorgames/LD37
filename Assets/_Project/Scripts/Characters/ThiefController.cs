@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ThiefController : CharController {
+public class ThiefController : Character {
 
 	public override void Start ()
 	{

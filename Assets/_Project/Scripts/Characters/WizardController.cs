@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WizardController : CharController {
+public class WizardController : Character {
 
 
-	protected override void OnTriggerEnter (Collider other)
+	/*protected override void OnTriggerEnter (Collider other)
 	{
 		base.OnTriggerEnter (other);
 
@@ -17,12 +17,13 @@ public class WizardController : CharController {
 			//Debug.Log ("Attack");
 			IDamagable d = other.GetComponent<IDamagable>();
 			if (d != null)
-				StartCoroutine (AttackCoroutine (d));
+				Attack(d);
+				//StartCoroutine (AttackCoroutine (d));
 		}
 
-	}
+	}*/
 
-	public override void Update ()
+	/*public override void Update ()
 	{
 		base.Update();
 
@@ -37,6 +38,6 @@ public class WizardController : CharController {
 
 		if (isGrabbed)
 			isAttacking = false;
-	}
+	}*/
 
 }

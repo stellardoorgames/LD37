@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KnightController : CharController {
+public class KnightController : Character {
 
 	public override void Start ()
 	{
@@ -15,7 +15,7 @@ public class KnightController : CharController {
 
 
 
-		Collider[] colliders = Physics.OverlapSphere (transform.position, .5f);
+		/*Collider[] colliders = Physics.OverlapSphere (transform.position, .5f);
 		bool isTentacle = false;
 		foreach (Collider c in colliders)
 			if (c.tag == "Tentacle")
@@ -23,9 +23,9 @@ public class KnightController : CharController {
 		isAttacking = isTentacle;
 
 		if (isGrabbed || grabbedObject != null)
-			isAttacking = false;
+			isAttacking = false;*/
 	}
-	protected override void OnTriggerEnter (Collider other)
+	/*protected override void OnTriggerEnter (Collider other)
 	{
 		base.OnTriggerEnter (other);
 
@@ -34,15 +34,6 @@ public class KnightController : CharController {
 			if (other.tag == "Princess")
 			{
 				AttemptToGrab(other.gameObject);
-				/*IGrabbable grab = other.GetComponent<IGrabbable>();
-				
-				if (grab != null)
-				{
-					grab.Grabbed(transform);
-					grab.OnEscaped += OnGrabRelease;
-					grabbedObject = grab;
-					
-				}*/
 				Retarget("Exit");
 			}
 			if (other.tag == "Tentacle" && grabbedObject == null)
@@ -50,9 +41,10 @@ public class KnightController : CharController {
 				//Debug.Log("KnightAttack");
 				IDamagable d = other.GetComponent<IDamagable>();
 				if (d != null)
-					StartCoroutine (AttackCoroutine (d));
+					Attack(d);
+					//StartCoroutine (AttackCoroutine (d));
 			}
 		}
-	}
+	}*/
 
 }

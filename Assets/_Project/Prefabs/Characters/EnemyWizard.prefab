@@ -12164,7 +12164,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1444026687741626}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 10, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224311566669145188}
@@ -16792,9 +16792,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3006405e26ac784fb244d505f3805f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stealTag: 
+  attackTag: Tentacle
+  escapeTag: Exit
   targetTags:
   - Tentacle
-  _currentTarget: 
+  currentTarget: 
   text: {fileID: 0}
   lavaDeathEffect: {fileID: 1038803464642200, guid: 31d076bc109379645a681b46611c640c,
     type: 2}
@@ -16802,6 +16805,9 @@ MonoBehaviour:
   attackInterval: 1
   damage: 1
   anim: {fileID: 95917374941006580}
+  agent: {fileID: 0}
+  rb: {fileID: 0}
+  charCollider: {fileID: 0}
   _grabRange: 1
 --- !u!114 &114783325694630818
 MonoBehaviour:

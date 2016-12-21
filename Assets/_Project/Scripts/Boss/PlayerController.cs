@@ -115,7 +115,7 @@ public class PlayerController : MonoBehaviour {
 		}*/
 	}
 
-	public void OnEatSoul(CharController enemy)
+	public void OnEatSoul(Character enemy)
 	{
 		currentMaxTotalTentacleLength += addToMaxLengthPerSoul;
 		enemy.Death();

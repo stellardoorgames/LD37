@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PrincessController : CharController, IGrabbable {
+public class PrincessController : Character, IGrabbable {
 
 	public override void Start ()
 	{
