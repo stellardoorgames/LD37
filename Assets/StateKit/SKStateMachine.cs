@@ -40,6 +40,7 @@ namespace Prime31.StateKit
 		{
 			state.setMachineAndContext( this, _context );
 			_states[state.GetType()] = state;
+			state.enabled = false;
 		}
 
 
@@ -66,7 +67,10 @@ namespace Prime31.StateKit
 
 			// only call end if we have a currentState
 			if( _currentState != null )
+			{
 				_currentState.end();
+				_currentState.enabled = false;
+			}
 
 			#if UNITY_EDITOR
 			// do a sanity check while in the editor to ensure we have the given state in our state list
@@ -81,6 +85,7 @@ namespace Prime31.StateKit
 			// swap states and call begin
 			previousState = _currentState;
 			_currentState = _states[newType];
+			_currentState.enabled = true;
 			_currentState.begin();
 			elapsedTimeInState = 0f;
 

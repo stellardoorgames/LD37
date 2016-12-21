@@ -5,8 +5,8 @@ using Prime31.StateKit;
 
 public class CharacterSpawnState : SKState<Character> {
 
+	public float waitTime = 1f;
 	float startTime;
-	float waitTime = 1f;
 
 	public override void begin ()
 	{

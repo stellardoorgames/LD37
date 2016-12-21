@@ -16839,6 +16839,7 @@ MonoBehaviour:
   damage: 1
   soulGemPrefab: {fileID: 1803453541596278, guid: 30ee4ca92a34f67489c144b69435d709,
     type: 2}
+  isDying: 0
   anim: {fileID: 95481908306019208}
   agent: {fileID: 0}
   rb: {fileID: 0}

@@ -11,6 +11,6 @@ public class KnightController : Character {
 		base.Start ();
 
 		if (isSuicidal)
-			escapeTag = "Lava";
+			GetComponent<CharacterCarryState>().carryDestination = "Lava";
 	}
 }

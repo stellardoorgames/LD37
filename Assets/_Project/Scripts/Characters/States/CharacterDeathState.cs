@@ -5,17 +5,27 @@ using Prime31.StateKit;
 
 public class CharacterDeathState : SKState<Character> {
 
-	float deathTime = 2f;
+	public float deathTime = 2f;
+	public GameObject lavaDeathEffect;
+	public GameObject soulGemPrefab;
+
 	float startTime;
 
 	public override void begin ()
 	{
+		_context.isDying = true;
+
+		_context.GrabEscape();
+
+		if (_context.deathType == Character.DeathTypes.Lava)
+			Instantiate(lavaDeathEffect, transform.position, Quaternion.identity);
+		
 		LevelManager.AddKill ();
 
-		if (_context.soulGemPrefab != null)
+		if (soulGemPrefab != null)
 		{
-			GameObject go = GameObject.Instantiate(_context.soulGemPrefab);
-			go.transform.position = _context.transform.position;
+			GameObject go = GameObject.Instantiate(soulGemPrefab);
+			go.transform.position = transform.position;
 		}
 
 		_context.anim.SetTrigger("Death");

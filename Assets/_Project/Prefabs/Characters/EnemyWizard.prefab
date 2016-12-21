@@ -3297,12 +3297,16 @@ GameObject:
   m_Component:
   - component: {fileID: 4673325714426218}
   - component: {fileID: 33677440919275138}
-  - component: {fileID: 136165172383228610}
-  - component: {fileID: 23650521980380944}
   - component: {fileID: 195888309525097082}
   - component: {fileID: 54842308736755642}
-  - component: {fileID: 114615348317922084}
   - component: {fileID: 135161807708211780}
+  - component: {fileID: 114615348317922084}
+  - component: {fileID: 114507433389159306}
+  - component: {fileID: 114168587549491244}
+  - component: {fileID: 114727164464568888}
+  - component: {fileID: 114225169194441016}
+  - component: {fileID: 114037592076198444}
+  - component: {fileID: 114842728511577666}
   m_Layer: 0
   m_Name: EnemyWizard
   m_TagString: Enemy
@@ -15462,37 +15466,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!23 &23650521980380944
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1444026687741626}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
 --- !u!23 &23687054854197246
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -16765,6 +16738,44 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114037592076198444
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1444026687741626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64becf96bf4bb4f40a0169307956ffcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114168587549491244
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1444026687741626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8606390da21746d44984c3cf92041f99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackNotSteal: 1
+  stealTag: 
+  attackTag: Tentacle
+  retargetInterval: 3
+--- !u!114 &114225169194441016
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1444026687741626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f30862ed4308d24e938f591df675b22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carryDestination: Exit
 --- !u!114 &114272735126883098
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16781,6 +16792,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114507433389159306
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1444026687741626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7933a879846c864eac8b4d1f4b672ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitTime: 1
 --- !u!114 &114615348317922084
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16792,25 +16815,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3006405e26ac784fb244d505f3805f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stealTag: 
-  attackTag: Tentacle
-  escapeTag: Exit
-  targetTags:
-  - Tentacle
   currentTarget: 
   text: {fileID: 0}
-  lavaDeathEffect: {fileID: 1038803464642200, guid: 31d076bc109379645a681b46611c640c,
-    type: 2}
   isAttacking: 0
-  attackInterval: 1
-  damage: 1
-  soulGemPrefab: {fileID: 1803453541596278, guid: 30ee4ca92a34f67489c144b69435d709,
-    type: 2}
+  isDying: 0
+  deathType: 0
   anim: {fileID: 95917374941006580}
   agent: {fileID: 0}
-  rb: {fileID: 0}
-  charCollider: {fileID: 0}
   _grabRange: 1
+  spawnState: {fileID: 0}
+  huntState: {fileID: 0}
+  attackState: {fileID: 0}
+  carryState: {fileID: 0}
+  grabbedState: {fileID: 0}
+  deathState: {fileID: 0}
+--- !u!114 &114727164464568888
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1444026687741626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 055335178bc85ce4bb9b952d8419f9a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackInterval: 1
+  damage: 1
 --- !u!114 &114783325694630818
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16832,6 +16863,22 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114842728511577666
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1444026687741626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4772719231c1b14eb96513c605caee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathTime: 2
+  lavaDeathEffect: {fileID: 1038803464642200, guid: 31d076bc109379645a681b46611c640c,
+    type: 2}
+  soulGemPrefab: {fileID: 1803453541596278, guid: 30ee4ca92a34f67489c144b69435d709,
+    type: 2}
 --- !u!114 &114920939931429066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16876,19 +16923,6 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136165172383228610
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1444026687741626}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  m_Radius: 0.2
-  m_Height: 1
-  m_Direction: 1
   m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!137 &137011631073673746
 SkinnedMeshRenderer:

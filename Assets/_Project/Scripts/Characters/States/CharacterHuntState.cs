@@ -5,21 +5,26 @@ using Prime31.StateKit;
 
 public class CharacterHuntState : SKState<Character> {
 
-	float retargetTime = 3f;
+	public bool attackNotSteal = false;
+
+	public string stealTag;
+	public string attackTag;
+
+	public float retargetInterval = 3f;
 	float lastRetarget;
 
 	public override void begin ()
 	{
-		if (_context.stealTag != null && _context.stealTag != "")
-			_context.Retarget(_context.stealTag);
+		if (stealTag != null && stealTag != "")
+			_context.Retarget(stealTag);
 		else
-			_context.Retarget(_context.attackTag);
+			_context.Retarget(attackTag);
 		lastRetarget = Time.time;
 	}
 
 	public override void update (float deltaTime)
 	{
-		if (Time.time > lastRetarget + retargetTime)
+		if (Time.time > lastRetarget + retargetInterval)
 		{
 			_context.Retarget();
 			lastRetarget = Time.time;
@@ -29,5 +34,22 @@ public class CharacterHuntState : SKState<Character> {
 	public override void end ()
 	{
 		
+	}
+	protected virtual void OnTriggerEnter(Collider other)
+	{
+		if (other.tag == stealTag)
+		{
+			_context.AttemptToGrab(other.gameObject);
+		}
+		if (other.tag == attackTag)
+		{
+			IDamagable d = other.GetComponent<IDamagable>();
+			if (d != null)
+			{
+				_context.attackTarget = d;
+				_machine.changeState<CharacterAttackState>();
+			}
+				//_context.Attack(d);
+		}
 	}
 }

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Prime31.StateKit
 {
-	public abstract class SKState<T>
+	public abstract class SKState<T>: MonoBehaviour
 	{
 		protected int _mecanimStateHash;
 		protected SKStateMachine<T> _machine;

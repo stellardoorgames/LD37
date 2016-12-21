@@ -2,30 +2,42 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Prime31.StateKit;
+using UnityEngine.AI;
 
 public class CharacterAttackState : SKState<Character> {
 
+	public float attackInterval = 1f;
+	public float damage = 1f;
+
 	float lastAttackTime;
+
+	string attackTag;
+
+	Animator anim;
+	NavMeshAgent agent;
 
 	public override void begin ()
 	{
+		agent = GetComponent<NavMeshAgent>();
+		anim = _context.anim;
+		attackTag = GetComponent<CharacterHuntState>().attackTag;
 		//_context.currentTarget = _context.attackTag;
 
 		_context.isAttacking = true;
 
-		_context.anim.SetBool ("isAttacking", true);
+		anim.SetBool ("isAttacking", true);
 
-		_context.agent.Stop ();
+		agent.Stop ();
 
 	}
 
 	public override void update (float deltaTime)
 	{
-		Collider[] colliders = Physics.OverlapSphere (_context.transform.position, .5f);
+		Collider[] colliders = Physics.OverlapSphere (transform.position, .5f);
 
 		bool isTargetThere = false;
 		foreach (Collider c in colliders)
-			if (c.tag == _context.attackTag)
+			if (c.tag == attackTag) //_context.attackTag)
 				isTargetThere = true;
 		
 		if (!isTargetThere)
@@ -33,11 +45,11 @@ public class CharacterAttackState : SKState<Character> {
 
 
 
-		if (Time.time >= lastAttackTime + _context.attackInterval)
+		if (Time.time >= lastAttackTime + attackInterval)
 		{
-			_context.anim.SetTrigger ("Attack");
+			anim.SetTrigger ("Attack");
 			
-			_context.attackTarget.TakeDamage(_context.damage);
+			_context.attackTarget.TakeDamage(damage);
 			
 			lastAttackTime = Time.time;
 		}
@@ -46,8 +58,8 @@ public class CharacterAttackState : SKState<Character> {
 
 	public override void end ()
 	{
-		_context.agent.Resume ();
+		agent.Resume ();
 
-		_context.anim.SetBool ("isAttacking", false);
+		anim.SetBool ("isAttacking", false);
 	}
 }
