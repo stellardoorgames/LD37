@@ -6,16 +6,16 @@ using UnityEngine.Events;
 
 public class TentacleTrigger : MonoBehaviour {
 
-	public event Action<Character> OnEatSoul;
+	public event Action<SoulGemController> OnEatSoul;
 
-	void OnTriggerStay(Collider other)
+	void OnTriggerEnter(Collider other)
 	{
-		if (other.tag == "Enemy")
+		if (other.tag == "SoulGem")
 		{
-			Character enemy = other.GetComponent<Character>();
+			SoulGemController gem = other.GetComponent<SoulGemController>();
 
-			if (enemy.isGrabbed && OnEatSoul != null && enemy != null)
-				OnEatSoul(enemy);
+			if (gem != null && gem.isGrabbed && OnEatSoul != null)
+				OnEatSoul(gem);
 			
 		}
 

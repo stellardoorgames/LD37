@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class KeyController : ItemController {
 
-	public KeyTypes keyType;
+	public enum Types
+	{
+		None,
+		Generic,
+		Red,
+		Green,
+		Blue
+	}
+
+	public Types keyType;
 
 }

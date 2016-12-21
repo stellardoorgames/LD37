@@ -12,9 +12,6 @@ public class CharacterGrabbedState : SKState<Character> {
 
 	public override void update (float deltaTime)
 	{
-		//if (!_context.isGrabbed)
-		//	_machine.changeStateToPrevious();
-		
 		_context.transform.position = Vector3.Lerp (_context.transform.position, _context.grabber.position, 0.1f);
 	}
 

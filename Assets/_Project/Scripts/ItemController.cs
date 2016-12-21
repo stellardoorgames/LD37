@@ -81,4 +81,11 @@ public class ItemController : MonoBehaviour, IGrabbable {
 		transform.SetParent (null);
 	}
 
+	public virtual void Destroy()
+	{
+		if (OnEscaped != null)
+			OnEscaped();
+
+		Destroy(gameObject);
+	}
 }

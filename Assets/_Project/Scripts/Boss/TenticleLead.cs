@@ -11,7 +11,6 @@ public class TenticleLead : MonoBehaviour {
 
 	public bool isActive = false;
 
-	//IGrabbable grabbable;
 	IGrabbable carryingObject;
 
 	Projector projector;
@@ -41,7 +40,6 @@ public class TenticleLead : MonoBehaviour {
 		if (isActive)
 		{
 			Vector3 movement = GetMovement() * speed * Time.deltaTime;
-			//if (rb.velocity.magnitude < maxSpeed)
 			rb.AddForce(movement);
 		}
 	}
@@ -53,15 +51,6 @@ public class TenticleLead : MonoBehaviour {
 
 		if (isActive)
 		{
-			/*if (carryingObject != null)
-			{
-				if (Vector3.Distance(transform.position, carryingObject.grabTransform.position) > 2)
-				{
-					carryingObject.Released ();
-					carryingObject = null;
-				}
-			}*/
-			//Debug.Log(carryingObject);
 			if (Input.GetButtonDown ("Grab"))
 			{
 				if (carryingObject != null)
@@ -71,25 +60,30 @@ public class TenticleLead : MonoBehaviour {
 				else
 				{
 					Collider[] colliders = Physics.OverlapSphere (transform.position, 1f);
-					GameObject key = null;
-					GameObject princess = null;
-					GameObject enemy = null;
-					foreach (Collider c in colliders)
+					if (colliders.Length > 0)
 					{
-						if (c.tag == "Enemy")
-							enemy = c.gameObject;
-						else if (c.tag == "Princess")
-							princess = c.gameObject;
-						else if (c.tag == "Key")
-							key = c.gameObject;
-					}
+						IGrabbable grabbedObject = null;
+						foreach (Collider c in colliders)
+						{
+							if (c.tag == "Enemy")
+								grabbedObject = c.GetComponent<IGrabbable>();
+						}
 
-					if (key != null)
-						AttemptToGrab (key);
-					else if (enemy != null)
-						AttemptToGrab (enemy);
-					else if (princess != null)
-						AttemptToGrab (princess);
+						if (grabbedObject == null)
+						{
+							foreach (Collider c in colliders)
+							{
+								grabbedObject = c.GetComponent<IGrabbable>();
+								if (grabbedObject != null)
+									break;
+							}
+							
+						}
+						
+						if (grabbedObject != null)
+							AttemptToGrab (grabbedObject);
+						
+					}
 
 					
 					/*if (grabbable != null)
@@ -111,18 +105,13 @@ public class TenticleLead : MonoBehaviour {
 		}
 	}
 
-	void AttemptToGrab(GameObject go)
+	void AttemptToGrab(IGrabbable grabbable)
 	{
-		IGrabbable grabbable = go.GetComponent<IGrabbable>();
-		if (grabbable != null)
+		bool grabWorked = grabbable.Grabbed (transform);
+		if (grabWorked)
 		{
-			Debug.Log(grabbable);
-			bool grabWorked = grabbable.Grabbed (transform);
-			if (grabWorked)
-			{
-				carryingObject = grabbable;
-				carryingObject.OnEscaped += OnGrabRelease;
-			}
+			carryingObject = grabbable;
+			carryingObject.OnEscaped += OnGrabRelease;
 		}
 	}
 

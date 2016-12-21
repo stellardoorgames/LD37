@@ -6,17 +6,14 @@ using UnityEngine.UI;
 using System;
 using Prime31.StateKit;
 
-/*public enum CharacterStates
-{
-	Spawning,
-	Hunting,
-	Attacking,
-	Carrying,
-	Grabbed,
-	Dying
-}*/
 
 public class Character : MonoBehaviour, IGrabbable {
+
+	public enum DeathTypes
+	{
+		Lava,
+		Spikes
+	}
 
 	public string stealTag;
 	public string attackTag;
@@ -44,6 +41,8 @@ public class Character : MonoBehaviour, IGrabbable {
 
 	public float damage = 1f;
 
+	public GameObject soulGemPrefab;
+
 	public Animator anim;
 	[HideInInspector]
 	public NavMeshAgent agent;
@@ -69,19 +68,12 @@ public class Character : MonoBehaviour, IGrabbable {
 	protected IGrabbable grabbedObject;
 
 	SKStateMachine<Character> stateMachine;
-	//SKState<Character> spawning;
-	//SKState<Character> hunting;
 
 	public virtual void Start()
 	{
 		agent = GetComponent<NavMeshAgent> ();
 		rb = GetComponent<Rigidbody> ();
 		charCollider = GetComponent<Collider> ();
-
-		//grabTransform = transform;
-
-		//spawning = new SKState<Character>();
-		//hunting = new SKState<Character>();
 
 		stateMachine = new SKStateMachine<Character>(this, new CharacterSpawnState());
 		stateMachine.addState(new CharacterHuntState());
@@ -90,7 +82,6 @@ public class Character : MonoBehaviour, IGrabbable {
 		stateMachine.addState(new CharacterDeathState());
 		stateMachine.addState(new CharacterCarryState());
 
-		//Retarget ();
 	}
 
 	public virtual void Update () 
@@ -103,30 +94,6 @@ public class Character : MonoBehaviour, IGrabbable {
 
 	public void Retarget(string newTarget = null)
 	{
-
-		/*if (overrideTargetTag != null)
-		{
-			targets = GameObject.FindGameObjectsWithTag (overrideTargetTag);
-			_currentTarget = overrideTargetTag;
-		}
-		else
-		{
-			foreach(string tag in targetTags)
-			{
-				targets = GameObject.FindGameObjectsWithTag (tag);
-				if (targets.Length > 0)
-				{
-					currentTarget = tag;
-					break;
-				}
-			}
-
-		}
-
-		if (targets == null || targets.Length == 0)
-			return;
-		*/
-
 		if (newTarget != null)
 			currentTarget = newTarget;
 
@@ -155,12 +122,8 @@ public class Character : MonoBehaviour, IGrabbable {
 
 		if (other.tag == "Lava")
 		{
-			//Animator anim = GetComponent<Animator> ();
-			//anim.Play ("Death");
 			Debug.Log ("Lava");
-            Instantiate(lavaDeathEffect, transform.position, Quaternion.identity);
-
-            Death ();
+            Death (DeathTypes.Lava);
 		}
 
 		if (!isGrabbed)
@@ -178,14 +141,15 @@ public class Character : MonoBehaviour, IGrabbable {
 		}
 	}
 
-	public virtual void Death()
+	public virtual void Death(DeathTypes deathType)
 	{
 		if (OnEscaped != null)
 			OnEscaped();
-		stateMachine.changeState<CharacterDeathState>();
+
+		if (deathType == DeathTypes.Lava)
+			Instantiate(lavaDeathEffect, transform.position, Quaternion.identity);
 		
-		//LevelManager.AddKill ();
-		//Destroy (gameObject);
+		stateMachine.changeState<CharacterDeathState>();
 
 	}
 	public void Destroy()
@@ -233,15 +197,6 @@ public class Character : MonoBehaviour, IGrabbable {
 		return true;
 	}
 
-	/*IEnumerator GrabbedCoroutine()
-	{
-		while(isGrabbed)
-		{
-			transform.position = Vector3.Lerp (transform.position, grabber.position, 0.1f);
-			yield return null;
-		}
-	}*/
-
 	public virtual void Released()
 	{
 		if (isGrabbed == false)
@@ -272,32 +227,6 @@ public class Character : MonoBehaviour, IGrabbable {
 		attackTarget = target;
 		stateMachine.changeState<CharacterAttackState>();
 	}
-
-	/*protected IEnumerator AttackCoroutine(IDamagable attackTarget)
-	{
-		isAttacking = true;
-
-		anim.SetBool ("isAttacking", true);
-
-		agent.Stop ();
-
-		while (isAttacking)
-		{
-			anim.SetTrigger ("Attack");
-
-			float nextAttackTime = Time.time + attackInterval;
-
-			attackTarget.TakeDamage(damage);
-
-			while (Time.time < nextAttackTime)
-				yield return null;
-
-		}
-
-		agent.Resume ();
-
-		anim.SetBool ("isAttacking", false);
-	}*/
 
 	protected void OnGrabRelease()
 	{

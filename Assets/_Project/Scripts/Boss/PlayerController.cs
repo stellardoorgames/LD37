@@ -36,13 +36,6 @@ public class PlayerController : MonoBehaviour {
 	public UnityEvent OnDeath;
 	public UnityEvent OnFinish;
 
-	static PlayerController instance;
-
-	void Awake()
-	{
-		instance = this;
-	}
-
 	void Start () 
 	{
 
@@ -79,9 +72,9 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetButtonDown ("East"))
 			activeTenticleIndex = 2;
 		
-		
 		//if (Input.GetButtonDown ("North"))
 		//	activeTenticleIndex = 2;
+
 		float percent = 0f;
 		for(int i = 0; i < tentacleBarImages.Count; i++)
 		{
@@ -107,24 +100,12 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		tentacleLeads [index].Activate(true);
-
-
-		/*for(int i = 0; i < tenticles.Count; i++)
-		{
-			if (i == )
-		}*/
 	}
 
-	public void OnEatSoul(Character enemy)
+	public void OnEatSoul(SoulGemController gem)
 	{
 		currentMaxTotalTentacleLength += addToMaxLengthPerSoul;
-		enemy.Death();
+		gem.Destroy();
 	}
 
-	public static void TakeDamage(float damage)
-	{
-		instance.currentLife -= damage;
-		if (instance.currentLife <= 0f)
-			instance.OnDeath.Invoke ();
-	}
 }

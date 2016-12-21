@@ -3,20 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public enum KeyTypes
-{
-	None,
-	Generic,
-	Red,
-	Green,
-	Blue
-}
 
 public class GateController : MonoBehaviour {
 
 	public bool isOpen = false;
 	
-	public KeyTypes lockType;
+	public KeyController.Types lockType;
 
 	public List<SwitchController> switches = new List<SwitchController>();
 

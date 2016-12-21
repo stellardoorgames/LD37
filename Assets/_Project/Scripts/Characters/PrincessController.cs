@@ -17,10 +17,10 @@ public class PrincessController : Character, IGrabbable {
 			LevelManager.LoseLevel ();
 	}
 
-	public override void Death ()
+	public override void Death(Character.DeathTypes deathType)
 	{
 		LevelManager.LoseLevel ();
 
-		base.Death ();
+		base.Death (deathType);
 	}
 }

@@ -16837,11 +16837,14 @@ MonoBehaviour:
   isAttacking: 0
   attackInterval: 1
   damage: 1
+  soulGemPrefab: {fileID: 1803453541596278, guid: 30ee4ca92a34f67489c144b69435d709,
+    type: 2}
   anim: {fileID: 95481908306019208}
   agent: {fileID: 0}
   rb: {fileID: 0}
   charCollider: {fileID: 0}
   _grabRange: 1
+  isSuicidal: 0
 --- !u!114 &114837903237553900
 MonoBehaviour:
   m_ObjectHideFlags: 1
