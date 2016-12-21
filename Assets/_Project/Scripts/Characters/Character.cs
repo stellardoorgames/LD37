@@ -14,22 +14,17 @@ public class Character : MonoBehaviour, IGrabbable {
 		Lava,
 		Spikes
 	}
+
+	public List<string> targetTags = new List<string>();
 	public string currentTarget;
 
 	public Text text;
 
 	Transform target;
 
-	//public bool isAttacking = false;
-
-	//public DeathTypes deathType;
-
 	public Animator anim;
 	[HideInInspector]
 	public NavMeshAgent agent;
-
-	//[HideInInspector]
-	//public IDamagable attackTarget;
 
 	[SerializeField]
 	float _grabRange = 1f;
@@ -97,11 +92,31 @@ public class Character : MonoBehaviour, IGrabbable {
 		if (newTarget != null)
 			currentTarget = newTarget;
 
-		if (currentTarget == null || currentTarget == "")
-			return;
-		
 		GameObject[] targets = null;
-		targets = GameObject.FindGameObjectsWithTag (currentTarget);
+
+
+		if (currentTarget != null && currentTarget != "")
+			targets = GameObject.FindGameObjectsWithTag (currentTarget);
+
+
+		if (targets == null || targets.Length == 0)
+		{
+			foreach(string tt in targetTags)
+			{
+				targets = GameObject.FindGameObjectsWithTag (tt);
+				if (targets.Length > 0)
+				{
+					currentTarget = tt;
+					break;
+				}
+			}
+
+			if (targets == null || targets.Length == 0)
+			{
+				Wander();
+				return;
+			}
+		}
 
 		float dist = int.MaxValue;
 
@@ -111,20 +126,26 @@ public class Character : MonoBehaviour, IGrabbable {
 			if (d < dist)
 				target = go.transform;
 		}
-		if (agent != null)
+		if (agent != null && target != null)
 			agent.destination = target.position;
-	
+		Debug.Log(agent.hasPath);
 	}
 
-
-	protected virtual void OnTriggerEnter(Collider other)
+	public virtual void Wander()
 	{
-		if (other.tag == "Lava")
-		{
-			Debug.Log ("Lava");
-            Death (DeathTypes.Lava);
-		}
+		List<Vector3> wanderDirections = new List<Vector3> {
+			new Vector3(1f,0f,0f),
+			new Vector3(-1f,0f,0f),
+			new Vector3(0f,0f,1f),
+			new Vector3(0f,0f,-1f),
+		};
+
+		int dir = UnityEngine.Random.Range(0, 3);
+
+		agent.destination = wanderDirections[dir];
+
 	}
+
 
 	public virtual void Death(DeathTypes deathType)
 	{

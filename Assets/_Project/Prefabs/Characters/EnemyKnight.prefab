@@ -16797,6 +16797,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9256089d476eacf4e8856bd3a6f23011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetTags:
+  - Princess
+  - Tentacle
   currentTarget: 
   text: {fileID: 0}
   anim: {fileID: 95481908306019208}
@@ -16856,7 +16859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4772719231c1b14eb96513c605caee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathTime: 2
+  deathTime: 5
   lavaDeathEffect: {fileID: 1038803464642200, guid: 31d076bc109379645a681b46611c640c,
     type: 2}
   soulGemPrefab: {fileID: 1803453541596278, guid: 30ee4ca92a34f67489c144b69435d709,
@@ -16889,10 +16892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8606390da21746d44984c3cf92041f99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackNotSteal: 0
-  stealTag: Princess
-  attackTag: Tentacle
-  retargetInterval: 3
+  retargetInterval: 2
 --- !u!114 &114997075601322652
 MonoBehaviour:
   m_ObjectHideFlags: 1

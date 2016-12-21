@@ -22,7 +22,7 @@ public class CharacterAttackState : SKState<Character> {
 	{
 		agent = GetComponent<NavMeshAgent>();
 		anim = _context.anim;
-		attackTag = GetComponent<CharacterHuntState>().attackTag;
+		//attackTag = GetComponent<CharacterHuntState>().attackTag;
 	}
 
 	public override void begin ()
@@ -39,7 +39,7 @@ public class CharacterAttackState : SKState<Character> {
 
 		bool isTargetThere = false;
 		foreach (Collider c in colliders)
-			if (c.tag == attackTag)
+			if (c.tag == _context.currentTarget)
 				isTargetThere = true;
 		
 		if (!isTargetThere)

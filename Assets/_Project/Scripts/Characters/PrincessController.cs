@@ -9,9 +9,14 @@ public class PrincessController : Character, IGrabbable {
 		base.Start ();
 	}
 
-	protected override void OnTriggerEnter(Collider other)
+
+	protected virtual void OnTriggerEnter(Collider other)
 	{
-		base.OnTriggerEnter(other);
+		if (other.tag == "Lava")
+		{
+			Debug.Log ("Lava");
+			Death (DeathTypes.Lava);
+		}
 
 		if (other.tag == "Exit")
 			LevelManager.LoseLevel ();

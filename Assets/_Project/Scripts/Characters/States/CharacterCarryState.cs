@@ -14,7 +14,8 @@ public class CharacterCarryState : SKState<Character> {
 
 	public override void update (float deltaTime)
 	{
-		
+		if (_context.grabbedObject == null)
+			_machine.changeState<CharacterHuntState>();
 	}
 
 	public override void end ()

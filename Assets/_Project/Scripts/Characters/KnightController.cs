@@ -13,4 +13,14 @@ public class KnightController : Character {
 		if (isSuicidal)
 			GetComponent<CharacterCarryState>().carryDestination = "Lava";
 	}
+
+	protected virtual void OnTriggerEnter(Collider other)
+	{
+		if (other.tag == "Lava")
+		{
+			Debug.Log ("Lava");
+			Death (DeathTypes.Lava);
+		}
+	}
+
 }

@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class ThiefController : Character {
 
-	public override void Start ()
+	protected virtual void OnTriggerEnter(Collider other)
 	{
-		base.Start ();
+		/*if (other.tag == "Lava")
+		{
+			Debug.Log ("Lava");
+			Death (DeathTypes.Lava);
+		}*/
 	}
+
 }

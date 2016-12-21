@@ -16760,7 +16760,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8606390da21746d44984c3cf92041f99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackNotSteal: 1
   stealTag: 
   attackTag: Tentacle
   retargetInterval: 3
@@ -16815,6 +16814,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3006405e26ac784fb244d505f3805f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetTags:
+  - Tentacle
   currentTarget: 
   text: {fileID: 0}
   anim: {fileID: 95917374941006580}
@@ -16871,7 +16872,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4772719231c1b14eb96513c605caee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathTime: 4
+  deathTime: 5
   lavaDeathEffect: {fileID: 1038803464642200, guid: 31d076bc109379645a681b46611c640c,
     type: 2}
   soulGemPrefab: {fileID: 1803453541596278, guid: 30ee4ca92a34f67489c144b69435d709,
