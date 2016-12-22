@@ -128,7 +128,6 @@ public class Character : MonoBehaviour, IGrabbable {
 		}
 		if (agent != null && target != null)
 			agent.destination = target.position;
-		Debug.Log(agent.hasPath);
 	}
 
 	public virtual void Wander()
@@ -195,12 +194,12 @@ public class Character : MonoBehaviour, IGrabbable {
 		
 	}
 
-	public void OnGrabRelease()
+	public void OnCarryRelease()
 	{
 		if (grabbedObject != null)
 		{
 			grabbedObject.Released();
-			grabbedObject.OnEscaped -= OnGrabRelease;
+			grabbedObject.OnEscaped -= OnCarryRelease;
 		}
 
 		grabbedObject = null;
@@ -208,7 +207,7 @@ public class Character : MonoBehaviour, IGrabbable {
 		Retarget();
 	}
 
-	public void AttemptToGrab(GameObject go)
+	public void AttemptToCarry(GameObject go)
 	{
 		if (deathState.enabled)
 			return;
@@ -220,7 +219,7 @@ public class Character : MonoBehaviour, IGrabbable {
 			if (grabWorked)
 			{
 				grabbedObject = grabbable;
-				grabbedObject.OnEscaped += OnGrabRelease;
+				grabbedObject.OnEscaped += OnCarryRelease;
 				stateMachine.changeState<CharacterCarryState>();
 			}
 		}

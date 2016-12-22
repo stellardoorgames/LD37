@@ -14,6 +14,7 @@ public class CharacterCarryState : SKState<Character> {
 
 	public override void update (float deltaTime)
 	{
+		Debug.Log(_context.grabbedObject);
 		if (_context.grabbedObject == null)
 			_machine.changeState<CharacterHuntState>();
 	}

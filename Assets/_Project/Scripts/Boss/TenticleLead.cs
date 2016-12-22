@@ -68,6 +68,11 @@ public class TenticleLead : MonoBehaviour {
 							if (c.tag == "Enemy")
 								grabbedObject = c.GetComponent<IGrabbable>();
 						}
+						foreach (Collider c in colliders)
+						{
+							if (c.tag == "SoulGem")
+								grabbedObject = c.GetComponent<IGrabbable>();
+						}
 
 						if (grabbedObject == null)
 						{

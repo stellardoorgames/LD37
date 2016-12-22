@@ -8,16 +8,11 @@ public class CharacterGrabbedState : SKState<Character> {
 
 	Animator anim;
 	NavMeshAgent agent;
-	//Rigidbody rb;
-	//Collider characterCollider;
 
 	public override void onInitialized ()
 	{
 		anim = _context.anim;
 		agent = GetComponent<NavMeshAgent>();
-		//rb = GetComponent<Rigidbody>();
-		//characterCollider = GetComponent<Collider>();
-		//Debug.Log(characterCollider);
 	}
 
 	public override void begin ()
@@ -25,7 +20,7 @@ public class CharacterGrabbedState : SKState<Character> {
 		_context.isGrabbed = true;
 		
 		if (_context.grabbedObject != null)
-			_context.OnGrabRelease();
+			_context.OnCarryRelease();
 
 		_context.GrabEscape();
 
@@ -35,12 +30,6 @@ public class CharacterGrabbedState : SKState<Character> {
 			agent.Stop ();
 			agent.enabled = false;
 		}
-
-		//if (rb != null)
-		//	rb.isKinematic = true;
-
-		//if (characterCollider != null)
-		//	characterCollider.enabled = false;
 
 		if (anim != null)
 			anim.SetBool ("isGrabbed", true);
@@ -56,8 +45,6 @@ public class CharacterGrabbedState : SKState<Character> {
 	{
 		//transform.position = Vector3.Lerp (transform.position, _context.grabber.position, 0.1f);
 		transform.position = _context.grabber.position;
-		//if (!_context.isGrabbed)
-		//	_machine.changeState<CharacterHuntState>();
 	}
 
 	public override void end ()
@@ -70,18 +57,11 @@ public class CharacterGrabbedState : SKState<Character> {
 			agent.Resume ();
 		}
 
-		//if (rb != null)
-		//	rb.isKinematic = false;
-
-		//if (characterCollider != null)
-		//	characterCollider.enabled = true;
-
 		if (anim != null)
 			anim.SetBool ("isGrabbed", false);
 
 		transform.SetParent (null);
 
 		_context.isGrabbed = false;
-		//_context.stateMachine.changeState<CharacterHuntState>();
 	}
 }

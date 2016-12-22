@@ -4,20 +4,12 @@ using UnityEngine;
 using Prime31.StateKit;
 
 public class CharacterHuntState : SKState<Character> {
-
-	//public List<string> targetTags = new List<string>();
-	//public string stealTag;
-	//public string attackTag;
-
+	
 	public float retargetInterval = 3f;
 	float lastRetarget;
 
 	public override void begin ()
 	{
-		/*if (stealTag != null && stealTag != "")
-			_context.Retarget(stealTag);
-		else
-			_context.Retarget(attackTag);*/
 		_context.Retarget();
 		lastRetarget = Time.time;
 	}
@@ -44,7 +36,7 @@ public class CharacterHuntState : SKState<Character> {
 		{
 			IGrabbable grab = other.GetComponent<IGrabbable>();
 			if (grab != null)
-				_context.AttemptToGrab(other.gameObject);
+				_context.AttemptToCarry(other.gameObject);
 			else
 			{
 				IDamagable fight = other.GetComponent<IDamagable>();
@@ -57,19 +49,5 @@ public class CharacterHuntState : SKState<Character> {
 			}
 		}
 
-		/*if (other.tag == stealTag)
-		{
-			_context.AttemptToGrab(other.gameObject);
-		}
-		if (other.tag == attackTag)
-		{
-			IDamagable d = other.GetComponent<IDamagable>();
-			if (d != null)
-			{
-				_context.attackState.attackTarget = d;
-				_machine.changeState<CharacterAttackState>();
-			}
-				//_context.Attack(d);
-		}*/
 	}
 }
