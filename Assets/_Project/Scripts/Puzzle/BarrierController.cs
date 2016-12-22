@@ -96,7 +96,7 @@ public class BarrierController : MonoBehaviour {
 			gameObject.layer = LayerMask.NameToLayer(barrierLayers[state]);
 		}
 		//TODO: animations
-		//TODO: test if tentacle is in when activated to cut it off
+		//TODO: test if tentacle is in when activated to cut it off?
 
 		OnChangeBarrier.Invoke();
 

@@ -6,17 +6,18 @@ using UnityEngine.AI;
 
 public class CharacterGrabbedState : SKState<Character> {
 
-	NavMeshAgent agent;
-	Rigidbody rb;
 	Animator anim;
-	Collider characterCollider;
+	NavMeshAgent agent;
+	//Rigidbody rb;
+	//Collider characterCollider;
 
 	public override void onInitialized ()
 	{
-		agent = GetComponent<NavMeshAgent>();
-		rb = GetComponent<Rigidbody>();
 		anim = _context.anim;
-		characterCollider = GetComponent<Collider>();
+		agent = GetComponent<NavMeshAgent>();
+		//rb = GetComponent<Rigidbody>();
+		//characterCollider = GetComponent<Collider>();
+		//Debug.Log(characterCollider);
 	}
 
 	public override void begin ()
@@ -30,16 +31,20 @@ public class CharacterGrabbedState : SKState<Character> {
 
 		Debug.Log ("Grabbed");
 		if (agent != null)
+		{
 			agent.Stop ();
+			agent.enabled = false;
+		}
 
-		if (rb != null)
-			rb.isKinematic = true;
+		//if (rb != null)
+		//	rb.isKinematic = true;
 
-		if (characterCollider != null)
-			characterCollider.enabled = false;
+		//if (characterCollider != null)
+		//	characterCollider.enabled = false;
 
 		if (anim != null)
 			anim.SetBool ("isGrabbed", true);
+
 
 		transform.position = _context.grabber.position;
 
@@ -49,8 +54,8 @@ public class CharacterGrabbedState : SKState<Character> {
 
 	public override void update (float deltaTime)
 	{
-		transform.position = Vector3.Lerp (transform.position, _context.grabber.position, 0.1f);
-
+		//transform.position = Vector3.Lerp (transform.position, _context.grabber.position, 0.1f);
+		transform.position = _context.grabber.position;
 		//if (!_context.isGrabbed)
 		//	_machine.changeState<CharacterHuntState>();
 	}
@@ -60,13 +65,16 @@ public class CharacterGrabbedState : SKState<Character> {
 		Debug.Log ("Released");
 
 		if (agent != null)
+		{
+			agent.enabled = true;
 			agent.Resume ();
+		}
 
-		if (rb != null)
-			rb.isKinematic = false;
+		//if (rb != null)
+		//	rb.isKinematic = false;
 
-		if (characterCollider != null)
-			characterCollider.enabled = true;
+		//if (characterCollider != null)
+		//	characterCollider.enabled = true;
 
 		if (anim != null)
 			anim.SetBool ("isGrabbed", false);

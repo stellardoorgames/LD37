@@ -133,13 +133,14 @@ public class Character : MonoBehaviour, IGrabbable {
 
 	public virtual void Wander()
 	{
+		float distance = 1f;
 		List<Vector3> wanderDirections = new List<Vector3> {
-			new Vector3(1f,0f,0f),
-			new Vector3(-1f,0f,0f),
-			new Vector3(0f,0f,1f),
-			new Vector3(0f,0f,-1f),
+			new Vector3(distance,0f,0f),
+			new Vector3(-distance,0f,0f),
+			new Vector3(0f,0f,distance),
+			new Vector3(0f,0f,-distance),
 		};
-
+		UnityEngine.Random.InitState((int)(Input.mousePosition.x + Input.mousePosition.y));
 		int dir = UnityEngine.Random.Range(0, 3);
 
 		agent.destination = wanderDirections[dir];
