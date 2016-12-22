@@ -7,9 +7,11 @@ public class CharacterHuntState : SKState<Character> {
 	
 	public float retargetInterval = 3f;
 	float lastRetarget;
+	bool isHunting = false;
 
 	public override void begin ()
 	{
+		isHunting = true;
 		_context.Retarget();
 		lastRetarget = Time.time;
 	}
@@ -25,14 +27,16 @@ public class CharacterHuntState : SKState<Character> {
 
 	public override void end ()
 	{
-		
+		isHunting = false;
 	}
+
 	protected virtual void OnTriggerEnter(Collider other)
 	{
+		//Debug.Log(enabled);
 		if (!enabled)
 			return;
 
-		if (other.tag == _context.currentTarget)
+		if (_context.targetTags.Contains(other.tag))
 		{
 			IGrabbable grab = other.GetComponent<IGrabbable>();
 			if (grab != null)
@@ -42,7 +46,9 @@ public class CharacterHuntState : SKState<Character> {
 				IDamagable fight = other.GetComponent<IDamagable>();
 				if (fight != null)
 				{
+					Debug.Log("Fight!");
 					_context.attackState.attackTarget = fight;
+					_context.attackState.attackTag = other.tag;
 					_machine.changeState<CharacterAttackState>();
 				}
 
@@ -50,4 +56,30 @@ public class CharacterHuntState : SKState<Character> {
 		}
 
 	}
+/*
+	protected virtual void OnTriggerStay(Collider other)
+	{
+		//Debug.Log(enabled);
+		if (!enabled)
+			return;
+
+		if (_context.targetTags.Contains(other.tag))
+		{
+			IGrabbable grab = other.GetComponent<IGrabbable>();
+			if (grab != null)
+				_context.AttemptToCarry(other.gameObject);
+			else
+			{
+				IDamagable fight = other.GetComponent<IDamagable>();
+				if (fight != null)
+				{
+					Debug.Log("Fight!");
+					_context.attackState.attackTarget = fight;
+					_machine.changeState<CharacterAttackState>();
+				}
+
+			}
+		}
+
+	}*/
 }

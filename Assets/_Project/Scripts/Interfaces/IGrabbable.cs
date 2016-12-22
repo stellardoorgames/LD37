@@ -13,5 +13,4 @@ public interface IGrabbable {
 	void Released ();
 	event Action OnEscaped;
 	float GetGrabRange(Vector3 grabber);
-	//Transform grabTransform {get; set;}
 }

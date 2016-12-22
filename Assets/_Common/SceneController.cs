@@ -95,20 +95,19 @@ namespace UnityCommon
 				Fader.FadeIn (fadeInColor, fadeInDuration);
 			}
 
-			float startTime = Time.time;
+			float startTime = Time.realtimeSinceStartup;
 			float endTime = startTime + fadeInDuration;
 
-			while (Time.time < endTime)
+			while (Time.realtimeSinceStartup < endTime)
 			{
 				yield return null;
 
 				if (fadeInAudio)
 				{
-					float t = Mathf.InverseLerp (startTime, endTime, Time.time);
+					float t = Mathf.InverseLerp (startTime, endTime, Time.realtimeSinceStartup);
 					AudioListener.volume = Mathf.Lerp (0f, previousVolume, t);
 				}
 			}
-
 		}
 
 		public static void ChangeScene(SceneField scene = null)

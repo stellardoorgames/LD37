@@ -37,7 +37,7 @@ public class Character : MonoBehaviour, IGrabbable {
 	public Transform grabTransform {get; set;}
 	public event Action OnEscaped;
 
-	public IGrabbable grabbedObject;
+	public IGrabbable carriedObject;
 
 	SKStateMachine<Character> stateMachine;
 
@@ -92,6 +92,9 @@ public class Character : MonoBehaviour, IGrabbable {
 		if (newTarget != null)
 			currentTarget = newTarget;
 
+		if (agent == null || !agent.isOnNavMesh)
+			return;
+
 		GameObject[] targets = null;
 
 
@@ -124,10 +127,18 @@ public class Character : MonoBehaviour, IGrabbable {
 		{
 			float d = Vector3.Distance (transform.position, go.transform.position);
 			if (d < dist)
+			{
+				dist = d;
 				target = go.transform;
+			}
 		}
-		if (agent != null && target != null)
+		if (target != null)
 			agent.destination = target.position;
+
+		if (!agent.hasPath)
+		{
+			Debug.Log("No Path, fix this");
+		}
 	}
 
 	public virtual void Wander()
@@ -182,7 +193,7 @@ public class Character : MonoBehaviour, IGrabbable {
 	{
 		if (isGrabbed == false)
 			return;
-	
+
 		if (!deathState.enabled)
 			stateMachine.changeState<CharacterHuntState>();
 	}
@@ -196,15 +207,19 @@ public class Character : MonoBehaviour, IGrabbable {
 
 	public void OnCarryRelease()
 	{
-		if (grabbedObject != null)
+		if (carriedObject != null)
 		{
-			grabbedObject.Released();
-			grabbedObject.OnEscaped -= OnCarryRelease;
+			carriedObject.Released();
+			carriedObject.OnEscaped -= OnCarryRelease;
 		}
 
-		grabbedObject = null;
+		carriedObject = null;
 
-		Retarget();
+		currentTarget = "";
+
+		//stateMachine.changeStateToPrevious();
+		//stateMachine.changeState<CharacterHuntState>();
+		//Retarget();
 	}
 
 	public void AttemptToCarry(GameObject go)
@@ -218,8 +233,8 @@ public class Character : MonoBehaviour, IGrabbable {
 			bool grabWorked = grabbable.Grabbed (transform);
 			if (grabWorked)
 			{
-				grabbedObject = grabbable;
-				grabbedObject.OnEscaped += OnCarryRelease;
+				carriedObject = grabbable;
+				carriedObject.OnEscaped += OnCarryRelease;
 				stateMachine.changeState<CharacterCarryState>();
 			}
 		}

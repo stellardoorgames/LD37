@@ -54,7 +54,7 @@ public class TenticleController : MonoBehaviour {
 
 		//spline.Refresh ();
 
-		if (playerController.totalTentacleLength > playerController.currentMaxTotalTentacleLength)
+		if (playerController.totalTentacleLength > playerController.currentMaxTotalTentacleLength && segment.PreviousControlPoint != null)
 		{
 			float dist1 = Vector3.Distance(lead.transform.position, segment.PreviousControlPoint.transform.position);
 			Vector3 movement = lead.GetMovement() + lead.transform.position;

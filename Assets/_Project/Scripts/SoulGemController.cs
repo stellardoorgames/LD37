@@ -10,4 +10,10 @@ public class SoulGemController : ItemController {
 
 	public GemType gemType;
 
+	void OnTriggerEnter(Collider other)
+	{
+		if (other.tag == "Exit")
+			Destroy();
+	}
+
 }

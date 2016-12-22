@@ -19,7 +19,7 @@ public class CharacterGrabbedState : SKState<Character> {
 	{
 		_context.isGrabbed = true;
 		
-		if (_context.grabbedObject != null)
+		if (_context.carriedObject != null)
 			_context.OnCarryRelease();
 
 		_context.GrabEscape();

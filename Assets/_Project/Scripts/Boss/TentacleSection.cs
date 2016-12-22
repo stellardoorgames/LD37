@@ -23,7 +23,7 @@ public class TentacleSection : MonoBehaviour, IDamagable {
 	public static TentacleSection Create(GameObject prefab, Transform target, CurvySplineSegment segment, TenticleController controller)
 	{
 		GameObject go = Instantiate (prefab);
-		go.transform.position = segment.PreviousControlPoint.transform.position;
+		go.transform.position = segment.transform.position; //segment.PreviousControlPoint.transform.position;
 		TentacleSection ts = go.GetComponent<TentacleSection> ();
 		ts.target = target;
 		ts.segment = segment;

@@ -13,7 +13,8 @@ public class CharacterAttackState : SKState<Character> {
 
 	[HideInInspector]
 	public IDamagable attackTarget;
-	string attackTag;
+	[HideInInspector]
+	public string attackTag;
 
 	Animator anim;
 	NavMeshAgent agent;
@@ -27,8 +28,8 @@ public class CharacterAttackState : SKState<Character> {
 
 	public override void begin ()
 	{
+		
 		anim.SetBool ("isAttacking", true);
-
 		agent.Stop ();
 
 	}
@@ -39,7 +40,7 @@ public class CharacterAttackState : SKState<Character> {
 
 		bool isTargetThere = false;
 		foreach (Collider c in colliders)
-			if (c.tag == _context.currentTarget)
+			if (c.tag == attackTag)
 				isTargetThere = true;
 		
 		if (!isTargetThere)
