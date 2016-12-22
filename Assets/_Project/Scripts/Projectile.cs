@@ -23,12 +23,12 @@ public class Projectile : MonoBehaviour {
         if (other.tag == targetTag)
         {
             Debug.LogError("Hit Target!");
-        // } else if (other.tag == "Wall") {    // stub for future wall collision code, if needed
+            Destroy(this.gameObject);
+            // } else if (other.tag == "Wall") {    // stub for future wall collision code, if needed
         } else {
             Debug.LogError("Hit something else");
         }
         // Instantiate (hitEffect, transform.position, Quaternion.identity);
-        Destroy(this.gameObject);
     }
 
 }

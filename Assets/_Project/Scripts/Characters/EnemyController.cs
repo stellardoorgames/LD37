@@ -48,15 +48,15 @@ public class EnemyController : Grabbable {
 	protected virtual void OnTriggerEnter(Collider other)
 	{
 
-		if (other.tag == "Lava")
-		{
-			//Animator anim = GetComponent<Animator> ();
-			//anim.Play ("Death");
-			Debug.Log ("Lava");
-            Instantiate(lavaDeathEffect, transform.position, Quaternion.identity);
+		//if (other.tag == "Lava")
+		//{
+		//	//Animator anim = GetComponent<Animator> ();
+		//	//anim.Play ("Death");
+		//	Debug.Log ("Lava");
+  //          Instantiate(lavaDeathEffect, transform.position, Quaternion.identity);
 
-            Death ();
-		}
+  //          Death ();
+		//}
 	}
 
 	public void Death()

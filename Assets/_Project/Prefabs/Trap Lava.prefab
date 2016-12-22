@@ -52,6 +52,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4254146875749702}
   - component: {fileID: 65336837621852838}
+  - component: {fileID: 114287490528249186}
   m_Layer: 8
   m_Name: Trap Lava
   m_TagString: Lava
@@ -406,3 +407,16 @@ Light:
   m_BounceIntensity: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114287490528249186
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1423506726666660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7c75eb131d6c6e4391f7dc0abdfa0dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lavaDeathEffect: {fileID: 1038803464642200, guid: 31d076bc109379645a681b46611c640c,
+    type: 2}

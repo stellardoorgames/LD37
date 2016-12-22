@@ -8,20 +8,25 @@ public class WizardController : EnemyController {
 
 	bool isAttacking;
 
+    public Transform castPoint;
     public Projectile fireballProjectile;
-    Transform target;
+    public Transform target;
 
 	protected override void OnTriggerEnter (Collider other)
 	{
 		base.OnTriggerEnter (other);
 
-		if (other.tag == targetTag)
-		{
-			Debug.Log ("Attack");
-			
+        if (other.tag == targetTag)
+        {
+            target = other.transform;
+            Debug.Log("Attack");
 
-
-			StartCoroutine (AttackCoroutine ());
+            if (!isAttacking) {
+                StartCoroutine(AttackCoroutine());
+            }
+            isAttacking = true;
+            Debug.LogWarning("STARTED A COROUTINE");
+            
 		}
 
 	}
@@ -30,15 +35,15 @@ public class WizardController : EnemyController {
 	{
 		base.Update ();
 
-		Collider[] colliders = Physics.OverlapSphere (transform.position, .5f);
-		bool isTentacle = false;
-        foreach (Collider c in colliders) {
-            if (c.tag == "Tentacle") {
-                isTentacle = true;
-                target = c.transform;
-            }
-        }
-		isAttacking = isTentacle;
+		//Collider[] colliders = Physics.OverlapSphere (transform.position, .5f);
+		//bool isTentacle = false;
+  //      foreach (Collider c in colliders) {
+  //          if (c.tag == "Tentacle") {
+  //              isTentacle = true;
+  //              //target = c.transform;
+  //          }
+  //      }
+		//isAttacking = isTentacle;
 	}
 
 	IEnumerator AttackCoroutine()
@@ -49,21 +54,25 @@ public class WizardController : EnemyController {
 
 		agent.Stop ();
 
-		while (isAttacking)
-		{
+        while (isAttacking) { 
+		//{
 			anim.SetTrigger ("Attack");
-            Projectile fireball = Instantiate(fireballProjectile, transform.position, Quaternion.identity);
+            Projectile fireball = Instantiate(fireballProjectile, castPoint.position, Quaternion.identity);
 
             fireball.targetTag = "Tentacle"; //TODO: This needs to be made modular
             fireball.target = target;
             fireball.speed = 1f;
 			
-			float nextAttackTime = Time.time + attackInterval;
-			
-			while (Time.time < nextAttackTime)
-				yield return null;
-			
-		}
+			//float nextAttackTime = Time.time + attackInterval;
+
+            //while (Time.time < nextAttackTime)
+            //{
+            //    yield return null;
+            //}
+
+            yield return new WaitForSeconds(attackInterval);
+
+        }
 
 		agent.Resume ();
 
