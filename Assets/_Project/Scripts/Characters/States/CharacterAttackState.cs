@@ -8,6 +8,7 @@ public class CharacterAttackState : SKState<Character> {
 
 	public float attackInterval = 1f;
 	public float damage = 1f;
+	public float attackRange = 1f;
 
 	float lastAttackTime;
 
@@ -34,22 +35,14 @@ public class CharacterAttackState : SKState<Character> {
 
 	public override void update (float deltaTime)
 	{
-		/*Collider[] colliders = Physics.OverlapSphere (transform.position, .5f);
-
-		bool isTargetThere = false;
-		foreach (Collider c in colliders)
-			if (c.tag == attackTag)
-				isTargetThere = true;
 		
-		if (!isTargetThere)
-			_machine.changeStateToPrevious();*/
-
-
-
 		if (Time.time >= lastAttackTime + attackInterval)
 		{
-			if (attackTarget == null)
+			if (attackTarget == null || Vector3.Distance(transform.position, attackTarget.transform.position) > attackRange)
+			{
 				_machine.changeState<CharacterHuntState>();
+				return;
+			}
 
 			anim.SetTrigger ("Attack");
 			
