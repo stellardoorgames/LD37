@@ -16836,7 +16836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackInterval: 1
   damage: 1
-  attackTag: 
+  attackTarget: {fileID: 0}
 --- !u!114 &114426017360544632
 MonoBehaviour:
   m_ObjectHideFlags: 1

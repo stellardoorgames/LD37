@@ -12,9 +12,7 @@ public class CharacterAttackState : SKState<Character> {
 	float lastAttackTime;
 
 	[HideInInspector]
-	public IDamagable attackTarget;
-	[HideInInspector]
-	public string attackTag;
+	public TentacleSection attackTarget;
 
 	Animator anim;
 	NavMeshAgent agent;
@@ -36,7 +34,7 @@ public class CharacterAttackState : SKState<Character> {
 
 	public override void update (float deltaTime)
 	{
-		Collider[] colliders = Physics.OverlapSphere (transform.position, .5f);
+		/*Collider[] colliders = Physics.OverlapSphere (transform.position, .5f);
 
 		bool isTargetThere = false;
 		foreach (Collider c in colliders)
@@ -44,12 +42,15 @@ public class CharacterAttackState : SKState<Character> {
 				isTargetThere = true;
 		
 		if (!isTargetThere)
-			_machine.changeStateToPrevious();
+			_machine.changeStateToPrevious();*/
 
 
 
 		if (Time.time >= lastAttackTime + attackInterval)
 		{
+			if (attackTarget == null)
+				_machine.changeState<CharacterHuntState>();
+
 			anim.SetTrigger ("Attack");
 			
 			attackTarget.TakeDamage(damage);

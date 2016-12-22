@@ -43,12 +43,11 @@ public class CharacterHuntState : SKState<Character> {
 				_context.AttemptToCarry(other.gameObject);
 			else
 			{
-				IDamagable fight = other.GetComponent<IDamagable>();
+				TentacleSection fight = other.GetComponent<TentacleSection>();
 				if (fight != null)
 				{
 					Debug.Log("Fight!");
 					_context.attackState.attackTarget = fight;
-					_context.attackState.attackTag = other.tag;
 					_machine.changeState<CharacterAttackState>();
 				}
 
