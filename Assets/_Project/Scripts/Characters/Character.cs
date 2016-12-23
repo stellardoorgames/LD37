@@ -7,7 +7,7 @@ using System;
 using Prime31.StateKit;
 
 
-public class Character : MonoBehaviour, IGrabbable {
+public class Character : MonoBehaviour {
 
 	public enum DeathTypes
 	{
@@ -26,7 +26,7 @@ public class Character : MonoBehaviour, IGrabbable {
 	[HideInInspector]
 	public NavMeshAgent agent;
 
-	[SerializeField]
+	/*[SerializeField]
 	float _grabRange = 1f;
 	public float grabRange {
 		get {return _grabRange;}
@@ -35,11 +35,11 @@ public class Character : MonoBehaviour, IGrabbable {
 	public bool isGrabbed {get; set;}
 	public Transform grabber {get; set;}
 	public Transform grabTransform {get; set;}
-	public event Action OnEscaped;
+	public event Action OnEscaped;*/
 
-	public IGrabbable carriedObject;
+	public Grabbable carriedObject;
 
-	SKStateMachine<Character> stateMachine;
+	public SKStateMachine<Character> stateMachine;
 
 	[HideInInspector]
 	public CharacterSpawnState spawnState;
@@ -172,12 +172,12 @@ public class Character : MonoBehaviour, IGrabbable {
 		Destroy (gameObject);
 	}
 
-	public float GetGrabRange(Vector3 grabberPosition)
+	/*public float GetGrabRange(Vector3 grabberPosition)
 	{
 		return Vector3.Distance(grabberPosition, transform.position);
-	}
+	}*/
 
-	public virtual bool Grabbed(Transform grabber)
+	/*public virtual bool Grabbed(Transform grabber)
 	{
 		if (deathState.enabled)
 			return false;
@@ -187,23 +187,23 @@ public class Character : MonoBehaviour, IGrabbable {
 		stateMachine.changeState<CharacterGrabbedState>();
 		
 		return true;
-	}
+	}*/
 
-	public virtual void Released()
+	/*public virtual void Released()
 	{
 		if (isGrabbed == false)
 			return;
 
 		if (!deathState.enabled)
 			stateMachine.changeState<CharacterHuntState>();
-	}
+	}*/
 
-	public void GrabEscape()
+	/*public void GrabEscape()
 	{
 		if (OnEscaped != null)
 			OnEscaped();
 		
-	}
+	}*/
 
 	public void OnCarryRelease()
 	{
@@ -227,7 +227,7 @@ public class Character : MonoBehaviour, IGrabbable {
 		if (deathState.enabled)
 			return;
 		
-		IGrabbable grabbable = go.GetComponent<IGrabbable>();
+		Grabbable grabbable = go.GetComponent<Grabbable>();
 		if (grabbable != null)
 		{
 			bool grabWorked = grabbable.Grabbed (transform);

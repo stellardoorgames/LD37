@@ -14,7 +14,7 @@ public class TentacleTrigger : MonoBehaviour {
 		{
 			SoulGemController gem = other.GetComponent<SoulGemController>();
 
-			if (gem != null && gem.isGrabbed && OnEatSoul != null)
+			if (gem != null && OnEatSoul != null)
 				OnEatSoul(gem);
 			
 		}

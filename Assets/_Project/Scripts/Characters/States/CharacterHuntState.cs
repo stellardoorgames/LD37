@@ -38,9 +38,9 @@ public class CharacterHuntState : SKState<Character> {
 
 		if (_context.targetTags.Contains(other.tag))
 		{
-			IGrabbable grab = other.GetComponent<IGrabbable>();
+			Grabbable grab = other.GetComponent<Grabbable>();
 			if (grab != null)
-				_context.AttemptToCarry(other.gameObject);
+				_context.AttemptToCarry(other.gameObject); //TODO: check if this can be Grabbable
 			else
 			{
 				TentacleSection fight = other.GetComponent<TentacleSection>();

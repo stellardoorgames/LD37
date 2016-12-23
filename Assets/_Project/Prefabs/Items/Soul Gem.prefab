@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4240526564547246}
   - component: {fileID: 135598727661542232}
   - component: {fileID: 114810752747984718}
+  - component: {fileID: 114752386452299072}
   m_Layer: 0
   m_Name: Soul Gem
   m_TagString: SoulGem
@@ -110,6 +111,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1940730334835186}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114752386452299072
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1803453541596278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c3d696565df2f94dafd6e89dfc5d0c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabRange: 1
+  isGrabbed: 0
+  grabber: {fileID: 0}
 --- !u!114 &114810752747984718
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -121,7 +136,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f9d0b5350b62f84394350acbd9589cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _grabRange: 1
   gemType: 0
 --- !u!135 &135598727661542232
 SphereCollider:

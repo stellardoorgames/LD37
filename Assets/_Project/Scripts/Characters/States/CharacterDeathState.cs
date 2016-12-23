@@ -18,15 +18,18 @@ public class CharacterDeathState : SKState<Character> {
 	Animator anim;
 	NavMeshAgent agent;
 
+	Grabbable grabbable;
+
 	public override void onInitialized ()
 	{
 		anim = _context.anim;
 		agent = GetComponent<NavMeshAgent>();
+		grabbable = GetComponent<Grabbable>();
 	}
 
 	public override void begin ()
 	{
-		_context.GrabEscape();
+		grabbable.EscapedEvent();
 
 		if (deathType == Character.DeathTypes.Lava)
 			Instantiate(lavaDeathEffect, transform.position, Quaternion.identity);

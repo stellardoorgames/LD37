@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class ItemController : MonoBehaviour, IGrabbable {
+public class ItemController : MonoBehaviour {
 
 	Rigidbody rb;
 	Animator anim;
 	Collider itemCollider;
 
-	[SerializeField]
+	/*[SerializeField]
 	float _grabRange = 1f;
 	public float grabRange {
 		get {return _grabRange;}
@@ -18,14 +18,14 @@ public class ItemController : MonoBehaviour, IGrabbable {
 	public bool isGrabbed {get; set;}
 	public Transform grabber {get; set;}
 	public Transform grabTransform {get; set;}
-	public event Action OnEscaped;
+	public event Action OnEscaped;*/
 
 	public float GetGrabRange(Vector3 grabberPosition)
 	{
 		return Vector3.Distance(grabberPosition, transform.position);
 	}
 
-	public virtual bool Grabbed(Transform grabber)
+	/*public virtual bool Grabbed(Transform grabber)
 	{
 		if (OnEscaped != null)
 			OnEscaped();
@@ -79,12 +79,15 @@ public class ItemController : MonoBehaviour, IGrabbable {
 			anim.SetBool ("isGrabbed", false);
 
 		transform.SetParent (null);
-	}
+	}*/
 
 	public virtual void Destroy()
 	{
-		if (OnEscaped != null)
-			OnEscaped();
+		Grabbable g = GetComponent<Grabbable>();
+		if (g != null)
+			g.EscapedEvent();
+		//if (OnEscaped != null)
+		//	OnEscaped();
 
 		Destroy(gameObject);
 	}

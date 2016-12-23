@@ -11,7 +11,7 @@ public class TenticleLead : MonoBehaviour {
 
 	public bool isActive = false;
 
-	IGrabbable carryingObject;
+	Grabbable carryingObject;
 
 	Projector projector;
 
@@ -62,23 +62,23 @@ public class TenticleLead : MonoBehaviour {
 					Collider[] colliders = Physics.OverlapSphere (transform.position, 1f);
 					if (colliders.Length > 0)
 					{
-						IGrabbable grabbedObject = null;
+						Grabbable grabbedObject = null;
 						foreach (Collider c in colliders)
 						{
 							if (c.tag == "Enemy")
-								grabbedObject = c.GetComponent<IGrabbable>();
+								grabbedObject = c.GetComponent<Grabbable>();
 						}
 						foreach (Collider c in colliders)
 						{
 							if (c.tag == "SoulGem")
-								grabbedObject = c.GetComponent<IGrabbable>();
+								grabbedObject = c.GetComponent<Grabbable>();
 						}
 
 						if (grabbedObject == null)
 						{
 							foreach (Collider c in colliders)
 							{
-								grabbedObject = c.GetComponent<IGrabbable>();
+								grabbedObject = c.GetComponent<Grabbable>();
 								if (grabbedObject != null)
 									break;
 							}
@@ -110,7 +110,7 @@ public class TenticleLead : MonoBehaviour {
 		}
 	}
 
-	void AttemptToGrab(IGrabbable grabbable)
+	void AttemptToGrab(Grabbable grabbable)
 	{
 		bool grabWorked = grabbable.Grabbed (transform);
 		if (grabWorked)

@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4783683724437340}
   - component: {fileID: 65815982575988572}
   - component: {fileID: 114413682505822334}
+  - component: {fileID: 114648102656544498}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -153,3 +154,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupEffect: {fileID: 1560895730617214, guid: 139da6c8c21524944bc804f371f33b25,
     type: 2}
+--- !u!114 &114648102656544498
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1905404070122812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c3d696565df2f94dafd6e89dfc5d0c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabRange: 1
+  isGrabbed: 0
+  grabber: {fileID: 0}

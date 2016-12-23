@@ -8,26 +8,29 @@ public class CharacterGrabbedState : SKState<Character> {
 
 	Animator anim;
 	NavMeshAgent agent;
+	Grabbable grabbable;
 
 	public override void onInitialized ()
 	{
 		anim = _context.anim;
 		agent = GetComponent<NavMeshAgent>();
+		grabbable = GetComponent<Grabbable>();
 	}
 
 	public override void begin ()
 	{
-		_context.isGrabbed = true;
+		grabbable.isGrabbed = true;
 		
 		if (_context.carriedObject != null)
 			_context.OnCarryRelease();
 
-		_context.GrabEscape();
+		grabbable.EscapedEvent(); //_context.GrabEscape();
 
 		Debug.Log ("Grabbed");
 		if (agent != null)
 		{
-			agent.Stop ();
+			if (agent.isOnNavMesh)
+				agent.Stop ();
 			agent.enabled = false;
 		}
 
@@ -35,16 +38,16 @@ public class CharacterGrabbedState : SKState<Character> {
 			anim.SetBool ("isGrabbed", true);
 
 
-		transform.position = _context.grabber.position;
+		transform.position = grabbable.grabber.position;
 
-		transform.SetParent (_context.grabber);
+		transform.SetParent (grabbable.grabber);
 
 	}
 
 	public override void update (float deltaTime)
 	{
 		//transform.position = Vector3.Lerp (transform.position, _context.grabber.position, 0.1f);
-		transform.position = _context.grabber.position;
+		transform.position = grabbable.grabber.position;
 	}
 
 	public override void end ()
@@ -54,7 +57,8 @@ public class CharacterGrabbedState : SKState<Character> {
 		if (agent != null)
 		{
 			agent.enabled = true;
-			agent.Resume ();
+			if (agent.isOnNavMesh)
+				agent.Resume ();
 		}
 
 		if (anim != null)
@@ -62,6 +66,6 @@ public class CharacterGrabbedState : SKState<Character> {
 
 		transform.SetParent (null);
 
-		_context.isGrabbed = false;
+		grabbable.isGrabbed = false;
 	}
 }

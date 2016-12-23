@@ -5185,6 +5185,7 @@ GameObject:
   - component: {fileID: 114426017360544632}
   - component: {fileID: 114298528269174422}
   - component: {fileID: 114545808982212804}
+  - component: {fileID: 114589858387281530}
   m_Layer: 0
   m_Name: EnemyKnight
   m_TagString: Enemy
@@ -16804,7 +16805,7 @@ MonoBehaviour:
   text: {fileID: 0}
   anim: {fileID: 95481908306019208}
   agent: {fileID: 0}
-  _grabRange: 1
+  carriedObject: {fileID: 0}
   spawnState: {fileID: 0}
   huntState: {fileID: 0}
   attackState: {fileID: 0}
@@ -16867,6 +16868,20 @@ MonoBehaviour:
   soulGemPrefab: {fileID: 1803453541596278, guid: 30ee4ca92a34f67489c144b69435d709,
     type: 2}
   deathType: 0
+--- !u!114 &114589858387281530
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1643498522182676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1939181d54b51d74e83bfe205a101450, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabRange: 1
+  isGrabbed: 0
+  grabber: {fileID: 0}
 --- !u!114 &114837903237553900
 MonoBehaviour:
   m_ObjectHideFlags: 1

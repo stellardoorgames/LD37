@@ -1468,6 +1468,7 @@ GameObject:
   - component: {fileID: 114072797524526624}
   - component: {fileID: 114754157604020644}
   - component: {fileID: 114368701343212978}
+  - component: {fileID: 114812752923805948}
   m_Layer: 0
   m_Name: EnemyThief
   m_TagString: Enemy
@@ -16931,6 +16932,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackInterval: 1
   damage: 1
+  attackRange: 1
+  attackTarget: {fileID: 0}
 --- !u!114 &114160973489879966
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16948,7 +16951,6 @@ MonoBehaviour:
   text: {fileID: 0}
   anim: {fileID: 95307860893498988}
   agent: {fileID: 0}
-  _grabRange: 1
   spawnState: {fileID: 0}
   huntState: {fileID: 0}
   attackState: {fileID: 0}
@@ -17053,6 +17055,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64becf96bf4bb4f40a0169307956ffcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114812752923805948
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1155810576341148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1939181d54b51d74e83bfe205a101450, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabRange: 1
+  isGrabbed: 0
+  grabber: {fileID: 0}
 --- !u!114 &114870470701053876
 MonoBehaviour:
   m_ObjectHideFlags: 1
