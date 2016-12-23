@@ -16805,7 +16805,6 @@ MonoBehaviour:
   text: {fileID: 0}
   anim: {fileID: 95481908306019208}
   agent: {fileID: 0}
-  carriedObject: {fileID: 0}
   spawnState: {fileID: 0}
   huntState: {fileID: 0}
   attackState: {fileID: 0}
@@ -16851,6 +16850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carryDestination: Exit
+  carriedObject: {fileID: 0}
 --- !u!114 &114545808982212804
 MonoBehaviour:
   m_ObjectHideFlags: 1

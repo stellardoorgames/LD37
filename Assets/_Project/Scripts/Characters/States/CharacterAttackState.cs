@@ -12,8 +12,8 @@ public class CharacterAttackState : SKState<Character> {
 
 	float lastAttackTime;
 
-	[HideInInspector]
-	public TentacleSection attackTarget;
+	//[HideInInspector]
+	Damagable attackTarget;
 
 	Animator anim;
 	NavMeshAgent agent;
@@ -25,9 +25,15 @@ public class CharacterAttackState : SKState<Character> {
 		//attackTag = GetComponent<CharacterHuntState>().attackTag;
 	}
 
+	public void StartAttack(Damagable target)
+	{
+		attackTarget = target;
+		_machine.changeState<CharacterAttackState>();
+	}
+
 	public override void begin ()
 	{
-		
+		Debug.Log("Fight!");
 		anim.SetBool ("isAttacking", true);
 		agent.Stop ();
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using FluffyUnderware.Curvy;
 
-public class TentacleSection : MonoBehaviour, IDamagable {
+public class TentacleSection : MonoBehaviour {
 
 	public float distanceMultiplier = 0.5f;
 	public Transform target;
@@ -64,8 +64,8 @@ public class TentacleSection : MonoBehaviour, IDamagable {
 
 	}
 
-	public void TakeDamage(float damage)
+	/*public void TakeDamage(float damage)
 	{
 		controller.TakeDamage();
-	}
+	}*/
 }

@@ -26,18 +26,7 @@ public class Character : MonoBehaviour {
 	[HideInInspector]
 	public NavMeshAgent agent;
 
-	/*[SerializeField]
-	float _grabRange = 1f;
-	public float grabRange {
-		get {return _grabRange;}
-		set {_grabRange = value;}
-	}
-	public bool isGrabbed {get; set;}
-	public Transform grabber {get; set;}
-	public Transform grabTransform {get; set;}
-	public event Action OnEscaped;*/
-
-	public Grabbable carriedObject;
+	//public Grabbable carriedObject;
 
 	public SKStateMachine<Character> stateMachine;
 
@@ -172,40 +161,7 @@ public class Character : MonoBehaviour {
 		Destroy (gameObject);
 	}
 
-	/*public float GetGrabRange(Vector3 grabberPosition)
-	{
-		return Vector3.Distance(grabberPosition, transform.position);
-	}*/
-
-	/*public virtual bool Grabbed(Transform grabber)
-	{
-		if (deathState.enabled)
-			return false;
-		
-		this.grabber = grabber;
-
-		stateMachine.changeState<CharacterGrabbedState>();
-		
-		return true;
-	}*/
-
-	/*public virtual void Released()
-	{
-		if (isGrabbed == false)
-			return;
-
-		if (!deathState.enabled)
-			stateMachine.changeState<CharacterHuntState>();
-	}*/
-
-	/*public void GrabEscape()
-	{
-		if (OnEscaped != null)
-			OnEscaped();
-		
-	}*/
-
-	public void OnCarryRelease()
+	/*public void OnCarryRelease()
 	{
 		if (carriedObject != null)
 		{
@@ -220,13 +176,10 @@ public class Character : MonoBehaviour {
 		//stateMachine.changeStateToPrevious();
 		//stateMachine.changeState<CharacterHuntState>();
 		//Retarget();
-	}
+	}*/
 
-	public void AttemptToCarry(GameObject go)
+	/*public void AttemptToCarry(GameObject go)
 	{
-		if (deathState.enabled)
-			return;
-		
 		Grabbable grabbable = go.GetComponent<Grabbable>();
 		if (grabbable != null)
 		{
@@ -238,5 +191,5 @@ public class Character : MonoBehaviour {
 				stateMachine.changeState<CharacterCarryState>();
 			}
 		}
-	}
+	}*/
 }

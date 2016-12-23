@@ -21,10 +21,11 @@ public class CharacterGrabbedState : SKState<Character> {
 	{
 		grabbable.isGrabbed = true;
 		
-		if (_context.carriedObject != null)
-			_context.OnCarryRelease();
+		//if (_context.carryState.carriedObject != null)
+		//	_context.carryState.OnCarryRelease();
 
-		grabbable.EscapedEvent(); //_context.GrabEscape();
+		//If the character is being grabbed away from another grabber? Right now that won't happen
+		//grabbable.EscapedEvent();
 
 		Debug.Log ("Grabbed");
 		if (agent != null)
