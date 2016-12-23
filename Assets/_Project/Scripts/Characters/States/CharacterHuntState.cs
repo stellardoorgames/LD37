@@ -7,11 +7,9 @@ public class CharacterHuntState : SKState<Character> {
 	
 	public float retargetInterval = 3f;
 	float lastRetarget;
-	//bool isHunting = false;
 
 	public override void begin ()
 	{
-		//isHunting = true;
 		_context.Retarget();
 		lastRetarget = Time.time;
 	}
@@ -27,12 +25,10 @@ public class CharacterHuntState : SKState<Character> {
 
 	public override void end ()
 	{
-		//isHunting = false;
 	}
 
 	protected virtual void OnTriggerEnter(Collider other)
 	{
-		//Debug.Log(enabled);
 		if (!enabled)
 			return;
 
@@ -40,62 +36,15 @@ public class CharacterHuntState : SKState<Character> {
 		{
 			Grabbable grab = other.GetComponent<Grabbable>();
 			if (grab != null)
-				AttemptToCarry(other.gameObject); //TODO: check if this can be Grabbable
+				_context.carryState.StartCarry(grab);
 			else
 			{
-				Damagable fight = other.GetComponent<Damagable>();
+				Damageable fight = other.GetComponent<Damageable>();
 				if (fight != null)
 					_context.attackState.StartAttack(fight);
-				/*{
-					Debug.Log("Fight!");
-					_context.attackState.attackTarget = fight;
-					_machine.changeState<CharacterAttackState>();
-				}*/
-
 			}
 		}
 
 	}
 
-	public void AttemptToCarry(GameObject go)
-	{
-		Grabbable grabbable = go.GetComponent<Grabbable>();
-		if (grabbable != null)
-		{
-			bool grabWorked = grabbable.Grabbed (transform);
-			if (grabWorked)
-			{
-				_context.carryState.StartCarry(grabbable);
-				//carriedObject = grabbable;
-
-				//_machine.changeState<CharacterCarryState>();
-			}
-		}
-	}
-/*
-	protected virtual void OnTriggerStay(Collider other)
-	{
-		//Debug.Log(enabled);
-		if (!enabled)
-			return;
-
-		if (_context.targetTags.Contains(other.tag))
-		{
-			IGrabbable grab = other.GetComponent<IGrabbable>();
-			if (grab != null)
-				_context.AttemptToCarry(other.gameObject);
-			else
-			{
-				IDamagable fight = other.GetComponent<IDamagable>();
-				if (fight != null)
-				{
-					Debug.Log("Fight!");
-					_context.attackState.attackTarget = fight;
-					_machine.changeState<CharacterAttackState>();
-				}
-
-			}
-		}
-
-	}*/
 }

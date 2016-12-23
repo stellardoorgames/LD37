@@ -11,8 +11,13 @@ public class CharacterCarryState : SKState<Character> {
 	
 	public void StartCarry(Grabbable grabbable)
 	{
-		carriedObject = grabbable;
-		_machine.changeState<CharacterCarryState>();
+		bool canGrab = grabbable.Grabbed(transform);
+
+		if (canGrab)
+		{
+			carriedObject = grabbable;
+			_machine.changeState<CharacterCarryState>();
+		}
 	}
 
 	public override void begin ()
@@ -23,8 +28,6 @@ public class CharacterCarryState : SKState<Character> {
 
 	public override void update (float deltaTime)
 	{
-		//if (_context.carriedObject == null)
-		//	_machine.changeState<CharacterHuntState>();
 	}
 
 	public override void end ()

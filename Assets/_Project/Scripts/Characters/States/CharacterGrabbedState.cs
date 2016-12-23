@@ -20,9 +20,6 @@ public class CharacterGrabbedState : SKState<Character> {
 	public override void begin ()
 	{
 		grabbable.isGrabbed = true;
-		
-		//if (_context.carryState.carriedObject != null)
-		//	_context.carryState.OnCarryRelease();
 
 		//If the character is being grabbed away from another grabber? Right now that won't happen
 		//grabbable.EscapedEvent();

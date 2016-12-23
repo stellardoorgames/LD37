@@ -26,8 +26,6 @@ public class Character : MonoBehaviour {
 	[HideInInspector]
 	public NavMeshAgent agent;
 
-	//public Grabbable carriedObject;
-
 	public SKStateMachine<Character> stateMachine;
 
 	[HideInInspector]
@@ -152,44 +150,12 @@ public class Character : MonoBehaviour {
 		if (deathState.enabled)
 			return;
 
-		deathState.deathType = deathType;
-		stateMachine.changeState<CharacterDeathState>();
-
+		deathState.StartDeath(deathType);
 	}
+
 	public void Destroy()
 	{
 		Destroy (gameObject);
 	}
 
-	/*public void OnCarryRelease()
-	{
-		if (carriedObject != null)
-		{
-			carriedObject.Released();
-			carriedObject.OnEscaped -= OnCarryRelease;
-		}
-
-		carriedObject = null;
-
-		currentTarget = "";
-
-		//stateMachine.changeStateToPrevious();
-		//stateMachine.changeState<CharacterHuntState>();
-		//Retarget();
-	}*/
-
-	/*public void AttemptToCarry(GameObject go)
-	{
-		Grabbable grabbable = go.GetComponent<Grabbable>();
-		if (grabbable != null)
-		{
-			bool grabWorked = grabbable.Grabbed (transform);
-			if (grabWorked)
-			{
-				carriedObject = grabbable;
-				carriedObject.OnEscaped += OnCarryRelease;
-				stateMachine.changeState<CharacterCarryState>();
-			}
-		}
-	}*/
 }

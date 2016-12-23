@@ -16837,7 +16837,6 @@ MonoBehaviour:
   attackInterval: 1
   damage: 1
   attackRange: 1
-  attackTarget: {fileID: 0}
 --- !u!114 &114426017360544632
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16850,7 +16849,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carryDestination: Exit
-  carriedObject: {fileID: 0}
 --- !u!114 &114545808982212804
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16867,7 +16865,6 @@ MonoBehaviour:
     type: 2}
   soulGemPrefab: {fileID: 1803453541596278, guid: 30ee4ca92a34f67489c144b69435d709,
     type: 2}
-  deathType: 0
 --- !u!114 &114589858387281530
 MonoBehaviour:
   m_ObjectHideFlags: 1

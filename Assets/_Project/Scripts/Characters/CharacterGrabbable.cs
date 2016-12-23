@@ -16,9 +16,6 @@ public class CharacterGrabbable : Grabbable {
 		if (character.deathState.enabled)
 			return false;
 
-		//if (character.carryState.carriedObject != null)
-		//	_context.carryState.OnCarryRelease();
-		
 		this.grabber = grabber;
 
 		character.stateMachine.changeState<CharacterGrabbedState>();

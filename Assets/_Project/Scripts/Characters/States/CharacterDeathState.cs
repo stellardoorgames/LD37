@@ -10,8 +10,7 @@ public class CharacterDeathState : SKState<Character> {
 	public GameObject lavaDeathEffect;
 	public GameObject soulGemPrefab;
 
-	[HideInInspector]
-	public Character.DeathTypes deathType;
+	Character.DeathTypes deathType;
 
 	float startTime;
 
@@ -25,6 +24,12 @@ public class CharacterDeathState : SKState<Character> {
 		anim = _context.anim;
 		agent = GetComponent<NavMeshAgent>();
 		grabbable = GetComponent<Grabbable>();
+	}
+
+	public void StartDeath(Character.DeathTypes deathType)
+	{
+		this.deathType = deathType;
+		_machine.changeState<CharacterDeathState>();
 	}
 
 	public override void begin ()

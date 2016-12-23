@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Damagable : MonoBehaviour {
+public abstract class Damageable : MonoBehaviour {
 
 	public abstract void TakeDamage(float damageAmount);
 

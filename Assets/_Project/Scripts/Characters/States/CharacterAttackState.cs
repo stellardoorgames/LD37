@@ -12,8 +12,7 @@ public class CharacterAttackState : SKState<Character> {
 
 	float lastAttackTime;
 
-	//[HideInInspector]
-	Damagable attackTarget;
+	Damageable attackTarget;
 
 	Animator anim;
 	NavMeshAgent agent;
@@ -22,10 +21,9 @@ public class CharacterAttackState : SKState<Character> {
 	{
 		agent = GetComponent<NavMeshAgent>();
 		anim = _context.anim;
-		//attackTag = GetComponent<CharacterHuntState>().attackTag;
 	}
 
-	public void StartAttack(Damagable target)
+	public void StartAttack(Damageable target)
 	{
 		attackTarget = target;
 		_machine.changeState<CharacterAttackState>();

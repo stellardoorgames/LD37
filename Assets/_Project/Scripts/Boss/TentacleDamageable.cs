@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TentacleDamagable : Damagable {
+public class TentacleDamageable : Damageable {
 
 	TentacleSection section;
 
