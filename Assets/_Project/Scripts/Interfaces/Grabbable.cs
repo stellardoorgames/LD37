@@ -19,9 +19,4 @@ public abstract class Grabbable : MonoBehaviour {
 		if (OnEscaped != null)
 			OnEscaped();
 	}
-
-	/*abstract float grabRange {get; set;}
-	abstract bool isGrabbed {get; set;}
-	abstract Transform grabber {get; set;}
-	abstract float GetGrabRange(Vector3 grabber);*/
 }

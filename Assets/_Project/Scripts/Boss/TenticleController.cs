@@ -8,7 +8,6 @@ public class TenticleController : MonoBehaviour {
 
 	public TenticleLead lead;
 	public PlayerController playerController;
-	//public Transform target;
 
 	public CurvySpline spline;
 
