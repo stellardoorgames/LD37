@@ -10,16 +10,12 @@ public class PrincessController : Character {
 	}
 
 
-	protected virtual void OnTriggerEnter(Collider other)
+	protected override void OnTriggerEnter(Collider other)
 	{
-		if (other.tag == "Lava")
-		{
-			Debug.Log ("Lava");
-			Death (DeathTypes.Lava);
-		}
-
 		if (other.tag == "Exit")
 			LevelManager.LoseLevel ();
+
+		base.OnTriggerEnter(other);
 	}
 
 	public override void Death(Character.DeathTypes deathType)

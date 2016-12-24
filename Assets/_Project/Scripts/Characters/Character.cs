@@ -18,6 +18,8 @@ public class Character : MonoBehaviour {
 	public List<string> targetTags = new List<string>();
 	public string currentTarget;
 
+	public List<string> vulnerabilities = new List<string>();
+
 	public Text text;
 
 	Transform target;
@@ -144,6 +146,15 @@ public class Character : MonoBehaviour {
 
 	}
 
+	protected virtual void OnTriggerEnter(Collider other)
+	{
+		if (vulnerabilities.Contains(other.tag))
+		{
+			Debug.Log (string.Format("{0} died from {1}.", name, other.tag));
+			Death (DeathTypes.Lava);
+		}
+
+	}
 
 	public virtual void Death(DeathTypes deathType)
 	{

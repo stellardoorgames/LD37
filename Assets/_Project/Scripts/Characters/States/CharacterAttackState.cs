@@ -31,7 +31,7 @@ public class CharacterAttackState : SKState<Character> {
 
 	public override void begin ()
 	{
-		Debug.Log("Fight!");
+		Debug.Log(string.Format("{0} is attacking {1}.", name, attackTarget));
 		anim.SetBool ("isAttacking", true);
 		agent.Stop ();
 

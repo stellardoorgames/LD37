@@ -16802,6 +16802,8 @@ MonoBehaviour:
   - Princess
   - Tentacle
   currentTarget: 
+  vulnerabilities:
+  - Lava
   text: {fileID: 0}
   anim: {fileID: 95481908306019208}
   agent: {fileID: 0}
