@@ -148,9 +148,10 @@ public class TenticleController : MonoBehaviour {
 
 	}
 
-	void Retract()
+	public void Retract(float speed = 0.3f)
 	{
-		StartCoroutine(RetractCoroutine(0.5f));
+		if (!isRetracting)
+			StartCoroutine(RetractCoroutine(speed));
 	}
 
 	IEnumerator RetractCoroutine(float duration)
@@ -160,9 +161,9 @@ public class TenticleController : MonoBehaviour {
 
 		isRetracting = true;
 
-		Vector3 newPosition = segment.PreviousControlPoint.transform.position;
-		tentacleSectionList[tentacleSectionList.Count - 2].Remove();
-		tentacleSectionList.RemoveAt(tentacleSectionList.Count - 2);
+		Vector3 newPosition = tentacleSectionList[tentacleSectionList.Count - 1].transform.position;//segment.PreviousControlPoint.transform.position;
+		tentacleSectionList[tentacleSectionList.Count - 1].Remove();
+		tentacleSectionList.RemoveAt(tentacleSectionList.Count - 1);
 
 
 		float startTime = Time.time;

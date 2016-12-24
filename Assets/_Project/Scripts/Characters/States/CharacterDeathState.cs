@@ -43,7 +43,7 @@ public class CharacterDeathState : SKState<Character> {
 
 		LevelManager.AddKill ();
 		
-		_context.anim.SetTrigger("Death");
+		anim.SetTrigger("Death");
 
 		startTime = Time.time;
 	}
