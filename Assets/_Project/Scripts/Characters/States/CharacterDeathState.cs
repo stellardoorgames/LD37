@@ -34,6 +34,8 @@ public class CharacterDeathState : SKState<Character> {
 
 	public override void begin ()
 	{
+		tag = "Untagged";
+
 		grabbable.EscapedEvent();
 
 		if (deathType == Character.DeathTypes.Lava)

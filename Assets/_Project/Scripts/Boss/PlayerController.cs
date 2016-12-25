@@ -13,12 +13,11 @@ public class PlayerController : MonoBehaviour {
 	public List<TenticleController> tentacles = new List<TenticleController>();
 	public List<ButtonNames> tentacleButtonNames = new List<ButtonNames>();
 	List<Buttons> tentacleButtons = new List<Buttons>();
+	public List<TentacleTrigger> tentacleTriggers = new List<TentacleTrigger>();
 
-
-	//public List<Image> tentacleBarImages = new List<Image>();
-	public float startingMaxTotalTentacleLength = 20f;
-	public float currentMaxTotalTentacleLength = 20f;
-	public float maxMaxTotalTentacleLength = 80f;
+	public float startingMaxLength = 20f;
+	public float currentMaxLength = 20f;
+	public float maxMaxLength = 80f;
 	public float addToMaxLengthPerSoul = 10f;
 	public float currentTotalTentacleLength;
 	public float totalTentacleLength{
@@ -36,10 +35,11 @@ public class PlayerController : MonoBehaviour {
 	TenticleLead activeTentacle;
 	List<TenticleLead> tentacleLeads;
 
-	public List<TentacleTrigger> tentacleTriggers = new List<TentacleTrigger>();
+	UITentacleLength lengthUI;
+
 
 	public UnityEvent OnDeath;
-	public UnityEvent OnFinish;
+	//public UnityEvent OnFinish;
 
 	void Start () 
 	{
@@ -55,12 +55,12 @@ public class PlayerController : MonoBehaviour {
 		activeTentacle.Activate(true);
 
 		foreach(TentacleTrigger tt in tentacleTriggers)
-		{
 			tt.OnEatSoul += OnEatSoul;
-		}
-
+		
 		foreach(ButtonNames n in tentacleButtonNames)
 			tentacleButtons.Add(Buttons.CreateButton(n));
+
+		lengthUI = GetComponent<UITentacleLength>();
 	}
 	
 	// Update is called once per frame
@@ -98,63 +98,48 @@ public class PlayerController : MonoBehaviour {
 		
 		//if (Input.GetButtonDown ("North"))
 		//	activeTenticleIndex = 2;
-/*
-		float percent = 0f;
-		for(int i = 0; i < tentacleBarImages.Count; i++)
-		{
-			percent += (tentacles[i].tentacleLength - 2.5f) / (currentMaxTotalTentacleLength - 7.5f);
-			tentacleBarImages[i].material.SetFloat("_Progress", percent);
-			
-		}*/
+
 	}
 
 	public float GetTotalTentacleLength()
 	{
-		float len = 0;
+		float length = 0;
 		foreach (TenticleController tc in tentacles)
-			len += tc.tentacleLength;
-		return len;
+			length += tc.tentacleLength;
+		return length;
 	}
 
 	void SwitchTenticles(int index)
 	{
 		foreach(TenticleLead tc in tentacleLeads)
-		{
 			tc.Activate(false);
-		}
-
+		
 		tentacleLeads [index].Activate(true);
 	}
 
 	public void OnEatSoul(SoulGemController gem)
 	{
-		StartCoroutine(ExtendLength(addToMaxLengthPerSoul, 1f));
-		StartCoroutine(GetComponent<UITentacleLength>().ColorFlash(1f, 1));
-		//currentMaxTotalTentacleLength += addToMaxLengthPerSoul;
+		StartCoroutine(ExtendMaxLength(addToMaxLengthPerSoul, 1f));
+		StartCoroutine(lengthUI.ColorFlash(1f, 1));
 		if (gem != null)
 			gem.Destroy();
 	}
 
-	IEnumerator ExtendLength(float amount, float duration)
+	IEnumerator ExtendMaxLength(float amount, float duration)
 	{
 		float startTime = Time.time;
 		float endTime = startTime + duration;
 
-		float startLength = currentMaxTotalTentacleLength;
+		float startLength = currentMaxLength;
 		float endLength = startLength + amount;
 
 		while (Time.time < endTime)
 		{
 			float t = Mathf.InverseLerp(startTime, endTime, Time.time);
-			currentMaxTotalTentacleLength = Mathf.Lerp(startLength, endLength, t);
+			currentMaxLength = Mathf.Lerp(startLength, endLength, t);
 
 			yield return null;
 		}
 	}
 
-
-	public void OnTestInput()
-	{
-		Debug.Log(Buttons.lastActiveButton.pressedTime);
-	}
 }

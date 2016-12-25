@@ -8,17 +8,13 @@ public class TenticleController : MonoBehaviour {
 
 	public TenticleLead lead;
 	public PlayerController playerController;
-
 	public CurvySpline spline;
-
-	public float segmentLength = 1f;
-
-	public GameObject obstacle;
-
+	public GameObject colliderObject;
 	public Material tentacleMaterial;
 	//public MeshRenderer materialObject;
 
-	public int selfCollidenumber = 8;
+	public float segmentLength = 1f;
+	public int selfCollideNumber = 8;
 
 	public Color damageTint;
 	Color startingTint;
@@ -29,8 +25,7 @@ public class TenticleController : MonoBehaviour {
 	[HideInInspector]
 	public float tentacleLength;
 
-	[HideInInspector]
-	public List<TentacleSection> tentacleSectionList = new List<TentacleSection>();
+	List<TentacleSection> tentacleSectionList = new List<TentacleSection>();
 
 	CurvySplineSegment segment;
 
@@ -42,7 +37,7 @@ public class TenticleController : MonoBehaviour {
 	{
 		foreach (CurvySplineSegment s in spline.Segments)
 		{
-			tentacleSectionList.Add (TentacleSection.Create (obstacle, null, s, this));
+			tentacleSectionList.Add (TentacleSection.Create (colliderObject, null, s, this));
 		}
 
 		startingTint = tentacleMaterial.color;
@@ -53,7 +48,7 @@ public class TenticleController : MonoBehaviour {
 
 		//spline.Refresh ();
 
-		if (playerController.totalTentacleLength > playerController.currentMaxTotalTentacleLength && segment.PreviousControlPoint != null)
+		if (playerController.totalTentacleLength > playerController.currentMaxLength && segment.PreviousControlPoint != null)
 		{
 			float dist1 = Vector3.Distance(lead.transform.position, segment.PreviousControlPoint.transform.position);
 			Vector3 movement = lead.GetMovement() + lead.transform.position;
@@ -97,7 +92,7 @@ public class TenticleController : MonoBehaviour {
 				previousSegment = segment.PreviousControlPoint;
 			
 			if (previousSegment != null)
-				tentacleSectionList.Add (TentacleSection.Create (obstacle, lead.transform, segment, this));
+				tentacleSectionList.Add (TentacleSection.Create (colliderObject, lead.transform, segment, this));
 			
 		}
 
@@ -122,7 +117,7 @@ public class TenticleController : MonoBehaviour {
 
 		int maxSection = tentacleSectionList.Count - 1;
 		Debug.Log ("Retracting");
-		for (int i = 1; i < selfCollidenumber; i++)
+		for (int i = 1; i < selfCollideNumber; i++)
 		{
 			if (i >= 0 && i < tentacleSectionList.Count - 1)
 			{
@@ -148,7 +143,7 @@ public class TenticleController : MonoBehaviour {
 
 	}
 
-	public void Retract(float speed = 0.3f)
+	public void Retract(float speed = 0.25f)
 	{
 		if (!isRetracting)
 			StartCoroutine(RetractCoroutine(speed));
@@ -156,7 +151,7 @@ public class TenticleController : MonoBehaviour {
 
 	IEnumerator RetractCoroutine(float duration)
 	{
-		if (tentacleSectionList.Count <= 3 || segment.PreviousControlPoint == null || isRetracting)
+		if (tentacleSectionList.Count <= 2 || segment.PreviousControlPoint == null || isRetracting)
 			yield break;
 
 		isRetracting = true;

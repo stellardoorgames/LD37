@@ -34,7 +34,7 @@ public class UITentacleLength : MonoBehaviour {
 		controller = GetComponent<PlayerController>();
 
 		startingTentacleLength = startingTotalTentacleLength / controller.tentacles.Count;
-		previousMaxLength = controller.currentMaxTotalTentacleLength;
+		previousMaxLength = controller.currentMaxLength;
 
 		barWidth = panel1.rect.width;
 		barPosition = panel1.anchoredPosition;
@@ -65,7 +65,7 @@ public class UITentacleLength : MonoBehaviour {
 
 		}*/
 
-		float t = Mathf.InverseLerp(controller.startingMaxTotalTentacleLength, controller.maxMaxTotalTentacleLength, controller.currentMaxTotalTentacleLength);
+		float t = Mathf.InverseLerp(controller.startingMaxLength, controller.maxMaxLength, controller.currentMaxLength);
 		barPositionOffset = Vector2.Lerp(barPosition, Vector2.zero, t);
 		panel1.anchoredPosition = barPositionOffset;
 		panel2.position = Vector2.zero;
@@ -75,7 +75,7 @@ public class UITentacleLength : MonoBehaviour {
 		for (int i = 0; i < tentacleBars.Count; i++)
 		{
 			float tentacleLength = controller.tentacles[i].tentacleLength - startingTentacleLength;
-			float maxTentacleLength = controller.currentMaxTotalTentacleLength - startingTotalTentacleLength;
+			float maxTentacleLength = controller.currentMaxLength - startingTotalTentacleLength;
 			float u = Mathf.InverseLerp(0f, maxTentacleLength, tentacleLength);
 			currentBarPosition += Vector2.Lerp (Vector2.zero, fullBarPosition, u);
 			tentacleBars[i].anchoredPosition = currentBarPosition;

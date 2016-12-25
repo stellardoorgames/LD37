@@ -1,13 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
+using System.Linq.Expressions;
 
 public class TenticleLead : MonoBehaviour {
 
+	public TenticleController tenticleController;
+	
 	public float speed = 800f;
 	public float maxSpeed = 1f;
 
-	public TenticleController tenticleController;
+	public float grabRadius = 0.75f;
 
 	public bool isActive = false;
 
@@ -45,10 +49,7 @@ public class TenticleLead : MonoBehaviour {
 	}
 
 	void Update () {
-
-		//Vector2 p = -(pos - Input.mousePosition) * 0.005f;
-		//pos = Input.mousePosition;
-
+		
 		if (isActive)
 		{
 			if (Input.GetButtonDown ("Grab"))
@@ -59,19 +60,40 @@ public class TenticleLead : MonoBehaviour {
 				}
 				else
 				{
-					Collider[] colliders = Physics.OverlapSphere (transform.position, 1f);
-					if (colliders.Length > 0)
+					//Collider[] colliders = Physics.OverlapSphere (transform.position, grabRadius);
+					List<Collider> colliders = new List<Collider>(Physics.OverlapSphere (transform.position, grabRadius));
+
+					if (colliders.Count > 0)
 					{
+
+
+						/*Collider col = null;
+
+						colliders.Find(ct => ct.tag == "SoulGem");
+
+
+						if (col == null)
+							col = colliders.Find(ct => ct.tag == "Enemy");
+
+
+						if (col != null)
+							grabbedObject = col.GetComponent<Grabbable>();*/
+						
 						Grabbable grabbedObject = null;
-						foreach (Collider c in colliders)
-						{
-							if (c.tag == "Enemy")
-								grabbedObject = c.GetComponent<Grabbable>();
-						}
+						
 						foreach (Collider c in colliders)
 						{
 							if (c.tag == "SoulGem")
 								grabbedObject = c.GetComponent<Grabbable>();
+						}
+
+						if (grabbedObject == null)
+						{
+							foreach (Collider c in colliders)
+							{
+								if (c.tag == "Enemy")
+									grabbedObject = c.GetComponent<Grabbable>();
+							}
 						}
 
 						if (grabbedObject == null)
@@ -90,21 +112,6 @@ public class TenticleLead : MonoBehaviour {
 						
 					}
 
-					
-					/*if (grabbable != null)
-					{
-						//if (Vector3.Distance (transform.position, grabbable.grabTransform.position) < 1f)
-						if (grabbable.GetGrabRange(transform.position) < grabbable.grabRange)
-						{
-							bool grabWorked = grabbable.Grabbed (transform);
-							if (grabWorked)
-							{
-								carryingObject = grabbable;
-								carryingObject.OnEscaped += OnGrabRelease;
-							}
-						}
-						//enemy = null
-					}*/
 				}
 			}
 		}
@@ -142,7 +149,7 @@ public class TenticleLead : MonoBehaviour {
 		}
 		else
 		{
-			gameObject.tag = "Untagged";
+			gameObject.tag = "Tentacle";
 			projector.enabled = false;
 		}
 	}
@@ -154,15 +161,6 @@ public class TenticleLead : MonoBehaviour {
 		if (obstacle != null)
 			tenticleController.SelfCollide (obstacle.gameObject);
 		
-		/*IGrabbable g = other.GetComponent<IGrabbable> ();
-		if (g != null)
-			grabbable = g;*/
-
 	}
-
-	/*public void HasReleased (IGrabbable grabbable)
-	{
-		
-	}*/
 
 }

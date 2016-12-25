@@ -4043,6 +4043,7 @@ GameObject:
   - component: {fileID: 114324899}
   - component: {fileID: 114324901}
   - component: {fileID: 114324902}
+  - component: {fileID: 114324906}
   m_Layer: 10
   m_Name: Tenticle Tracking East
   m_TagString: Player
@@ -4062,9 +4063,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a497ce8f40e4184fb6237521c8cb346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tenticleController: {fileID: 2054711732}
   speed: 1400
   maxSpeed: 1
-  tenticleController: {fileID: 2054711732}
+  grabRadius: 0.75
   isActive: 0
 --- !u!4 &114324900
 Transform:
@@ -4163,6 +4165,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 114324898}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114324906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 114324898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea885cb8cd4bf1c48a373cc5c11b2ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &114473216
 GameObject:
   m_ObjectHideFlags: 0
@@ -8345,6 +8358,7 @@ GameObject:
   - component: {fileID: 268055568}
   - component: {fileID: 268055570}
   - component: {fileID: 268055569}
+  - component: {fileID: 268055575}
   m_Layer: 11
   m_Name: Tenticle Tracking South
   m_TagString: Player
@@ -8364,9 +8378,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a497ce8f40e4184fb6237521c8cb346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tenticleController: {fileID: 2087423249}
   speed: 1400
   maxSpeed: 1
-  tenticleController: {fileID: 2087423249}
+  grabRadius: 0.75
   isActive: 0
 --- !u!135 &268055569
 SphereCollider:
@@ -8465,6 +8480,17 @@ Transform:
   m_Father: {fileID: 2087423250}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &268055575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 268055567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea885cb8cd4bf1c48a373cc5c11b2ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &269640595
 GameObject:
   m_ObjectHideFlags: 0
@@ -28936,6 +28962,7 @@ GameObject:
   - component: {fileID: 904373624}
   - component: {fileID: 904373626}
   - component: {fileID: 904373627}
+  - component: {fileID: 904373631}
   m_Layer: 12
   m_Name: Tenticle Tracking West
   m_TagString: Player
@@ -28955,9 +28982,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a497ce8f40e4184fb6237521c8cb346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tenticleController: {fileID: 1256034778}
   speed: 1400
   maxSpeed: 1
-  tenticleController: {fileID: 1256034778}
+  grabRadius: 0.75
   isActive: 0
 --- !u!4 &904373625
 Transform:
@@ -29056,6 +29084,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 904373623}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &904373631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 904373623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea885cb8cd4bf1c48a373cc5c11b2ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &905438769
 Prefab:
   m_ObjectHideFlags: 0
@@ -37986,15 +38025,15 @@ MonoBehaviour:
   lead: {fileID: 904373624}
   playerController: {fileID: 2069960446}
   spline: {fileID: 1041548147}
-  segmentLength: 1
-  obstacle: {fileID: 1946876087593136, guid: 612c9ac974daae748a03839c593f57e9, type: 2}
+  colliderObject: {fileID: 1946876087593136, guid: 612c9ac974daae748a03839c593f57e9,
+    type: 2}
   tentacleMaterial: {fileID: 2100000, guid: c11bb81749a6ed449b20cc2a7819655e, type: 2}
-  selfCollidenumber: 12
+  segmentLength: 1
+  selfCollideNumber: 8
   damageTint: {r: 0.9632353, g: 0.120404415, b: 0.120404415, a: 1}
   damageFlashDuration: 1.5
   damageFlashNumber: 3
   tentacleLength: 0
-  tentacleSectionList: []
 --- !u!4 &1256034779
 Transform:
   m_ObjectHideFlags: 0
@@ -61469,15 +61508,15 @@ MonoBehaviour:
   lead: {fileID: 114324899}
   playerController: {fileID: 2069960446}
   spline: {fileID: 678953019}
-  segmentLength: 1
-  obstacle: {fileID: 1946876087593136, guid: 612c9ac974daae748a03839c593f57e9, type: 2}
+  colliderObject: {fileID: 1946876087593136, guid: 612c9ac974daae748a03839c593f57e9,
+    type: 2}
   tentacleMaterial: {fileID: 2100000, guid: 76c14f2e2b1a12c4b9005aa9e0054d58, type: 2}
-  selfCollidenumber: 12
+  segmentLength: 1
+  selfCollideNumber: 8
   damageTint: {r: 0.9632353, g: 0.120404415, b: 0.120404415, a: 1}
   damageFlashDuration: 1.5
   damageFlashNumber: 3
   tentacleLength: 0
-  tentacleSectionList: []
 --- !u!4 &2054711733
 Transform:
   m_ObjectHideFlags: 0
@@ -61663,22 +61702,17 @@ MonoBehaviour:
   - {fileID: 2087423249}
   - {fileID: 2054711732}
   tentacleButtonNames: 000000000100000002000000
-  startingMaxTotalTentacleLength: 20
-  currentMaxTotalTentacleLength: 20
-  maxMaxTotalTentacleLength: 60
-  addToMaxLengthPerSoul: 10
-  currentTotalTentacleLength: 0
-  _activeTenticleIndex: 1
   tentacleTriggers:
   - {fileID: 1157612208}
   - {fileID: 571947716}
   - {fileID: 1685939471}
+  startingMaxLength: 20
+  currentMaxLength: 20
+  maxMaxLength: 80
+  addToMaxLengthPerSoul: 10
+  currentTotalTentacleLength: 0
+  _activeTenticleIndex: 1
   OnDeath:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  OnFinish:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
@@ -62392,15 +62426,15 @@ MonoBehaviour:
   lead: {fileID: 268055568}
   playerController: {fileID: 2069960446}
   spline: {fileID: 1593120337}
-  segmentLength: 1
-  obstacle: {fileID: 1946876087593136, guid: 612c9ac974daae748a03839c593f57e9, type: 2}
+  colliderObject: {fileID: 1946876087593136, guid: 612c9ac974daae748a03839c593f57e9,
+    type: 2}
   tentacleMaterial: {fileID: 2100000, guid: 0bb98e761cf7bfa41bc35b866b95ce90, type: 2}
-  selfCollidenumber: 12
+  segmentLength: 1
+  selfCollideNumber: 8
   damageTint: {r: 0.9632353, g: 0.120404415, b: 0.120404415, a: 1}
   damageFlashDuration: 1.5
   damageFlashNumber: 3
   tentacleLength: 0
-  tentacleSectionList: []
 --- !u!4 &2087423250
 Transform:
   m_ObjectHideFlags: 0

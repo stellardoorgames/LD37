@@ -18,7 +18,7 @@ public class Buttons : MonoBehaviour {
 
 	public ButtonNames buttonName;
 	public string buttonNameString;
-	public float timeToStartHold = 0.2f;
+	public float timeToStartHold = 0.22f;
 	public float doubleTapSpeed = 0.25f;
 
 	public bool isPressed = false;
