@@ -4067,6 +4067,9 @@ MonoBehaviour:
   speed: 1400
   maxSpeed: 1
   grabRadius: 0.75
+  grabPriority:
+  - SoulGem
+  - Enemy
   isActive: 0
 --- !u!4 &114324900
 Transform:
@@ -4176,6 +4179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea885cb8cd4bf1c48a373cc5c11b2ed4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 2054711732}
 --- !u!1 &114473216
 GameObject:
   m_ObjectHideFlags: 0
@@ -8382,6 +8386,9 @@ MonoBehaviour:
   speed: 1400
   maxSpeed: 1
   grabRadius: 0.75
+  grabPriority:
+  - SoulGem
+  - Enemy
   isActive: 0
 --- !u!135 &268055569
 SphereCollider:
@@ -8491,6 +8498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea885cb8cd4bf1c48a373cc5c11b2ed4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 2087423249}
 --- !u!1 &269640595
 GameObject:
   m_ObjectHideFlags: 0
@@ -13404,8 +13412,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1397067790}
   - {fileID: 890870752}
+  - {fileID: 1397067790}
   - {fileID: 1914998517}
   - {fileID: 1142762931}
   - {fileID: 1709443564}
@@ -13479,8 +13487,8 @@ MonoBehaviour:
     m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   Modules:
-  - {fileID: 1397067791}
   - {fileID: 890870753}
+  - {fileID: 1397067791}
   - {fileID: 1914998518}
   - {fileID: 1142762932}
   - {fileID: 1709443565}
@@ -21546,7 +21554,7 @@ Transform:
   m_Children:
   - {fileID: 1593120338}
   m_Father: {fileID: 1331538979}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &678235310
 MonoBehaviour:
@@ -24199,7 +24207,7 @@ Transform:
   m_Children:
   - {fileID: 1109837452}
   m_Father: {fileID: 1302588969}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &776586211
 MonoBehaviour:
@@ -28493,7 +28501,7 @@ Transform:
   m_Children:
   - {fileID: 1485409873}
   m_Father: {fileID: 465432594}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &890870753
 MonoBehaviour:
@@ -28986,6 +28994,9 @@ MonoBehaviour:
   speed: 1400
   maxSpeed: 1
   grabRadius: 0.75
+  grabPriority:
+  - SoulGem
+  - Enemy
   isActive: 0
 --- !u!4 &904373625
 Transform:
@@ -29095,6 +29106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea885cb8cd4bf1c48a373cc5c11b2ed4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 1256034778}
 --- !u!1001 &905438769
 Prefab:
   m_ObjectHideFlags: 0
@@ -32175,7 +32187,7 @@ Transform:
   m_Children:
   - {fileID: 678953020}
   m_Father: {fileID: 1302588969}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1017647003
 MonoBehaviour:
@@ -32632,7 +32644,7 @@ Transform:
   m_Children:
   - {fileID: 487009017}
   m_Father: {fileID: 1331538979}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1022216828
 MonoBehaviour:
@@ -38813,8 +38825,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1017647002}
   - {fileID: 776586210}
+  - {fileID: 1017647002}
   - {fileID: 1204350714}
   - {fileID: 1319500490}
   - {fileID: 1191516371}
@@ -38888,8 +38900,8 @@ MonoBehaviour:
     m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   Modules:
-  - {fileID: 1017647003}
   - {fileID: 776586211}
+  - {fileID: 1017647003}
   - {fileID: 1204350715}
   - {fileID: 1319500491}
   - {fileID: 1191516372}
@@ -39798,8 +39810,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1022216827}
   - {fileID: 678235309}
+  - {fileID: 1022216827}
   - {fileID: 847729484}
   - {fileID: 584409013}
   - {fileID: 1663088951}
@@ -39873,8 +39885,8 @@ MonoBehaviour:
     m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   Modules:
-  - {fileID: 1022216828}
   - {fileID: 678235310}
+  - {fileID: 1022216828}
   - {fileID: 847729485}
   - {fileID: 584409014}
   - {fileID: 1663088952}
@@ -41425,7 +41437,7 @@ Transform:
   m_Children:
   - {fileID: 1041548148}
   m_Father: {fileID: 465432594}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1397067791
 MonoBehaviour:

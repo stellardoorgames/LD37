@@ -1,8 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
-using System.Linq.Expressions;
 
 public class TenticleLead : MonoBehaviour {
 
@@ -12,6 +10,8 @@ public class TenticleLead : MonoBehaviour {
 	public float maxSpeed = 1f;
 
 	public float grabRadius = 0.75f;
+
+	public List<string> grabPriority = new List<string>();
 
 	public bool isActive = false;
 
@@ -80,8 +80,20 @@ public class TenticleLead : MonoBehaviour {
 							grabbedObject = col.GetComponent<Grabbable>();*/
 						
 						Grabbable grabbedObject = null;
-						
-						foreach (Collider c in colliders)
+
+						foreach(string grabTag in grabPriority)
+						{
+							foreach (Collider c in colliders)
+							{
+								if (c.tag == grabTag)
+									grabbedObject = c.GetComponent<Grabbable>();
+							}
+
+							if (grabbedObject != null)
+								break;
+						}
+
+						/*foreach (Collider c in colliders)
 						{
 							if (c.tag == "SoulGem")
 								grabbedObject = c.GetComponent<Grabbable>();
@@ -94,7 +106,7 @@ public class TenticleLead : MonoBehaviour {
 								if (c.tag == "Enemy")
 									grabbedObject = c.GetComponent<Grabbable>();
 							}
-						}
+						}*/
 
 						if (grabbedObject == null)
 						{
@@ -154,7 +166,7 @@ public class TenticleLead : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerEnter(Collider other)
+	void OnTriggerStay(Collider other)
 	{
 		TentacleSection obstacle = other.GetComponent<TentacleSection> ();
 

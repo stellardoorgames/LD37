@@ -68,6 +68,7 @@ public class TenticleController : MonoBehaviour {
 
 		Vector2 v = tentacleMaterial.mainTextureOffset;
 		v.x -= offset * 0.25f;
+		v.y += 0.01f;
 
 		tentacleMaterial.mainTextureOffset = v;
 
@@ -121,7 +122,7 @@ public class TenticleController : MonoBehaviour {
 		{
 			if (i >= 0 && i < tentacleSectionList.Count - 1)
 			{
-				TentacleSection ts = tentacleSectionList [tentacleSectionList.Count - 1];
+				TentacleSection ts = tentacleSectionList [i];
 				if (go == ts.gameObject)
 				{
 					RemoveSegment (tentacleSectionList.Count - 1);
@@ -157,8 +158,8 @@ public class TenticleController : MonoBehaviour {
 		isRetracting = true;
 
 		Vector3 newPosition = tentacleSectionList[tentacleSectionList.Count - 1].transform.position;//segment.PreviousControlPoint.transform.position;
-		tentacleSectionList[tentacleSectionList.Count - 1].Remove();
-		tentacleSectionList.RemoveAt(tentacleSectionList.Count - 1);
+		tentacleSectionList[tentacleSectionList.Count - 2].Remove();
+		tentacleSectionList.RemoveAt(tentacleSectionList.Count - 2);
 
 
 		float startTime = Time.time;
