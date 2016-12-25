@@ -38039,7 +38039,7 @@ MonoBehaviour:
   spline: {fileID: 1041548147}
   colliderObject: {fileID: 1946876087593136, guid: 612c9ac974daae748a03839c593f57e9,
     type: 2}
-  tentacleMaterial: {fileID: 2100000, guid: c11bb81749a6ed449b20cc2a7819655e, type: 2}
+  materialObject: {fileID: 1399630950}
   segmentLength: 1
   selfCollideNumber: 8
   damageTint: {r: 0.9632353, g: 0.120404415, b: 0.120404415, a: 1}
@@ -61522,7 +61522,7 @@ MonoBehaviour:
   spline: {fileID: 678953019}
   colliderObject: {fileID: 1946876087593136, guid: 612c9ac974daae748a03839c593f57e9,
     type: 2}
-  tentacleMaterial: {fileID: 2100000, guid: 76c14f2e2b1a12c4b9005aa9e0054d58, type: 2}
+  materialObject: {fileID: 951326454}
   segmentLength: 1
   selfCollideNumber: 8
   damageTint: {r: 0.9632353, g: 0.120404415, b: 0.120404415, a: 1}
@@ -62440,7 +62440,7 @@ MonoBehaviour:
   spline: {fileID: 1593120337}
   colliderObject: {fileID: 1946876087593136, guid: 612c9ac974daae748a03839c593f57e9,
     type: 2}
-  tentacleMaterial: {fileID: 2100000, guid: 0bb98e761cf7bfa41bc35b866b95ce90, type: 2}
+  materialObject: {fileID: 433136260}
   segmentLength: 1
   selfCollideNumber: 8
   damageTint: {r: 0.9632353, g: 0.120404415, b: 0.120404415, a: 1}

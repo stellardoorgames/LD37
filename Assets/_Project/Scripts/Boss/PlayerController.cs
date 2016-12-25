@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour {
 		{
 			//if (Input.GetButtonUp(tentacleButtons[i]))
 			if (tentacleButtons[i].isHeld)
-				tentacles[i].Retract(0.1f);
+				tentacles[i].Retract(0.2f);
 			if (tentacleButtons[i].isTapReleased)
 				activeTenticleIndex = i;
 			if (tentacleButtons[i].isDoubleTapped)

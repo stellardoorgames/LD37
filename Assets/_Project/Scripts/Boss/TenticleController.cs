@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using FluffyUnderware.Curvy;
 using FluffyUnderware.Curvy.Generator;
+using FluffyUnderware.Curvy.Generator.Modules;
 
 public class TenticleController : MonoBehaviour {
 
@@ -10,8 +11,7 @@ public class TenticleController : MonoBehaviour {
 	public PlayerController playerController;
 	public CurvySpline spline;
 	public GameObject colliderObject;
-	public Material tentacleMaterial;
-	//public MeshRenderer materialObject;
+	public MeshRenderer materialObject;
 
 	public float segmentLength = 1f;
 	public int selfCollideNumber = 8;
@@ -29,9 +29,9 @@ public class TenticleController : MonoBehaviour {
 
 	CurvySplineSegment segment;
 
-	float length;
-
 	bool isRetracting = false;
+
+	Vector2 textureOffset = Vector2.zero;
 
 	void Start()
 	{
@@ -40,98 +40,78 @@ public class TenticleController : MonoBehaviour {
 			tentacleSectionList.Add (TentacleSection.Create (colliderObject, null, s, this));
 		}
 
-		startingTint = tentacleMaterial.color;
+		startingTint = materialObject.material.color;
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
+		segment = spline.LastVisibleControlPoint;//spline.ControlPoints [spline.Count - 1];//
+		CurvySplineSegment previousSegment = segment.PreviousControlPoint;
 
-		//spline.Refresh ();
-
-		if (playerController.totalTentacleLength > playerController.currentMaxLength && segment.PreviousControlPoint != null)
+		if (playerController.totalTentacleLength > playerController.currentMaxLength)
 		{
-			float dist1 = Vector3.Distance(lead.transform.position, segment.PreviousControlPoint.transform.position);
+			Debug.Log("Exceeded Length");
+
+			//If too long, only update position if the player is backtracking
+			float dist1 = Vector3.Distance(lead.transform.position, previousSegment.transform.position);
 			Vector3 movement = lead.GetMovement() + lead.transform.position;
-			float dist2 = Vector3.Distance(movement, segment.PreviousControlPoint.transform.position);
+			float dist2 = Vector3.Distance(movement, previousSegment.transform.position);
 			if (dist1 > dist2)
 				lead.UpdatePosition();
-
-			Debug.Log("Exceeded Length");
 		}
 		else
 			lead.UpdatePosition();
 
-		segment = spline.LastVisibleControlPoint;//spline.ControlPoints [spline.Count - 1];//
 
-		float offset = spline.Length - length;//Vector3.Distance (segment.transform.position, target.position);
-		length = spline.Length;
+		segment.transform.position = lead.transform.position;
 
-		Vector2 v = tentacleMaterial.mainTextureOffset;
-		v.x -= offset * 0.25f;
-		v.y += 0.01f;
 
-		tentacleMaterial.mainTextureOffset = v;
-
-		//TODO: figure out how to get to the material on the mesh that Curvy generates at runtime
-		//Material mat = materialObject.material;
-		/*mat.SetTextureOffset("_MainTex", v);
-		mat.SetTextureOffset("_BumpMap", v);
-		mat.SetTextureOffset("_EmissionMap", v);*/
-
-		segment.transform.position = lead.transform.position;//target.position;
-
-		if (segment.PreviousControlPoint.Length > segmentLength)
+		if (previousSegment.Length > segmentLength)
 		{
-			 
 			segment = spline.InsertBefore (segment);
-			//segment = spline.Add ();
-			//segment.transform.position = target.position;
-			//spline.Refresh ();
-
-			CurvySplineSegment previousSegment = null;
-			if (segment.PreviousControlPoint != null)
-				previousSegment = segment.PreviousControlPoint;
-			
-			if (previousSegment != null)
-				tentacleSectionList.Add (TentacleSection.Create (colliderObject, lead.transform, segment, this));
-			
+			tentacleSectionList.Add (TentacleSection.Create (colliderObject, lead.transform, segment, this));
 		}
 
-		if (Input.GetKeyDown (KeyCode.P) && lead.isActive)
+		if (previousSegment.Length < segmentLength * 0.45f)
 		{
-			Retract();
-			//TakeDamage();
-			/*spline = spline.ControlPoints [5].SplitSpline ();
-			segment = spline.ControlPoints[spline.ControlPointCount - 1];
-			transform.position = segment.transform.position;*/
+			RemoveSegment(tentacleSectionList.Count - 1);
 		}
 
 		spline.Refresh ();
 
+		float offset = spline.Length - tentacleLength;
 
 		tentacleLength = spline.Length;
+
+		textureOffset.x -= offset * 0.25f;
+		//textureOffset.y += shift.x * Time.deltaTime * 0.05f;
+
+		materialObject.material.mainTextureOffset = textureOffset;
+
 	}
 
 	public bool SelfCollide(GameObject go)
 	{
-		bool retVal = false;
-
+		int minIndex = 2;
 		int maxSection = tentacleSectionList.Count - 1;
-		Debug.Log ("Retracting");
-		for (int i = 1; i < selfCollideNumber; i++)
+		if (maxSection < minIndex)
+			return false;
+		
+		int minSection = maxSection - selfCollideNumber;
+		if (minSection < minIndex)
+			minSection = minIndex;
+		
+		for (int i = minSection; i < maxSection; i++)
 		{
-			if (i >= 0 && i < tentacleSectionList.Count - 1)
+			TentacleSection ts = tentacleSectionList [i];
+			if (go == ts.gameObject)
 			{
-				TentacleSection ts = tentacleSectionList [i];
-				if (go == ts.gameObject)
-				{
-					RemoveSegment (tentacleSectionList.Count - 1);
-				}
-				retVal = true;
+				RemoveSegment (i);
+				return true;
 			}
 		}
 
-		return retVal;
+		return false;
 	}
 
 	void RemoveSegment(int index)
@@ -152,30 +132,28 @@ public class TenticleController : MonoBehaviour {
 
 	IEnumerator RetractCoroutine(float duration)
 	{
-		if (tentacleSectionList.Count <= 2 || segment.PreviousControlPoint == null || isRetracting)
+		if (tentacleSectionList.Count <= 2 || segment.PreviousControlPoint == null)
 			yield break;
 
 		isRetracting = true;
-
-		Vector3 newPosition = tentacleSectionList[tentacleSectionList.Count - 1].transform.position;//segment.PreviousControlPoint.transform.position;
-		tentacleSectionList[tentacleSectionList.Count - 2].Remove();
-		tentacleSectionList.RemoveAt(tentacleSectionList.Count - 2);
-
 
 		float startTime = Time.time;
 		float endTime = Time.time + duration;
 
 		Vector3 startPosition = lead.transform.position;
 
+		Vector3 newPosition = tentacleSectionList[tentacleSectionList.Count - 1].transform.position;
+
 		while (Time.time < endTime)
 		{
 			float t = Mathf.InverseLerp(startTime, endTime, Time.time);
-
+			 
 			lead.transform.position = Vector3.Lerp(startPosition, newPosition, t);
-
+			
 			yield return null;
 		}
 
+		lead.transform.position = newPosition;
 		isRetracting = false;
 	}
 
@@ -199,7 +177,7 @@ public class TenticleController : MonoBehaviour {
 			{
 				yield return null;
 				float t = Mathf.InverseLerp(startingTime, endTime, Time.time);
-				tentacleMaterial.color = Color.Lerp(startingTint, damageTint, t);
+				materialObject.material.color = Color.Lerp(startingTint, damageTint, t);
 			}
 			endTime = Time.time + flashTime;
 			startingTime = Time.time;
@@ -207,17 +185,17 @@ public class TenticleController : MonoBehaviour {
 			{
 				yield return null;
 				float t = Mathf.InverseLerp(startingTime, endTime, Time.time);
-				tentacleMaterial.color = Color.Lerp(damageTint, startingTint, t);
+				materialObject.material.color = Color.Lerp(damageTint, startingTint, t);
 			}
 		}
 
 		isFlashing = false;
 	}
-
+/*
 	void OnDestroy()
 	{
 		Debug.Log("Resetting Texture UVs");
 		tentacleMaterial.mainTextureOffset = Vector2.zero;
 		tentacleMaterial.color = startingTint;
-	}
+	}*/
 }
