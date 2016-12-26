@@ -6,6 +6,8 @@ public class ItemGrabbable : Grabbable {
 
 	Animator anim;
 
+	public float minGrabDelay = 0.1f;
+
 	public virtual void Awake()
 	{
 		anim = GetComponent<Animator>();
@@ -13,6 +15,11 @@ public class ItemGrabbable : Grabbable {
 
 	public override bool Grabbed(Transform grabber)
 	{
+		if (Time.time < lastGrabbedTime + minGrabDelay)
+			return false;
+
+		lastGrabbedTime = Time.time;
+
 		EscapedEvent();
 
 		isGrabbed = true;

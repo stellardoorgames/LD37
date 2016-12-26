@@ -6,6 +6,11 @@ using UnityEngine.Events;
 
 public class LevelManager : MonoBehaviour {
 
+	public SceneField winScene;
+	public SceneField loseScene;
+
+	SceneField nextScene;
+
 	public int winConditionKills = 0;
 	int _currentKills = 0;
 	int currentKills {
@@ -52,8 +57,23 @@ public class LevelManager : MonoBehaviour {
 		instance.currentTreasure++;
 	}
 
-	static public void LoseLevel()
+	public void LoseLevel()
 	{
-		instance.OnLose.Invoke ();
+		nextScene = loseScene;
+
+		OnLose.Invoke ();
+	}
+
+	public void WinLevel()
+	{
+		nextScene = winScene;
+
+		OnWin.Invoke ();
+	}
+
+	public void ExitLevel()
+	{
+		SceneController.ChangeScene(nextScene);
+
 	}
 }

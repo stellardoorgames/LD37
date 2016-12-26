@@ -16,6 +16,7 @@ public class CharacterGrabbable : Grabbable {
 		if (character.deathState.enabled)
 			return false;
 
+		lastGrabbedTime = Time.time;
 		this.grabber = grabber;
 
 		character.stateMachine.changeState<CharacterGrabbedState>();
