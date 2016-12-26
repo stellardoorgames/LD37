@@ -38,6 +38,8 @@ public class UITentacleLength : MonoBehaviour {
 
 		barWidth = panel1.rect.width;
 		barPosition = panel1.anchoredPosition;
+
+
 	}
 	
 	// Update is called once per frame

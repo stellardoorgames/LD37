@@ -41,6 +41,8 @@ public class TenticleController : MonoBehaviour {
 		}
 
 		startingTint = materialObject.material.color;
+
+		textureOffset.y = -0.25f;
 	}
 	
 	void Update () 
@@ -84,7 +86,7 @@ public class TenticleController : MonoBehaviour {
 		tentacleLength = spline.Length;
 
 		textureOffset.x -= offset * 0.25f;
-		//textureOffset.y += shift.x * Time.deltaTime * 0.05f;
+		//textureOffset.y += lead.GetMovement().x * Time.deltaTime * 0.5f;
 
 		materialObject.material.mainTextureOffset = textureOffset;
 
@@ -191,11 +193,5 @@ public class TenticleController : MonoBehaviour {
 
 		isFlashing = false;
 	}
-/*
-	void OnDestroy()
-	{
-		Debug.Log("Resetting Texture UVs");
-		tentacleMaterial.mainTextureOffset = Vector2.zero;
-		tentacleMaterial.color = startingTint;
-	}*/
+
 }
