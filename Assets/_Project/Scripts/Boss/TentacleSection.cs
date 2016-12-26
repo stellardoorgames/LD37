@@ -18,6 +18,14 @@ public class TentacleSection : MonoBehaviour {
 	void Start () 
 	{
 		Scale ();
+/*
+		if (segment.SegmentIndex % 3 == 0)
+		{
+			segment.OrientationAnchor = true;
+			segment.Swirl = CurvyOrientationSwirl.Segment;
+			StartCoroutine(Swirl());
+			
+		}*/
 	}
 
 	public static TentacleSection Create(GameObject prefab, Transform target, CurvySplineSegment segment, TenticleController controller)
@@ -64,6 +72,27 @@ public class TentacleSection : MonoBehaviour {
 
 	}
 
+	/*IEnumerator Swirl()
+	{
+		//CurvySplineSegment first = spline.FirstVisibleControlPoint;
+
+		Vector3 v1 = new Vector3(-0.0000f, 0f, 0f);
+		Vector3 v2 = new Vector3(0.0005f, 0f, 0f);
+		while(true)
+		{
+			v1 = -v1;
+			v2 = -v2;
+			float startTime = Time.time;
+			float endTime = startTime + 3f;
+			while (Time.time < endTime)
+			{
+				float t = Mathf.InverseLerp(startTime, endTime, Time.time);
+				segment.SwirlTurns += Vector3.Slerp(v1, v2, t).x;
+				yield return null;
+			}
+
+		}
+	}*/
 	/*public void TakeDamage(float damage)
 	{
 		controller.TakeDamage();

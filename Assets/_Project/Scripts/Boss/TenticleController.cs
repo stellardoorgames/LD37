@@ -33,6 +33,8 @@ public class TenticleController : MonoBehaviour {
 
 	Vector2 textureOffset = Vector2.zero;
 
+	bool swirlUp = false;
+
 	void Start()
 	{
 		foreach (CurvySplineSegment s in spline.Segments)
@@ -42,7 +44,7 @@ public class TenticleController : MonoBehaviour {
 
 		startingTint = materialObject.material.color;
 
-		textureOffset.y = -0.25f;
+		StartCoroutine(Swirl());
 	}
 	
 	void Update () 
@@ -72,6 +74,7 @@ public class TenticleController : MonoBehaviour {
 		{
 			segment = spline.InsertBefore (segment);
 			tentacleSectionList.Add (TentacleSection.Create (colliderObject, lead.transform, segment, this));
+
 		}
 
 		if (previousSegment.Length < segmentLength * 0.45f)
@@ -90,6 +93,31 @@ public class TenticleController : MonoBehaviour {
 
 		materialObject.material.mainTextureOffset = textureOffset;
 
+		//Twist
+		//first.SwirlTurns += offset * 0.0005f;
+
+	}
+
+	IEnumerator Swirl()
+	{
+		CurvySplineSegment first = spline.FirstVisibleControlPoint;
+
+		Vector3 v1 = new Vector3(-0.0002f, 0f, 0f);
+		Vector3 v2 = new Vector3(0.0002f, 0f, 0f);
+		while(true)
+		{
+			v1 = -v1;
+			v2 = -v2;
+			float startTime = Time.time;
+			float endTime = startTime + 3f;
+			while (Time.time < endTime)
+			{
+				float t = Mathf.InverseLerp(startTime, endTime, Time.time);
+				first.SwirlTurns += Vector3.Slerp(v1, v2, t).x;
+				yield return null;
+			}
+
+		}
 	}
 
 	public bool SelfCollide(GameObject go)
