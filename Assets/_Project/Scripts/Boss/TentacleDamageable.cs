@@ -14,6 +14,6 @@ public class TentacleDamageable : Damageable {
 
 	public override void TakeDamage (float damageAmount)
 	{
-		controller.TakeDamage();
+		controller.TakeDamage(damageAmount);
 	}
 }

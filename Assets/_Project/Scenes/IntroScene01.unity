@@ -141,12 +141,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 964035459}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 1
   duration: 17
   fadeInDuration: 1
   fadeOutDuration: 1
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  displayColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 0}
   textDuration: 0
@@ -273,12 +274,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 752271885}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 5
   duration: 6
   fadeInDuration: 1
   fadeOutDuration: 5
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  displayColor: {r: 0, g: 0, b: 0, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 0}
   textDuration: 0
@@ -455,12 +457,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 1
   nextObject: {fileID: 1702280730}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 3
   duration: 23
   fadeInDuration: 2
   fadeOutDuration: 0.5
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  displayColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 0}
   textDuration: 0
@@ -492,7 +495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -563,12 +566,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 475083183}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 2
   duration: 9
   fadeInDuration: 0.5
   fadeOutDuration: 1
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  displayColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 1042160239}
   textDuration: 4
@@ -751,12 +755,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 183478163}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 3
   duration: 5
   fadeInDuration: 1
   fadeOutDuration: 0.5
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  displayColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 0}
   textDuration: 0
@@ -849,12 +854,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 721852891}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 1
   duration: 5.5
   fadeInDuration: 1
   fadeOutDuration: 1.5
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  displayColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 0}
   textDuration: 0
@@ -1184,12 +1190,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 247707358}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 6
   duration: 7
   fadeInDuration: 1
   fadeOutDuration: 1
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  displayColor: {r: 0, g: 0, b: 0, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 0}
   textDuration: 0
@@ -1292,12 +1299,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 1927135579}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 10
   duration: 10
   fadeInDuration: 1
   fadeOutDuration: 1
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  displayColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 2010866155}
   textDuration: 10
@@ -1417,12 +1425,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 685503060}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 4.5
   duration: 4.5
   fadeInDuration: 0.2
   fadeOutDuration: 1
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  displayColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 1885409548}
   textDuration: 3
@@ -1541,12 +1550,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 0}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 10
   duration: 10
   fadeInDuration: 1
   fadeOutDuration: 4
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  displayColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 255470397}
   textDuration: 7
@@ -1953,12 +1963,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 496917204}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 2.5
   duration: 4
   fadeInDuration: 1
   fadeOutDuration: 0.5
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  displayColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 547243653}
   textDuration: 6
@@ -2288,12 +2299,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 365870935}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 7
   duration: 11
   fadeInDuration: 0.5
   fadeOutDuration: 0.5
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  displayColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 1081088364}
   textDuration: 4
@@ -2647,12 +2659,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 1940778711}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 1
   duration: 7
   fadeInDuration: 1
   fadeOutDuration: 1
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  displayColor: {r: 0, g: 0, b: 0, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 0}
   textDuration: 0
@@ -2823,12 +2836,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 659386857}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 5
   duration: 5
   fadeInDuration: 1
   fadeOutDuration: 1
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  displayColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 0}
   textDuration: 0

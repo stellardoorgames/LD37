@@ -35,12 +35,16 @@ public class TenticleController : MonoBehaviour {
 
 	bool swirlUp = false;
 
+	float startingLength;
+
 	void Start()
 	{
 		foreach (CurvySplineSegment s in spline.Segments)
 		{
 			tentacleSectionList.Add (TentacleSection.Create (colliderObject, null, s, this));
 		}
+
+		startingLength = spline.Length;
 
 		startingTint = materialObject.material.color;
 
@@ -93,7 +97,6 @@ public class TenticleController : MonoBehaviour {
 
 		materialObject.material.mainTextureOffset = textureOffset;
 
-		//Twist
 		//first.SwirlTurns += offset * 0.0005f;
 
 	}
@@ -187,8 +190,11 @@ public class TenticleController : MonoBehaviour {
 		isRetracting = false;
 	}
 
-	public void TakeDamage()
+	public void TakeDamage(float amount)
 	{
+		if (tentacleLength > startingLength + 0.25f)
+			playerController.TakeDamage(amount);
+		
 		if (!isFlashing)
 			StartCoroutine(ColorFlash(damageTint, damageFlashDuration, damageFlashNumber));
 		Retract();

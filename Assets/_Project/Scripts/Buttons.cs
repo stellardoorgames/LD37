@@ -44,6 +44,9 @@ public class Buttons : MonoBehaviour {
 
 	public static Buttons CreateButton(ButtonNames buttonName)
 	{
+		if (buttons.ContainsKey(buttonName))
+			return buttons[buttonName];
+		
 		GameObject go = new GameObject("Button " + buttonName.ToString());
 		Buttons b = go.AddComponent<Buttons>();
 		b.buttonName = buttonName;
@@ -55,6 +58,7 @@ public class Buttons : MonoBehaviour {
 	{
 		buttons.Add(buttonName, this);
 		buttonNameString = buttonName.ToString();
+		DontDestroyOnLoad(gameObject);
 	}
 	
 	void Update () 

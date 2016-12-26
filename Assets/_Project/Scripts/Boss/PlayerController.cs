@@ -7,8 +7,8 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
-	public float maxLife = 10;
-	float currentLife;
+	public float maxLife = 20f;
+	public float currentLife;
 
 	public List<TenticleController> tentacles = new List<TenticleController>();
 	public List<ButtonNames> tentacleButtonNames = new List<ButtonNames>();
@@ -139,6 +139,17 @@ public class PlayerController : MonoBehaviour {
 			currentMaxLength = Mathf.Lerp(startLength, endLength, t);
 
 			yield return null;
+		}
+	}
+
+	public void TakeDamage(float amount)
+	{
+		currentLife -= amount;
+
+		if (currentLife <= 0f)
+		{
+			if (OnDeath != null)
+				OnDeath.Invoke();
 		}
 	}
 

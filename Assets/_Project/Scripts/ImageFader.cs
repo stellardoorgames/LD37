@@ -9,13 +9,15 @@ public class ImageFader : MonoBehaviour
     public bool start = false;
     public GameObject nextObject;
 
+	public bool keyToSkip = false;
+	public bool keyToContinue = false;
     public float nextImageTime = 3f;
     public float duration = 3f;
-    public float fadeInDuration = 0.5f;
+	public float fadeInDuration = 0.5f;
     public float fadeOutDuration = 0.5f;
 
     public Color startColor = Color.clear;
-    public Color displayColor = Color.white;
+    Color displayColor = Color.white;
     public Color endColor = Color.clear;
 
     public GameObject textObject;
@@ -25,11 +27,17 @@ public class ImageFader : MonoBehaviour
 
     Image image;
 
-    void Start()
-    {
-        if (start)
-            StartImage();
+	void Awake()
+	{
+		if (!start)
+			gameObject.SetActive(false);
+	}
 
+	void Start()
+    {
+		if (start)
+            StartImage();
+		
     }
 
     /*void OnEnable()
@@ -40,6 +48,8 @@ public class ImageFader : MonoBehaviour
     public void StartImage()
     {
         image = GetComponent<Image>();
+
+		displayColor = image.color;
 
         image.color = Color.clear;
 
@@ -77,8 +87,25 @@ public class ImageFader : MonoBehaviour
         }
 
         //Wait
-        float waitTime = duration - fadeInDuration - fadeOutDuration;
-        yield return new WaitForSeconds(waitTime);
+		if (keyToContinue)
+		{
+			while (!Input.anyKeyDown)
+			{
+				Debug.Log("Waiting");
+				yield return null;
+			}
+		}
+		else
+		{
+			float waitEndTime = Time.time + duration - fadeInDuration - fadeOutDuration;
+			while (Time.time < waitEndTime)
+			{
+				if (keyToSkip && Input.anyKeyDown)
+					break;
+				
+				yield return null;
+			}
+		}
 
         SetTextActive(false);
 
