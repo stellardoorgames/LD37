@@ -16,7 +16,7 @@ public class CharacterSpawnState : SKState<Character> {
 	public override void update (float deltaTime)
 	{
 		if (Time.time > startTime + waitTime)
-			_machine.changeState<CharacterHuntState>();
+			_machine.changeState<CharacterSearchState>();
 	}
 
 	public override void end ()

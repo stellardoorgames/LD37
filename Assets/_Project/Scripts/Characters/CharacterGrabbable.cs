@@ -30,7 +30,7 @@ public class CharacterGrabbable : Grabbable {
 			return;
 
 		if (!character.deathState.enabled)
-			character.stateMachine.changeState<CharacterHuntState>();
+			character.stateMachine.changeState<CharacterSearchState>();
 	}
 	
 }

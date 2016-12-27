@@ -2,13 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Prime31.StateKit;
+using UnityEngine.AI;
 
 public class CharacterCarryState : SKState<Character> {
 
 	public string carryDestination = "Exit";
 
+	public float retargetInterval = 3f;
+	float retargetTime;
+
 	Grabbable carriedObject;
-	
+
+	NavMeshAgent agent;
+
+	public override void onInitialized ()
+	{
+		agent = GetComponent<NavMeshAgent>();
+	}
+
 	public void StartCarry(Grabbable grabbable)
 	{
 		bool canGrab = grabbable.Grabbed(transform);
@@ -23,11 +34,25 @@ public class CharacterCarryState : SKState<Character> {
 	public override void begin ()
 	{
 		carriedObject.OnEscaped += OnCarryEscape;
-		_context.Retarget(carryDestination);
+
+		agent.path = _context.GetPathToTarget(carryDestination);
+		retargetTime = Time.time;
 	}
 
 	public override void update (float deltaTime)
 	{
+		if (Time.time > retargetTime + retargetInterval)
+		{
+			if (carriedObject == null)
+			{
+				_machine.changeState<CharacterSearchState>();
+			}
+			else if (agent.isPathStale)
+			{
+				agent.path = _context.GetPathToTarget(carryDestination);
+				retargetTime = Time.time;
+			}
+		}
 	}
 
 	public override void end ()
@@ -42,12 +67,12 @@ public class CharacterCarryState : SKState<Character> {
 
 		carriedObject = null;
 		
-		_context.currentTarget = "";
+		//_context.currentTarget = "";
 
 	}
 
 	public void OnCarryEscape()
 	{
-		_machine.changeState<CharacterHuntState>();
+		_machine.changeState<CharacterSearchState>();
 	}
 }

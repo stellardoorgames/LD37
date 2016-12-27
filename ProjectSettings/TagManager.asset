@@ -12,6 +12,7 @@ TagManager:
   - Enemy
   - Key
   - SoulGem
+  - Light
   layers:
   - Default
   - TransparentFX

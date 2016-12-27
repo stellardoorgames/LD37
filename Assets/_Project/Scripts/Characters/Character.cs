@@ -15,14 +15,14 @@ public class Character : MonoBehaviour {
 		Spikes
 	}
 
-	public List<string> targetTags = new List<string>();
-	public string currentTarget;
+	//public List<string> targetTags = new List<string>();
+	//public string currentTarget;
 
 	public List<string> vulnerabilities = new List<string>();
 
 	public Text text;
 
-	Transform target;
+	GameObject target;
 
 	public Animator anim;
 	[HideInInspector]
@@ -32,8 +32,8 @@ public class Character : MonoBehaviour {
 
 	[HideInInspector]
 	public CharacterSpawnState spawnState;
-	[HideInInspector]
-	public CharacterHuntState huntState;
+	//[HideInInspector]
+	//public CharacterHuntState huntState;
 	[HideInInspector]
 	public CharacterAttackState attackState;
 	[HideInInspector]
@@ -42,30 +42,46 @@ public class Character : MonoBehaviour {
 	public CharacterGrabbedState grabbedState;
 	[HideInInspector]
 	public CharacterDeathState deathState;
+	[HideInInspector]
+	public CharacterSearchState searchState;
+	[HideInInspector]
+	public CharacterWanderState wanderState;
+
+	List<Vector3> wanderDirections;
 
 	public virtual void Start()
 	{
 		agent = GetComponent<NavMeshAgent> ();
 
 		spawnState = GetComponent<CharacterSpawnState>();
-		huntState = GetComponent<CharacterHuntState>();
+		//huntState = GetComponent<CharacterHuntState>();
 		attackState = GetComponent<CharacterAttackState>();
 		carryState = GetComponent<CharacterCarryState>();
 		grabbedState = GetComponent<CharacterGrabbedState>();
 		deathState = GetComponent<CharacterDeathState>();
+		searchState = GetComponent<CharacterSearchState>();
+		wanderState = GetComponent<CharacterWanderState>();
 
 		stateMachine = new SKStateMachine<Character>(this, spawnState);
-		stateMachine.addState(huntState);
+		//stateMachine.addState(huntState);
 		stateMachine.addState(attackState);
 		stateMachine.addState(carryState);
 		stateMachine.addState(grabbedState);
 		stateMachine.addState(deathState);
+		stateMachine.addState(searchState);
+		stateMachine.addState(wanderState);
 		/*stateMachine.addState(GetComponent<CharacterHuntState>());
 		stateMachine.addState(GetComponent<CharacterGrabbedState>());
 		stateMachine.addState(GetComponent<CharacterAttackState>());
 		stateMachine.addState(GetComponent<CharacterDeathState>());
 		stateMachine.addState(GetComponent<CharacterCarryState>());*/
 
+		wanderDirections = new List<Vector3> {
+			Vector3.forward,
+			Vector3.right,
+			Vector3.back,
+			Vector3.left
+		};
 	}
 
 	public virtual void Update () 
@@ -76,7 +92,85 @@ public class Character : MonoBehaviour {
 		//	Death();
 	}
 
-	public void Retarget(string newTarget = null)
+	public GameObject FindClosestTarget(GameObject[] targets)
+	{
+		if (targets == null)
+			return null;
+		
+		GameObject newTarget = null;
+		float dist = int.MaxValue;
+
+		foreach(GameObject go in targets)
+		{
+			float d = Vector3.Distance (transform.position, go.transform.position);
+			if (d < dist)
+			{
+				dist = d;
+				newTarget = go;
+			}
+		}
+		
+		return newTarget;
+	}
+
+	public NavMeshPath GetPathToTarget(string tag, bool wander = true)
+	{
+		List<string> t = new List<string>()	{tag};
+		return GetPathToTarget(t, wander);
+	}
+
+	public NavMeshPath GetPathToTarget(List<string> tags, bool wander = true)
+	{
+		NavMeshPath path = new NavMeshPath();
+
+		foreach(string tt in tags)
+		{
+			target = FindClosestTarget(GameObject.FindGameObjectsWithTag (tt));
+			if (target != null)
+			{
+				if (agent.CalculatePath(target.transform.position, path))
+					break;
+			}
+		}
+
+		if (!(path.status == NavMeshPathStatus.PathComplete) && wander)
+		{
+			path = GetWanderPath(3.5f);
+		}
+
+		return path;
+	}
+
+	NavMeshPath GetWanderPath(float distance = 1f)
+	{
+		Debug.Log("Auto-wander");
+
+		GameObject[] gos = GameObject.FindGameObjectsWithTag("Light");
+
+		GameObject go = gos[UnityEngine.Random.Range(0, gos.Length - 1)];
+
+		NavMeshPath path = new NavMeshPath();
+		agent.CalculatePath(go.transform.position, path);
+		return path;
+
+
+		/*List<Vector3> dirs = wanderDirections;
+
+		dirs.Shuffle<Vector3>();
+
+		NavMeshPath path = new NavMeshPath();
+
+		foreach(Vector3 v in dirs)
+		{
+			agent.CalculatePath(transform.position + v, path);
+			if (path.status == NavMeshPathStatus.PathComplete)
+				break;
+		}
+
+		return path;*/
+	}
+
+	/*public void Retarget(string newTarget = null)
 	{
 		if (newTarget != null)
 			currentTarget = newTarget;
@@ -128,9 +222,9 @@ public class Character : MonoBehaviour {
 		{
 			Debug.Log("No Path, fix this");
 		}
-	}
+	}*/
 
-	public virtual void Wander()
+	/*public virtual void Wander()
 	{
 		float distance = 1f;
 		List<Vector3> wanderDirections = new List<Vector3> {
@@ -144,7 +238,7 @@ public class Character : MonoBehaviour {
 
 		agent.destination = wanderDirections[dir];
 
-	}
+	}*/
 
 	protected virtual void OnTriggerEnter(Collider other)
 	{

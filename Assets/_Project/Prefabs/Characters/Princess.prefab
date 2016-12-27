@@ -4970,6 +4970,9 @@ GameObject:
   - component: {fileID: 114590361515993002}
   - component: {fileID: 114217564708781716}
   - component: {fileID: 114795886478997432}
+  - component: {fileID: 114406487460277980}
+  - component: {fileID: 114045271803826878}
+  - component: {fileID: 114146608870600922}
   m_Layer: 0
   m_Name: Princess
   m_TagString: Princess
@@ -7087,8 +7090,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1844002888443164}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 3, y: 0, z: -1}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 2, y: 0, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224670763105596960}
@@ -11558,6 +11561,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114045271803826878
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1844002888443164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d97870c8273d7f445b5763854e3133a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTags: []
+  retargetInterval: 3
 --- !u!114 &114070454764458724
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11581,6 +11597,8 @@ MonoBehaviour:
   carryState: {fileID: 0}
   grabbedState: {fileID: 0}
   deathState: {fileID: 0}
+  searchState: {fileID: 0}
+  wanderState: {fileID: 0}
   OnKidnapped:
     m_PersistentCalls:
       m_Calls:
@@ -11613,6 +11631,20 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+  holdState: {fileID: 0}
+--- !u!114 &114146608870600922
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1844002888443164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91bd09f2fd5406c42a3bbdacd12575a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 1
+  wanderDuration: 3
 --- !u!114 &114217564708781716
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11708,6 +11740,17 @@ MonoBehaviour:
   attackInterval: 1
   damage: 1
   attackRange: 1
+--- !u!114 &114406487460277980
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1844002888443164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a17a29b6da50c1245bda25447f91ac78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114563458795073328
 MonoBehaviour:
   m_ObjectHideFlags: 1

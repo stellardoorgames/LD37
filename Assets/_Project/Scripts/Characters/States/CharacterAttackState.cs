@@ -44,7 +44,7 @@ public class CharacterAttackState : SKState<Character> {
 		{
 			if (attackTarget == null || Vector3.Distance(transform.position, attackTarget.transform.position) > attackRange)
 			{
-				_machine.changeState<CharacterHuntState>();
+				_machine.changeState<CharacterSearchState>();
 				return;
 			}
 

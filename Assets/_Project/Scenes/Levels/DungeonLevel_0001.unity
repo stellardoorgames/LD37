@@ -421,6 +421,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1677349356990924, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
+      propertyPath: m_TagString
+      value: Light
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
   m_IsPrefabParent: 0
@@ -2440,6 +2444,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1677349356990924, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
+      propertyPath: m_TagString
+      value: Light
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
   m_IsPrefabParent: 0
@@ -3868,6 +3876,10 @@ Prefab:
     - target: {fileID: 1677349356990924, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
       propertyPath: m_Name
       value: Torch North (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677349356990924, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
+      propertyPath: m_TagString
+      value: Light
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
@@ -5688,6 +5700,10 @@ Prefab:
     - target: {fileID: 1677349356990924, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
       propertyPath: m_Name
       value: Torch North (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677349356990924, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
+      propertyPath: m_TagString
+      value: Light
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
@@ -15239,8 +15255,8 @@ MonoBehaviour:
     m_SceneAsset: {fileID: 102900000, guid: 36f7f0ea78e3906498d2f9ca2cfb0502, type: 3}
     m_SceneName: CutScene01
   loseScene:
-    m_SceneAsset: {fileID: 102900000, guid: c99fab8c2bd792347b7e4a2c0975093b, type: 3}
-    m_SceneName: DungeonLevel001B
+    m_SceneAsset: {fileID: 102900000, guid: 705f604313bb9294b91380e999262483, type: 3}
+    m_SceneName: DungeonLevel_0001
   winConditionKills: 0
   winConditionTreasure: 0
   winConditionTime: 0
@@ -17654,6 +17670,10 @@ Prefab:
     - target: {fileID: 1318517495456874, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677349356990924, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
+      propertyPath: m_TagString
+      value: Light
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
@@ -30292,9 +30312,9 @@ MonoBehaviour:
   OnEnd:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 503072477}
-        m_MethodName: ChangeLevel
-        m_Mode: 5
+      - m_Target: {fileID: 594773179}
+        m_MethodName: ExitLevel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -32030,7 +32050,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  testActivate: 0
 --- !u!1001 &1306634768
 Prefab:
   m_ObjectHideFlags: 0
@@ -32231,6 +32250,10 @@ Prefab:
     - target: {fileID: 1677349356990924, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
       propertyPath: m_Name
       value: Torch North (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677349356990924, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
+      propertyPath: m_TagString
+      value: Light
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
@@ -32923,6 +32946,10 @@ Prefab:
     - target: {fileID: 1431546733880374, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677349356990924, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
+      propertyPath: m_TagString
+      value: Light
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
@@ -34813,6 +34840,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 1677349356990924, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
+      propertyPath: m_TagString
+      value: Light
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
   m_IsPrefabParent: 0
@@ -35519,6 +35550,10 @@ Prefab:
     - target: {fileID: 1677349356990924, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
       propertyPath: m_Name
       value: Torch North (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677349356990924, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
+      propertyPath: m_TagString
+      value: Light
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
@@ -36695,6 +36730,10 @@ Prefab:
     - target: {fileID: 1487643130635378, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677349356990924, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
+      propertyPath: m_TagString
+      value: Light
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
@@ -38416,6 +38455,10 @@ Prefab:
     - target: {fileID: 4136221685418986, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677349356990924, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
+      propertyPath: m_TagString
+      value: Light
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
@@ -42435,6 +42478,10 @@ Prefab:
       propertyPath: m_Name
       value: Torch North (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1677349356990924, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
+      propertyPath: m_TagString
+      value: Light
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
   m_IsPrefabParent: 0
@@ -42640,6 +42687,10 @@ Prefab:
       propertyPath: m_Name
       value: Torch North (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1677349356990924, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
+      propertyPath: m_TagString
+      value: Light
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
   m_IsPrefabParent: 0
@@ -42710,6 +42761,10 @@ Prefab:
     - target: {fileID: 1431546733880374, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677349356990924, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
+      propertyPath: m_TagString
+      value: Light
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
@@ -43190,6 +43245,10 @@ Prefab:
     - target: {fileID: 1431546733880374, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677349356990924, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
+      propertyPath: m_TagString
+      value: Light
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
@@ -46593,6 +46652,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1677349356990924, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
+      propertyPath: m_TagString
+      value: Light
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
   m_IsPrefabParent: 0
@@ -47036,6 +47099,10 @@ Prefab:
     - target: {fileID: 4136221685418986, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
       propertyPath: m_LocalScale.z
       value: 1.0000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677349356990924, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
+      propertyPath: m_TagString
+      value: Light
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
@@ -47788,6 +47855,10 @@ Prefab:
     - target: {fileID: 4136221685418986, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
       propertyPath: m_LocalScale.z
       value: 1.0000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677349356990924, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
+      propertyPath: m_TagString
+      value: Light
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
@@ -50941,9 +51012,9 @@ MonoBehaviour:
           m_StringArgument: DungeonLevel001B
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 594773177}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 594773179}
+        m_MethodName: LoseLevel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -51566,6 +51637,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1677349356990924, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
+      propertyPath: m_TagString
+      value: Light
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 503a3e49d764a534bbca2b53b25dbec2, type: 2}
   m_IsPrefabParent: 0
@@ -51794,9 +51869,9 @@ MonoBehaviour:
   OnEnd:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 503072477}
-        m_MethodName: ChangeLevel
-        m_Mode: 5
+      - m_Target: {fileID: 594773179}
+        m_MethodName: ExitLevel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

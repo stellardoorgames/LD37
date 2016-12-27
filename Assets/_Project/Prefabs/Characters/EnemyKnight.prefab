@@ -5186,6 +5186,8 @@ GameObject:
   - component: {fileID: 114298528269174422}
   - component: {fileID: 114545808982212804}
   - component: {fileID: 114589858387281530}
+  - component: {fileID: 114691689326474902}
+  - component: {fileID: 114353931932380922}
   m_Layer: 0
   m_Name: EnemyKnight
   m_TagString: Enemy
@@ -13632,7 +13634,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1643498522182676}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: 8}
+  m_LocalPosition: {x: -11, y: 0, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224910634520228974}
@@ -16798,21 +16800,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9256089d476eacf4e8856bd3a6f23011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTags:
-  - Princess
-  - Tentacle
-  currentTarget: 
   vulnerabilities:
   - Lava
   text: {fileID: 0}
   anim: {fileID: 95481908306019208}
   agent: {fileID: 0}
   spawnState: {fileID: 0}
-  huntState: {fileID: 0}
   attackState: {fileID: 0}
   carryState: {fileID: 0}
   grabbedState: {fileID: 0}
   deathState: {fileID: 0}
+  searchState: {fileID: 0}
+  wanderState: {fileID: 0}
   isSuicidal: 0
 --- !u!114 &114298528269174422
 MonoBehaviour:
@@ -16839,6 +16838,19 @@ MonoBehaviour:
   attackInterval: 1
   damage: 1
   attackRange: 1
+--- !u!114 &114353931932380922
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1643498522182676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91bd09f2fd5406c42a3bbdacd12575a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 1
+  wanderDuration: 3
 --- !u!114 &114426017360544632
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16851,6 +16863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carryDestination: Exit
+  retargetInterval: 3
 --- !u!114 &114545808982212804
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16882,6 +16895,21 @@ MonoBehaviour:
   isGrabbed: 0
   grabber: {fileID: 0}
   lastGrabbedTime: 0
+--- !u!114 &114691689326474902
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1643498522182676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d97870c8273d7f445b5763854e3133a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTags:
+  - Princess
+  - Tentacle
+  retargetInterval: 3
 --- !u!114 &114837903237553900
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -3308,6 +3308,8 @@ GameObject:
   - component: {fileID: 114037592076198444}
   - component: {fileID: 114842728511577666}
   - component: {fileID: 114008186464155002}
+  - component: {fileID: 114405084426257526}
+  - component: {fileID: 114584290090306902}
   m_Layer: 0
   m_Name: EnemyWizard
   m_TagString: Enemy
@@ -16805,6 +16807,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114405084426257526
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1444026687741626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91bd09f2fd5406c42a3bbdacd12575a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 1
+  wanderDuration: 3
 --- !u!114 &114507433389159306
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16817,6 +16832,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitTime: 1
+--- !u!114 &114584290090306902
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1444026687741626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d97870c8273d7f445b5763854e3133a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTags:
+  - Tentacle
+  retargetInterval: 3
 --- !u!114 &114615348317922084
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16842,6 +16871,8 @@ MonoBehaviour:
   carryState: {fileID: 0}
   grabbedState: {fileID: 0}
   deathState: {fileID: 0}
+  searchState: {fileID: 0}
+  wanderState: {fileID: 0}
 --- !u!114 &114727164464568888
 MonoBehaviour:
   m_ObjectHideFlags: 1
