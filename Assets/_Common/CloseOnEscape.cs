@@ -35,7 +35,7 @@ namespace UnityCommon
 			//It's been disabled through CloseTop()
 			if (objectStack.Count > 0)
 			{
-				//It was disabled through other mean
+				//It was disabled through other means
 				if (objectStack.Peek () == this)
 					objectStack.Pop ();
 				//It was disabled through other means, but it's not the last one on the stack

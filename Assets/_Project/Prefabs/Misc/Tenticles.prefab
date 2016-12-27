@@ -4265,11 +4265,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ab39732588a0847a623f626823345e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 4206350090690112}
+  lead: {fileID: 0}
+  playerController: {fileID: 0}
   spline: {fileID: 114689482685489354}
+  colliderObject: {fileID: 0}
+  materialObject: {fileID: 0}
   segmentLength: 1
-  obstacle: {fileID: 1420564068274964, guid: 1eb19d169c2ce564da9ac9cc57b4b5a1, type: 2}
-  tenticleMaterial: {fileID: 2100000, guid: c11bb81749a6ed449b20cc2a7819655e, type: 2}
+  selfCollideNumber: 8
+  damageTint: {r: 0, g: 0, b: 0, a: 0}
+  damageFlashDuration: 2
+  damageFlashNumber: 3
+  tentacleLength: 0
 --- !u!114 &114311737868489734
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4685,8 +4691,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a497ce8f40e4184fb6237521c8cb346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.04
   tenticleController: {fileID: 114298872954873464}
+  speed: 0.04
+  maxSpeed: 1
+  grabRadius: 0.75
+  grabPriority: []
   isActive: 0
 --- !u!114 &114453989994201892
 MonoBehaviour:
@@ -4796,11 +4805,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ab39732588a0847a623f626823345e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 4103719348520068}
+  lead: {fileID: 0}
+  playerController: {fileID: 0}
   spline: {fileID: 114071974921867408}
+  colliderObject: {fileID: 0}
+  materialObject: {fileID: 0}
   segmentLength: 1
-  obstacle: {fileID: 1420564068274964, guid: 1eb19d169c2ce564da9ac9cc57b4b5a1, type: 2}
-  tenticleMaterial: {fileID: 2100000, guid: 0bb98e761cf7bfa41bc35b866b95ce90, type: 2}
+  selfCollideNumber: 8
+  damageTint: {r: 0, g: 0, b: 0, a: 0}
+  damageFlashDuration: 2
+  damageFlashNumber: 3
+  tentacleLength: 0
 --- !u!114 &114476430669498176
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4950,8 +4965,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a497ce8f40e4184fb6237521c8cb346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.04
   tenticleController: {fileID: 114628344512288996}
+  speed: 0.04
+  maxSpeed: 1
+  grabRadius: 0.75
+  grabPriority: []
   isActive: 0
 --- !u!114 &114487174900513398
 MonoBehaviour:
@@ -5628,11 +5646,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ab39732588a0847a623f626823345e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 4453340892857552}
+  lead: {fileID: 0}
+  playerController: {fileID: 0}
   spline: {fileID: 114968809641974650}
+  colliderObject: {fileID: 0}
+  materialObject: {fileID: 0}
   segmentLength: 1
-  obstacle: {fileID: 1420564068274964, guid: 1eb19d169c2ce564da9ac9cc57b4b5a1, type: 2}
-  tenticleMaterial: {fileID: 2100000, guid: ad96d9e8d596b694481cfc5ae5042281, type: 2}
+  selfCollideNumber: 8
+  damageTint: {r: 0, g: 0, b: 0, a: 0}
+  damageFlashDuration: 2
+  damageFlashNumber: 3
+  tentacleLength: 0
 --- !u!114 &114640004883708534
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6054,8 +6078,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a497ce8f40e4184fb6237521c8cb346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.04
   tenticleController: {fileID: 114469578038798284}
+  speed: 0.04
+  maxSpeed: 1
+  grabRadius: 0.75
+  grabPriority: []
   isActive: 0
 --- !u!114 &114705106418875698
 MonoBehaviour:
@@ -6119,8 +6146,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a497ce8f40e4184fb6237521c8cb346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.04
   tenticleController: {fileID: 114961560129221764}
+  speed: 0.04
+  maxSpeed: 1
+  grabRadius: 0.75
+  grabPriority: []
   isActive: 0
 --- !u!114 &114711186214376940
 MonoBehaviour:
@@ -7012,11 +7042,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c5ccb594a0e77541b18ed7c2213bf30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tenticleNorth: {fileID: 114479637521103564}
-  tenticleSouth: {fileID: 114700555917148390}
-  tenticleEast: {fileID: 114709522281898900}
-  tenticleWest: {fileID: 114441789309654482}
+  maxLife: 20
+  currentLife: 0
+  tentacles: []
+  tentacleButtonNames: 
+  tentacleTriggers: []
+  startingMaxLength: 20
+  currentMaxLength: 20
+  maxMaxLength: 80
+  addToMaxLengthPerSoul: 10
+  currentTotalTentacleLength: 0
   _activeTenticleIndex: 0
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!114 &114884498343094816
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7407,11 +7448,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ab39732588a0847a623f626823345e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 4555091108045952}
+  lead: {fileID: 0}
+  playerController: {fileID: 0}
   spline: {fileID: 114910807478489360}
+  colliderObject: {fileID: 0}
+  materialObject: {fileID: 0}
   segmentLength: 1
-  obstacle: {fileID: 1420564068274964, guid: 1eb19d169c2ce564da9ac9cc57b4b5a1, type: 2}
-  tenticleMaterial: {fileID: 2100000, guid: 76c14f2e2b1a12c4b9005aa9e0054d58, type: 2}
+  selfCollideNumber: 8
+  damageTint: {r: 0, g: 0, b: 0, a: 0}
+  damageFlashDuration: 2
+  damageFlashNumber: 3
+  tentacleLength: 0
 --- !u!114 &114966316846089038
 MonoBehaviour:
   m_ObjectHideFlags: 1

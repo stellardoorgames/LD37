@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using UnityEngine.Events;
 
 namespace UnityCommon
 {
@@ -34,6 +35,7 @@ namespace UnityCommon
 		[Space]
 
 		public EscBehavior escapeBehavior;
+		public UnityEvent OnOpenMenu;
 		public GameObject menu;
 
 
@@ -54,8 +56,8 @@ namespace UnityCommon
 				AudioListener.volume = previousVolume;
 
 			//Option Menu
-			if (menu != null)
-				menu.SetActive (false);
+			//if (menu != null)
+			//	menu.SetActive (false);
 
 			//Start
 			StartScene ();
@@ -70,11 +72,12 @@ namespace UnityCommon
 					Application.Quit ();
 				else if (escapeBehavior == EscBehavior.ExitScene && defaultExitScene != "")
 					ChangeLevel ();
-				else if (menu != null)
+				else// if (menu != null)
 				{
 					if (! CloseOnEscape.CloseTop() && escapeBehavior == EscBehavior.OpenMenu)
 					{
-						menu.SetActive (true);
+						OnOpenMenu.Invoke();
+						//menu.SetActive (true);
 					}
 
 				}

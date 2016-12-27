@@ -125,6 +125,8 @@ MonoBehaviour:
   grabRange: 1
   isGrabbed: 0
   grabber: {fileID: 0}
+  lastGrabbedTime: 0
+  minGrabDelay: 1
 --- !u!114 &114810752747984718
 MonoBehaviour:
   m_ObjectHideFlags: 1

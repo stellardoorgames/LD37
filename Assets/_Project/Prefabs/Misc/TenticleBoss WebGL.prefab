@@ -2767,8 +2767,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a497ce8f40e4184fb6237521c8cb346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.04
   tenticleController: {fileID: 114320674350465062}
+  speed: 0.04
+  maxSpeed: 1
+  grabRadius: 0.75
+  grabPriority: []
   isActive: 0
 --- !u!114 &114072443569523496
 MonoBehaviour:
@@ -3090,11 +3093,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ab39732588a0847a623f626823345e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 4686193727459276}
+  lead: {fileID: 0}
+  playerController: {fileID: 0}
   spline: {fileID: 114365660981191616}
+  colliderObject: {fileID: 0}
+  materialObject: {fileID: 0}
   segmentLength: 1
-  obstacle: {fileID: 1420564068274964, guid: 1eb19d169c2ce564da9ac9cc57b4b5a1, type: 2}
-  tenticleMaterial: {fileID: 2100000, guid: 0bb98e761cf7bfa41bc35b866b95ce90, type: 2}
+  selfCollideNumber: 8
+  damageTint: {r: 0, g: 0, b: 0, a: 0}
+  damageFlashDuration: 2
+  damageFlashNumber: 3
+  tentacleLength: 0
 --- !u!114 &114125490071869952
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3781,11 +3790,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ab39732588a0847a623f626823345e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 4578531668472218}
+  lead: {fileID: 0}
+  playerController: {fileID: 0}
   spline: {fileID: 114536225949858022}
+  colliderObject: {fileID: 0}
+  materialObject: {fileID: 0}
   segmentLength: 1
-  obstacle: {fileID: 1420564068274964, guid: 1eb19d169c2ce564da9ac9cc57b4b5a1, type: 2}
-  tenticleMaterial: {fileID: 2100000, guid: 76c14f2e2b1a12c4b9005aa9e0054d58, type: 2}
+  selfCollideNumber: 8
+  damageTint: {r: 0, g: 0, b: 0, a: 0}
+  damageFlashDuration: 2
+  damageFlashNumber: 3
+  tentacleLength: 0
 --- !u!114 &114333743183491610
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3831,8 +3846,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a497ce8f40e4184fb6237521c8cb346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.04
   tenticleController: {fileID: 114113875855799728}
+  speed: 0.04
+  maxSpeed: 1
+  grabRadius: 0.75
+  grabPriority: []
   isActive: 0
 --- !u!114 &114342894604533354
 MonoBehaviour:
@@ -4712,16 +4730,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxLife: 10
-  tenticleSouth: {fileID: 114342889932022482}
-  tenticleEast: {fileID: 114067983677399396}
-  tenticleWest: {fileID: 114929597771192572}
+  currentLife: 0
+  tentacles: []
+  tentacleButtonNames: 
+  tentacleTriggers: []
+  startingMaxLength: 20
+  currentMaxLength: 20
+  maxMaxLength: 80
+  addToMaxLengthPerSoul: 10
+  currentTotalTentacleLength: 0
   _activeTenticleIndex: 1
   OnDeath:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  OnFinish:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
@@ -5809,11 +5828,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ab39732588a0847a623f626823345e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 4453076851542698}
+  lead: {fileID: 0}
+  playerController: {fileID: 0}
   spline: {fileID: 114105170745886354}
+  colliderObject: {fileID: 0}
+  materialObject: {fileID: 0}
   segmentLength: 1
-  obstacle: {fileID: 1420564068274964, guid: 1eb19d169c2ce564da9ac9cc57b4b5a1, type: 2}
-  tenticleMaterial: {fileID: 2100000, guid: c11bb81749a6ed449b20cc2a7819655e, type: 2}
+  selfCollideNumber: 8
+  damageTint: {r: 0, g: 0, b: 0, a: 0}
+  damageFlashDuration: 2
+  damageFlashNumber: 3
+  tentacleLength: 0
 --- !u!114 &114873202575240126
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5969,8 +5994,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a497ce8f40e4184fb6237521c8cb346, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.04
   tenticleController: {fileID: 114871830362080230}
+  speed: 0.04
+  maxSpeed: 1
+  grabRadius: 0.75
+  grabPriority: []
   isActive: 0
 --- !u!114 &114957666141620810
 MonoBehaviour:
