@@ -8,9 +8,14 @@ public class PrincessController : Character {
 	public UnityEvent OnKidnapped;
 	public UnityEvent OnDeath;
 
+	public CharacterHoldState holdState;
+
 	public override void Start ()
 	{
 		base.Start ();
+
+		holdState = GetComponent<CharacterHoldState>();
+		stateMachine.addState(holdState);
 	}
 
 
@@ -20,6 +25,13 @@ public class PrincessController : Character {
 		{
 			OnKidnapped.Invoke();
 			//LevelManager.LoseLevel ();
+		}
+		else if (other.tag == "Switch")
+		{
+			Grabbable grab = other.GetComponent<Grabbable>();
+			if (grab != null)
+				carryState.StartCarry(grab);
+			
 		}
 
 		base.OnTriggerEnter(other);

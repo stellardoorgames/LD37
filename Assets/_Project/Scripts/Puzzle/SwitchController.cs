@@ -17,7 +17,6 @@ public class SwitchController : MonoBehaviour {
 	public UnityEvent OnSwitchOff;
 	public UnityEvent OnSwitchToggle;
 
-	public bool testActivate = false;
 
 	// Use this for initialization
 	void Start () {
@@ -26,11 +25,6 @@ public class SwitchController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (testActivate && !isOn)
-			SwitchON();
-		
-		if (!testActivate && isOn)
-			SwitchOff();
 	}
 
 	public void SwitchON()

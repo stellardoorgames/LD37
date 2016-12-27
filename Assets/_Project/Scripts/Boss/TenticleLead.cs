@@ -131,6 +131,9 @@ public class TenticleLead : MonoBehaviour {
 
 	void AttemptToGrab(Grabbable grabbable)
 	{
+		Vector3 grabPosition = new Vector3(grabbable.transform.position.x, transform.position.y, grabbable.transform.position.z);
+		transform.position = grabPosition;
+
 		bool grabWorked = grabbable.Grabbed (transform);
 		if (grabWorked)
 		{

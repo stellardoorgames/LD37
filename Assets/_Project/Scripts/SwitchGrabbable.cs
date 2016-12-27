@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class SwitchGrabbable : Grabbable {
 
+	SwitchController switchController;
+
 	// Use this for initialization
 	void Start () {
-		
+		switchController = GetComponent<SwitchController>();
 	}
 	
 	// Update is called once per frame
@@ -16,12 +18,37 @@ public class SwitchGrabbable : Grabbable {
 
 	public override bool Grabbed (Transform grabber)
 	{
-		Debug.Log("Grab Switch todo");
-		throw new System.NotImplementedException ();
+		this.grabber = grabber;
+
+		//grabber.position = transform.position;
+
+		isGrabbed = true;
+
+		switchController.SwitchON();
+
+		StartCoroutine(GrabbedCoroutine());
+
+		return true;
+	}
+
+	IEnumerator GrabbedCoroutine()
+	{
+		while(isGrabbed)
+		{
+			float dist = Vector3.Distance (transform.position, grabber.position);
+			if (dist > grabRange)
+			{
+				EscapedEvent();
+			}
+			
+			yield return null;
+		}
 	}
 
 	public override void Released ()
 	{
-		throw new System.NotImplementedException ();
+		isGrabbed = false;
+
+		switchController.SwitchOff();
 	}
 }
