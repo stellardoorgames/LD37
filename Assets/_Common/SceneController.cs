@@ -14,12 +14,21 @@ namespace UnityCommon
 		OpenMenu,
 	}
 
+	public enum SceneSelect
+	{
+		Default,
+		Win,
+		Lose
+	}
+
 	public class SceneController : MonoBehaviour {
 
 		public static float loadingProgress = 0f;
 		public static float previousVolume = 1f;
 
 		public SceneField defaultExitScene;
+		public SceneField defaultWinScene;
+		public SceneField defaultLoseScene;
 		public bool asychronousLoad;
 		[Space]
 		public bool fadeIn = true;
@@ -71,7 +80,7 @@ namespace UnityCommon
 				if (escapeBehavior == EscBehavior.ExitGame)
 					Application.Quit ();
 				else if (escapeBehavior == EscBehavior.ExitScene && defaultExitScene != "")
-					ChangeLevel ();
+					ChangeScene ();
 				else// if (menu != null)
 				{
 					if (! CloseOnEscape.CloseTop() && escapeBehavior == EscBehavior.OpenMenu)
@@ -113,20 +122,39 @@ namespace UnityCommon
 			}
 		}
 
-		public static void ChangeScene(SceneField scene = null)
+		/*public static void ChangeScene(SceneField scene = null)
 		{
 			instance.StartCoroutine(instance.ChangeSceneCoroutine(scene));
-		}
+		}*/
 
-		public void ChangeLevel(string sceneName = "")
+		public void ChangeScene(string sceneName = "")
 		{
 			if (sceneName == "")
-				StartCoroutine (ChangeSceneCoroutine ());
+				StartCoroutine (ChangeSceneCoroutine (defaultExitScene));
 			else
-			{
 				StartCoroutine (ChangeSceneCoroutine (new SceneField (sceneName)));
-			}
 		}
+
+		public void ChangeScene(SceneSelect scene)
+		{
+			if (scene == SceneSelect.Default)
+				StartCoroutine(ChangeSceneCoroutine(defaultExitScene));
+			else if (scene == SceneSelect.Win)
+				StartCoroutine(ChangeSceneCoroutine(defaultWinScene));
+			else if (scene == SceneSelect.Lose)
+				StartCoroutine(ChangeSceneCoroutine(defaultLoseScene));
+		}
+
+		public void StartWinScene()
+		{
+			StartCoroutine(ChangeSceneCoroutine(defaultWinScene));
+		}
+
+		public void StartLoseScene()
+		{
+			StartCoroutine(ChangeSceneCoroutine(defaultLoseScene));
+		}
+
 		public IEnumerator ChangeSceneCoroutine(SceneField scene = null)
 		{
 			float startTime = Time.time;

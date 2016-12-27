@@ -3302,14 +3302,12 @@ GameObject:
   - component: {fileID: 135161807708211780}
   - component: {fileID: 114615348317922084}
   - component: {fileID: 114507433389159306}
-  - component: {fileID: 114168587549491244}
+  - component: {fileID: 114584290090306902}
   - component: {fileID: 114727164464568888}
   - component: {fileID: 114225169194441016}
   - component: {fileID: 114037592076198444}
   - component: {fileID: 114842728511577666}
   - component: {fileID: 114008186464155002}
-  - component: {fileID: 114405084426257526}
-  - component: {fileID: 114584290090306902}
   m_Layer: 0
   m_Name: EnemyWizard
   m_TagString: Enemy
@@ -16767,18 +16765,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64becf96bf4bb4f40a0169307956ffcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114168587549491244
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1444026687741626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8606390da21746d44984c3cf92041f99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  retargetInterval: 3
 --- !u!114 &114225169194441016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16791,6 +16777,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carryDestination: Exit
+  retargetInterval: 3
 --- !u!114 &114272735126883098
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16807,19 +16794,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &114405084426257526
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1444026687741626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91bd09f2fd5406c42a3bbdacd12575a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distance: 1
-  wanderDuration: 3
 --- !u!114 &114507433389159306
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16857,22 +16831,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3006405e26ac784fb244d505f3805f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTags:
-  - Tentacle
-  currentTarget: 
-  vulnerabilities:
-  - Lava
+  vulnerabilities: 00000000
   text: {fileID: 0}
   anim: {fileID: 95917374941006580}
   agent: {fileID: 0}
   spawnState: {fileID: 0}
-  huntState: {fileID: 0}
+  searchState: {fileID: 0}
   attackState: {fileID: 0}
   carryState: {fileID: 0}
   grabbedState: {fileID: 0}
   deathState: {fileID: 0}
-  searchState: {fileID: 0}
-  wanderState: {fileID: 0}
 --- !u!114 &114727164464568888
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16920,8 +16888,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathTime: 5
-  lavaDeathEffect: {fileID: 1038803464642200, guid: 31d076bc109379645a681b46611c640c,
-    type: 2}
   soulGemPrefab: {fileID: 1803453541596278, guid: 30ee4ca92a34f67489c144b69435d709,
     type: 2}
 --- !u!114 &114920939931429066

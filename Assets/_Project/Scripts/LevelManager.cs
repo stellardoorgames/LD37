@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityCommon;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 
 	public SceneField winScene;
 	public SceneField loseScene;
+
+	//public bool loseRestartScene = true;
 
 	SceneField nextScene;
 
@@ -39,7 +42,6 @@ public class LevelManager : MonoBehaviour {
 	void Start () {
 
 		instance = this;
-		
 	}
 	
 	// Update is called once per frame
@@ -73,7 +75,7 @@ public class LevelManager : MonoBehaviour {
 
 	public void ExitLevel()
 	{
-		SceneController.ChangeScene(nextScene);
+		//SceneController.ChangeScene(nextScene);
 
 	}
 }

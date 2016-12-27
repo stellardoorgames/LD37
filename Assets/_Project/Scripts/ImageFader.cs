@@ -23,10 +23,14 @@ public class ImageFader : MonoBehaviour
     public GameObject textObject;
     public float textDuration;
 
-    public UnityEvent OnEnd;
+	public bool pauseOnDisplay = false;
+
+	public UnityEvent OnEnd;
 	public UnityEvent OnStart;
 	public UnityEvent OnFinishFadeIn;
 	public UnityEvent OnStartFadeOut;
+
+	float startingTimeScale;
 
     Image image;
 
@@ -38,6 +42,8 @@ public class ImageFader : MonoBehaviour
 
 	void Start()
     {
+		startingTimeScale = Time.timeScale;
+
 		if (start)
             StartImage();
 		
@@ -93,6 +99,11 @@ public class ImageFader : MonoBehaviour
             StartCoroutine(TextRemoveCoroutine());
         }
 
+		if (pauseOnDisplay)
+		{
+			Time.timeScale = 0f;
+		}
+
         //Wait
 		if (keyToContinue)
 		{
@@ -103,14 +114,19 @@ public class ImageFader : MonoBehaviour
 		}
 		else
 		{
-			float waitEndTime = Time.time + duration - fadeInDuration - fadeOutDuration;
-			while (Time.time < waitEndTime)
+			float waitEndTime = Time.realtimeSinceStartup + duration - fadeInDuration - fadeOutDuration;
+			while (Time.realtimeSinceStartup < waitEndTime)
 			{
 				if (keyToSkip && Input.anyKeyDown)
 					break;
 				
 				yield return null;
 			}
+		}
+
+		if (pauseOnDisplay)
+		{
+			Time.timeScale = startingTimeScale;
 		}
 
         SetTextActive(false);
@@ -162,4 +178,9 @@ public class ImageFader : MonoBehaviour
             textObject.SetActive(active);
 
     }
+
+	void OnDisable()
+	{
+		Time.timeScale = startingTimeScale;
+	}
 }

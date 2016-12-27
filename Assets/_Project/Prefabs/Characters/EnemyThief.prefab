@@ -1469,8 +1469,6 @@ GameObject:
   - component: {fileID: 114754157604020644}
   - component: {fileID: 114368701343212978}
   - component: {fileID: 114812752923805948}
-  - component: {fileID: 114285001267113562}
-  - component: {fileID: 114633628650419628}
   m_Layer: 0
   m_Name: EnemyThief
   m_TagString: Enemy
@@ -12260,7 +12258,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1155810576341148}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: 8}
+  m_LocalPosition: {x: -1, y: 0, z: -12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224724238767778586}
@@ -16947,17 +16945,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c79a28d898e3e840a1f7dcccf8cd238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vulnerabilities: []
+  vulnerabilities: 
   text: {fileID: 0}
   anim: {fileID: 95307860893498988}
   agent: {fileID: 0}
   spawnState: {fileID: 0}
+  searchState: {fileID: 0}
   attackState: {fileID: 0}
   carryState: {fileID: 0}
   grabbedState: {fileID: 0}
   deathState: {fileID: 0}
-  searchState: {fileID: 0}
-  wanderState: {fileID: 0}
 --- !u!114 &114230918440367084
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17007,19 +17004,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: New Text fdsfds
---- !u!114 &114285001267113562
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1155810576341148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91bd09f2fd5406c42a3bbdacd12575a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distance: 1
-  wanderDuration: 3
 --- !u!114 &114368701343212978
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17032,8 +17016,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathTime: 5
-  lavaDeathEffect: {fileID: 1038803464642200, guid: 31d076bc109379645a681b46611c640c,
-    type: 2}
   soulGemPrefab: {fileID: 1803453541596278, guid: 30ee4ca92a34f67489c144b69435d709,
     type: 2}
 --- !u!114 &114533900602165262
@@ -17057,20 +17039,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &114633628650419628
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1155810576341148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d97870c8273d7f445b5763854e3133a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTags:
-  - SoulGem
-  retargetInterval: 3
 --- !u!114 &114754157604020644
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17105,10 +17073,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1155810576341148}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8606390da21746d44984c3cf92041f99, type: 3}
+  m_Script: {fileID: 11500000, guid: d97870c8273d7f445b5763854e3133a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  retargetInterval: 2
+  targetTags:
+  - SoulGem
+  retargetInterval: 3
 --- !u!114 &114914335866625036
 MonoBehaviour:
   m_ObjectHideFlags: 1

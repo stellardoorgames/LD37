@@ -52,9 +52,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4254146875749702}
   - component: {fileID: 65336837621852838}
+  - component: {fileID: 114271451997447048}
   m_Layer: 8
   m_Name: Trap Lava
-  m_TagString: Lava
+  m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -406,3 +407,17 @@ Light:
   m_BounceIntensity: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114271451997447048
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1423506726666660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18e4dd0d518c0aa4daf5bab038edc43c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hazardType: 0
+  effectPrefab: {fileID: 1038803464642200, guid: 31d076bc109379645a681b46611c640c,
+    type: 2}

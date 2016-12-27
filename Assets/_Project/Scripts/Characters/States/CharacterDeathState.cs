@@ -7,10 +7,10 @@ using UnityEngine.AI;
 public class CharacterDeathState : SKState<Character> {
 
 	public float deathTime = 2f;
-	public GameObject lavaDeathEffect;
+	//public GameObject lavaDeathEffect;
 	public GameObject soulGemPrefab;
 
-	Character.DeathTypes deathType;
+	Character.DeathType deathType;
 
 	float startTime;
 
@@ -26,7 +26,7 @@ public class CharacterDeathState : SKState<Character> {
 		grabbable = GetComponent<Grabbable>();
 	}
 
-	public void StartDeath(Character.DeathTypes deathType)
+	public void StartDeath(Character.DeathType deathType)
 	{
 		this.deathType = deathType;
 		_machine.changeState<CharacterDeathState>();
@@ -34,12 +34,14 @@ public class CharacterDeathState : SKState<Character> {
 
 	public override void begin ()
 	{
+		Debug.Log (string.Format("{0} died from {1}.", name, deathType));
+
 		tag = "Untagged";
 
 		grabbable.EscapedEvent();
 
-		if (deathType == Character.DeathTypes.Lava)
-			Instantiate(lavaDeathEffect, transform.position, Quaternion.identity);
+		//if (deathType == Character.DeathType.Lava)
+		//	Instantiate(lavaDeathEffect, transform.position, Quaternion.identity);
 		
 		agent.Stop();
 

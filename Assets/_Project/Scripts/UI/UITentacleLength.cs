@@ -23,9 +23,9 @@ public class UITentacleLength : MonoBehaviour {
 
 	Vector2 barPosition;
 	Vector2 barPositionOffset;
-	float barWidth;
+	//float barWidth;
 
-	float previousMaxLength;
+	//float previousMaxLength;
 
 	PlayerController controller;
 	
@@ -34,9 +34,9 @@ public class UITentacleLength : MonoBehaviour {
 		controller = GetComponent<PlayerController>();
 
 		startingTentacleLength = startingTotalTentacleLength / controller.tentacles.Count;
-		previousMaxLength = controller.currentMaxLength;
+		//previousMaxLength = controller.currentMaxLength;
 
-		barWidth = panel1.rect.width;
+		//barWidth = panel1.rect.width;
 		barPosition = panel1.anchoredPosition;
 
 

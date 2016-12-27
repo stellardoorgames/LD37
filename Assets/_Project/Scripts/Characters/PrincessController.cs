@@ -37,7 +37,7 @@ public class PrincessController : Character {
 		base.OnTriggerEnter(other);
 	}
 
-	public override void Death(Character.DeathTypes deathType)
+	public override void Death(Character.DeathType deathType)
 	{
 		//LevelManager.LoseLevel ();
 		OnDeath.Invoke();

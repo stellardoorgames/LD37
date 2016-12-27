@@ -141,15 +141,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 1475357955}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 2
   duration: 8
   fadeInDuration: 1.5
   fadeOutDuration: 0.5
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  displayColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 0}
+  textDuration: 0
+  pauseOnDisplay: 0
   OnEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnFinishFadeIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStartFadeOut:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
@@ -253,15 +271,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 1535186680}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 2
   duration: 4.5
   fadeInDuration: 1.5
   fadeOutDuration: 1.5
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  displayColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 0}
+  textDuration: 0
+  pauseOnDisplay: 0
   OnEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnFinishFadeIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStartFadeOut:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
@@ -348,15 +384,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 395760533}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 2
   duration: 5
   fadeInDuration: 1
   fadeOutDuration: 1
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  displayColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 0}
+  textDuration: 0
+  pauseOnDisplay: 0
   OnEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnFinishFadeIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStartFadeOut:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
@@ -422,6 +476,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultExitScene:
+    m_SceneAsset: {fileID: 102900000, guid: b898486496c1939469177589c1f925ac, type: 3}
+    m_SceneName: MenuScene01
+  defaultWinScene:
+    m_SceneAsset: {fileID: 0}
+    m_SceneName: 
+  defaultLoseScene:
     m_SceneAsset: {fileID: 0}
     m_SceneName: 
   asychronousLoad: 0
@@ -434,6 +494,11 @@ MonoBehaviour:
   fadeOutColor: {r: 0, g: 0, b: 0, a: 1}
   fadeOutAudio: 0
   escapeBehavior: 0
+  OnOpenMenu:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   menu: {fileID: 0}
 --- !u!4 &257759644
 Transform:
@@ -526,14 +591,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 74271569}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 2
   duration: 5
   fadeInDuration: 1.5
   fadeOutDuration: 1.5
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  displayColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 0}
+  textDuration: 0
+  pauseOnDisplay: 0
   OnEnd:
     m_PersistentCalls:
       m_Calls:
@@ -548,6 +616,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnFinishFadeIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStartFadeOut:
+    m_PersistentCalls:
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
 --- !u!114 &273572370
@@ -632,15 +715,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 2011238595}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 2
   duration: 11.5
   fadeInDuration: 1
   fadeOutDuration: 1.5
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  displayColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 0}
+  textDuration: 0
+  pauseOnDisplay: 0
   OnEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnFinishFadeIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStartFadeOut:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
@@ -728,15 +829,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 973495558}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 0
   duration: 7
   fadeInDuration: 0.5
   fadeOutDuration: 1
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  displayColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 0}
+  textDuration: 0
+  pauseOnDisplay: 0
   OnEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnFinishFadeIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStartFadeOut:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
@@ -841,15 +960,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 1256005123}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 6
   duration: 5
   fadeInDuration: 1
   fadeOutDuration: 1
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  displayColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 0}
+  textDuration: 0
+  pauseOnDisplay: 0
   OnEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnFinishFadeIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStartFadeOut:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
@@ -999,15 +1136,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 1891428566}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 0.5
   duration: 5
   fadeInDuration: 1
   fadeOutDuration: 1
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  displayColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 0}
+  textDuration: 0
+  pauseOnDisplay: 0
   OnEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnFinishFadeIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStartFadeOut:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
@@ -1129,15 +1284,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 1650966710}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 1
   duration: 6
   fadeInDuration: 1
   fadeOutDuration: 1
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  displayColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 0}
+  textDuration: 0
+  pauseOnDisplay: 0
   OnEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnFinishFadeIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStartFadeOut:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
@@ -1224,15 +1397,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 1754177871}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 7
   duration: 7
   fadeInDuration: 0.5
   fadeOutDuration: 1
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  displayColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 0}
+  textDuration: 0
+  pauseOnDisplay: 0
   OnEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnFinishFadeIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStartFadeOut:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
@@ -1339,15 +1530,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 1
   nextObject: {fileID: 74001011}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 1
   duration: 14
   fadeInDuration: 0
   fadeOutDuration: 0.5
   startColor: {r: 0.14117648, g: 0.02745098, b: 0.12156863, a: 1}
-  displayColor: {r: 0.14117648, g: 0.02745098, b: 0.12156863, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 0}
+  textDuration: 0
+  pauseOnDisplay: 0
   OnEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnFinishFadeIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStartFadeOut:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
@@ -1434,15 +1643,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 273572367}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 2
   duration: 11
   fadeInDuration: 1
   fadeOutDuration: 1
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  displayColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 0}
+  textDuration: 0
+  pauseOnDisplay: 0
   OnEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnFinishFadeIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStartFadeOut:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
@@ -1529,15 +1756,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 1634584135}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 1
   duration: 11
   fadeInDuration: 1
   fadeOutDuration: 1
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  displayColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 0}
+  textDuration: 0
+  pauseOnDisplay: 0
   OnEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnFinishFadeIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStartFadeOut:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
@@ -1625,15 +1870,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 1284429581}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 1
   duration: 12
   fadeInDuration: 1
   fadeOutDuration: 1
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  displayColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 0}
+  textDuration: 0
+  pauseOnDisplay: 0
   OnEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnFinishFadeIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStartFadeOut:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
@@ -1737,15 +2000,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 80731003}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 2
   duration: 9
   fadeInDuration: 1
   fadeOutDuration: 1
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  displayColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 0}
+  textDuration: 0
+  pauseOnDisplay: 0
   OnEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnFinishFadeIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStartFadeOut:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
@@ -1833,14 +2114,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 814116782}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 6
   duration: 6
   fadeInDuration: 1
   fadeOutDuration: 1
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  displayColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 0}
+  textDuration: 0
+  pauseOnDisplay: 0
   OnEnd:
     m_PersistentCalls:
       m_Calls:
@@ -1855,6 +2139,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnFinishFadeIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStartFadeOut:
+    m_PersistentCalls:
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
 --- !u!114 &1475357958
@@ -2018,15 +2317,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 0}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 2
   duration: 4.5
   fadeInDuration: 1.5
   fadeOutDuration: 1
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  displayColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 0}
+  textDuration: 0
+  pauseOnDisplay: 0
   OnEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnFinishFadeIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStartFadeOut:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
@@ -2113,15 +2430,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 395760533}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 1
   duration: 10
   fadeInDuration: 1
   fadeOutDuration: 1
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  displayColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 0}
+  textDuration: 0
+  pauseOnDisplay: 0
   OnEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnFinishFadeIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStartFadeOut:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
@@ -2226,15 +2561,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 349985322}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 4
   duration: 4
   fadeInDuration: 1
   fadeOutDuration: 1
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  displayColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 0}
+  textDuration: 0
+  pauseOnDisplay: 0
   OnEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnFinishFadeIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStartFadeOut:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
@@ -2408,15 +2761,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 911438772}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 1
   duration: 8
   fadeInDuration: 1
   fadeOutDuration: 1
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  displayColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 0}
+  textDuration: 0
+  pauseOnDisplay: 0
   OnEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnFinishFadeIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStartFadeOut:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
@@ -2615,15 +2986,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 1368883978}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 4
   duration: 4
   fadeInDuration: 0.5
   fadeOutDuration: 1
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  displayColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 0}
+  textDuration: 0
+  pauseOnDisplay: 0
   OnEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnFinishFadeIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStartFadeOut:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
@@ -2710,15 +3099,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: 0
   nextObject: {fileID: 423163766}
+  keyToSkip: 0
+  keyToContinue: 0
   nextImageTime: 2.5
   duration: 4
   fadeInDuration: 1
   fadeOutDuration: 1
   startColor: {r: 0, g: 0, b: 0, a: 0}
-  displayColor: {r: 1, g: 1, b: 1, a: 1}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   textObject: {fileID: 0}
+  textDuration: 0
+  pauseOnDisplay: 0
   OnEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnFinishFadeIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnStartFadeOut:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,

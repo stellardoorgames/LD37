@@ -6,13 +6,13 @@ TagManager:
   tags:
   - CameraFollow
   - Princess
-  - Lava
   - Tentacle
   - Exit
   - Enemy
   - Key
   - SoulGem
   - Light
+  - Hazard
   layers:
   - Default
   - TransparentFX
