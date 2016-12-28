@@ -18,13 +18,15 @@ public class ItemGrabbable : Grabbable {
 		if (Time.time < lastGrabbedTime + minGrabDelay)
 			return false;
 
-		lastGrabbedTime = Time.time;
-
 		EscapedEvent();
 
-		isGrabbed = true;
+		//lastGrabbedTime = Time.time;
+		
+		//isGrabbed = true;
 
-		this.grabber = grabber;
+		//this.grabber = grabber;
+
+		base.Grabbed(grabber);
 
 		if (anim != null)
 			anim.SetBool ("isGrabbed", true);
@@ -51,7 +53,9 @@ public class ItemGrabbable : Grabbable {
 	{
 		if (isGrabbed == false)
 			return;
-		isGrabbed = false;
+		//isGrabbed = false;
+
+		base.Released();
 
 		Debug.Log ("Released");
 

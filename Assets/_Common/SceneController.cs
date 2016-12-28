@@ -10,6 +10,9 @@ namespace UnityCommon
 	{
 		Nothing,
 		ExitScene,
+		NextSceneInBuild,
+		PreviousSceneInBuild,
+		LastOpenedScene,
 		ExitGame,
 		OpenMenu,
 	}
@@ -40,6 +43,7 @@ namespace UnityCommon
 
 		public UnityEvent OnFinishFadeIn;
 
+		static public int currentSceneIndex;
 		static int previousSceneIndex = -1;
 
 		private static SceneController instance;
@@ -58,6 +62,8 @@ namespace UnityCommon
 			else
 				AudioListener.volume = previousVolume;
 
+			currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
 			//Option Menu
 			//if (menu != null)
 			//	menu.SetActive (false);
@@ -71,7 +77,32 @@ namespace UnityCommon
 		{
 			if (Input.GetButtonDown ("Cancel"))
 			{
-				if (escapeBehavior == EscBehavior.ExitGame)
+				switch (escapeBehavior)
+				{
+				case EscBehavior.ExitGame:
+					Application.Quit();
+					break;
+				case EscBehavior.ExitScene:
+					ChangeScene ();
+					break;
+				case EscBehavior.LastOpenedScene:
+					LoadLastOpenedScene();
+					break;
+				case EscBehavior.NextSceneInBuild:
+					LoadNextSceneInBuild();
+					break;
+				case EscBehavior.PreviousSceneInBuild:
+					LoadPreviousSceneInBuild();
+					break;
+				case EscBehavior.OpenMenu:
+					if (! CloseOnEscape.CloseTop())
+						OnOpenMenu.Invoke();
+					break;
+				default:
+					break;
+				}
+
+				/*if (escapeBehavior == EscBehavior.ExitGame)
 					Application.Quit ();
 				else if (escapeBehavior == EscBehavior.ExitScene && defaultExitScene != "")
 					ChangeScene ();
@@ -83,7 +114,7 @@ namespace UnityCommon
 						//menu.SetActive (true);
 					}
 
-				}
+				}*/
 
 			}
 

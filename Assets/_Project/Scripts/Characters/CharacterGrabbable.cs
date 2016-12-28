@@ -16,8 +16,10 @@ public class CharacterGrabbable : Grabbable {
 		if (character.deathState.enabled)
 			return false;
 
-		lastGrabbedTime = Time.time;
-		this.grabber = grabber;
+		//lastGrabbedTime = Time.time;
+		//this.grabber = grabber;
+
+		base.Grabbed(grabber);
 
 		character.stateMachine.changeState<CharacterGrabbedState>();
 
@@ -28,6 +30,8 @@ public class CharacterGrabbable : Grabbable {
 	{
 		if (isGrabbed == false)
 			return;
+
+		base.Released();
 
 		if (!character.deathState.enabled)
 			character.stateMachine.changeState<CharacterSearchState>();

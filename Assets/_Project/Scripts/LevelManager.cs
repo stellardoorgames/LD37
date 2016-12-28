@@ -5,16 +5,23 @@ using UnityCommon;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
+public enum Stats
+{
+	PrincessNabbed,
+	PrincessLost,
+	PrincessDeath,
+	EnemiesSpawned,
+	EnemiesGrabbed,
+	EnemiesKilled,
+	SoulStonesSpawned,
+	SoulStonesGrabbed,
+	SoulStonesConsumed,
+	SoulStonesNabbed,
+	SoulStonesLost,
+}
+
 public class LevelManager : MonoBehaviour {
-
-	int princessStolen = 0;
-	int enemiesGrabbed = 0;
-	int soulStonesDropped = 0;
-	int soulStonesGrabbed = 0;
-	int soulStonesConsumed = 0;
-	int soulStonesStolen = 0;
-
-
+	
 	public int winConditionKills = 0;
 	int _currentKills = 0;
 	int currentKills {
@@ -37,12 +44,27 @@ public class LevelManager : MonoBehaviour {
 	public UnityEvent OnLose;
 	public UnityEvent OnWin;
 
+	public UnityEvent OnFirstPrincessNab;
+	public UnityEvent OnFirstPrincessSteal;
+	public UnityEvent OnFirstEnemySpawn;
+	public UnityEvent OnFirstEnemyGrab;
+	public UnityEvent OnFirstEnemyKill;
+	public UnityEvent OnFirstSoulStoneDrop;
+	public UnityEvent OnFirstSoulStoneGrab;
+	public UnityEvent OnFirstSoulStoneConsume;
+	public UnityEvent OnFirstSoulStoneSteal;
+	public UnityEvent OnFirstSoulStoneLost;
+
 	static LevelManager instance;
 
-	// Use this for initialization
-	void Start () {
+	Dictionary<Stats, int> levelStats = new Dictionary<Stats, int>();
+	static Dictionary<Stats, int> totalStats = new Dictionary<Stats, int>();
 
+	// Use this for initialization
+	void Start () 
+	{
 		instance = this;
+
 	}
 	
 	// Update is called once per frame
@@ -50,14 +72,42 @@ public class LevelManager : MonoBehaviour {
 		
 	}
 
-	static public void AddKill()
+	static public void IncrementStat(Stats stat)
 	{
-		instance.currentKills++;
+		if (!instance.levelStats.ContainsKey(stat))
+		{
+			instance.levelStats.Add(stat, 0);
+			instance.FirstStatEvent(stat);
+		}
+		
+		instance.levelStats[stat]++;
+
+		if (!totalStats.ContainsKey(stat))
+			totalStats.Add(stat, 0);
+
+		totalStats[stat]++;
 	}
 
-	static public void AddTreasure()
+	void FirstStatEvent(Stats stat)
 	{
-		instance.currentTreasure++;
+		switch (stat) {
+		case Stats.PrincessNabbed:
+			OnFirstPrincessNab.Invoke();
+			break;
+		case Stats.EnemiesGrabbed:
+			OnFirstEnemyGrab.Invoke();
+			break;
+		case Stats.SoulStonesGrabbed:
+			OnFirstSoulStoneGrab.Invoke();
+			break;
+		case Stats.SoulStonesSpawned:
+			OnFirstSoulStoneDrop.Invoke();
+			break;
+		default:
+			break;
+		}
+
+		Debug.Log(stat + " incremented");
 	}
 
 }

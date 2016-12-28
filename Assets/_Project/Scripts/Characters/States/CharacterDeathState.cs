@@ -45,7 +45,9 @@ public class CharacterDeathState : SKState<Character> {
 		
 		agent.Stop();
 
-		LevelManager.AddKill ();
+		//LevelManager.AddKill ();
+		if (gameObject.tag == "Enemy")
+			LevelManager.IncrementStat(Stats.EnemiesKilled);
 		
 		anim.SetTrigger("Death");
 

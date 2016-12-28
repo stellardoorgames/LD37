@@ -159,12 +159,14 @@ public class TenticleLead : MonoBehaviour {
 
 		if (active)
 		{
-			gameObject.tag = "CameraFollow";
+			CameraController.SetTarget(gameObject);
+			//gameObject.tag = "CameraFollow";
 			projector.enabled = true;
 		}
 		else
 		{
-			gameObject.tag = "Tentacle";
+			CameraController.RemoveTarget(gameObject);
+			//gameObject.tag = "Tentacle";
 			projector.enabled = false;
 		}
 	}

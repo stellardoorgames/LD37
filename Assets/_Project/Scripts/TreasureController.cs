@@ -23,7 +23,7 @@ public class TreasureController : MonoBehaviour {
 		if (tenticle != null)
 		{
             Instantiate(pickupEffect, transform.position, Quaternion.identity);
-			LevelManager.AddTreasure ();
+			//LevelManager.AddTreasure ();
 			Destroy (gameObject);
 		}
 	}

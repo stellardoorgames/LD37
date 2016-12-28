@@ -478,12 +478,6 @@ MonoBehaviour:
   defaultExitScene:
     m_SceneAsset: {fileID: 102900000, guid: b898486496c1939469177589c1f925ac, type: 3}
     m_SceneName: MenuScene01
-  defaultWinScene:
-    m_SceneAsset: {fileID: 0}
-    m_SceneName: 
-  defaultLoseScene:
-    m_SceneAsset: {fileID: 0}
-    m_SceneName: 
   asychronousLoad: 0
   fadeIn: 1
   fadeInDuration: 1
@@ -493,13 +487,18 @@ MonoBehaviour:
   fadeOutDuration: 1
   fadeOutColor: {r: 0, g: 0, b: 0, a: 1}
   fadeOutAudio: 0
-  escapeBehavior: 0
+  escapeBehavior: 2
   OnOpenMenu:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   menu: {fileID: 0}
+  OnFinishFadeIn:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!4 &257759644
 Transform:
   m_ObjectHideFlags: 0

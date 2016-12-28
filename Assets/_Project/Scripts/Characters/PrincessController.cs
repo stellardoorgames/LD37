@@ -10,12 +10,26 @@ public class PrincessController : Character {
 
 	public CharacterHoldState holdState;
 
+	CharacterGrabbable grabbable;
+
 	public override void Start ()
 	{
 		base.Start ();
 
 		holdState = GetComponent<CharacterHoldState>();
 		stateMachine.addState(holdState);
+
+		grabbable = GetComponent<CharacterGrabbable>();
+		grabbable.OnGrab += OnGrabbed;
+	}
+
+	void OnGrabbed()
+	{
+		if (grabbable.grabber != null)
+		{
+			if (grabbable.grabber.tag == "Enemy")
+				LevelManager.IncrementStat(Stats.PrincessNabbed);
+		}
 	}
 
 
@@ -23,8 +37,8 @@ public class PrincessController : Character {
 	{
 		if (other.tag == "Exit")
 		{
+			LevelManager.IncrementStat(Stats.PrincessLost);
 			OnKidnapped.Invoke();
-			//LevelManager.LoseLevel ();
 		}
 		else if (other.tag == "Switch")
 		{
@@ -39,7 +53,7 @@ public class PrincessController : Character {
 
 	public override void Death(Character.DeathType deathType)
 	{
-		//LevelManager.LoseLevel ();
+		LevelManager.IncrementStat(Stats.PrincessDeath);
 		OnDeath.Invoke();
 
 		base.Death (deathType);

@@ -123,6 +123,8 @@ public class PlayerController : MonoBehaviour {
 		StartCoroutine(lengthUI.ColorFlash(1f, 1));
 		if (gem != null)
 			gem.Destroy();
+
+		LevelManager.IncrementStat(Stats.SoulStonesConsumed);
 	}
 
 	IEnumerator ExtendMaxLength(float amount, float duration)

@@ -35,7 +35,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1463498765637758}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 450, y: 300, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -50,11 +50,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 512c55c7a10104e40a41a87c1d16f619, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c14ca116003b4ce4ba92f0d6ff8ac56b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -133,14 +133,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultExitScene:
-    m_SceneAsset: {fileID: 102900000, guid: 705f604313bb9294b91380e999262483, type: 3}
-    m_SceneName: DungeonLevel_0001
-  defaultWinScene:
-    m_SceneAsset: {fileID: 0}
-    m_SceneName: 
-  defaultLoseScene:
-    m_SceneAsset: {fileID: 0}
-    m_SceneName: 
+    m_SceneAsset: {fileID: 102900000, guid: b898486496c1939469177589c1f925ac, type: 3}
+    m_SceneName: MenuScene01
   asychronousLoad: 0
   fadeIn: 1
   fadeInDuration: 1
@@ -149,11 +143,38 @@ MonoBehaviour:
   fadeOut: 1
   fadeOutDuration: 1
   fadeOutColor: {r: 0, g: 0, b: 0, a: 1}
-  fadeOutAudio: 0
-  escapeBehavior: 1
+  fadeOutAudio: 1
+  escapeBehavior: 3
   OnOpenMenu:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   menu: {fileID: 0}
+  OnFinishFadeIn:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null

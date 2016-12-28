@@ -3121,6 +3121,22 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114731730385112938, guid: 73cd3ea9b33dd2740b03971f0a34b672,
+        type: 2}
+      propertyPath: escapeBehavior
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114731730385112938, guid: 73cd3ea9b33dd2740b03971f0a34b672,
+        type: 2}
+      propertyPath: defaultExitScene.m_SceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: 705f604313bb9294b91380e999262483,
+        type: 3}
+    - target: {fileID: 114731730385112938, guid: 73cd3ea9b33dd2740b03971f0a34b672,
+        type: 2}
+      propertyPath: defaultExitScene.m_SceneName
+      value: DungeonLevel_0001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 73cd3ea9b33dd2740b03971f0a34b672, type: 2}
   m_IsPrefabParent: 0

@@ -16,6 +16,8 @@ public class Buttons : MonoBehaviour {
 
 	public static Buttons lastActiveButton = null;
 
+	public static GameObject buttonObject;
+
 	public ButtonNames buttonName;
 	public string buttonNameString;
 	public float timeToStartHold = 0.22f;
@@ -47,8 +49,14 @@ public class Buttons : MonoBehaviour {
 		if (buttons.ContainsKey(buttonName))
 			return buttons[buttonName];
 		
-		GameObject go = new GameObject("Button " + buttonName.ToString());
-		Buttons b = go.AddComponent<Buttons>();
+		//GameObject go = new GameObject("Button " + buttonName.ToString());
+		if (buttonObject == null)
+		{
+			buttonObject = new GameObject("Button Object");
+			DontDestroyOnLoad(buttonObject);
+		}
+
+		Buttons b = buttonObject.AddComponent<Buttons>();
 		b.buttonName = buttonName;
 
 		return b;
