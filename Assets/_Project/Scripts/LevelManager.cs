@@ -7,6 +7,14 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 
+	int princessStolen = 0;
+	int enemiesGrabbed = 0;
+	int soulStonesDropped = 0;
+	int soulStonesGrabbed = 0;
+	int soulStonesConsumed = 0;
+	int soulStonesStolen = 0;
+
+
 	public int winConditionKills = 0;
 	int _currentKills = 0;
 	int currentKills {

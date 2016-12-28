@@ -38,6 +38,8 @@ namespace UnityCommon
 		public UnityEvent OnOpenMenu;
 		public GameObject menu;
 
+		public UnityEvent OnFinishFadeIn;
+
 		static int previousSceneIndex = -1;
 
 		private static SceneController instance;
@@ -112,6 +114,8 @@ namespace UnityCommon
 					AudioListener.volume = Mathf.Lerp (0f, previousVolume, t);
 				}
 			}
+
+			OnFinishFadeIn.Invoke();
 		}
 
 		public static void ChangeScene(SceneField scene)
