@@ -7,7 +7,7 @@ public class UITentacleLength : MonoBehaviour {
 
 	//public List<Image> tentacleBarImages = new List<Image>();
 	public List<RectTransform> tentacleBars = new List<RectTransform>();
-	float barImageWidth = 347f;
+	//float barImageWidth = 347f;
 
 	public RectTransform panel1;
 	public RectTransform panel2;
@@ -87,6 +87,9 @@ public class UITentacleLength : MonoBehaviour {
 
 	public IEnumerator ColorFlash(float duration, int number)
 	{
+		if (isFlashing)
+			yield break;
+
 		isFlashing = true;
 
 		float flashTime = duration / (number * 2);

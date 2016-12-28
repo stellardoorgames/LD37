@@ -43,7 +43,7 @@ public class Character : MonoBehaviour {
 	[HideInInspector]
 	public CharacterDeathState deathState;
 
-	List<Vector3> wanderDirections;
+	//List<Vector3> wanderDirections;
 
 	public virtual void Start()
 	{
@@ -68,12 +68,12 @@ public class Character : MonoBehaviour {
 		stateMachine.addState(GetComponent<CharacterDeathState>());
 		stateMachine.addState(GetComponent<CharacterCarryState>());*/
 
-		wanderDirections = new List<Vector3> {
+		/*wanderDirections = new List<Vector3> {
 			Vector3.forward,
 			Vector3.right,
 			Vector3.back,
 			Vector3.left
-		};
+		};*/
 	}
 
 	public virtual void Update () 

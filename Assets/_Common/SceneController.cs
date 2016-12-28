@@ -14,21 +14,12 @@ namespace UnityCommon
 		OpenMenu,
 	}
 
-	public enum SceneSelect
-	{
-		Default,
-		Win,
-		Lose
-	}
-
 	public class SceneController : MonoBehaviour {
 
 		public static float loadingProgress = 0f;
 		public static float previousVolume = 1f;
 
 		public SceneField defaultExitScene;
-		public SceneField defaultWinScene;
-		public SceneField defaultLoseScene;
 		public bool asychronousLoad;
 		[Space]
 		public bool fadeIn = true;
@@ -47,6 +38,7 @@ namespace UnityCommon
 		public UnityEvent OnOpenMenu;
 		public GameObject menu;
 
+		static int previousSceneIndex = -1;
 
 		private static SceneController instance;
 
@@ -122,10 +114,10 @@ namespace UnityCommon
 			}
 		}
 
-		/*public static void ChangeScene(SceneField scene = null)
+		public static void ChangeScene(SceneField scene)
 		{
 			instance.StartCoroutine(instance.ChangeSceneCoroutine(scene));
-		}*/
+		}
 
 		public void ChangeScene(string sceneName = "")
 		{
@@ -135,24 +127,33 @@ namespace UnityCommon
 				StartCoroutine (ChangeSceneCoroutine (new SceneField (sceneName)));
 		}
 
-		public void ChangeScene(SceneSelect scene)
+		public void LoadAssignedExitScene()
 		{
-			if (scene == SceneSelect.Default)
-				StartCoroutine(ChangeSceneCoroutine(defaultExitScene));
-			else if (scene == SceneSelect.Win)
-				StartCoroutine(ChangeSceneCoroutine(defaultWinScene));
-			else if (scene == SceneSelect.Lose)
-				StartCoroutine(ChangeSceneCoroutine(defaultLoseScene));
+			StartCoroutine(ChangeSceneCoroutine(defaultExitScene));
 		}
 
-		public void StartWinScene()
+		public void ReloadCurrentScene()
 		{
-			StartCoroutine(ChangeSceneCoroutine(defaultWinScene));
+			Scene scene = SceneManager.GetActiveScene();
+			SceneManager.LoadScene(scene.buildIndex);
 		}
 
-		public void StartLoseScene()
+		public void LoadNextSceneInBuild()
 		{
-			StartCoroutine(ChangeSceneCoroutine(defaultLoseScene));
+			Scene scene = SceneManager.GetActiveScene();
+			SceneManager.LoadScene(scene.buildIndex + 1);
+		}
+
+		public void LoadPreviousSceneInBuild()
+		{
+			Scene scene = SceneManager.GetActiveScene();
+			SceneManager.LoadScene(scene.buildIndex - 1);
+		}
+
+		public void LoadLastOpenedScene()
+		{
+			if (previousSceneIndex >= 0)
+			SceneManager.LoadScene(previousSceneIndex);
 		}
 
 		public IEnumerator ChangeSceneCoroutine(SceneField scene = null)
@@ -181,6 +182,8 @@ namespace UnityCommon
 
 			if (scene == null)
 				scene = defaultExitScene;
+
+			previousSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
 			//LoadScene
 			if (asychronousLoad)

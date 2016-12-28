@@ -94,6 +94,8 @@ public class Buttons : MonoBehaviour {
 				{
 					isHeld = true;
 					startHoldTime = Time.time;
+					if (OnHoldStart != null)
+						OnHoldStart(this);
 				}
 			}
 

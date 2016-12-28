@@ -10,12 +10,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Project/Scenes/CutScenes/IntroScene01.unity
   - enabled: 1
-    path: Assets/_Project/Scenes/Levels/DungeonLevel_0002.unity
+    path: Assets/_Project/Scenes/Levels/DungeonLevel_0001.unity
   - enabled: 1
     path: Assets/_Project/Scenes/CutScenes/CutScene01.unity
   - enabled: 1
-    path: Assets/_Project/Scenes/Levels/DungeonLevel_0001.unity
+    path: Assets/_Project/Scenes/Levels/DungeonLevel_0002.unity
   - enabled: 1
     path: Assets/_Project/Scenes/CutScenes/CutScene02.unity
+  - enabled: 1
+    path: Assets/_Project/Scenes/Levels/DungeonLevel_0003.unity
+  - enabled: 1
+    path: Assets/_Project/Scenes/CutScenes/CutScene03.unity
   - enabled: 1
     path: Assets/_Project/Scenes/CreditsScene01.unity

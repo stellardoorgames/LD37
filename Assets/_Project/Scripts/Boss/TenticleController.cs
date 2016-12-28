@@ -33,8 +33,6 @@ public class TenticleController : MonoBehaviour {
 
 	Vector2 textureOffset = Vector2.zero;
 
-	bool swirlUp = false;
-
 	float startingLength;
 
 	void Start()
