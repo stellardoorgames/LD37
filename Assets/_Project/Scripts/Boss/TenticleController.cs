@@ -8,11 +8,15 @@ using FluffyUnderware.Curvy.Generator.Modules;
 public class TenticleController : MonoBehaviour {
 
 	public float speed = 800f;
+	public int tentacleID;
 	//public float maxSpeed = 1f;
 	public PlayerController playerController;
 	public GameObject colliderObject;
-	public CurvySpline spline;
-	public MeshRenderer materialObject;
+	public CurvyGenerator generator;
+	CurvySpline spline;
+	MeshRenderer materialObject;
+	//Material meshMaterial;
+	CGMaterialSettingsEx materialSettings;
 
 
 	public float segmentLength = 1f;
@@ -43,6 +47,10 @@ public class TenticleController : MonoBehaviour {
 
 	float startingLength;
 
+	Vector3 startingPosition;
+
+	bool isInitialized = false;
+
 	void Awake () 
 	{
 		projector = GetComponentInChildren<Projector> ();
@@ -51,14 +59,33 @@ public class TenticleController : MonoBehaviour {
 		rb = GetComponent<Rigidbody>();
 
 		grabber = GetComponent<TenticleGrabber>();
+
+		startingPosition = transform.position;
 	}
 
-	void Start()
+	IEnumerator Start()
 	{
-		foreach (CurvySplineSegment s in spline.Segments)
-		{
-			tentacleSectionList.Add (TentacleSection.Create (colliderObject, null, s, this));
-		}
+		while (!generator.IsInitialized)
+			yield return null;
+
+		InputSplinePath[] splineArray = generator.GetComponentsInChildren<InputSplinePath>();
+		foreach(InputSplinePath sp in splineArray)
+			if (sp.name == "Input Spline Path" + tentacleID.ToString())
+				spline = sp.GetComponentInChildren<CurvySpline>();
+		
+		BuildVolumeMesh[] meshes = generator.GetComponentsInChildren<BuildVolumeMesh>();
+		foreach(BuildVolumeMesh bvm in meshes)
+			if (bvm.name == "Volume Mesh" + tentacleID)
+				materialSettings = bvm.MaterialSetttings[0];
+		
+		CGMeshResource[] meshResource = generator.GetComponentsInChildren<CGMeshResource>();
+		foreach(CGMeshResource r in meshResource)
+			if (r.name.Contains("Mesh00" + tentacleID))
+				materialObject = r.Renderer;
+
+		isInitialized = true;
+
+		tentacleSectionList.Add (TentacleSection.Create (colliderObject, null, spline.LastVisibleControlPoint, this));
 
 		startingLength = spline.Length;
 
@@ -69,6 +96,9 @@ public class TenticleController : MonoBehaviour {
 	
 	void Update () 
 	{
+		if (!isInitialized)
+			return;
+		
 		segment = spline.LastVisibleControlPoint;//spline.ControlPoints [spline.Count - 1];//
 		CurvySplineSegment previousSegment = segment.PreviousControlPoint;
 
@@ -88,6 +118,7 @@ public class TenticleController : MonoBehaviour {
 			else
 				UpdatePosition();
 		}
+
 
 
 		segment.transform.position = transform.position;
@@ -111,11 +142,11 @@ public class TenticleController : MonoBehaviour {
 
 		tentacleLength = spline.Length;
 
-		textureOffset.x -= offset * 0.25f;
+		textureOffset.y -= offset * 0.25f;
 		//textureOffset.y += GetMovement().x * Time.deltaTime * 0.5f;
 
-		materialObject.material.mainTextureOffset = textureOffset;
-
+		//meshMaterial.mainTextureOffset = textureOffset;
+		materialSettings.UVOffset = textureOffset;
 		//first.SwirlTurns += offset * 0.0005f;
 
 	}
@@ -218,7 +249,13 @@ public class TenticleController : MonoBehaviour {
 
 	IEnumerator RetractCoroutine(float duration)
 	{
-		if (tentacleSectionList.Count <= 2 || segment.PreviousControlPoint == null)
+		if (tentacleSectionList.Count <= 3)
+		{
+			transform.position = startingPosition;
+			yield break;
+		}
+
+		if (segment.PreviousControlPoint == null)
 			yield break;
 
 		isRetracting = true;

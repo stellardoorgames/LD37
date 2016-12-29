@@ -41,11 +41,7 @@ namespace UnityCommon
 				//It was disabled through other means, but it's not the last one on the stack
 				//Happens less often, but it can happen when a parent object disables multiple objects at once
 				else if (objectStack.Contains(this))
-				{
-					Debug.Log (objectStack.Count);
 					objectStack.Remove (this);
-					Debug.Log (objectStack.Count);
-				}
 			}
 		}
 
