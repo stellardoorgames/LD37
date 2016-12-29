@@ -8,7 +8,7 @@ public class Pause : MonoBehaviour {
 
 	public void UnPause()
 	{
-		Time.timeScale = previousTimeScale;
+		Time.timeScale = 1f;
 	}
 
 	void OnEnable ()
