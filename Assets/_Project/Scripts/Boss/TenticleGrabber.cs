@@ -2,13 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TenticleLead : MonoBehaviour {
-
-	//public TenticleController tenticleController;
+public class TenticleGrabber : MonoBehaviour {
 	
-	//public float speed = 800f;
-	//public float maxSpeed = 1f;
-
 	public float grabRadius = 0.75f;
 
 	public List<string> grabPriority = new List<string>();
@@ -17,19 +12,6 @@ public class TenticleLead : MonoBehaviour {
 
 	Grabbable carryingObject;
 
-	//Projector projector;
-
-	//Rigidbody rb;
-/*
-	void Awake () 
-	{
-		projector = GetComponentInChildren<Projector> ();
-		projector.enabled = false;
-
-		rb = GetComponent<Rigidbody>();
-
-	}
-*/
 	void Update () {
 		
 		if (isActive)
@@ -119,32 +101,5 @@ public class TenticleLead : MonoBehaviour {
 		
 		carryingObject = null;
 	}
-/*
-	public void Activate(bool active)
-	{
-		isActive = active;
-
-		if (active)
-		{
-			CameraController.SetTarget(gameObject);
-			//gameObject.tag = "CameraFollow";
-			projector.enabled = true;
-		}
-		else
-		{
-			CameraController.RemoveTarget(gameObject);
-			//gameObject.tag = "Tentacle";
-			projector.enabled = false;
-		}
-	}
-*/
-/*	void OnTriggerStay(Collider other)
-	{
-		TentacleSection obstacle = other.GetComponent<TentacleSection> ();
-
-		if (obstacle != null)
-			tenticleController.SelfCollide (obstacle.gameObject);
-		
-	}*/
 
 }

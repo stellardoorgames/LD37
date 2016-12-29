@@ -18,7 +18,7 @@ public class TreasureController : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-		TenticleLead tenticle = other.GetComponent<TenticleLead> ();
+		TenticleGrabber tenticle = other.GetComponent<TenticleGrabber> ();
 
 		if (tenticle != null)
 		{

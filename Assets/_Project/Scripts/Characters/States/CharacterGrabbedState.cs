@@ -24,7 +24,7 @@ public class CharacterGrabbedState : SKState<Character> {
 		//If the character is being grabbed away from another grabber? Right now that won't happen
 		//grabbable.EscapedEvent();
 
-		Debug.Log ("Grabbed");
+		Debug.Log (name + " Grabbed by " + grabbable.grabber.name);
 		if (agent != null)
 		{
 			if (agent.isOnNavMesh)

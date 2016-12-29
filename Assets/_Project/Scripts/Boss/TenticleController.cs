@@ -10,8 +10,8 @@ public class TenticleController : MonoBehaviour {
 	public float speed = 800f;
 	//public float maxSpeed = 1f;
 	public PlayerController playerController;
-	public CurvySpline spline;
 	public GameObject colliderObject;
+	public CurvySpline spline;
 	public MeshRenderer materialObject;
 
 
@@ -33,7 +33,7 @@ public class TenticleController : MonoBehaviour {
 
 	Projector projector;
 	Rigidbody rb;
-	TenticleLead grabber;
+	TenticleGrabber grabber;
 
 	CurvySplineSegment segment;
 
@@ -50,7 +50,7 @@ public class TenticleController : MonoBehaviour {
 
 		rb = GetComponent<Rigidbody>();
 
-		grabber = GetComponent<TenticleLead>();
+		grabber = GetComponent<TenticleGrabber>();
 	}
 
 	void Start()

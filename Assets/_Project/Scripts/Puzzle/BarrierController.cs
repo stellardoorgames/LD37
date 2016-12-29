@@ -40,25 +40,43 @@ public class BarrierController : MonoBehaviour {
 
 	public UnityEvent OnChangeBarrier;
 
+	public MeshRenderer barrierRenderer;
+
+	public Color redColor = new Color(255f, 0f, 0f, 180f);
+	public Color greenColor = new Color(0f, 255f, 0f, 180f);
+	public Color blueColor = new Color(0f, 0f, 255f, 180f);
+	public Color disabledColor = new Color(255f, 255f, 255f, 100f);
+
+	Dictionary<BarrierStates, Color> barrierColors;
+
 	int sequenceIndex = 0;
 
 	Collider barrierCollider;
 
+	static bool hasBeenInitialized = false;
+
 	void Awake()
 	{
-		
-
-		foreach (KeyValuePair<string, string> ln in layerNames)
+		if (!hasBeenInitialized)
 		{
-			int bl = LayerMask.NameToLayer(ln.Key);
-			int tl = LayerMask.NameToLayer(ln.Value);
-
-			for (int j = 0; j < 32 ; j++)
+			List<int> barrierLayers = new List<int>();
+			List<int> tentacleLayers = new List<int>();
+			
+			foreach (KeyValuePair<string, string> ln in layerNames)
 			{
-				if (j != tl)
-					Physics.IgnoreLayerCollision(bl, j);
+				barrierLayers.Add(LayerMask.NameToLayer(ln.Key));
+				tentacleLayers.Add(LayerMask.NameToLayer(ln.Value));
 			}
 			
+			//Ignore all collisions except with tentacles, except with the matching color
+			for(int i = 0; i < barrierLayers.Count; i++)
+			{
+				for (int j = 0; j < 32 ; j++)
+				{
+					if (!tentacleLayers.Contains(j) || j == tentacleLayers[i])
+						Physics.IgnoreLayerCollision(barrierLayers[i], j);
+				}
+			}
 		}
 
 	}
@@ -66,6 +84,12 @@ public class BarrierController : MonoBehaviour {
 	void Start()
 	{
 		barrierCollider = GetComponent<Collider>();
+
+		barrierColors = new Dictionary<BarrierStates, Color>();
+		barrierColors.Add(BarrierStates.Red, redColor);
+		barrierColors.Add(BarrierStates.Green, greenColor);
+		barrierColors.Add(BarrierStates.Blue, blueColor);
+		barrierColors.Add(BarrierStates.Disabled, disabledColor);
 
 		SetState(state);
 	}
@@ -95,11 +119,18 @@ public class BarrierController : MonoBehaviour {
 			barrierCollider.enabled = true;
 			gameObject.layer = LayerMask.NameToLayer(barrierLayers[state]);
 		}
+
+		barrierRenderer.material.color = barrierColors[newState];
 		//TODO: animations
 		//TODO: test if tentacle is in when activated to cut it off?
 
 		OnChangeBarrier.Invoke();
 
 		return newState;
+	}
+
+	void OnDisable()
+	{
+		hasBeenInitialized = false;
 	}
 }
