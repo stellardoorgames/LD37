@@ -7,11 +7,13 @@ using FluffyUnderware.Curvy.Generator.Modules;
 
 public class TenticleController : MonoBehaviour {
 
-	public TenticleLead lead;
+	public float speed = 800f;
+	//public float maxSpeed = 1f;
 	public PlayerController playerController;
 	public CurvySpline spline;
 	public GameObject colliderObject;
 	public MeshRenderer materialObject;
+
 
 	public float segmentLength = 1f;
 	public int selfCollideNumber = 8;
@@ -22,10 +24,16 @@ public class TenticleController : MonoBehaviour {
 	public int damageFlashNumber = 3;
 	bool isFlashing = false;
 
+	public bool isActive = false;
+
 	[HideInInspector]
 	public float tentacleLength;
 
 	List<TentacleSection> tentacleSectionList = new List<TentacleSection>();
+
+	Projector projector;
+	Rigidbody rb;
+	TenticleLead grabber;
 
 	CurvySplineSegment segment;
 
@@ -34,6 +42,16 @@ public class TenticleController : MonoBehaviour {
 	Vector2 textureOffset = Vector2.zero;
 
 	float startingLength;
+
+	void Awake () 
+	{
+		projector = GetComponentInChildren<Projector> ();
+		projector.enabled = false;
+
+		rb = GetComponent<Rigidbody>();
+
+		grabber = GetComponent<TenticleLead>();
+	}
 
 	void Start()
 	{
@@ -54,28 +72,31 @@ public class TenticleController : MonoBehaviour {
 		segment = spline.LastVisibleControlPoint;//spline.ControlPoints [spline.Count - 1];//
 		CurvySplineSegment previousSegment = segment.PreviousControlPoint;
 
-		if (playerController.totalTentacleLength > playerController.currentMaxLength)
+		if (isActive)
 		{
-			Debug.Log("Exceeded Length");
-
-			//If too long, only update position if the player is backtracking
-			float dist1 = Vector3.Distance(lead.transform.position, previousSegment.transform.position);
-			Vector3 movement = lead.GetMovement() + lead.transform.position;
-			float dist2 = Vector3.Distance(movement, previousSegment.transform.position);
-			if (dist1 > dist2)
-				lead.UpdatePosition();
+			if (playerController.totalTentacleLength > playerController.currentMaxLength)
+			{
+				Debug.Log("Exceeded Length");
+				
+				//If too long, only update position if the player is backtracking
+				float dist1 = Vector3.Distance(transform.position, previousSegment.transform.position);
+				Vector3 movement = GetMovement() + transform.position;
+				float dist2 = Vector3.Distance(movement, previousSegment.transform.position);
+				if (dist1 > dist2)
+					UpdatePosition();
+			}
+			else
+				UpdatePosition();
 		}
-		else
-			lead.UpdatePosition();
 
 
-		segment.transform.position = lead.transform.position;
+		segment.transform.position = transform.position;
 
 
 		if (previousSegment.Length > segmentLength)
 		{
 			segment = spline.InsertBefore (segment);
-			tentacleSectionList.Add (TentacleSection.Create (colliderObject, lead.transform, segment, this));
+			tentacleSectionList.Add (TentacleSection.Create (colliderObject, transform, segment, this));
 
 		}
 
@@ -91,12 +112,43 @@ public class TenticleController : MonoBehaviour {
 		tentacleLength = spline.Length;
 
 		textureOffset.x -= offset * 0.25f;
-		//textureOffset.y += lead.GetMovement().x * Time.deltaTime * 0.5f;
+		//textureOffset.y += GetMovement().x * Time.deltaTime * 0.5f;
 
 		materialObject.material.mainTextureOffset = textureOffset;
 
 		//first.SwirlTurns += offset * 0.0005f;
 
+	}
+
+	public void Activate(bool active)
+	{
+		isActive = active;
+		grabber.isActive = active;
+
+		if (active)
+		{
+			CameraController.SetTarget(gameObject);
+			projector.enabled = true;
+		}
+		else
+		{
+			CameraController.RemoveTarget(gameObject);
+			projector.enabled = false;
+		}
+	}
+
+	public Vector3 GetMovement()
+	{
+		float horizontal = Input.GetAxis ("Horizontal" );
+		float vertical = Input.GetAxis ("Vertical");
+
+		return new Vector3 (horizontal, 0, vertical);
+	}
+
+	public void UpdatePosition()
+	{
+			Vector3 movement = GetMovement() * speed * Time.deltaTime;
+		rb.AddForce(movement);
 	}
 
 	IEnumerator Swirl()
@@ -174,7 +226,7 @@ public class TenticleController : MonoBehaviour {
 		float startTime = Time.time;
 		float endTime = Time.time + duration;
 
-		Vector3 startPosition = lead.transform.position;
+		Vector3 startPosition = transform.position;
 
 		Vector3 newPosition = tentacleSectionList[tentacleSectionList.Count - 1].transform.position;
 
@@ -182,12 +234,12 @@ public class TenticleController : MonoBehaviour {
 		{
 			float t = Mathf.InverseLerp(startTime, endTime, Time.time);
 			 
-			lead.transform.position = Vector3.Lerp(startPosition, newPosition, t);
+			transform.position = Vector3.Lerp(startPosition, newPosition, t);
 			
 			yield return null;
 		}
 
-		lead.transform.position = newPosition;
+		transform.position = newPosition;
 		isRetracting = false;
 	}
 
@@ -229,4 +281,12 @@ public class TenticleController : MonoBehaviour {
 		isFlashing = false;
 	}
 
+	void OnTriggerStay(Collider other)
+	{
+		TentacleSection obstacle = other.GetComponent<TentacleSection> ();
+
+		if (obstacle != null)
+			SelfCollide (obstacle.gameObject);
+
+	}
 }

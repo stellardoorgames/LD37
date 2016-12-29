@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using System;
 
 
 public class PlayerController : MonoBehaviour {
@@ -32,11 +33,11 @@ public class PlayerController : MonoBehaviour {
 		set {_activeTenticleIndex = (int)Mathf.Repeat(value, tentacles.Count);//value % tentacles.Count;
 			SwitchTenticles (_activeTenticleIndex);}
 	}
-	TenticleLead activeTentacle;
-	List<TenticleLead> tentacleLeads;
+	TenticleController activeTentacle;
+	//List<TenticleLead> tentacleLeads;
 
-	UITentacleLength lengthUI;
-
+	//UITentacleLength lengthUI;
+	public event Action OnGrowMaxLength;
 
 	public UnityEvent OnDeath;
 	//public UnityEvent OnFinish;
@@ -46,11 +47,11 @@ public class PlayerController : MonoBehaviour {
 
 		currentLife = maxLife;
 
-		tentacleLeads = new List<TenticleLead>();
-		foreach(TenticleController tc in tentacles)
-			tentacleLeads.Add(tc.lead);
+		//tentacleLeads = new List<TenticleLead>();
+		//foreach(TenticleController tc in tentacles)
+		//	tentacleLeads.Add(tc.lead);
 	
-		activeTentacle = tentacleLeads [activeTenticleIndex];
+		activeTentacle = tentacles [activeTenticleIndex];
 
 		activeTentacle.Activate(true);
 
@@ -60,7 +61,7 @@ public class PlayerController : MonoBehaviour {
 		foreach(ButtonNames n in tentacleButtonNames)
 			tentacleButtons.Add(Buttons.CreateButton(n));
 
-		lengthUI = GetComponent<UITentacleLength>();
+		//lengthUI = GetComponent<UITentacleLength>();
 	}
 	
 	// Update is called once per frame
@@ -111,16 +112,20 @@ public class PlayerController : MonoBehaviour {
 
 	void SwitchTenticles(int index)
 	{
-		foreach(TenticleLead tc in tentacleLeads)
+		foreach(TenticleController tc in tentacles)
 			tc.Activate(false);
 		
-		tentacleLeads [index].Activate(true);
+		tentacles [index].Activate(true);
 	}
 
 	public void OnEatSoul(SoulGemController gem)
 	{
 		StartCoroutine(ExtendMaxLength(addToMaxLengthPerSoul, 1f));
-		StartCoroutine(lengthUI.ColorFlash(1f, 1));
+
+		if (OnGrowMaxLength != null)
+			OnGrowMaxLength();
+		//StartCoroutine(lengthUI.ColorFlash(1f, 1));
+
 		if (gem != null)
 			gem.Destroy();
 

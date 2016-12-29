@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class UITentacleLength : MonoBehaviour {
 
+	public PlayerController controller;
 	//public List<Image> tentacleBarImages = new List<Image>();
 	public List<RectTransform> tentacleBars = new List<RectTransform>();
 	//float barImageWidth = 347f;
@@ -27,11 +28,11 @@ public class UITentacleLength : MonoBehaviour {
 
 	//float previousMaxLength;
 
-	PlayerController controller;
+	//PlayerController controller;
 	
 	// Use this for initialization
 	void Start () {
-		controller = GetComponent<PlayerController>();
+		//controller = GetComponent<PlayerController>();
 
 		startingTentacleLength = startingTotalTentacleLength / controller.tentacles.Count;
 		//previousMaxLength = controller.currentMaxLength;
@@ -39,7 +40,7 @@ public class UITentacleLength : MonoBehaviour {
 		//barWidth = panel1.rect.width;
 		barPosition = panel1.anchoredPosition;
 
-
+		controller.OnGrowMaxLength += OnGrowLength;
 	}
 	
 	// Update is called once per frame
@@ -84,6 +85,10 @@ public class UITentacleLength : MonoBehaviour {
 		}
 	}
 
+	void OnGrowLength()
+	{
+		StartCoroutine(ColorFlash(1f, 1));
+	}
 
 	public IEnumerator ColorFlash(float duration, int number)
 	{

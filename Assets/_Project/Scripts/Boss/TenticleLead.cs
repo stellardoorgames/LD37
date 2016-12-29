@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class TenticleLead : MonoBehaviour {
 
-	public TenticleController tenticleController;
+	//public TenticleController tenticleController;
 	
-	public float speed = 800f;
-	public float maxSpeed = 1f;
+	//public float speed = 800f;
+	//public float maxSpeed = 1f;
 
 	public float grabRadius = 0.75f;
 
@@ -17,10 +17,10 @@ public class TenticleLead : MonoBehaviour {
 
 	Grabbable carryingObject;
 
-	Projector projector;
+	//Projector projector;
 
-	Rigidbody rb;
-
+	//Rigidbody rb;
+/*
 	void Awake () 
 	{
 		projector = GetComponentInChildren<Projector> ();
@@ -29,25 +29,7 @@ public class TenticleLead : MonoBehaviour {
 		rb = GetComponent<Rigidbody>();
 
 	}
-
-	public Vector3 GetMovement()
-	{
-		float horizontal = Input.GetAxis ("Horizontal" );
-		float vertical = Input.GetAxis ("Vertical");
-
-		return new Vector3 (horizontal, 0, vertical);
-	}
-
-	public void UpdatePosition()
-	{
-
-		if (isActive)
-		{
-			Vector3 movement = GetMovement() * speed * Time.deltaTime;
-			rb.AddForce(movement);
-		}
-	}
-
+*/
 	void Update () {
 		
 		if (isActive)
@@ -93,21 +75,6 @@ public class TenticleLead : MonoBehaviour {
 								break;
 						}
 
-						/*foreach (Collider c in colliders)
-						{
-							if (c.tag == "SoulGem")
-								grabbedObject = c.GetComponent<Grabbable>();
-						}
-
-						if (grabbedObject == null)
-						{
-							foreach (Collider c in colliders)
-							{
-								if (c.tag == "Enemy")
-									grabbedObject = c.GetComponent<Grabbable>();
-							}
-						}*/
-
 						if (grabbedObject == null)
 						{
 							foreach (Collider c in colliders)
@@ -152,7 +119,7 @@ public class TenticleLead : MonoBehaviour {
 		
 		carryingObject = null;
 	}
-
+/*
 	public void Activate(bool active)
 	{
 		isActive = active;
@@ -170,14 +137,14 @@ public class TenticleLead : MonoBehaviour {
 			projector.enabled = false;
 		}
 	}
-
-	void OnTriggerStay(Collider other)
+*/
+/*	void OnTriggerStay(Collider other)
 	{
 		TentacleSection obstacle = other.GetComponent<TentacleSection> ();
 
 		if (obstacle != null)
 			tenticleController.SelfCollide (obstacle.gameObject);
 		
-	}
+	}*/
 
 }

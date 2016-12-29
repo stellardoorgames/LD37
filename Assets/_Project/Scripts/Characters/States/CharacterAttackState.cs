@@ -35,6 +35,7 @@ public class CharacterAttackState : SKState<Character> {
 		anim.SetBool ("isAttacking", true);
 		agent.Stop ();
 
+		lastAttackTime = Time.time;
 	}
 
 	public override void update (float deltaTime)
