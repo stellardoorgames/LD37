@@ -126,7 +126,7 @@ public class ImageFader : MonoBehaviour
 
 		if (pauseOnDisplay)
 		{
-			Time.timeScale = startingTimeScale;
+			Time.timeScale = 1f;
 		}
 
         SetTextActive(false);
@@ -148,6 +148,7 @@ public class ImageFader : MonoBehaviour
 
         OnEnd.Invoke();
 
+		//gameObject.SetActive(false);
     }
 
     IEnumerator NextImageCoroutine()
@@ -181,6 +182,6 @@ public class ImageFader : MonoBehaviour
 
 	void OnDisable()
 	{
-		Time.timeScale = startingTimeScale;
+		Time.timeScale = 1f;
 	}
 }

@@ -21,7 +21,7 @@ public class TenticleLead : MonoBehaviour {
 
 	Rigidbody rb;
 
-	void Start () 
+	void Awake () 
 	{
 		projector = GetComponentInChildren<Projector> ();
 		projector.enabled = false;

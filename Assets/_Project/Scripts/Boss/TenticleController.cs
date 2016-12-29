@@ -147,6 +147,9 @@ public class TenticleController : MonoBehaviour {
 
 	void RemoveSegment(int index)
 	{
+		if (tentacleSectionList.Count < 3)
+			return;
+		
 		for (int i = tentacleSectionList.Count - 1; i >= index; i--)
 		{
 			tentacleSectionList [i].Remove ();

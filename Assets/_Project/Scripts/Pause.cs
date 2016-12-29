@@ -6,6 +6,11 @@ public class Pause : MonoBehaviour {
 
 	float previousTimeScale;
 
+	public void UnPause()
+	{
+		Time.timeScale = previousTimeScale;
+	}
+
 	void OnEnable ()
 	{
 		previousTimeScale = Time.timeScale;
@@ -14,6 +19,6 @@ public class Pause : MonoBehaviour {
 
 	void OnDisable ()
 	{
-		Time.timeScale = previousTimeScale;
+		UnPause();
 	}
 }
