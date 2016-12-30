@@ -8,16 +8,15 @@ public class UITentacleLength : MonoBehaviour {
 	public PlayerController controller;
 	public List<RectTransform> tentacleBars = new List<RectTransform>();
 
-	public RectTransform panel1;
-	public RectTransform panel2;
-	public RectTransform object3;
+	public RectTransform tentacleLengthPanel;
+	public RectTransform zeroPanel;
+	public RectTransform endOfTentacleMarker;
 
 	float startingTentacleLength;
 	public float startingTotalTentacleLength = 7.5f;
 	
 	public Image outlineImage;
-	bool isFlashing = false;
-	//public Color startingColor;
+	List<Image> isFlashing;
 	public Color flashingColor;
 
 	Vector2 barPosition;
@@ -29,12 +28,15 @@ public class UITentacleLength : MonoBehaviour {
 	{
 		startingTentacleLength = startingTotalTentacleLength / controller.tentacles.Count;
 
-		barPosition = panel1.anchoredPosition;
+		barPosition = tentacleLengthPanel.anchoredPosition;
 
 		tentacleImages = new List<Image>();
+		//TODO: fix the ID order in the curvy generator so it matches controller list order
 		for(int i = tentacleBars.Count - 1; i >= 0; i--)
 			tentacleImages.Add(tentacleBars[i].GetComponent<Image>());
-		
+
+		isFlashing = new List<Image>();
+
 		controller.OnGrowMaxLength += () => StartCoroutine(ColorFlash(outlineImage, 1f, 1));
 		controller.OnExceedLength += () => StartCoroutine(ColorFlash(outlineImage, 1f, 1));
 		foreach(TenticleController tc in controller.tentacles)
@@ -46,10 +48,10 @@ public class UITentacleLength : MonoBehaviour {
 	{
 		float t = Mathf.InverseLerp(controller.startingMaxLength, controller.maxMaxLength, controller.currentMaxLength);
 		barPositionOffset = Vector2.Lerp(barPosition, Vector2.zero, t);
-		panel1.anchoredPosition = barPositionOffset;
-		panel2.position = Vector2.zero;
+		tentacleLengthPanel.anchoredPosition = barPositionOffset;
+		zeroPanel.position = Vector2.zero;
 
-		Vector2 fullBarPosition =  object3.position;//new Vector2(barImageWidth, 0f);
+		Vector2 fullBarPosition =  endOfTentacleMarker.position;//new Vector2(barImageWidth, 0f);
 		Vector2 currentBarPosition = Vector2.zero;
 		for (int i = 0; i < tentacleBars.Count; i++)
 		{
@@ -63,10 +65,10 @@ public class UITentacleLength : MonoBehaviour {
 
 	public IEnumerator ColorFlash(Image image, float duration, int number)
 	{
-		if (isFlashing)
+		if (isFlashing.Contains(image))
 			yield break;
 
-		isFlashing = true;
+		isFlashing.Add(image);
 
 		Color startingColor = image.color;
 
@@ -93,7 +95,7 @@ public class UITentacleLength : MonoBehaviour {
 
 		image.color = startingColor;
 			
-		isFlashing = false;
+		isFlashing.Remove(image);
 	}
 
 }

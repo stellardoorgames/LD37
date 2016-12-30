@@ -6,14 +6,9 @@ public class SwitchGrabbable : Grabbable {
 
 	SwitchController switchController;
 
-	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		switchController = GetComponent<SwitchController>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 
 	public override bool Grabbed (Transform grabber)
