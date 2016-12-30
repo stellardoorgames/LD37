@@ -16780,6 +16780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1939181d54b51d74e83bfe205a101450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isStatic: 0
   grabRange: 1
   isGrabbed: 0
   grabber: {fileID: 0}
@@ -16822,6 +16823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f30862ed4308d24e938f591df675b22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carryTags: []
   carryDestination: Exit
   retargetInterval: 3
 --- !u!114 &114454216005462096
@@ -16868,7 +16870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d97870c8273d7f445b5763854e3133a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTags:
+  searchTags:
   - Tentacle
   retargetInterval: 3
 --- !u!114 &114615348317922084
@@ -16885,7 +16887,7 @@ MonoBehaviour:
   vulnerabilities: 00000000
   text: {fileID: 114817604418964250}
   anim: {fileID: 95917374941006580}
-  debug: 0
+  debug: 1
   agent: {fileID: 0}
   spawnState: {fileID: 0}
   searchState: {fileID: 0}
@@ -16904,6 +16906,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 055335178bc85ce4bb9b952d8419f9a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackTags:
+  - Tentacle
   attackInterval: 1
   damage: 1
   attackRange: 1

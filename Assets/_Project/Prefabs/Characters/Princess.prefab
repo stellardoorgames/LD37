@@ -11611,7 +11611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d97870c8273d7f445b5763854e3133a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTags: []
+  searchTags: []
   retargetInterval: 3
 --- !u!114 &114070454764458724
 MonoBehaviour:
@@ -11627,7 +11627,7 @@ MonoBehaviour:
   vulnerabilities: 
   text: {fileID: 114769267491237270}
   anim: {fileID: 95114228260101396}
-  debug: 0
+  debug: 1
   agent: {fileID: 0}
   spawnState: {fileID: 0}
   searchState: {fileID: 0}
@@ -11702,6 +11702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 055335178bc85ce4bb9b952d8419f9a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackTags: []
   attackInterval: 1
   damage: 1
   attackRange: 1
@@ -11716,6 +11717,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a17a29b6da50c1245bda25447f91ac78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  holdTags:
+  - Switch
 --- !u!114 &114590361515993002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11771,6 +11774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1939181d54b51d74e83bfe205a101450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isStatic: 0
   grabRange: 1
   isGrabbed: 0
   grabber: {fileID: 0}
@@ -11786,6 +11790,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f30862ed4308d24e938f591df675b22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carryTags:
+  - Switch
   carryDestination: Exit
   retargetInterval: 3
 --- !u!114 &114907913301836738

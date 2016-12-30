@@ -19,6 +19,8 @@ public class CharacterGrabbedState : SKState<Character> {
 
 	public override void begin ()
 	{
+		_context.debugMessage("Grabbed");
+
 		grabbable.isGrabbed = true;
 
 		//If the character is being grabbed away from another grabber? Right now that won't happen
@@ -50,6 +52,7 @@ public class CharacterGrabbedState : SKState<Character> {
 
 	public override void end ()
 	{
+		_context.debugMessage("");
 		Debug.Log ("Released");
 
 		if (agent != null)

@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 114313540022792128}
   m_Layer: 8
   m_Name: Switch
-  m_TagString: Untagged
+  m_TagString: Switch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -231,6 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7839945a9dfdc84f9ea70523010771c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isStatic: 1
   grabRange: 1
   isGrabbed: 0
   grabber: {fileID: 0}

@@ -6,6 +6,8 @@ using UnityEngine.AI;
 
 public class CharacterCarryState : SKState<Character> {
 
+	public List<string> carryTags;
+
 	public string carryDestination = "Exit";
 
 	public float retargetInterval = 3f;
@@ -37,7 +39,11 @@ public class CharacterCarryState : SKState<Character> {
 
 		carriedObject.OnEscaped += OnCarryEscape;
 
-		agent.path = _context.GetPathToTarget(carryDestination);
+		if (carriedObject.isStatic)
+			agent.SetDestination(carriedObject.transform.position);
+		else
+			agent.path = _context.GetPathToTarget(carryDestination);
+		
 		retargetTime = Time.time;
 	}
 
@@ -51,7 +57,10 @@ public class CharacterCarryState : SKState<Character> {
 			}
 			else if (agent.isPathStale)
 			{
-				agent.path = _context.GetPathToTarget(carryDestination);
+				if (carriedObject.isStatic)
+					agent.SetDestination(carriedObject.transform.position);
+				else
+					agent.path = _context.GetPathToTarget(carryDestination);
 				retargetTime = Time.time;
 			}
 		}

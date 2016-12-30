@@ -40,13 +40,13 @@ public class PrincessController : Character {
 			LevelManager.IncrementStat(Stats.PrincessLost);
 			OnKidnapped.Invoke();
 		}
-		else if (other.tag == "Switch")
+		/*else if (other.tag == "Switch")
 		{
 			Grabbable grab = other.GetComponent<Grabbable>();
 			if (grab != null)
 				carryState.StartCarry(grab);
 			
-		}
+		}*/
 
 		base.OnTriggerEnter(other);
 	}

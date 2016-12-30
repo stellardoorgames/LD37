@@ -4,17 +4,20 @@ using UnityEngine;
 using System;
 
 public abstract class Grabbable : MonoBehaviour {
-	
+
+	public bool isStatic = false;
 	public float grabRange;
 	public bool isGrabbed;
+	[HideInInspector]
 	public Transform grabber;
+	[HideInInspector]
+	public float lastGrabbedTime = 0f;
 
 	public event Action OnEscaped;
 
 	public event Action OnGrab;
 	public event Action OnRelease;
 
-	public float lastGrabbedTime = 0f;
 	
 	//public abstract bool Grabbed (Transform grabber);
 	//public abstract void Released ();

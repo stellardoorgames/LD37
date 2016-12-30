@@ -6,12 +6,15 @@ using UnityEngine.AI;
 
 public class CharacterAttackState : SKState<Character> {
 
+	public List<string> attackTags;
+
 	public float attackInterval = 1f;
 	public float damage = 1f;
 	public float attackRange = 1f;
 
 	float lastAttackTime;
 
+	[SerializeField]
 	Damageable attackTarget;
 
 	Animator anim;
@@ -47,6 +50,7 @@ public class CharacterAttackState : SKState<Character> {
 		{
 			if (attackTarget == null || Vector3.Distance(transform.position, attackTarget.transform.position) > attackRange)
 			{
+				Debug.Log("Lost Attack Target");
 				_machine.changeState<CharacterSearchState>();
 				return;
 			}

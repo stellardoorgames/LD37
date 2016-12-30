@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 public class CharacterSearchState : SKState<Character> {
 
-	public List<string> targetTags;
+	public List<string> searchTags;
 
 	//GameObject target;
 
@@ -24,7 +24,7 @@ public class CharacterSearchState : SKState<Character> {
 	{
 		_context.debugMessage("Searching");
 
-		agent.path = _context.GetPathToTarget(targetTags);
+		agent.path = _context.GetPathToTarget(searchTags);
 
 		lastRetarget = Time.time;
 	}
@@ -36,7 +36,7 @@ public class CharacterSearchState : SKState<Character> {
 			_context.debugMessage("Searching");
 			//if (agent.isPathStale)
 			{
-				agent.path = _context.GetPathToTarget(targetTags);
+				agent.path = _context.GetPathToTarget(searchTags);
 
 				lastRetarget = Time.time;
 			}
@@ -50,22 +50,22 @@ public class CharacterSearchState : SKState<Character> {
 		_context.debugMessage("");
 	}
 
-	protected virtual void OnTriggerEnter(Collider other)
+	protected virtual void OnTriggerStay(Collider other)
 	{
 		if (!enabled)
 			return;
 
-		if (targetTags.Contains(other.tag))
+		if (_context.carryState.carryTags.Contains(other.tag))
 		{
 			Grabbable grab = other.GetComponent<Grabbable>();
 			if (grab != null)
 				_context.carryState.StartCarry(grab);
-			else
-			{
-				Damageable fight = other.GetComponent<Damageable>();
-				if (fight != null)
-					_context.attackState.StartAttack(fight);
-			}
+		}
+		else if (_context.attackState.attackTags.Contains(other.tag))
+		{
+			Damageable fight = other.GetComponent<Damageable>();
+			if (fight != null)
+				_context.attackState.StartAttack(fight);
 		}
 
 	}
