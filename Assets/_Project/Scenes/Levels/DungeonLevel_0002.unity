@@ -8800,6 +8800,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 4440712588466134, guid: 22e842d4f9c3bee48915c0528f2eb14d, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4506721849966816, guid: 22e842d4f9c3bee48915c0528f2eb14d, type: 2}
       propertyPath: m_RootOrder
       value: 4
@@ -8807,6 +8811,10 @@ Prefab:
     - target: {fileID: 4462435172995492, guid: 22e842d4f9c3bee48915c0528f2eb14d, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4338013135618184, guid: 22e842d4f9c3bee48915c0528f2eb14d, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4145230365035018, guid: 22e842d4f9c3bee48915c0528f2eb14d, type: 2}
       propertyPath: m_RootOrder
@@ -8816,21 +8824,13 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 4346534572080530, guid: 22e842d4f9c3bee48915c0528f2eb14d, type: 2}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4440712588466134, guid: 22e842d4f9c3bee48915c0528f2eb14d, type: 2}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 4338013135618184, guid: 22e842d4f9c3bee48915c0528f2eb14d, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 4704961355880290, guid: 22e842d4f9c3bee48915c0528f2eb14d, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346534572080530, guid: 22e842d4f9c3bee48915c0528f2eb14d, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4969679869524342, guid: 22e842d4f9c3bee48915c0528f2eb14d, type: 2}
       propertyPath: m_RootOrder
@@ -24594,11 +24594,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 160958129}
     m_Modifications:
-    - target: {fileID: 114217564708781716, guid: 51dd39e928714bd4f8e39a72b90d4278,
-        type: 2}
-      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4188970245622470, guid: 51dd39e928714bd4f8e39a72b90d4278, type: 2}
       propertyPath: m_LocalPosition.x
       value: 2
@@ -24636,26 +24631,6 @@ Prefab:
       propertyPath: OnKidnapped.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1534761743}
-    - target: {fileID: 114217564708781716, guid: 51dd39e928714bd4f8e39a72b90d4278,
-        type: 2}
-      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114217564708781716, guid: 51dd39e928714bd4f8e39a72b90d4278,
-        type: 2}
-      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114217564708781716, guid: 51dd39e928714bd4f8e39a72b90d4278,
-        type: 2}
-      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1659651474}
-    - target: {fileID: 114070454764458724, guid: 51dd39e928714bd4f8e39a72b90d4278,
-        type: 2}
-      propertyPath: debug
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 51dd39e928714bd4f8e39a72b90d4278, type: 2}
   m_IsPrefabParent: 0
@@ -30722,11 +30697,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4925980662284290, guid: fd237e7e41e729e4882a3d6140475496,
     type: 2}
   m_PrefabInternal: {fileID: 1655752788}
---- !u!1 &1659651474 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1204805062525628, guid: cb2131d47ff1bdf4ab4d9caebdbc03b4,
-    type: 2}
-  m_PrefabInternal: {fileID: 1942261457}
 --- !u!1001 &1660195162
 Prefab:
   m_ObjectHideFlags: 0

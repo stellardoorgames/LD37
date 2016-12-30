@@ -4,6 +4,7 @@ using UnityEngine;
 using FluffyUnderware.Curvy;
 using FluffyUnderware.Curvy.Generator;
 using FluffyUnderware.Curvy.Generator.Modules;
+using System;
 
 public class TenticleController : MonoBehaviour {
 
@@ -25,6 +26,8 @@ public class TenticleController : MonoBehaviour {
 
 	[HideInInspector]
 	public float tentacleLength;
+
+	public event Action<int> OnTakeDamage;
 
 	List<TentacleSection> tentacleSectionList = new List<TentacleSection>();
 
@@ -102,6 +105,7 @@ public class TenticleController : MonoBehaviour {
 			if (playerController.totalTentacleLength > playerController.currentMaxLength)
 			{
 				Debug.Log("Exceeded Length");
+				playerController.ExceedMaxLength();
 				
 				//If too long, only update position if the player is backtracking
 				float dist1 = Vector3.Distance(transform.position, previousSegment.transform.position);
@@ -281,6 +285,9 @@ public class TenticleController : MonoBehaviour {
 			playerController.TakeDamage(amount);
 
 		colorFlash.FlashColor(materialObject);
+
+		if (OnTakeDamage != null)
+			OnTakeDamage(tentacleID);
 
 		Retract();
 	}

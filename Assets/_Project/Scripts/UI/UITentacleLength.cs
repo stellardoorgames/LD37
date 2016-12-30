@@ -6,9 +6,7 @@ using UnityEngine.UI;
 public class UITentacleLength : MonoBehaviour {
 
 	public PlayerController controller;
-	//public List<Image> tentacleBarImages = new List<Image>();
 	public List<RectTransform> tentacleBars = new List<RectTransform>();
-	//float barImageWidth = 347f;
 
 	public RectTransform panel1;
 	public RectTransform panel2;
@@ -17,57 +15,35 @@ public class UITentacleLength : MonoBehaviour {
 	float startingTentacleLength;
 	public float startingTotalTentacleLength = 7.5f;
 	
-	public Image flashImage;
+	public Image outlineImage;
 	bool isFlashing = false;
-	public Color startingColor;
+	//public Color startingColor;
 	public Color flashingColor;
 
 	Vector2 barPosition;
 	Vector2 barPositionOffset;
-	//float barWidth;
 
-	//float previousMaxLength;
+	List<Image> tentacleImages;
 
-	//PlayerController controller;
-	
-	// Use this for initialization
-	void Start () {
-		//controller = GetComponent<PlayerController>();
-
+	void Start () 
+	{
 		startingTentacleLength = startingTotalTentacleLength / controller.tentacles.Count;
-		//previousMaxLength = controller.currentMaxLength;
 
-		//barWidth = panel1.rect.width;
 		barPosition = panel1.anchoredPosition;
 
-		controller.OnGrowMaxLength += OnGrowLength;
+		tentacleImages = new List<Image>();
+		for(int i = tentacleBars.Count - 1; i >= 0; i--)
+			tentacleImages.Add(tentacleBars[i].GetComponent<Image>());
+		
+		controller.OnGrowMaxLength += () => StartCoroutine(ColorFlash(outlineImage, 1f, 1));
+		controller.OnExceedLength += () => StartCoroutine(ColorFlash(outlineImage, 1f, 1));
+		foreach(TenticleController tc in controller.tentacles)
+			tc.OnTakeDamage += (int i) => StartCoroutine(ColorFlash(tentacleImages[i], 1f, 1));
+		
 	}
 	
-	// Update is called once per frame
-	void Update () {
-
-		/*if (controller.currentMaxTotalTentacleLength == previousMaxLength)
-			return;
-
-		previousMaxLength = controller.currentMaxTotalTentacleLength;
-*/
-		//StartCoroutine(ColorFlash(flashingColor, 1f, 2));
-		//float t = Mathf.InverseLerp(controller.startingMaxTotalTentacleLength, controller.maxMaxTotalTentacleLength, controller.currentMaxTotalTentacleLength);
-		//barPositionOffset = Vector2.Lerp(barPosition, Vector2.zero, t);
-		//bar.anchoredPosition = barPositionOffset;
-
-		//float percent = 0f;
-		//float percent = 1f - t;//Mathf.Lerp (.8f, 0f, t);//
-		//float p = 1f - percent;
-		/*for(int i = 0; i < tentacleBarImages.Count; i++)
-		{
-			float tentacleLength = controller.tentacles[i].tentacleLength - startingTentacleLength;
-			float maxTentacleLength = controller.currentMaxTotalTentacleLength - startingTotalTentacleLength;
-			percent += tentacleLength / maxTentacleLength;
-			tentacleBarImages[i].material.SetFloat("_Progress", percent);
-
-		}*/
-
+	void Update () 
+	{
 		float t = Mathf.InverseLerp(controller.startingMaxLength, controller.maxMaxLength, controller.currentMaxLength);
 		barPositionOffset = Vector2.Lerp(barPosition, Vector2.zero, t);
 		panel1.anchoredPosition = barPositionOffset;
@@ -85,17 +61,14 @@ public class UITentacleLength : MonoBehaviour {
 		}
 	}
 
-	void OnGrowLength()
-	{
-		StartCoroutine(ColorFlash(1f, 1));
-	}
-
-	public IEnumerator ColorFlash(float duration, int number)
+	public IEnumerator ColorFlash(Image image, float duration, int number)
 	{
 		if (isFlashing)
 			yield break;
 
 		isFlashing = true;
+
+		Color startingColor = image.color;
 
 		float flashTime = duration / (number * 2);
 		for ( int i = 0; i < number; i++)
@@ -106,7 +79,7 @@ public class UITentacleLength : MonoBehaviour {
 			{
 				yield return null;
 				float t = Mathf.InverseLerp(startingTime, endTime, Time.time);
-				flashImage.color = Color.Lerp(startingColor, flashingColor, t);
+				image.color = Color.Lerp(startingColor, flashingColor, t);
 			}
 			endTime = Time.time + flashTime;
 			startingTime = Time.time;
@@ -114,11 +87,11 @@ public class UITentacleLength : MonoBehaviour {
 			{
 				yield return null;
 				float t = Mathf.InverseLerp(startingTime, endTime, Time.time);
-				flashImage.color = Color.Lerp(startingColor, flashingColor, t);
+				image.color = Color.Lerp(startingColor, flashingColor, t);
 			}
 		}
 
-		flashImage.color = startingColor;
+		image.color = startingColor;
 			
 		isFlashing = false;
 	}

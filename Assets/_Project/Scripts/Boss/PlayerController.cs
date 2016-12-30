@@ -40,6 +40,8 @@ public class PlayerController : MonoBehaviour {
 	ColorFlash colorFlash;
 
 	public event Action OnGrowMaxLength;
+	public event Action OnExceedLength;
+	public event Action OnTakeDamage;
 
 	public UnityEvent OnDeath;
 
@@ -125,6 +127,12 @@ public class PlayerController : MonoBehaviour {
 			gem.Destroy();
 
 		LevelManager.IncrementStat(Stats.SoulStonesConsumed);
+	}
+
+	public void ExceedMaxLength()
+	{
+		if (OnExceedLength != null)
+			OnExceedLength();
 	}
 
 	IEnumerator ExtendMaxLength(float amount, float duration)

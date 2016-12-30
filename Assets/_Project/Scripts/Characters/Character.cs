@@ -17,48 +17,20 @@ public class Character : MonoBehaviour {
 
 	public bool debug = false;
 
-	[HideInInspector]
-	public NavMeshAgent agent;
+	NavMeshAgent agent;
 
 	public SKStateMachine<Character> stateMachine;
-
-	/*[HideInInspector]
-	public CharacterSpawnState spawnState;
-	[HideInInspector]
-	public CharacterSearchState searchState;
-	[HideInInspector]
-	public CharacterAttackState attackState;
-	[HideInInspector]
-	public CharacterCarryState carryState;
-	[HideInInspector]
-	public CharacterGrabbedState grabbedState;
-	[HideInInspector]
-	public CharacterDeathState deathState;*/
 
 	public virtual void Start()
 	{
 		agent = GetComponent<NavMeshAgent> ();
 
-		/*spawnState = GetComponent<CharacterSpawnState>();
-		searchState = GetComponent<CharacterSearchState>();
-		attackState = GetComponent<CharacterAttackState>();
-		carryState = GetComponent<CharacterCarryState>();
-		grabbedState = GetComponent<CharacterGrabbedState>();
-		deathState = GetComponent<CharacterDeathState>();*/
-
 		stateMachine = new SKStateMachine<Character>(this, GetComponent<CharacterSpawnState>());
-		/*stateMachine.addState(searchState);
-		stateMachine.addState(attackState);
-		stateMachine.addState(carryState);
-		stateMachine.addState(grabbedState);
-		stateMachine.addState(deathState);*/
 		stateMachine.addState(GetComponent<CharacterSearchState>());
 		stateMachine.addState(GetComponent<CharacterGrabbedState>());
 		stateMachine.addState(GetComponent<CharacterAttackState>());
 		stateMachine.addState(GetComponent<CharacterDeathState>());
 		stateMachine.addState(GetComponent<CharacterCarryState>());
-
-
 	}
 
 	public virtual void Update () 
@@ -66,32 +38,6 @@ public class Character : MonoBehaviour {
 		stateMachine.update(Time.deltaTime);
 
 	}
-
-	public GameObject FindClosestTarget(GameObject[] targets)
-	{
-		if (targets == null)
-			return null;
-		
-		GameObject newTarget = null;
-		float dist = int.MaxValue;
-
-		foreach(GameObject go in targets)
-		{
-			float d = Vector3.Distance (transform.position, go.transform.position);
-			if (d < dist)
-			{
-				dist = d;
-				newTarget = go;
-			}
-		}
-		
-		return newTarget;
-	}
-
-	/*public List<GameObject> SortByDistance(GameObject[] targets)
-	{
-		
-	}*/
 
 	public NavMeshPath GetPathToTarget(string tag, bool wander = true)
 	{
@@ -128,6 +74,32 @@ public class Character : MonoBehaviour {
 
 		return path;
 	}
+
+	public GameObject FindClosestTarget(GameObject[] targets)
+	{
+		if (targets == null)
+			return null;
+
+		GameObject newTarget = null;
+		float dist = int.MaxValue;
+
+		foreach(GameObject go in targets)
+		{
+			float d = Vector3.Distance (transform.position, go.transform.position);
+			if (d < dist)
+			{
+				dist = d;
+				newTarget = go;
+			}
+		}
+
+		return newTarget;
+	}
+
+	/*public List<GameObject> SortByDistance(GameObject[] targets)
+	{
+		
+	}*/
 
 	NavMeshPath GetWanderPath(float distance = 1f)
 	{
@@ -182,14 +154,6 @@ public class Character : MonoBehaviour {
 
 		this.text.text = "";
 	}
-
-	/*public virtual void Death(DeathType deathType)
-	{
-		if (deathState.enabled)
-			return;
-
-		deathState.StartDeath(deathType);
-	}*/
 
 	public void Destroy()
 	{

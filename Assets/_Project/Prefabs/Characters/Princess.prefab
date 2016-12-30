@@ -11623,17 +11623,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a623a662aa22f8b45a4dc7c80f77b67d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vulnerabilities: 
   text: {fileID: 114769267491237270}
   anim: {fileID: 95114228260101396}
-  debug: 1
-  agent: {fileID: 0}
-  spawnState: {fileID: 0}
-  searchState: {fileID: 0}
-  attackState: {fileID: 0}
-  carryState: {fileID: 0}
-  grabbedState: {fileID: 0}
-  deathState: {fileID: 0}
+  debug: 0
   OnKidnapped:
     m_PersistentCalls:
       m_Calls:
@@ -11650,12 +11642,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  OnDeath:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  holdState: {fileID: 0}
 --- !u!114 &114217564708781716
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11667,8 +11653,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4772719231c1b14eb96513c605caee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vulnerabilities: 
   deathTime: 2
   soulGemPrefab: {fileID: 0}
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!114 &114289227752592110
 MonoBehaviour:
   m_ObjectHideFlags: 1

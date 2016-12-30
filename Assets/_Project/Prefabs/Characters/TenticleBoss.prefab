@@ -2904,7 +2904,7 @@ Transform:
   m_Children:
   - {fileID: 4764923408505470}
   m_Father: {fileID: 4776859277608550}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4157502497636834
 Transform:
@@ -3144,7 +3144,7 @@ Transform:
   m_Children:
   - {fileID: 4935099408023742}
   m_Father: {fileID: 4776859277608550}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4346534572080530
 Transform:
@@ -3157,7 +3157,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4776859277608550}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4351482070837530
 Transform:
@@ -3222,7 +3222,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4776859277608550}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4403964198054530
 Transform:
@@ -3314,7 +3314,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4776859277608550}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4448639371634222
 Transform:
@@ -3367,7 +3367,7 @@ Transform:
   m_Children:
   - {fileID: 4214141025889632}
   m_Father: {fileID: 4776859277608550}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4469098252963994
 Transform:
@@ -3380,7 +3380,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4776859277608550}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4472342986402840
 Transform:
@@ -3420,7 +3420,7 @@ Transform:
   m_Children:
   - {fileID: 4115545892692744}
   m_Father: {fileID: 4776859277608550}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4509085514280072
 Transform:
@@ -3566,7 +3566,7 @@ Transform:
   m_Children:
   - {fileID: 4765403755197652}
   m_Father: {fileID: 4776859277608550}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4714362038769058
 Transform:
@@ -3719,18 +3719,18 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4969679869524342}
-  - {fileID: 4704961355880290}
-  - {fileID: 4145230365035018}
-  - {fileID: 4338013135618184}
-  - {fileID: 4506721849966816}
   - {fileID: 4462435172995492}
-  - {fileID: 4346534572080530}
-  - {fileID: 4518123652309264}
+  - {fileID: 4506721849966816}
+  - {fileID: 4338013135618184}
+  - {fileID: 4145230365035018}
+  - {fileID: 4704961355880290}
+  - {fileID: 4969679869524342}
   - {fileID: 4469098252963994}
-  - {fileID: 4440712588466134}
-  - {fileID: 4742459557436382}
+  - {fileID: 4518123652309264}
+  - {fileID: 4346534572080530}
   - {fileID: 4396337268347588}
+  - {fileID: 4742459557436382}
+  - {fileID: 4440712588466134}
   - {fileID: 4120347198516402}
   m_Father: {fileID: 4183354374172442}
   m_RootOrder: 7
@@ -3931,7 +3931,7 @@ Transform:
   m_Children:
   - {fileID: 4725564603395380}
   m_Father: {fileID: 4776859277608550}
-  m_RootOrder: 0
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4987176546523194
 Transform:
@@ -23470,18 +23470,18 @@ MonoBehaviour:
     m_TypeName: FluffyUnderware.Curvy.CurvyCGEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   Modules:
-  - {fileID: 114970490901381648}
-  - {fileID: 114905562788880012}
-  - {fileID: 114676784758000624}
-  - {fileID: 114564328584730948}
-  - {fileID: 114144110542229100}
   - {fileID: 114316314226027354}
-  - {fileID: 114143901191171988}
-  - {fileID: 114019034430855828}
+  - {fileID: 114144110542229100}
+  - {fileID: 114564328584730948}
+  - {fileID: 114676784758000624}
+  - {fileID: 114905562788880012}
+  - {fileID: 114970490901381648}
   - {fileID: 114496462765554018}
-  - {fileID: 114219433970524540}
-  - {fileID: 114920768302537394}
+  - {fileID: 114019034430855828}
+  - {fileID: 114143901191171988}
   - {fileID: 114756662787131094}
+  - {fileID: 114920768302537394}
+  - {fileID: 114219433970524540}
   - {fileID: 114737835508818886}
   m_LastModuleID: 13
 --- !u!114 &114862784000689424
