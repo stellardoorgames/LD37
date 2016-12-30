@@ -88,6 +88,14 @@ public class LevelManager : MonoBehaviour {
 		totalStats[stat]++;
 	}
 
+	static public void IncrementKills(string tagName)
+	{
+		if (tagName == "Enemy")
+			IncrementStat(Stats.EnemiesKilled);
+		else if (tagName == "Princess")
+			IncrementStat(Stats.PrincessDeath);
+	}
+
 	void FirstStatEvent(Stats stat)
 	{
 		switch (stat) {

@@ -20,8 +20,6 @@ public class SwitchGrabbable : Grabbable {
 	{
 		this.grabber = grabber;
 
-		//grabber.position = transform.position;
-
 		isGrabbed = true;
 
 		switchController.SwitchON();

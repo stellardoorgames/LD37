@@ -8,18 +8,7 @@ using Prime31.StateKit;
 
 
 public class Character : MonoBehaviour {
-
-	public enum DeathType
-	{
-		Lava,
-		Spikes
-	}
-
-	//public List<string> targetTags = new List<string>();
-	//public string currentTarget;
-
-	public List<DeathType> vulnerabilities = new List<DeathType>();
-
+	
 	public Text text;
 
 	GameObject target;
@@ -45,8 +34,6 @@ public class Character : MonoBehaviour {
 	public CharacterGrabbedState grabbedState;
 	[HideInInspector]
 	public CharacterDeathState deathState;
-
-	//List<Vector3> wanderDirections;
 
 	public virtual void Start()
 	{
@@ -188,31 +175,21 @@ public class Character : MonoBehaviour {
 	{
 		this.text.text = text;
 
-		yield return new WaitForSeconds(duration);
+		if (duration == 0f)
+			yield break;
+		else
+			yield return new WaitForSeconds(duration);
 
 		this.text.text = "";
 	}
 
-	protected virtual void OnTriggerEnter(Collider other)
-	{
-		if (other.tag == "Hazard")
-		{
-			Hazard h = other.GetComponent<Hazard>();
-			if (h != null && vulnerabilities.Contains(h.hazardType))
-			{
-				Death (h.hazardType);
-			}
-		}
-
-	}
-
-	public virtual void Death(DeathType deathType)
+	/*public virtual void Death(DeathType deathType)
 	{
 		if (deathState.enabled)
 			return;
 
 		deathState.StartDeath(deathType);
-	}
+	}*/
 
 	public void Destroy()
 	{

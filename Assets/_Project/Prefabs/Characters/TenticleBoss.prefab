@@ -1259,6 +1259,7 @@ GameObject:
   - component: {fileID: 54988718002579430}
   - component: {fileID: 135449303284537150}
   - component: {fileID: 135269042358713024}
+  - component: {fileID: 114018718138131488}
   m_Layer: 12
   m_Name: Tenticle Tracking West
   m_TagString: Tentacle
@@ -1400,6 +1401,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4183354374172442}
   - component: {fileID: 114986316852267950}
+  - component: {fileID: 114783635087412540}
   m_Layer: 0
   m_Name: TenticleBoss
   m_TagString: Untagged
@@ -1421,6 +1423,7 @@ GameObject:
   - component: {fileID: 54570113168046616}
   - component: {fileID: 135832132975896446}
   - component: {fileID: 135838351764982718}
+  - component: {fileID: 114488524457990482}
   m_Layer: 10
   m_Name: Tenticle Tracking East
   m_TagString: Tentacle
@@ -2740,6 +2743,7 @@ GameObject:
   - component: {fileID: 54777041344060634}
   - component: {fileID: 135767120832614274}
   - component: {fileID: 135080373066909774}
+  - component: {fileID: 114396081187448698}
   m_Layer: 11
   m_Name: Tenticle Tracking South
   m_TagString: Tentacle
@@ -4575,6 +4579,20 @@ MonoBehaviour:
   m_ExplicitU: 0
   m_FirstU: 0
   m_SecondU: 0
+--- !u!114 &114018718138131488
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1422844246914122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51b2458256e9bce4dbed99d0705d9e17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageTint: {r: 0.9632353, g: 0.120404415, b: 0.120404415, a: 1}
+  damageFlashDuration: 1.5
+  damageFlashNumber: 3
 --- !u!114 &114019034430855828
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6933,6 +6951,8 @@ MonoBehaviour:
   grabPriority:
   - SoulGem
   - Enemy
+  - Princess
+  - Switch
   isActive: 0
 --- !u!114 &114138331210310788
 MonoBehaviour:
@@ -13122,6 +13142,20 @@ MonoBehaviour:
   m_ExplicitU: 0
   m_FirstU: 0
   m_SecondU: 0
+--- !u!114 &114396081187448698
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1990943898568614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51b2458256e9bce4dbed99d0705d9e17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageTint: {r: 0.9632353, g: 0.120404415, b: 0.120404415, a: 1}
+  damageFlashDuration: 1.5
+  damageFlashNumber: 3
 --- !u!114 &114397542817230126
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13511,7 +13545,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea885cb8cd4bf1c48a373cc5c11b2ed4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 114945776769023198}
 --- !u!114 &114417998731348536
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13585,9 +13618,6 @@ MonoBehaviour:
   generator: {fileID: 114862292863563214}
   segmentLength: 1
   selfCollideNumber: 8
-  damageTint: {r: 0.9632353, g: 0.120404415, b: 0.120404415, a: 1}
-  damageFlashDuration: 1.5
-  damageFlashNumber: 3
   isActive: 0
   tentacleLength: 0
 --- !u!114 &114422921965107132
@@ -15141,7 +15171,23 @@ MonoBehaviour:
   grabPriority:
   - SoulGem
   - Enemy
+  - Princess
+  - Switch
   isActive: 0
+--- !u!114 &114488524457990482
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1495844932394640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51b2458256e9bce4dbed99d0705d9e17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageTint: {r: 0.9632353, g: 0.120404415, b: 0.120404415, a: 1}
+  damageFlashDuration: 1.5
+  damageFlashNumber: 3
 --- !u!114 &114488789350516218
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16405,6 +16451,8 @@ MonoBehaviour:
   grabPriority:
   - SoulGem
   - Enemy
+  - Princess
+  - Switch
   isActive: 0
 --- !u!114 &114547490788969434
 MonoBehaviour:
@@ -16453,7 +16501,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea885cb8cd4bf1c48a373cc5c11b2ed4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 114596978438376736}
 --- !u!114 &114550802519783338
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -17565,9 +17612,6 @@ MonoBehaviour:
   generator: {fileID: 114862292863563214}
   segmentLength: 1
   selfCollideNumber: 8
-  damageTint: {r: 0.9632353, g: 0.120404415, b: 0.120404415, a: 1}
-  damageFlashDuration: 1.5
-  damageFlashNumber: 3
   isActive: 0
   tentacleLength: 0
 --- !u!114 &114597227289906220
@@ -17761,7 +17805,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea885cb8cd4bf1c48a373cc5c11b2ed4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 114422446801897484}
 --- !u!114 &114610275573272256
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -21620,6 +21663,20 @@ MonoBehaviour:
   m_ExplicitU: 0
   m_FirstU: 0
   m_SecondU: 0
+--- !u!114 &114783635087412540
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1492691245230058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51b2458256e9bce4dbed99d0705d9e17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageTint: {r: 0.9632353, g: 0.120404415, b: 0.120404415, a: 1}
+  damageFlashDuration: 1.5
+  damageFlashNumber: 3
 --- !u!114 &114783822417273862
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -25404,9 +25461,6 @@ MonoBehaviour:
   generator: {fileID: 114862292863563214}
   segmentLength: 1
   selfCollideNumber: 8
-  damageTint: {r: 0.9632353, g: 0.120404415, b: 0.120404415, a: 1}
-  damageFlashDuration: 1.5
-  damageFlashNumber: 3
   isActive: 0
   tentacleLength: 0
 --- !u!114 &114947419409242216
@@ -26303,6 +26357,8 @@ MonoBehaviour:
   addToMaxLengthPerSoul: 10
   currentTotalTentacleLength: 0
   _activeTenticleIndex: 1
+  anim: {fileID: 95094358042783220}
+  skinnedMeshRenderer: {fileID: 137517887944275544}
   OnDeath:
     m_PersistentCalls:
       m_Calls:

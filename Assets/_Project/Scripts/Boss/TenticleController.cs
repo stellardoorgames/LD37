@@ -22,11 +22,11 @@ public class TenticleController : MonoBehaviour {
 	public float segmentLength = 1f;
 	public int selfCollideNumber = 8;
 
-	public Color damageTint;
+	/*public Color damageTint;
 	Color startingTint;
 	public float damageFlashDuration = 2;
 	public int damageFlashNumber = 3;
-	bool isFlashing = false;
+	bool isFlashing = false;*/
 
 	public bool isActive = false;
 
@@ -51,6 +51,8 @@ public class TenticleController : MonoBehaviour {
 
 	bool isInitialized = false;
 
+	ColorFlash colorFlash;
+
 	void Awake () 
 	{
 		projector = GetComponentInChildren<Projector> ();
@@ -59,6 +61,8 @@ public class TenticleController : MonoBehaviour {
 		rb = GetComponent<Rigidbody>();
 
 		grabber = GetComponent<TenticleGrabber>();
+
+		colorFlash = GetComponent<ColorFlash>();
 
 		startingPosition = transform.position;
 	}
@@ -89,7 +93,8 @@ public class TenticleController : MonoBehaviour {
 
 		startingLength = spline.Length;
 
-		startingTint = materialObject.material.color;
+		//startingTint = materialObject.material.color;
+		//colorFlash.meshRenderer = materialObject;
 
 		StartCoroutine(Swirl());
 	}
@@ -284,13 +289,14 @@ public class TenticleController : MonoBehaviour {
 	{
 		if (tentacleLength < startingLength + .5f)
 			playerController.TakeDamage(amount);
-		
-		if (!isFlashing)
-			StartCoroutine(ColorFlash(damageTint, damageFlashDuration, damageFlashNumber));
+
+		colorFlash.FlashColor(materialObject);
+		//if (!isFlashing)
+		//	StartCoroutine(ColorFlash(damageTint, damageFlashDuration, damageFlashNumber));
 		Retract();
 	}
 
-	public IEnumerator ColorFlash(Color color, float duration, int number)
+	/*public IEnumerator ColorFlash(Color color, float duration, int number)
 	{
 		isFlashing = true;
 
@@ -316,7 +322,7 @@ public class TenticleController : MonoBehaviour {
 		}
 
 		isFlashing = false;
-	}
+	}*/
 
 	void OnTriggerStay(Collider other)
 	{

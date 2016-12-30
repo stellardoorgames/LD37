@@ -36,6 +36,10 @@ public class PlayerController : MonoBehaviour {
 	TenticleController activeTentacle;
 	//List<TenticleLead> tentacleLeads;
 
+	public Animator anim;
+	public SkinnedMeshRenderer skinnedMeshRenderer;
+	ColorFlash colorFlash;
+
 	//UITentacleLength lengthUI;
 	public event Action OnGrowMaxLength;
 
@@ -44,6 +48,7 @@ public class PlayerController : MonoBehaviour {
 
 	void Start () 
 	{
+		colorFlash = GetComponent<ColorFlash>();
 
 		currentLife = maxLife;
 
@@ -152,6 +157,8 @@ public class PlayerController : MonoBehaviour {
 	public void TakeDamage(float amount)
 	{
 		currentLife -= amount;
+		
+		colorFlash.FlashColor(skinnedMeshRenderer);
 
 		if (currentLife <= 0f)
 		{

@@ -5004,7 +5004,6 @@ GameObject:
   - component: {fileID: 114590361515993002}
   - component: {fileID: 114217564708781716}
   - component: {fileID: 114795886478997432}
-  - component: {fileID: 114406487460277980}
   m_Layer: 0
   m_Name: Princess
   m_TagString: Princess
@@ -11706,19 +11705,7 @@ MonoBehaviour:
   attackInterval: 1
   damage: 1
   attackRange: 1
---- !u!114 &114406487460277980
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1844002888443164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a17a29b6da50c1245bda25447f91ac78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  holdTags:
-  - Switch
+  attackTarget: {fileID: 0}
 --- !u!114 &114590361515993002
 MonoBehaviour:
   m_ObjectHideFlags: 1

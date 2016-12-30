@@ -16884,7 +16884,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3006405e26ac784fb244d505f3805f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vulnerabilities: 00000000
   text: {fileID: 114817604418964250}
   anim: {fileID: 95917374941006580}
   debug: 1
@@ -16911,6 +16910,7 @@ MonoBehaviour:
   attackInterval: 1
   damage: 1
   attackRange: 1
+  attackTarget: {fileID: 0}
 --- !u!114 &114817604418964250
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -16955,9 +16955,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4772719231c1b14eb96513c605caee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vulnerabilities: 00000000
   deathTime: 5
   soulGemPrefab: {fileID: 1803453541596278, guid: 30ee4ca92a34f67489c144b69435d709,
     type: 2}
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!114 &114910171161496244
 MonoBehaviour:
   m_ObjectHideFlags: 1

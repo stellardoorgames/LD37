@@ -6,9 +6,6 @@ using UnityEngine.Events;
 public class PrincessController : Character {
 
 	public UnityEvent OnKidnapped;
-	public UnityEvent OnDeath;
-
-	public CharacterHoldState holdState;
 
 	CharacterGrabbable grabbable;
 
@@ -16,11 +13,9 @@ public class PrincessController : Character {
 	{
 		base.Start ();
 
-		holdState = GetComponent<CharacterHoldState>();
-		stateMachine.addState(holdState);
-
 		grabbable = GetComponent<CharacterGrabbable>();
 		grabbable.OnGrab += OnGrabbed;
+		grabbable.OnRelease += OnReleased;
 	}
 
 	void OnGrabbed()
@@ -28,34 +23,35 @@ public class PrincessController : Character {
 		if (grabbable.grabber != null)
 		{
 			if (grabbable.grabber.tag == "Enemy")
+			{
+				SetSpeech("Help!!", 0f);
 				LevelManager.IncrementStat(Stats.PrincessNabbed);
+			}
 		}
 	}
 
+	void OnReleased()
+	{
+		SetSpeech("", 0f);
+	}
 
-	protected override void OnTriggerEnter(Collider other)
+
+	protected virtual void OnTriggerEnter(Collider other)
 	{
 		if (other.tag == "Exit")
 		{
 			LevelManager.IncrementStat(Stats.PrincessLost);
 			OnKidnapped.Invoke();
 		}
-		/*else if (other.tag == "Switch")
-		{
-			Grabbable grab = other.GetComponent<Grabbable>();
-			if (grab != null)
-				carryState.StartCarry(grab);
-			
-		}*/
 
-		base.OnTriggerEnter(other);
+		//base.OnTriggerEnter(other);
 	}
 
-	public override void Death(Character.DeathType deathType)
+	/*public override void Death(Character.DeathType deathType)
 	{
 		LevelManager.IncrementStat(Stats.PrincessDeath);
 		OnDeath.Invoke();
 
 		base.Death (deathType);
-	}
+	}*/
 }

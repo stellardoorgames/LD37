@@ -8,8 +8,6 @@ public class CharacterSearchState : SKState<Character> {
 
 	public List<string> searchTags;
 
-	//GameObject target;
-
 	public float retargetInterval = 3f;
 	float lastRetarget;
 

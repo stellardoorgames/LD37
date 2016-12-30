@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Hazard : MonoBehaviour {
 	
-	public Character.DeathType hazardType;
+	public CharacterDeathState.DeathType hazardType;
 
 	public GameObject effectPrefab;
 

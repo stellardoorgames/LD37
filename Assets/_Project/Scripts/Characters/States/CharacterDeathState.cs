@@ -3,14 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using Prime31.StateKit;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 public class CharacterDeathState : SKState<Character> {
+
+	public enum DeathType
+	{
+		Lava,
+		Spikes
+	}
+
+	public List<DeathType> vulnerabilities = new List<DeathType>();
 
 	public float deathTime = 2f;
 	//public GameObject lavaDeathEffect;
 	public GameObject soulGemPrefab;
 
-	Character.DeathType deathType;
+	public UnityEvent OnDeath;
+
+	DeathType deathType;
 
 	float startTime;
 
@@ -26,8 +37,11 @@ public class CharacterDeathState : SKState<Character> {
 		grabbable = GetComponent<Grabbable>();
 	}
 
-	public void StartDeath(Character.DeathType deathType)
+	public void StartDeath(DeathType deathType)
 	{
+		if (enabled)
+			return;
+		
 		this.deathType = deathType;
 		_machine.changeState<CharacterDeathState>();
 	}
@@ -40,16 +54,13 @@ public class CharacterDeathState : SKState<Character> {
 
 		grabbable.EscapedEvent();
 
-		//if (deathType == Character.DeathType.Lava)
-		//	Instantiate(lavaDeathEffect, transform.position, Quaternion.identity);
-		
 		agent.Stop();
 
-		//LevelManager.AddKill ();
-		if (gameObject.tag == "Enemy")
-			LevelManager.IncrementStat(Stats.EnemiesKilled);
+		LevelManager.IncrementKills(tag);
 		
 		anim.SetTrigger("Death");
+
+		OnDeath.Invoke();
 
 		startTime = Time.time;
 	}
@@ -71,4 +82,21 @@ public class CharacterDeathState : SKState<Character> {
 	{
 
 	}
+
+	protected virtual void OnTriggerEnter(Collider other)
+	{
+		if (enabled)
+			return;
+		
+		if (other.tag == "Hazard")
+		{
+			Hazard h = other.GetComponent<Hazard>();
+			if (h != null && vulnerabilities.Contains(h.hazardType))
+			{
+				StartDeath (h.hazardType);
+			}
+		}
+
+	}
+
 }
