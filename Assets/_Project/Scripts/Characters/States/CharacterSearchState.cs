@@ -22,6 +22,8 @@ public class CharacterSearchState : SKState<Character> {
 
 	public override void begin ()
 	{
+		_context.debugMessage("Searching");
+
 		agent.path = _context.GetPathToTarget(targetTags);
 
 		lastRetarget = Time.time;
@@ -31,6 +33,7 @@ public class CharacterSearchState : SKState<Character> {
 	{
 		if (Time.time > lastRetarget + retargetInterval)
 		{
+			_context.debugMessage("Searching");
 			//if (agent.isPathStale)
 			{
 				agent.path = _context.GetPathToTarget(targetTags);
@@ -44,6 +47,7 @@ public class CharacterSearchState : SKState<Character> {
 
 	public override void end ()
 	{
+		_context.debugMessage("");
 	}
 
 	protected virtual void OnTriggerEnter(Collider other)

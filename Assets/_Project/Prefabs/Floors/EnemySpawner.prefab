@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 65816165701920044}
   m_Layer: 8
   m_Name: EnemySpawner
-  m_TagString: Exit
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -235,10 +235,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da74e0e2b07bc0c4093c27afdb9b43db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnObjects:
-  - {fileID: 1444026687741626, guid: c9ca0e9451fcbdb47ac6fc6e11ca6c8f, type: 2}
   sequenceOption: 1
-  beginTime: 2
-  intervalTime: 20
-  stopTime: 0
-  spawnNum: 2
+  spawnObjects:
+  - {fileID: 1643498522182676, guid: 88de7206cdabfc6478a980f407297d2e, type: 2}
+  intervalTimes:
+  - 5
+  - 20
+  stopAfterTime: 0
+  stopAfterNum: 2

@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class TentacleDamageable : Damageable {
 
-	public TenticleController controller;
+	TenticleController controller;
 
 	protected virtual void Start()
 	{
 		if (controller == null)
-			controller = GetComponent<TentacleSection>().controller;
+		{
+			TentacleSection ts = GetComponent<TentacleSection>();
+			if (ts != null)
+				controller = ts.controller;
+		}
+
+		if (controller == null)
+			controller = GetComponent<TenticleController>();
 	}
 
 	public override void TakeDamage (float damageAmount)

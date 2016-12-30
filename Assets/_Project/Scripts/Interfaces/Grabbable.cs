@@ -27,6 +27,8 @@ public abstract class Grabbable : MonoBehaviour {
 
 	public virtual bool Grabbed(Transform grabber)
 	{
+		EscapedEvent();
+
 		isGrabbed = true;
 
 		lastGrabbedTime = Time.time;

@@ -282,7 +282,7 @@ public class TenticleController : MonoBehaviour {
 
 	public void TakeDamage(float amount)
 	{
-		if (tentacleLength > startingLength + 0.25f)
+		if (tentacleLength < startingLength + .5f)
 			playerController.TakeDamage(amount);
 		
 		if (!isFlashing)

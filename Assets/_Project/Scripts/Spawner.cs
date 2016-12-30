@@ -5,67 +5,79 @@ using UnityEngine;
 public enum SpawnerSequenceOptions
 {
 	Loop,
-	Random,
-	Shuffle
+	Shuffle,
+	Random
 }
 
 public class Spawner : MonoBehaviour {
 
-	public List<GameObject> spawnObjects;
-
 	public SpawnerSequenceOptions sequenceOption;
+	public List<GameObject> spawnObjects = new List<GameObject>();
+	public List<float> intervalTimes = new List<float>();
 
-	public float beginTime;
-	public float intervalTime;
-	public float stopTime;
-	public int spawnNum;
+
+	//public float beginTime;
+	public float stopAfterTime;
+	public int stopAfterNum;
+
+	int _spawnIndex;
+	int spawnIndex
+	{
+		get {return _spawnIndex;}
+		set {_spawnIndex = value;
+			if (_spawnIndex > spawnObjects.Count - 1)
+				_spawnIndex = 0;}
+	}
+
+	int _intervalIndex;
+	int intervalIndex
+	{
+		get {return _intervalIndex;}
+		set {_intervalIndex = value;
+			if (_intervalIndex > intervalTimes.Count - 1)
+				_intervalIndex = intervalTimes.Count - 1;}
+	}
 
 	// Use this for initialization
-	IEnumerator Start () 
+	void Start () 
 	{
-		float startTime = Time.time + beginTime;
-
-		while (Time.time < startTime)
-			yield return null;
-		
-		yield return StartCoroutine (SpawnCoroutine ());
+		StartCoroutine (SpawnCoroutine ());
 	}
 
 	IEnumerator SpawnCoroutine()
 	{
-		float sequenceEndTime = stopTime + Time.time;
+		float sequenceEndTime = stopAfterTime + Time.time;
 
+		if (stopAfterNum == 0)
+			stopAfterNum = int.MaxValue;
 
-		if (spawnNum == 0)
-			spawnNum = int.MaxValue;
-
-		for (int i = 0; i < spawnNum ; i++)
+		for (int i = 0; i < stopAfterNum ; i++)
 		{
-			if (stopTime > 0f && Time.time > sequenceEndTime)
-				yield break;
-			
-			if (sequenceOption == SpawnerSequenceOptions.Random)
-				yield return StartCoroutine (SpawnRandom ());
-			else if (sequenceOption == SpawnerSequenceOptions.Loop)
-				yield return StartCoroutine (SpawnRandom ());
-			
-		}
+			yield return new WaitForSeconds(intervalTimes[intervalIndex]);
 
+			if (stopAfterTime > 0f && Time.time > sequenceEndTime)
+				yield break;
+
+			if (spawnIndex == 0 && sequenceOption == SpawnerSequenceOptions.Shuffle)
+				spawnObjects.Shuffle();
+
+			if (sequenceOption == SpawnerSequenceOptions.Random)
+				spawnIndex = Random.Range (0, spawnObjects.Count - 1);
+
+
+			Spawn (spawnIndex);
+			
+
+			spawnIndex++;
+			intervalIndex++;
+		}
 	}
 
-	IEnumerator SpawnRandom()
+	void Spawn(int index)
 	{
-		float nextSpawnTime = Time.time + intervalTime;
-
-		int randomIndex = Random.Range (0, spawnObjects.Count - 1);
-
-		GameObject go = spawnObjects [randomIndex];
+		GameObject go = spawnObjects [index];
 
 		Instantiate (go);
 		go.transform.position = transform.position;
-
-		while (Time.time < nextSpawnTime)
-			yield return null;
-		
 	}
 }

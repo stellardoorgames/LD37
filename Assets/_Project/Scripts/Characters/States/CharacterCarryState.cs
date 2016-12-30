@@ -33,6 +33,8 @@ public class CharacterCarryState : SKState<Character> {
 
 	public override void begin ()
 	{
+		_context.debugMessage("Carrying");
+
 		carriedObject.OnEscaped += OnCarryEscape;
 
 		agent.path = _context.GetPathToTarget(carryDestination);
@@ -57,6 +59,8 @@ public class CharacterCarryState : SKState<Character> {
 
 	public override void end ()
 	{
+		_context.debugMessage("");
+
 		Debug.Log("Drop");
 
 		if (carriedObject != null)

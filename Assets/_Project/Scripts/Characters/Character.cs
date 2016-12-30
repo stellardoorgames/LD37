@@ -25,6 +25,9 @@ public class Character : MonoBehaviour {
 	GameObject target;
 
 	public Animator anim;
+
+	public bool debug = false;
+
 	[HideInInspector]
 	public NavMeshAgent agent;
 
@@ -68,12 +71,7 @@ public class Character : MonoBehaviour {
 		stateMachine.addState(GetComponent<CharacterDeathState>());
 		stateMachine.addState(GetComponent<CharacterCarryState>());*/
 
-		/*wanderDirections = new List<Vector3> {
-			Vector3.forward,
-			Vector3.right,
-			Vector3.back,
-			Vector3.left
-		};*/
+
 	}
 
 	public virtual void Update () 
@@ -103,6 +101,11 @@ public class Character : MonoBehaviour {
 		return newTarget;
 	}
 
+	/*public List<GameObject> SortByDistance(GameObject[] targets)
+	{
+		
+	}*/
+
 	public NavMeshPath GetPathToTarget(string tag, bool wander = true)
 	{
 		List<string> t = new List<string>()	{tag};
@@ -118,12 +121,20 @@ public class Character : MonoBehaviour {
 			target = FindClosestTarget(GameObject.FindGameObjectsWithTag (tt));
 			if (target != null)
 			{
-				if (agent.CalculatePath(target.transform.position, path))
+				Vector3 point = target.transform.position;// + ((transform.position - target.transform.position).normalized * .25f) ;
+				//Instantiate(deathState.soulGemPrefab, point, Quaternion.identity);
+				if (agent.CalculatePath(point, path))
 					break;
 			}
+
+			/*foreach(GameObject go in GameObject.FindGameObjectsWithTag (tt))
+			{
+				if (agent.CalculatePath(go.transform.position, path) && (path.status == NavMeshPathStatus.PathComplete))
+					break;
+			}*/
 		}
 
-		if (!(path.status == NavMeshPathStatus.PathComplete) && wander)
+	if (path.status == NavMeshPathStatus.PathInvalid && wander)
 		{
 			path = GetWanderPath(3.5f);
 		}
@@ -133,6 +144,7 @@ public class Character : MonoBehaviour {
 
 	NavMeshPath GetWanderPath(float distance = 1f)
 	{
+		debugMessage("Wandering");
 		Debug.Log("Auto-wander");
 
 		GameObject[] gos = GameObject.FindGameObjectsWithTag("Light");
@@ -158,6 +170,27 @@ public class Character : MonoBehaviour {
 		}
 
 		return path;*/
+	}
+
+	public void debugMessage(string text)
+	{
+		if (debug && this.text != null)
+			this.text.text = text;
+	}
+
+	public void SetSpeech(string text, float duration)
+	{
+		if (!debug && this.text != null)
+			StartCoroutine(SetSpeechCoroutine(text, duration));
+	}
+
+	IEnumerator SetSpeechCoroutine(string text, float duration)
+	{
+		this.text.text = text;
+
+		yield return new WaitForSeconds(duration);
+
+		this.text.text = "";
 	}
 
 	protected virtual void OnTriggerEnter(Collider other)
