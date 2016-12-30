@@ -10,6 +10,7 @@ public class CharacterSpawnState : SKState<Character> {
 
 	public override void begin ()
 	{
+		_context.debugMessage("Spawning");
 		startTime = Time.time;
 	}
 
@@ -21,7 +22,7 @@ public class CharacterSpawnState : SKState<Character> {
 
 	public override void end ()
 	{
-		
+		_context.debugMessage("");
 	}
 
 }

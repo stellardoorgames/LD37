@@ -16,7 +16,7 @@ public class CharacterDeathState : SKState<Character> {
 	public List<DeathType> vulnerabilities = new List<DeathType>();
 
 	public float deathTime = 2f;
-	//public GameObject lavaDeathEffect;
+
 	public GameObject soulGemPrefab;
 
 	public UnityEvent OnDeath;
@@ -48,6 +48,7 @@ public class CharacterDeathState : SKState<Character> {
 
 	public override void begin ()
 	{
+		_context.debugMessage("Dying");
 		Debug.Log (string.Format("{0} died from {1}.", name, deathType));
 
 		tag = "Untagged";
@@ -80,7 +81,7 @@ public class CharacterDeathState : SKState<Character> {
 
 	public override void end ()
 	{
-
+		_context.debugMessage("");
 	}
 
 	protected virtual void OnTriggerEnter(Collider other)

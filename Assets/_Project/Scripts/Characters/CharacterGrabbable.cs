@@ -6,19 +6,20 @@ public class CharacterGrabbable : Grabbable {
 
 	protected Character character;
 
+	CharacterDeathState deathState;
+
 	protected virtual void Awake()
 	{
 		character = GetComponent<Character>();
+
+		deathState = GetComponent<CharacterDeathState>();
 	}
 
 	public override bool Grabbed (Transform grabber)
 	{
-		if (character.deathState.enabled)
+		if (deathState != null && deathState.enabled)
 			return false;
-
-		//lastGrabbedTime = Time.time;
-		//this.grabber = grabber;
-
+		
 		base.Grabbed(grabber);
 
 		character.stateMachine.changeState<CharacterGrabbedState>();
@@ -33,8 +34,10 @@ public class CharacterGrabbable : Grabbable {
 
 		base.Released();
 
-		if (!character.deathState.enabled)
-			character.stateMachine.changeState<CharacterSearchState>();
+		if (deathState != null && deathState.enabled)
+			return;
+
+		character.stateMachine.changeState<CharacterSearchState>();
 	}
 	
 }

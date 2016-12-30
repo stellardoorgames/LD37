@@ -34,17 +34,14 @@ public class PlayerController : MonoBehaviour {
 			SwitchTenticles (_activeTenticleIndex);}
 	}
 	TenticleController activeTentacle;
-	//List<TenticleLead> tentacleLeads;
 
 	public Animator anim;
 	public SkinnedMeshRenderer skinnedMeshRenderer;
 	ColorFlash colorFlash;
 
-	//UITentacleLength lengthUI;
 	public event Action OnGrowMaxLength;
 
 	public UnityEvent OnDeath;
-	//public UnityEvent OnFinish;
 
 	void Start () 
 	{
@@ -52,10 +49,6 @@ public class PlayerController : MonoBehaviour {
 
 		currentLife = maxLife;
 
-		//tentacleLeads = new List<TenticleLead>();
-		//foreach(TenticleController tc in tentacles)
-		//	tentacleLeads.Add(tc.lead);
-	
 		activeTentacle = tentacles [activeTenticleIndex];
 
 		activeTentacle.Activate(true);
@@ -65,8 +58,6 @@ public class PlayerController : MonoBehaviour {
 		
 		foreach(ButtonNames n in tentacleButtonNames)
 			tentacleButtons.Add(Buttons.CreateButton(n));
-
-		//lengthUI = GetComponent<UITentacleLength>();
 	}
 	
 	// Update is called once per frame
@@ -129,8 +120,7 @@ public class PlayerController : MonoBehaviour {
 
 		if (OnGrowMaxLength != null)
 			OnGrowMaxLength();
-		//StartCoroutine(lengthUI.ColorFlash(1f, 1));
-
+		
 		if (gem != null)
 			gem.Destroy();
 

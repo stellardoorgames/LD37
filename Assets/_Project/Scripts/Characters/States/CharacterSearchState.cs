@@ -13,9 +13,14 @@ public class CharacterSearchState : SKState<Character> {
 
 	NavMeshAgent agent;
 
+	CharacterCarryState carryState;
+	CharacterAttackState attackState;
+
 	public override void onInitialized ()
 	{
 		agent = GetComponent<NavMeshAgent>();
+		carryState = GetComponent<CharacterCarryState>();
+		attackState = GetComponent<CharacterAttackState>();
 	}
 
 	public override void begin ()
@@ -53,17 +58,17 @@ public class CharacterSearchState : SKState<Character> {
 		if (!enabled)
 			return;
 
-		if (_context.carryState.carryTags.Contains(other.tag))
+		if (carryState != null && carryState.carryTags.Contains(other.tag))
 		{
 			Grabbable grab = other.GetComponent<Grabbable>();
 			if (grab != null)
-				_context.carryState.StartCarry(grab);
+				carryState.StartCarry(grab);
 		}
-		else if (_context.attackState.attackTags.Contains(other.tag))
+		else if (attackState != null && attackState.attackTags.Contains(other.tag))
 		{
 			Damageable fight = other.GetComponent<Damageable>();
 			if (fight != null)
-				_context.attackState.StartAttack(fight);
+				attackState.StartAttack(fight);
 		}
 
 	}

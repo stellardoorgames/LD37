@@ -22,7 +22,7 @@ public class Character : MonoBehaviour {
 
 	public SKStateMachine<Character> stateMachine;
 
-	[HideInInspector]
+	/*[HideInInspector]
 	public CharacterSpawnState spawnState;
 	[HideInInspector]
 	public CharacterSearchState searchState;
@@ -33,30 +33,30 @@ public class Character : MonoBehaviour {
 	[HideInInspector]
 	public CharacterGrabbedState grabbedState;
 	[HideInInspector]
-	public CharacterDeathState deathState;
+	public CharacterDeathState deathState;*/
 
 	public virtual void Start()
 	{
 		agent = GetComponent<NavMeshAgent> ();
 
-		spawnState = GetComponent<CharacterSpawnState>();
+		/*spawnState = GetComponent<CharacterSpawnState>();
 		searchState = GetComponent<CharacterSearchState>();
 		attackState = GetComponent<CharacterAttackState>();
 		carryState = GetComponent<CharacterCarryState>();
 		grabbedState = GetComponent<CharacterGrabbedState>();
-		deathState = GetComponent<CharacterDeathState>();
+		deathState = GetComponent<CharacterDeathState>();*/
 
-		stateMachine = new SKStateMachine<Character>(this, spawnState);
-		stateMachine.addState(searchState);
+		stateMachine = new SKStateMachine<Character>(this, GetComponent<CharacterSpawnState>());
+		/*stateMachine.addState(searchState);
 		stateMachine.addState(attackState);
 		stateMachine.addState(carryState);
 		stateMachine.addState(grabbedState);
-		stateMachine.addState(deathState);
-		/*stateMachine.addState(GetComponent<CharacterHuntState>());
+		stateMachine.addState(deathState);*/
+		stateMachine.addState(GetComponent<CharacterSearchState>());
 		stateMachine.addState(GetComponent<CharacterGrabbedState>());
 		stateMachine.addState(GetComponent<CharacterAttackState>());
 		stateMachine.addState(GetComponent<CharacterDeathState>());
-		stateMachine.addState(GetComponent<CharacterCarryState>());*/
+		stateMachine.addState(GetComponent<CharacterCarryState>());
 
 
 	}

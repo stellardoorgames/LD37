@@ -15,18 +15,11 @@ public class TenticleController : MonoBehaviour {
 	public CurvyGenerator generator;
 	CurvySpline spline;
 	MeshRenderer materialObject;
-	//Material meshMaterial;
 	CGMaterialSettingsEx materialSettings;
 
 
 	public float segmentLength = 1f;
 	public int selfCollideNumber = 8;
-
-	/*public Color damageTint;
-	Color startingTint;
-	public float damageFlashDuration = 2;
-	public int damageFlashNumber = 3;
-	bool isFlashing = false;*/
 
 	public bool isActive = false;
 
@@ -92,9 +85,6 @@ public class TenticleController : MonoBehaviour {
 		tentacleSectionList.Add (TentacleSection.Create (colliderObject, null, spline.LastVisibleControlPoint, this));
 
 		startingLength = spline.Length;
-
-		//startingTint = materialObject.material.color;
-		//colorFlash.meshRenderer = materialObject;
 
 		StartCoroutine(Swirl());
 	}
@@ -291,38 +281,9 @@ public class TenticleController : MonoBehaviour {
 			playerController.TakeDamage(amount);
 
 		colorFlash.FlashColor(materialObject);
-		//if (!isFlashing)
-		//	StartCoroutine(ColorFlash(damageTint, damageFlashDuration, damageFlashNumber));
+
 		Retract();
 	}
-
-	/*public IEnumerator ColorFlash(Color color, float duration, int number)
-	{
-		isFlashing = true;
-
-		float flashTime = duration / (number * 2);
-		for ( int i = 0; i < number; i++)
-		{
-			float endTime = Time.time + flashTime;
-			float startingTime = Time.time;
-			while (Time.time < endTime)
-			{
-				yield return null;
-				float t = Mathf.InverseLerp(startingTime, endTime, Time.time);
-				materialObject.material.color = Color.Lerp(startingTint, damageTint, t);
-			}
-			endTime = Time.time + flashTime;
-			startingTime = Time.time;
-			while (Time.time < endTime)
-			{
-				yield return null;
-				float t = Mathf.InverseLerp(startingTime, endTime, Time.time);
-				materialObject.material.color = Color.Lerp(damageTint, startingTint, t);
-			}
-		}
-
-		isFlashing = false;
-	}*/
 
 	void OnTriggerStay(Collider other)
 	{
