@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UITentacleLength : MonoBehaviour {
 
-	public PlayerController controller;
+	PlayerController controller;
 	public List<RectTransform> tentacleBars = new List<RectTransform>();
 
 	public RectTransform tentacleLengthPanel;
@@ -26,6 +26,8 @@ public class UITentacleLength : MonoBehaviour {
 
 	void Start () 
 	{
+		controller = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+
 		startingTentacleLength = startingTotalTentacleLength / controller.tentacles.Count;
 
 		barPosition = tentacleLengthPanel.anchoredPosition;

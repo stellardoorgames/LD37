@@ -49,6 +49,10 @@ public class TenticleController : MonoBehaviour {
 
 	ColorFlash colorFlash;
 
+	Vector3 movement;
+	bool applyMovement = true;
+	bool isReversing = false;
+
 	void Awake () 
 	{
 		projector = GetComponentInChildren<Projector> ();
@@ -102,20 +106,40 @@ public class TenticleController : MonoBehaviour {
 
 		if (isActive)
 		{
+			movement = GetMovement();
+
+			float dist1 = Vector3.Distance(transform.position, previousSegment.transform.position);
+			Vector3 newPosition = movement + transform.position;
+			float dist2 = Vector3.Distance(newPosition, previousSegment.transform.position);
+			if (dist1 > dist2)
+			{
+				//colorFlash.FlashColor(materialObject);
+				movement = (previousSegment.transform.position - transform.position).normalized * movement.magnitude;
+				isReversing = true;
+			}
+			else
+				isReversing = false;
+
 			if (playerController.totalTentacleLength > playerController.currentMaxLength)
 			{
 				Debug.Log("Exceeded Length");
 				playerController.ExceedMaxLength();
 				
 				//If too long, only update position if the player is backtracking
-				float dist1 = Vector3.Distance(transform.position, previousSegment.transform.position);
-				Vector3 movement = GetMovement() + transform.position;
-				float dist2 = Vector3.Distance(movement, previousSegment.transform.position);
-				if (dist1 > dist2)
-					UpdatePosition();
+				//float dist1b = Vector3.Distance(transform.position, previousSegment.transform.position);
+				//Vector3 newPositionb = movement + transform.position;
+				//float dist2b = Vector3.Distance(newPositionb, previousSegment.transform.position);
+				if (isReversing)
+				{
+					applyMovement = true;
+				}
+				else
+					applyMovement = false;
+					//UpdatePosition();
 			}
 			else
-				UpdatePosition();
+				applyMovement = true;
+				//UpdatePosition();
 		}
 
 
@@ -150,6 +174,12 @@ public class TenticleController : MonoBehaviour {
 
 	}
 
+	public void FixedUpdate()
+	{
+		if (isActive && applyMovement)
+			rb.AddForce(movement * speed);
+	}
+
 	public void Activate(bool active)
 	{
 		isActive = active;
@@ -172,14 +202,14 @@ public class TenticleController : MonoBehaviour {
 		float horizontal = Input.GetAxis ("Horizontal" );
 		float vertical = Input.GetAxis ("Vertical");
 
-		return new Vector3 (horizontal, 0, vertical);
+		return new Vector3 (horizontal, 0, vertical);// * Time.deltaTime;
 	}
 
-	public void UpdatePosition()
+	/*public void UpdatePosition()
 	{
 			Vector3 movement = GetMovement() * speed * Time.deltaTime;
 		rb.AddForce(movement);
-	}
+	}*/
 
 	IEnumerator Swirl()
 	{

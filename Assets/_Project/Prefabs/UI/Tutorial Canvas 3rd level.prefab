@@ -204,7 +204,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Barriers can only be entered by the tentacle of the same color.
+  m_Text: Those are magic barriers. Only the tentacle of the matching color can pass
+    through the barriers.
 --- !u!222 &222119624531281884
 CanvasRenderer:
   m_ObjectHideFlags: 1

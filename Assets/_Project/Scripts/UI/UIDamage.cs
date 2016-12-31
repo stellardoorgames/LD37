@@ -5,13 +5,15 @@ using UnityEngine.UI;
 
 public class UIDamage : MonoBehaviour {
 
-	public PlayerController controller;
+	PlayerController controller;
 	public Image materialImage;
 
 	float startingValue;
 
 	// Use this for initialization
 	void Start () {
+		controller = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+
 		startingValue = materialImage.material.GetFloat("_Progress");
 	}
 	

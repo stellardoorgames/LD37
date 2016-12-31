@@ -41,6 +41,7 @@ public class BarrierController : MonoBehaviour {
 	public UnityEvent OnChangeBarrier;
 
 	public MeshRenderer barrierRenderer;
+	public Light barrierLight;
 
 	public Color redColor = new Color(255f, 0f, 0f, 180f);
 	public Color greenColor = new Color(0f, 255f, 0f, 180f);
@@ -120,7 +121,10 @@ public class BarrierController : MonoBehaviour {
 			gameObject.layer = LayerMask.NameToLayer(barrierLayers[state]);
 		}
 
-		barrierRenderer.material.color = barrierColors[newState];
+		Color newColor = barrierColors[newState];
+		barrierRenderer.material.color = newColor;
+		barrierRenderer.material.SetColor("_EmissionColor", newColor);
+		barrierLight.color = newColor;
 		//TODO: animations
 		//TODO: test if tentacle is in when activated to cut it off?
 
