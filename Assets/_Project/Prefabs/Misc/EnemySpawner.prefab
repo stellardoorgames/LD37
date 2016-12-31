@@ -241,5 +241,6 @@ MonoBehaviour:
   intervalTimes:
   - 5
   - 20
+  OnlyAfterPreviousDestroyed: 0
   stopAfterTime: 0
   stopAfterNum: 2

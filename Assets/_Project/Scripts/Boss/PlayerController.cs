@@ -163,6 +163,7 @@ public class PlayerController : MonoBehaviour {
 
 		if (currentLife <= 0f)
 		{
+			LevelManager.IncrementStat(Stats.PlayerKilled);
 			OnDeath.Invoke();
 		}
 	}

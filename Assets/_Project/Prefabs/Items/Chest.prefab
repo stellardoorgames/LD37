@@ -67,7 +67,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1905404070122812}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -4, y: 0, z: 0}
+  m_LocalPosition: {x: -5, y: 0, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4438022666151650}
@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c00cefa607baea041bbd319a337e7e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moneyAmount: 100
   pickupEffect: {fileID: 1560895730617214, guid: 139da6c8c21524944bc804f371f33b25,
     type: 2}
 --- !u!114 &114648102656544498
@@ -165,6 +166,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c3d696565df2f94dafd6e89dfc5d0c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isStatic: 0
   grabRange: 1
   isGrabbed: 0
   grabber: {fileID: 0}
+  lastGrabbedTime: 0
+  minGrabDelay: 0.1

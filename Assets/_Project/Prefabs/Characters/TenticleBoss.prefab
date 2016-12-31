@@ -3513,7 +3513,7 @@ MonoBehaviour:
     type: 2}
   generator: {fileID: 114862292863563214}
   segmentLength: 1
-  selfCollideNumber: 8
+  selfCollideNumber: 4
   isActive: 0
   tentacleLength: 0
 --- !u!114 &114424278011871234
@@ -4085,7 +4085,7 @@ MonoBehaviour:
     type: 2}
   generator: {fileID: 114862292863563214}
   segmentLength: 1
-  selfCollideNumber: 8
+  selfCollideNumber: 4
   isActive: 0
   tentacleLength: 0
 --- !u!114 &114609776976453334
@@ -4750,7 +4750,7 @@ MonoBehaviour:
     type: 2}
   generator: {fileID: 114862292863563214}
   segmentLength: 1
-  selfCollideNumber: 8
+  selfCollideNumber: 4
   isActive: 0
   tentacleLength: 0
 --- !u!114 &114951529284968732

@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public enum Stats
 {
+	PlayerKilled,
 	PrincessNabbed,
 	PrincessLost,
 	PrincessDeath,
@@ -18,11 +19,22 @@ public enum Stats
 	SoulStonesConsumed,
 	SoulStonesNabbed,
 	SoulStonesLost,
+	TreasureCollected,
+	MoneyCollected
 }
 
 public class LevelManager : MonoBehaviour {
-	
-	public int winConditionKills = 0;
+
+	public List<Stats> winConditions;
+	public List<int> winAmount;
+	public bool winRequireAll = false;
+
+	public List<Stats> loseConditions;
+	public List<int> loseAmount;
+	public bool loseRequireAll = false;
+
+
+	/*public int winConditionKills = 0;
 	int _currentKills = 0;
 	int currentKills {
 		get { return _currentKills; }
@@ -39,7 +51,7 @@ public class LevelManager : MonoBehaviour {
 			if (winConditionTreasure > 0 && _currentTreasure >= winConditionTreasure)
 				OnWin.Invoke ();}
 	}
-	public float winConditionTime = 0f;
+	public float winConditionTime = 0f;*/
 
 	public UnityEvent OnLose;
 	public UnityEvent OnWin;
@@ -60,11 +72,21 @@ public class LevelManager : MonoBehaviour {
 	Dictionary<Stats, int> levelStats = new Dictionary<Stats, int>();
 	static Dictionary<Stats, int> totalStats = new Dictionary<Stats, int>();
 
+	Dictionary <Stats, int> winCon;
+	Dictionary <Stats, int> loseCon;
+
 	// Use this for initialization
 	void Start () 
 	{
 		instance = this;
 
+		winCon = new Dictionary<Stats, int>();
+		for(int i = 0; i < winConditions.Count; i++)
+			winCon.Add(winConditions[i], winAmount[i]);
+
+		loseCon = new Dictionary<Stats, int>();
+		for(int i = 0; i < loseConditions.Count; i++)
+			loseCon.Add(loseConditions[i], loseAmount[i]);
 	}
 	
 	// Update is called once per frame
@@ -72,7 +94,7 @@ public class LevelManager : MonoBehaviour {
 		
 	}
 
-	static public void IncrementStat(Stats stat)
+	static public void IncrementStat(Stats stat, int amount = 1)
 	{
 		if (!instance.levelStats.ContainsKey(stat))
 		{
@@ -80,12 +102,14 @@ public class LevelManager : MonoBehaviour {
 			instance.FirstStatEvent(stat);
 		}
 		
-		instance.levelStats[stat]++;
+		instance.levelStats[stat] += amount;
 
 		if (!totalStats.ContainsKey(stat))
 			totalStats.Add(stat, 0);
 
-		totalStats[stat]++;
+		totalStats[stat] += amount;
+
+		instance.testConditions(stat);
 	}
 
 	static public void IncrementKills(string tagName)
@@ -94,6 +118,57 @@ public class LevelManager : MonoBehaviour {
 			IncrementStat(Stats.EnemiesKilled);
 		else if (tagName == "Princess")
 			IncrementStat(Stats.PrincessDeath);
+	}
+
+	bool testConditions(Stats stat)
+	{
+		bool conditionFullfilled = false;
+
+		if (winCon.ContainsKey(stat) && winCon[stat] >= levelStats[stat])
+		{
+			conditionFullfilled = true;
+
+			if (winRequireAll)
+			{
+				foreach(KeyValuePair<Stats, int> wc in winCon)
+				{
+					if (levelStats[wc.Key] < wc.Value)
+						conditionFullfilled = false;
+				}
+				/*for (int i = 0; i < winConditions.Count; i++) 
+				{
+					if (levelStats[winConditions[i]] < winAmount[i])
+						conditionFullfilled = false;
+				}*/
+			}
+
+			if (conditionFullfilled)
+				OnWin.Invoke();
+		}
+
+		if (loseCon.ContainsKey(stat) && loseCon[stat] >= levelStats[stat])
+		{
+			conditionFullfilled = true;
+
+			if (loseRequireAll)
+			{
+				foreach(KeyValuePair<Stats, int> lc in loseCon)
+				{
+					if (levelStats[lc.Key] < lc.Value)
+						conditionFullfilled = false;
+				}
+				/*for (int i = 0; i < loseConditions.Count; i++) 
+				{
+					if (levelStats[loseConditions[i]] < loseAmount[i])
+						conditionFullfilled = false;
+				}*/
+			}
+
+			if (conditionFullfilled)
+				OnLose.Invoke();
+		}
+		
+		return conditionFullfilled;
 	}
 
 	void FirstStatEvent(Stats stat)

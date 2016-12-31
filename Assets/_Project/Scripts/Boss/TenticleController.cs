@@ -108,38 +108,25 @@ public class TenticleController : MonoBehaviour {
 		{
 			movement = GetMovement();
 
-			float dist1 = Vector3.Distance(transform.position, previousSegment.transform.position);
-			Vector3 newPosition = movement + transform.position;
-			float dist2 = Vector3.Distance(newPosition, previousSegment.transform.position);
-			if (dist1 > dist2)
+			isReversing = false;
+			if (previousSegment.PreviousControlPoint != null)
 			{
-				//colorFlash.FlashColor(materialObject);
-				movement = (previousSegment.transform.position - transform.position).normalized * movement.magnitude;
-				isReversing = true;
+				float dist1 = Vector3.Distance(transform.position, previousSegment.PreviousControlPoint.transform.position);
+				float dist2 = Vector3.Distance(transform.position + movement, previousSegment.PreviousControlPoint.transform.position);
+				if (dist1 > dist2)
+				{
+					movement = (previousSegment.transform.position - transform.position).normalized * movement.magnitude;
+					isReversing = true;
+				}
 			}
-			else
-				isReversing = false;
 
+			applyMovement = true;
 			if (playerController.totalTentacleLength > playerController.currentMaxLength)
 			{
-				Debug.Log("Exceeded Length");
 				playerController.ExceedMaxLength();
-				
-				//If too long, only update position if the player is backtracking
-				//float dist1b = Vector3.Distance(transform.position, previousSegment.transform.position);
-				//Vector3 newPositionb = movement + transform.position;
-				//float dist2b = Vector3.Distance(newPositionb, previousSegment.transform.position);
-				if (isReversing)
-				{
-					applyMovement = true;
-				}
-				else
+				if (!isReversing)
 					applyMovement = false;
-					//UpdatePosition();
 			}
-			else
-				applyMovement = true;
-				//UpdatePosition();
 		}
 
 

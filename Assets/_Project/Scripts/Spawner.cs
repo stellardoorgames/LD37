@@ -15,6 +15,9 @@ public class Spawner : MonoBehaviour {
 	public List<GameObject> spawnObjects = new List<GameObject>();
 	public List<float> intervalTimes = new List<float>();
 
+	public bool OnlyAfterPreviousDestroyed = false;
+
+	public float randomIntervalAdd;
 
 	//public float beginTime;
 	public float stopAfterTime;
@@ -38,6 +41,8 @@ public class Spawner : MonoBehaviour {
 				_intervalIndex = intervalTimes.Count - 1;}
 	}
 
+	GameObject spawnedObject;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -53,7 +58,7 @@ public class Spawner : MonoBehaviour {
 
 		for (int i = 0; i < stopAfterNum ; i++)
 		{
-			yield return new WaitForSeconds(intervalTimes[intervalIndex]);
+			yield return new WaitForSeconds(intervalTimes[intervalIndex] + Random.Range(0, randomIntervalAdd));
 
 			if (stopAfterTime > 0f && Time.time > sequenceEndTime)
 				yield break;
@@ -70,6 +75,12 @@ public class Spawner : MonoBehaviour {
 
 			spawnIndex++;
 			intervalIndex++;
+
+			if (OnlyAfterPreviousDestroyed)
+			{
+				while (spawnedObject != null)
+					yield return null;
+			}
 		}
 	}
 
@@ -77,7 +88,16 @@ public class Spawner : MonoBehaviour {
 	{
 		GameObject go = spawnObjects [index];
 
-		Instantiate (go);
+		spawnedObject = Instantiate (go);
 		go.transform.position = transform.position;
+	}
+
+	public void SpawnNow()
+	{
+		Spawn(spawnIndex);
+
+		spawnIndex++;
+		intervalIndex++;
+
 	}
 }

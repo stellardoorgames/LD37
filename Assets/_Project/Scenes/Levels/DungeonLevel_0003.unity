@@ -9260,6 +9260,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4925980662284290, guid: fd237e7e41e729e4882a3d6140475496,
     type: 2}
   m_PrefabInternal: {fileID: 1502990889}
+--- !u!1 &474153037 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1653349004503662, guid: cb2131d47ff1bdf4ab4d9caebdbc03b4,
+    type: 2}
+  m_PrefabInternal: {fileID: 1942261457}
 --- !u!1001 &478186067
 Prefab:
   m_ObjectHideFlags: 0
@@ -22353,6 +22358,16 @@ Prefab:
       propertyPath: m_HandleOut.x
       value: -0.175
       objectReference: {fileID: 0}
+    - target: {fileID: 114986316852267950, guid: 22e842d4f9c3bee48915c0528f2eb14d,
+        type: 2}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 474153037}
+    - target: {fileID: 114986316852267950, guid: 22e842d4f9c3bee48915c0528f2eb14d,
+        type: 2}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 22e842d4f9c3bee48915c0528f2eb14d, type: 2}
   m_IsPrefabParent: 0
@@ -24142,6 +24157,8 @@ MonoBehaviour:
   - 5
   - 20
   - 40
+  OnlyAfterPreviousDestroyed: 0
+  randomIntervalAdd: 0
   stopAfterTime: 0
   stopAfterNum: 0
 --- !u!1001 &1276695318
@@ -36336,6 +36353,26 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114361259600396586, guid: cb2131d47ff1bdf4ab4d9caebdbc03b4,
+        type: 2}
+      propertyPath: winAmount.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114361259600396586, guid: cb2131d47ff1bdf4ab4d9caebdbc03b4,
+        type: 2}
+      propertyPath: loseAmount.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114361259600396586, guid: cb2131d47ff1bdf4ab4d9caebdbc03b4,
+        type: 2}
+      propertyPath: winConditions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114361259600396586, guid: cb2131d47ff1bdf4ab4d9caebdbc03b4,
+        type: 2}
+      propertyPath: loseConditions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4238511791344676, guid: cb2131d47ff1bdf4ab4d9caebdbc03b4, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -36393,6 +36430,31 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1204805062525628, guid: cb2131d47ff1bdf4ab4d9caebdbc03b4, type: 2}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114361259600396586, guid: cb2131d47ff1bdf4ab4d9caebdbc03b4,
+        type: 2}
+      propertyPath: winConditions.Array.data[0]
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114361259600396586, guid: cb2131d47ff1bdf4ab4d9caebdbc03b4,
+        type: 2}
+      propertyPath: winAmount.Array.data[0]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114361259600396586, guid: cb2131d47ff1bdf4ab4d9caebdbc03b4,
+        type: 2}
+      propertyPath: loseConditions.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114361259600396586, guid: cb2131d47ff1bdf4ab4d9caebdbc03b4,
+        type: 2}
+      propertyPath: loseAmount.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114361259600396586, guid: cb2131d47ff1bdf4ab4d9caebdbc03b4,
+        type: 2}
+      propertyPath: loseAmount.Array.data[1]
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

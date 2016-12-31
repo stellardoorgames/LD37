@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class TreasureController : MonoBehaviour {
 
+	public int moneyAmount = 100;
+
+
     public GameObject pickupEffect;
 
 	// Use this for initialization
@@ -23,7 +26,10 @@ public class TreasureController : MonoBehaviour {
 		if (tenticle != null)
 		{
             Instantiate(pickupEffect, transform.position, Quaternion.identity);
-			//LevelManager.AddTreasure ();
+
+			LevelManager.IncrementStat(Stats.TreasureCollected);
+			LevelManager.IncrementStat(Stats.MoneyCollected, moneyAmount);
+
 			Destroy (gameObject);
 		}
 	}
