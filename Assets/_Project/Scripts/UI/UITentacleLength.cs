@@ -31,9 +31,8 @@ public class UITentacleLength : MonoBehaviour {
 		barPosition = tentacleLengthPanel.anchoredPosition;
 
 		tentacleImages = new List<Image>();
-		//TODO: fix the ID order in the curvy generator so it matches controller list order
-		for(int i = tentacleBars.Count - 1; i >= 0; i--)
-			tentacleImages.Add(tentacleBars[i].GetComponent<Image>());
+		foreach(RectTransform rt in tentacleBars)
+			tentacleImages.Add(rt.GetComponent<Image>());
 
 		isFlashing = new List<Image>();
 

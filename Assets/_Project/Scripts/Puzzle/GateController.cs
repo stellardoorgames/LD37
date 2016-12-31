@@ -15,6 +15,16 @@ public class GateController : MonoBehaviour {
 	public UnityEvent OnOpen;
 	public UnityEvent OnClose;
 
+	public Renderer MeshRenderer;
+
+	/*Dictionary<KeyController.Types, Color> lockColors = new Dictionary<KeyController.Types, Color>
+	{
+		{KeyController.Types.Generic, Color.white},
+		{KeyController.Types.Red, Color.red},
+		{KeyController.Types.Green, Color.green},
+		{KeyController.Types.Blue, Color.blue}
+	};*/
+
 	void Start () 
 	{
 		foreach(SwitchController sc in switches)
@@ -22,6 +32,9 @@ public class GateController : MonoBehaviour {
 			sc.OnSwitchOn.AddListener(OnSwitch);
 			sc.OnSwitchOff.AddListener(OnSwitch);
 		}
+
+		if (MeshRenderer != null)
+			MeshRenderer.material.color = KeyController.keyColors[lockType];
 
 		//if (isOpen)
 		//	Open();
@@ -47,12 +60,6 @@ public class GateController : MonoBehaviour {
 		if (!isUnlocked && isOpen)
 			Close();
 	}
-
-	/*public void OnKey(KeyTypes KeyType)
-	{
-		if (KeyType == lockType && !isOpen)
-			Open();
-	}*/
 
 	public void Open()
 	{

@@ -67,7 +67,7 @@ public class Character : MonoBehaviour {
 			}*/
 		}
 
-	if (path.status == NavMeshPathStatus.PathInvalid && wander)
+		if (path.status == NavMeshPathStatus.PathInvalid && wander)
 		{
 			path = GetWanderPath(3.5f);
 		}

@@ -158,10 +158,12 @@ public class PlayerController : MonoBehaviour {
 		
 		colorFlash.FlashColor(skinnedMeshRenderer);
 
+		if (OnTakeDamage != null)
+			OnTakeDamage();
+
 		if (currentLife <= 0f)
 		{
-			if (OnDeath != null)
-				OnDeath.Invoke();
+			OnDeath.Invoke();
 		}
 	}
 

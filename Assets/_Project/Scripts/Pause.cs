@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Pause : MonoBehaviour {
 
-	float previousTimeScale;
+	//float previousTimeScale;
 
 	public void UnPause()
 	{
@@ -13,7 +13,7 @@ public class Pause : MonoBehaviour {
 
 	void OnEnable ()
 	{
-		previousTimeScale = Time.timeScale;
+		//previousTimeScale = Time.timeScale;
 		Time.timeScale = 0.0f;
 	}
 

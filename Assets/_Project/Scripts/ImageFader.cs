@@ -30,7 +30,7 @@ public class ImageFader : MonoBehaviour
 	public UnityEvent OnFinishFadeIn;
 	public UnityEvent OnStartFadeOut;
 
-	float startingTimeScale;
+	//float startingTimeScale;
 
     Image image;
 
@@ -42,7 +42,7 @@ public class ImageFader : MonoBehaviour
 
 	void Start()
     {
-		startingTimeScale = Time.timeScale;
+		//startingTimeScale = Time.timeScale;
 
 		if (start)
             StartImage();

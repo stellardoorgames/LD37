@@ -16777,13 +16777,6 @@ MonoBehaviour:
   text: {fileID: 114255089788014412}
   anim: {fileID: 95481908306019208}
   debug: 0
-  agent: {fileID: 0}
-  spawnState: {fileID: 0}
-  searchState: {fileID: 0}
-  attackState: {fileID: 0}
-  carryState: {fileID: 0}
-  grabbedState: {fileID: 0}
-  deathState: {fileID: 0}
   isSuicidal: 0
 --- !u!114 &114255089788014412
 MonoBehaviour:
