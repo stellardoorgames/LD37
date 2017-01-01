@@ -16886,7 +16886,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 114817604418964250}
   anim: {fileID: 95917374941006580}
-  debug: 0
+  debug: 1
 --- !u!114 &114727164464568888
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -11625,7 +11625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 114769267491237270}
   anim: {fileID: 95114228260101396}
-  debug: 0
+  debug: 1
   OnKidnapped:
     m_PersistentCalls:
       m_Calls:

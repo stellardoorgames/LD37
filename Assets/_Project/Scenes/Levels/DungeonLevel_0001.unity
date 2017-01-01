@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2010,6 +2010,8 @@ MonoBehaviour:
   intervalTimes:
   - 5
   - 20
+  OnlyAfterPreviousDestroyed: 0
+  randomIntervalAdd: 0
   stopAfterTime: 0
   stopAfterNum: 2
 --- !u!1001 &68177536
@@ -2124,11 +2126,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sequenceOption: 0
   spawnObjects:
-  - {fileID: 1444026687741626, guid: c9ca0e9451fcbdb47ac6fc6e11ca6c8f, type: 2}
+  - {fileID: 1444026687741626, guid: 58d1f4da4ef45f24ab3a641ecba862aa, type: 2}
   intervalTimes:
   - 5
   - 20
   - 60
+  OnlyAfterPreviousDestroyed: 0
+  randomIntervalAdd: 0
   stopAfterTime: 0
   stopAfterNum: 0
 --- !u!1001 &71943607
@@ -17134,6 +17138,8 @@ MonoBehaviour:
   - 5
   - 20
   - 60
+  OnlyAfterPreviousDestroyed: 0
+  randomIntervalAdd: 0
   stopAfterTime: 0
   stopAfterNum: 2
 --- !u!1001 &794109212
@@ -21200,6 +21206,8 @@ MonoBehaviour:
   intervalTimes:
   - 5
   - 20
+  OnlyAfterPreviousDestroyed: 0
+  randomIntervalAdd: 0
   stopAfterTime: 0
   stopAfterNum: 2
 --- !u!1001 &983546570

@@ -16776,7 +16776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 114255089788014412}
   anim: {fileID: 95481908306019208}
-  debug: 0
+  debug: 1
   isSuicidal: 0
 --- !u!114 &114255089788014412
 MonoBehaviour:
