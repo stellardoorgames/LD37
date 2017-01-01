@@ -286,9 +286,9 @@ public class TenticleController : MonoBehaviour {
 		while (Time.time < endTime)
 		{
 			float t = Mathf.InverseLerp(startTime, endTime, Time.time);
-			 
+
 			transform.position = Vector3.Lerp(startPosition, newPosition, t);
-			
+
 			yield return null;
 		}
 
